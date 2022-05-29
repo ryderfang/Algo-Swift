@@ -247,14 +247,14 @@ public class Primer {
             print(String(chars[x...y]))
         }
     }
-    static public func p4_3() {
+    public static func p4_3() {
         let lines = READNUMS()
         for ln in lines {
             let x = ln[0]
             print(x.isPrime())
         }
     }
-    static public func p5_2() {
+    public static func p5_2() {
         var a = BigInt(i: 12345)
         let b = BigInt(str: "9876587882321")
         a.output()

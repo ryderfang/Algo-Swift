@@ -10,12 +10,12 @@ import Foundation
 class NumberTheory {
     // 最小公倍数
     // gcd(a, b) * lcm(a, b) = a * b
-    static public func lcm(a: Int, b: Int) -> Int {
+    public static func lcm(a: Int, b: Int) -> Int {
         return (a * b) / self.gcd(a: a, b: b)
     }
     
     // 最大公约数
-    static public func gcd(a: Int, b: Int) -> Int {
+    public static func gcd(a: Int, b: Int) -> Int {
         if b == 0 {
             return a
         }
@@ -24,7 +24,7 @@ class NumberTheory {
     
     // 扩展的欧几里德算法 (最大公约数算法)
     // 返回 gcd(a, b) 的同时，获取 a * x + b * y = gcd(a, b) 的唯一解
-    static public func exgcd(a: Int, b: Int) -> (Int, Int, Int) {
+    public static func exgcd(a: Int, b: Int) -> (Int, Int, Int) {
         if b == 0 {
             return (a, 1, 0)
         }
@@ -35,7 +35,7 @@ class NumberTheory {
     // 中国剩余定理 https://oi-wiki.org/math/number-theory/crt/
     // k is length of a & r
     // x = a[i] (mod r[i])
-    static public func CRT(k: Int, a: Array<Int>, r: Array<Int>) -> Int {
+    public static func CRT(k: Int, a: Array<Int>, r: Array<Int>) -> Int {
         // 计算所有模数的积
         let n = r.reduce(1, { $0 * $1 })
         var ans = 0

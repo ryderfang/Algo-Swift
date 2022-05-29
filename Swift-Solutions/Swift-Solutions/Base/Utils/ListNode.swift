@@ -23,7 +23,7 @@ public class ListNode {
         self.next = next;
     }
     
-    static public func arrayToList(_ array: Array<Int>) -> ListNode? {
+    public static func arrayToList(_ array: Array<Int>) -> ListNode? {
         var head : ListNode?  = nil
         if array.count == 0 {
             return nil
