@@ -18,8 +18,8 @@ let cases = [
 for x in cases {
     let p = Permutations()
     print(p.permute(x))
-    print(p.permuteUnique(x))
-    print(sol.permuteUnique(x))
+    print(p.permuteUnique2(x))
+    print(p.permuteUnique3(x))
 }
 
 #else
