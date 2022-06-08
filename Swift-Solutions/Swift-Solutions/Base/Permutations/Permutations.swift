@@ -38,7 +38,7 @@ class Permutations {
         var ans = [[Int]]()
         var used = [Bool](repeating: false, count: n)
         let a = nums.sorted()
-        func _backTracking(locatedAt index: Int, with result: inout [Int]) -> Void {
+        func _backTracking(_ index: Int, _ result: inout [Int]) {
             guard index < n else {
                 ans.append(result)
                 return
@@ -49,14 +49,14 @@ class Permutations {
                 }
                 result.append(a[i])
                 used[i] = true
-                _backTracking(locatedAt: index + 1, with: &result)
+                _backTracking(index + 1, &result)
                 used[i] = false
                 result.removeLast()
             }
         }
         
         var tmp = [Int]()
-        _backTracking(locatedAt: 0, with: &tmp)
+        _backTracking(0, &tmp)
         return ans
     }
     
@@ -116,7 +116,7 @@ class Permutations {
         var ans = [[Int]]()
         var used = [Bool](repeating: false, count: n)
         let a = nums.sorted()
-        func _backTracking(locatedAt index: Int, with result: inout [Int]) -> Void {
+        func _backTracking(_ index: Int, _ result: inout [Int]) {
             guard index < n else {
                 ans.append(result)
                 return
@@ -130,14 +130,14 @@ class Permutations {
                 }
                 result.append(a[i])
                 used[i] = true
-                _backTracking(locatedAt: index + 1, with: &result)
+                _backTracking(index + 1, &result)
                 used[i] = false
                 result.removeLast()
             }
         }
         
         var tmp = [Int]()
-        _backTracking(locatedAt: 0, with: &tmp)
+        _backTracking(0, &tmp)
         return ans
     }
     

@@ -11,15 +11,16 @@ import Foundation
 let sol = Solution()
 //let cases = READNUMS()
 let cases = [
-//    [1, 2, 2, 3],
-//    [1, 2, 3],
-    [1, 2, 2],
+    [1, 2, 3, 4, 5],
+    [1, 2, 3],
+    [0],
 ]
 for x in cases {
-    let p = Permutations()
-    print(p.permute(x))
-    print(p.permuteUnique2(x))
-    print(p.permuteUnique3(x))
+//    print(sol.subsetsWithDup(x))
+//    let com = Combinations()
+//    print(com.subsets1(x))
+    let b = BinarySearch()
+    print(b.search(x, 0))
 }
 
 #else
