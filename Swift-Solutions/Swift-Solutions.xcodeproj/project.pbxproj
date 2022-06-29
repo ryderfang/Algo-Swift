@@ -181,6 +181,9 @@
 		0D0C134528216A3F0021D8BA /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
+				0D0C861228632D4B0010C108 /* Easy */,
+				0D0C861328632D540010C108 /* Medium */,
+				0D0C861428632D590010C108 /* Hard */,
 				0D0C1346282171420021D8BA /* 2.add-two-numbers.swift */,
 				0D0C134A282177460021D8BA /* 19.remove-nth-node-from-end-of-list.swift */,
 				0D0C134C28217D2A0021D8BA /* 21.merge-two-sorted-lists.swift */,
@@ -194,6 +197,27 @@
 				0DAC5B842849B84F0008B26C /* 90.subsets-ii.swift */,
 			);
 			path = LeetCode;
+			sourceTree = "<group>";
+		};
+		0D0C861228632D4B0010C108 /* Easy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Easy;
+			sourceTree = "<group>";
+		};
+		0D0C861328632D540010C108 /* Medium */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Medium;
+			sourceTree = "<group>";
+		};
+		0D0C861428632D590010C108 /* Hard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Hard;
 			sourceTree = "<group>";
 		};
 		0D4BDC6C2839FC1D00AC838D /* Permutations */ = {

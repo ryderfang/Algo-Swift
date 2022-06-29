@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func subsetsWithDup(_ nums: [Int]) -> [[Int]] {
         guard !nums.isEmpty else { return [] }
 
