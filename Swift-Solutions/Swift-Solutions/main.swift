@@ -11,16 +11,13 @@ import Foundation
 let sol = Solution()
 //let cases = READNUMS()
 let cases = [
-    [1, 2, 3, 4, 5],
-    [1, 2, 3],
-    [0],
+    "III",
+    "LVIII",
+    "MCMXCIV",
+    "MCMCDXLXCIVIX",
 ]
 for x in cases {
-//    print(sol.subsetsWithDup(x))
-//    let com = Combinations()
-//    print(com.subsets1(x))
-    let b = BinarySearch()
-    print(b.search(x, 0))
+    print(sol.romanToInt(x))
 }
 
 #else
