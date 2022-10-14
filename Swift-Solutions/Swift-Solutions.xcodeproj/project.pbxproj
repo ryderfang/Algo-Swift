@@ -37,6 +37,7 @@
 		DAFCA3AD28F8090700CF1DE6 /* 1.two-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */; };
 		DAFCA3AF28F814CD00CF1DE6 /* 9.palindrome-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */; };
 		DAFCA3B128F81DB700CF1DE6 /* 13.roman-to-integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */; };
+		DAFCA3B328F900A700CF1DE6 /* 14.longest-common-prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA3B228F900A700CF1DE6 /* 14.longest-common-prefix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1.two-sum.swift"; sourceTree = "<group>"; };
 		DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "9.palindrome-number.swift"; sourceTree = "<group>"; };
 		DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "13.roman-to-integer.swift"; sourceTree = "<group>"; };
+		DAFCA3B228F900A700CF1DE6 /* 14.longest-common-prefix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "14.longest-common-prefix.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
+				DAFCA3B228F900A700CF1DE6 /* 14.longest-common-prefix.swift */,
 				DAFCA3A628F6B70A00CF1DE6 /* 21.merge-two-sorted-lists.swift */,
 			);
 			path = Easy;
@@ -375,6 +378,7 @@
 				DAFCA3AB28F6B71200CF1DE6 /* 60.permutation-sequence.swift in Sources */,
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
 				DAFCA39E28F6B70400CF1DE6 /* 47.permutations-ii.swift in Sources */,
+				DAFCA3B328F900A700CF1DE6 /* 14.longest-common-prefix.swift in Sources */,
 				0D7BF46128436AA100E1EEA4 /* Permutations.swift in Sources */,
 				0D0C1342282134260021D8BA /* Queue.swift in Sources */,
 				0D4BDC702839FC6B00AC838D /* LehmerCode.swift in Sources */,

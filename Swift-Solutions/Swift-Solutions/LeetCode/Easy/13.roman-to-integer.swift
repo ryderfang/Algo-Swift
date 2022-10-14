@@ -35,7 +35,7 @@ fileprivate extension Character {
     }
 }
 
-class Solution {
+extension Solution {
     func romanToInt(_ s: String) -> Int {
         var res = 0
         let n = s.count

@@ -11,13 +11,11 @@ import Foundation
 let sol = Solution()
 //let cases = READNUMS()
 let cases = [
-    "III",
-    "LVIII",
-    "MCMXCIV",
-    "MCMCDXLXCIVIX",
+    ["flower","flow","flight"],
+    ["dog","racecar","car"],
 ]
 for x in cases {
-    print(sol.romanToInt(x))
+    print(sol.longestCommonPrefix(x))
 }
 
 #else
