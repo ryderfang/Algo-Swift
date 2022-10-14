@@ -14,20 +14,21 @@ public class ListNode {
         self.val = val;
         self.next = next;
     }
-    
-    public func array() -> [Int] {
+}
+
+extension ListNode {
+    func array() -> [Int] {
         var p: ListNode? = self
         var ans = [Int]()
-        while true {
-            guard let tmp  = p else { break }
-            ans.append(tmp.val)
-            p = tmp.next
+        while p != nil {
+            ans.append(p!.val)
+            p = p!.next
         }
         return ans
     }
 
     // MARK: static
-    public static func arrayToList(_ nums: [Int]) -> ListNode? {
+    static func arrayToList(_ nums: [Int]) -> ListNode? {
         guard nums.count > 0 else { return nil }
         let head = ListNode(nums[0])
         var p: ListNode = head
