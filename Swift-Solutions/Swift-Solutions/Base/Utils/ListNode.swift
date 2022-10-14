@@ -10,42 +10,32 @@ import Foundation
 public class ListNode {
     public var val: Int
     public var next: ListNode?
-    public init() {
-        self.val = 0;
-        self.next = nil;
-    }
-    public init(_ val: Int) {
-        self.val = val;
-        self.next = nil;
-    }
-    public init(_ val: Int, _ next: ListNode?) {
+    public init(_ val: Int = 0, _ next: ListNode? = nil) {
         self.val = val;
         self.next = next;
     }
     
-    public static func arrayToList(_ array: Array<Int>) -> ListNode? {
-        var head : ListNode?  = nil
-        if array.count == 0 {
-            return nil
-        } else {
-            head = ListNode(array[0])
+    public func array() -> [Int] {
+        var p: ListNode? = self
+        var ans = [Int]()
+        while true {
+            guard let tmp  = p else { break }
+            ans.append(tmp.val)
+            p = tmp.next
         }
-        var p : ListNode? = head
-        for item in array[1...] {
-            let q = ListNode(item)
-            p!.next = q
+        return ans
+    }
+
+    // MARK: static
+    public static func arrayToList(_ nums: [Int]) -> ListNode? {
+        guard nums.count > 0 else { return nil }
+        let head = ListNode(nums[0])
+        var p: ListNode = head
+        for x in nums.dropFirst() {
+            let q = ListNode(x)
+            p.next = q
             p = q
         }
         return head
-    }
-    
-    public func listToArray() -> Array<Int> {
-        var p : ListNode? = self
-        var ans = [Int]()
-        while p != nil {
-            ans.append(p!.val)
-            p = p!.next
-        }
-        return ans
     }
 }

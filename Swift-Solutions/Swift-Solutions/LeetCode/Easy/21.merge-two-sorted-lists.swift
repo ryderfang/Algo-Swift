@@ -17,6 +17,20 @@
  */
 extension Solution {
     func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
+        if let head1 = list1, let head2 = list2 {
+            if head1.val < head2.val {
+                head1.next = mergeTwoLists(list1?.next, list2)
+                return head1
+            } else {
+                head2.next = mergeTwoLists(list1, list2?.next)
+                return head2
+            }
+        } else {
+            return list1 ?? list2
+        }
+    }
+
+    func mergeTwoLists1(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
         if list1 == nil {
             return list2
         }

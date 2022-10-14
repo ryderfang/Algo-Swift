@@ -11,14 +11,17 @@ import Foundation
 let sol = Solution()
 //let cases = READNUMS()
 let cases = [
-    [1,1,1,1,2,2,2,3,4,4],
-    [1,1,2],
-    [0,0,1,1,1,2,2,3,3,4],
+//    [[1,4,5],[1,3,4],[2,6]],
+//    [],
+//    [[]],
+    [[1],[2],[3],[4],[5],[6]]
 ]
 for x in cases {
-    var tmp = x
-    print(sol.removeDuplicates(&tmp))
-    print(tmp)
+    var lists = [ListNode?]()
+    for t in x {
+        lists.append(ListNode.arrayToList(t))
+    }
+    print(sol.mergeKLists(lists)?.array() ?? [] as [Int])
 }
 
 #else
