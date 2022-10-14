@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func longestCommonPrefix(_ strs: [String]) -> String {
         guard var ret = strs.first else { return "" }
         for s in strs.dropFirst() {
