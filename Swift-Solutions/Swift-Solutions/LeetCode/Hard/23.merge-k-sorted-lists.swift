@@ -15,7 +15,7 @@
  *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
  * }
  */
-class Solution {
+extension Solution {
     func mergeTwo(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
         let ans = ListNode(0)
         var r : ListNode? = ans

@@ -125,7 +125,7 @@ public class Primer {
     }
     static func prac2_3() {
         // 中国剩余定理
-        let lines = READNUMS()
+        let lines = [[2, 1, 6], [2, 1, 3]]
         for nums in lines {
             print(nums)
             let ans = NumberTheory.CRT(k: nums.count, a: nums, r: [3, 5, 7])
@@ -163,7 +163,7 @@ public class Primer {
         }
 //        print(a)
         // 圈打矩阵
-        let nums = READNUMS()
+        let nums = [[10, 11, 12, 1], [9, 16, 13, 2], [8, 15, 14, 3], [7, 6, 5, 4]]
         var (i, j) = (0, 0)
         let (r, c) = (nums.count, nums[0].count)
         var flag = Array(repeating: Array(repeating: 0, count: c), count: r)
@@ -199,7 +199,7 @@ public class Primer {
         print(ans)
     }
     static func p3_5() {
-        let lines = READFILE()
+        let lines = ["Confuciuss say: Madam, I'm Adam"]
         for ln in lines {
             let chars = Array(ln)
             let n = chars.count
@@ -248,7 +248,7 @@ public class Primer {
         }
     }
     public static func p4_3() {
-        let lines = READNUMS()
+        let lines = [[1],[2],[3],[8],[11],[15],[28],[1417]]
         for ln in lines {
             let x = ln[0]
             print(x.isPrime())

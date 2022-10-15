@@ -30,6 +30,9 @@
 		DAFCA40728FAD75800CF1DE6 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA40628FAD75800CF1DE6 /* Defines.swift */; };
 		DAFCA45128FAD99200CF1DE6 /* AlgoBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFCA45028FAD99200CF1DE6 /* AlgoBase.framework */; };
 		DAFCA45228FAD99200CF1DE6 /* AlgoBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAFCA45028FAD99200CF1DE6 /* AlgoBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAFCA45B28FAEBD700CF1DE6 /* 27.remove-element.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA45A28FAEBD700CF1DE6 /* 27.remove-element.swift */; };
+		DAFCA45F28FAF04D00CF1DE6 /* 35.search-insert-position.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA45E28FAF04C00CF1DE6 /* 35.search-insert-position.swift */; };
+		DAFCA46128FAF3A900CF1DE6 /* 58.length-of-last-word.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46028FAF3A900CF1DE6 /* 58.length-of-last-word.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,9 @@
 		DAFCA40628FAD75800CF1DE6 /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		DAFCA45028FAD99200CF1DE6 /* AlgoBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlgoBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFCA45828FAE46700CF1DE6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		DAFCA45A28FAEBD700CF1DE6 /* 27.remove-element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "27.remove-element.swift"; sourceTree = "<group>"; };
+		DAFCA45E28FAF04C00CF1DE6 /* 35.search-insert-position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "35.search-insert-position.swift"; sourceTree = "<group>"; };
+		DAFCA46028FAF3A900CF1DE6 /* 58.length-of-last-word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "58.length-of-last-word.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,9 @@
 				DAFCA3B428F9140900CF1DE6 /* 20.valid-parentheses.swift */,
 				DAFCA3A628F6B70A00CF1DE6 /* 21.merge-two-sorted-lists.swift */,
 				DAFCA3B628F9362600CF1DE6 /* 26.remove-duplicates-from-sorted-array.swift */,
+				DAFCA45A28FAEBD700CF1DE6 /* 27.remove-element.swift */,
+				DAFCA45E28FAF04C00CF1DE6 /* 35.search-insert-position.swift */,
+				DAFCA46028FAF3A900CF1DE6 /* 58.length-of-last-word.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 				DAFCA3A428F6B70400CF1DE6 /* 46.permutations.swift in Sources */,
 				DAFCA3A228F6B70400CF1DE6 /* 31.next-permutation.swift in Sources */,
 				DAFCA3A728F6B70A00CF1DE6 /* 21.merge-two-sorted-lists.swift in Sources */,
+				DAFCA45B28FAEBD700CF1DE6 /* 27.remove-element.swift in Sources */,
 				DAFCA3A328F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift in Sources */,
 				DAFCA3AB28F6B71200CF1DE6 /* 60.permutation-sequence.swift in Sources */,
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
@@ -331,8 +341,10 @@
 				DAFCA3A028F6B70400CF1DE6 /* 77.combinations.swift in Sources */,
 				DAFCA3B728F9362600CF1DE6 /* 26.remove-duplicates-from-sorted-array.swift in Sources */,
 				DAFCA3AD28F8090700CF1DE6 /* 1.two-sum.swift in Sources */,
+				DAFCA46128FAF3A900CF1DE6 /* 58.length-of-last-word.swift in Sources */,
 				DAFCA3AA28F6B71200CF1DE6 /* 23.merge-k-sorted-lists.swift in Sources */,
 				DAFCA3A528F6B70400CF1DE6 /* 90.subsets-ii.swift in Sources */,
+				DAFCA45F28FAF04D00CF1DE6 /* 35.search-insert-position.swift in Sources */,
 				0DA8E5BB2834AA8B00FA2C0B /* bm83.swift in Sources */,
 				0D01F331281AE26D00794410 /* main.swift in Sources */,
 				DAFCA3B528F9140900CF1DE6 /* 20.valid-parentheses.swift in Sources */,

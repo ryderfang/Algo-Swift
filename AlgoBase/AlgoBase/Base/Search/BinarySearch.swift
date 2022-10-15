@@ -8,19 +8,37 @@
 import Foundation
 
 class BinarySearch {
-    // MARK: find index of x in nums
-    func search(_ nums: [Int], _ x: Int) -> Int {
-        var (l, r) = (0, nums.count)
-        var m = 0
+    /*
+     * @param nums contains values sorted in ascending order
+     * @return the index if the target is found. Otherwise,
+     * @return the index where it would be if it were inserted in order
+     * https://leetcode.com/problems/search-insert-position/description/
+    **/
+    func search(_ nums: [Int], _ target: Int) -> Int {
+        var l = 0, r = nums.count
         while l < r {
-            m = l + (r - l) / 2
-            if nums[m] < x {
+            let m = l + (r - l) / 2
+            if nums[m] < target {
                 l = m + 1
             } else {
                 r = m
             }
         }
-        if (l >= 0 && l < nums.count && nums[l] == x) {
+        return l
+    }
+
+    // @return the index if the target is found, otherwise return -1
+    func checkIfExists(_ nums: [Int], _ target: Int) -> Int {
+        var l = 0, r = nums.count
+        while l < r {
+            let m = l + (r - l) / 2
+            if nums[m] < target {
+                l = m + 1
+            } else {
+                r = m
+            }
+        }
+        if ((0..<nums.count).contains(l) && nums[l] == target) {
             return l
         }
         return -1

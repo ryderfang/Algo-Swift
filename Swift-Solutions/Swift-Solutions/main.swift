@@ -11,17 +11,12 @@ import Foundation
 let sol = Solution()
 //let cases = READNUMS()
 let cases = [
-    [[1,4,5],[1,3,4],[2,6]],
-    [],
-    [[]],
-    [[1],[2],[3],[4],[5],[6]]
+    "Hello World",
+    "   fly me   to   the moon  ",
+    "luffy is still joyboy",
 ]
 for x in cases {
-    var lists = [ListNode?]()
-    for t in x {
-        lists.append(ListNode.arrayToList(t))
-    }
-    print(sol.mergeKLists(lists)?.array() ?? [] as [Int])
+    print(sol.lengthOfLastWord(x))
 }
 
 #else
