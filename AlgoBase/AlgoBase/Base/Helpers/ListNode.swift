@@ -16,7 +16,7 @@ public class ListNode {
     }
 }
 
-extension ListNode {
+public extension ListNode {
     func array() -> [Int] {
         var p: ListNode? = self
         var ans = [Int]()

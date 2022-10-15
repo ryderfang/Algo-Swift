@@ -1,21 +1,14 @@
 //
-//  MyMacro.swift
+//  Defines.swift
 //  Solutions
 //
-//  Created by Ryder Fang on 2022/5/2.
+//  Created by ryfang on 2022/10/15.
 //
 
-import Foundation
+// globally import
+@_exported import AlgoBase
 
-var g_start_time = NSDate()
-public func TICK() {
-    g_start_time = NSDate()
-}
-public func TOCK(function: String = #function) {
-    print(String(format: "[%@] cost: %.2lf s", function, -g_start_time.timeIntervalSinceNow))
-}
-
-public func READFILE(fname: String = "testcase") -> Array<String> {
+public func READFILE(fname: String = "testcase") -> [String] {
     let currentURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
     let bundleURL = URL(fileURLWithPath: "TestCases.bundle", relativeTo: currentURL)
     let testFile = Bundle(url: bundleURL)!.url(forResource: fname, withExtension: "txt")!
@@ -26,7 +19,7 @@ public func READFILE(fname: String = "testcase") -> Array<String> {
     return lines ?? [String]()
 }
 
-public func READNUMS(fname: String = "testcase") -> Array<Array<Int>> {
+public func READNUMS(fname: String = "testcase") -> [[Int]] {
     var result = [[Int]]()
     let lines = READFILE(fname: fname)
     for (_, ln) in lines.enumerated() {

@@ -8,7 +8,7 @@
 import Foundation
 
 struct queue<Element> {
-    var items: [Element] = []
+    fileprivate var items: [Element] = []
     mutating func push(_ val: Element) {
         items.append(val)
     }
