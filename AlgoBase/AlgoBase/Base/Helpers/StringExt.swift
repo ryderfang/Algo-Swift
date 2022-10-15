@@ -14,25 +14,30 @@ extension Character {
     // 这里只判断英文字符 [a-zA-z]
     // isLetter 对于非英文字母也返回 true
     public func isAlpha() -> Bool {
-        switch (self) {
-        case "a"..."z":
-            fallthrough
-        case "A"..."Z":
-            return true
-        default:
-            return false
-        }
+        return ("a"..."z").contains(self) || ("A"..."Z").contains(self)
     }
     
     // 只判断阿拉伯数字 [0-9] -> AlphaValue [48...57]
     // isNumber 还包括 ㊈ 𝟠 这种 unicode 字符
     public func isDigit() -> Bool {
-        switch (self) {
-        case "0"..."9":
-            return true
-        default:
-            return false
+        return ("0"..."9").contains(self)
+    }
+
+    // ④ -> 4
+    // 百 -> 100
+    public func wholeInt() -> Int? {
+        guard let intValue = self.wholeNumberValue else {
+            return nil
         }
+        return intValue
+    }
+
+    // "0" -> 0
+    public func toInt() -> Int? {
+        guard let intValue = Int(String(self)) else {
+            return nil
+        }
+        return intValue
     }
 }
 

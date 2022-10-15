@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func lengthOfLastWord(_ s: String) -> Int {
         var lastWord = ""
         var flag = false

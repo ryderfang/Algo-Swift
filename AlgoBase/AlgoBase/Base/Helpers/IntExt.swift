@@ -21,6 +21,28 @@ extension Int {
         }
         return true
     }
+
+    // 0-9
+    // Character(UnicodeScalar(self + 48)!)
+    public func digitChar() -> Character? {
+        guard (0...9).contains(self) else {
+            return nil
+        }
+        // 48
+        let zero = Int(("0" as UnicodeScalar).value)
+        return Character(UnicodeScalar(self + zero)!)
+    }
+
+    // [A...Z] -> [65...90]
+    // [a...z] -> [97...122]
+    // Int(("A" as UnicodeScalar).value) -> 65
+    // Int(("a" as UnicodeScalar).value) -> 97
+    public func alphaChar() -> Character? {
+        guard (65...90).contains(self) || (97...122).contains(self) else {
+            return nil
+        }
+        return Character(UnicodeScalar(self)!)
+    }
 }
 
 public class BigInt {

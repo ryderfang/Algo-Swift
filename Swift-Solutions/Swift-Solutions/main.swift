@@ -11,12 +11,12 @@ import Foundation
 let sol = Solution()
 //let cases = READNUMS()
 let cases = [
-    "Hello World",
-    "   fly me   to   the moon  ",
-    "luffy is still joyboy",
+    ("11", "1"),
+    ("101011", "101111"),
 ]
+print(Int(("0" as UnicodeScalar).value))
 for x in cases {
-    print(sol.lengthOfLastWord(x))
+    print(sol.addBinary(x.0, x.1))
 }
 
 #else
