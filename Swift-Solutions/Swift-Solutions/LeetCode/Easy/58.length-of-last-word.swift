@@ -7,19 +7,19 @@
 // @lc code=start
 class Solution {
     func lengthOfLastWord(_ s: String) -> Int {
-        var flag = false
         var lastWord = ""
-        for ch in s {
+        var flag = false
+        for ch in s.reversed() {
             if ch != " " {
-                if flag {
-                    lastWord = ""
-                    flag = false
-                }
+                flag = true
                 lastWord.append(ch)
             } else {
-                flag = true
+                if flag {
+                    break
+                }
             }
         }
+        print(String(lastWord.reversed()))
         return lastWord.count
     }
 }
