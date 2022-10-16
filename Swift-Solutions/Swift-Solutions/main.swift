@@ -11,12 +11,20 @@ import Foundation
 let sol = Solution()
 //let cases = READNUMS()
 let cases = [
-    ("11", "1"),
-    ("101011", "101111"),
+    1,
+    8,
+    15,
+    24,
+    35,
+    48,
+    63,
+    80,
+    88,
+    2147483647,
+    2147395599,
 ]
-print(Int(("0" as UnicodeScalar).value))
 for x in cases {
-    print(sol.addBinary(x.0, x.1))
+    print(sol.mySqrt(x))
 }
 
 #else
