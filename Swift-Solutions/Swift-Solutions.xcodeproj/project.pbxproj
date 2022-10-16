@@ -36,6 +36,9 @@
 		DAFCA46328FAF6EC00CF1DE6 /* 66.plus-one.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46228FAF6EC00CF1DE6 /* 66.plus-one.swift */; };
 		DAFCA46528FAFA4100CF1DE6 /* 67.add-binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46428FAFA4100CF1DE6 /* 67.add-binary.swift */; };
 		DAFCA46728FB055100CF1DE6 /* 69.sqrt-x.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46628FB055100CF1DE6 /* 69.sqrt-x.swift */; };
+		DAFCA46928FBD09000CF1DE6 /* 70.climbing-stairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46828FBD09000CF1DE6 /* 70.climbing-stairs.swift */; };
+		DAFCA46B28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46A28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift */; };
+		DAFCA46D28FBD64700CF1DE6 /* 88.merge-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46C28FBD64700CF1DE6 /* 88.merge-sorted-array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		DAFCA46228FAF6EC00CF1DE6 /* 66.plus-one.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "66.plus-one.swift"; sourceTree = "<group>"; };
 		DAFCA46428FAFA4100CF1DE6 /* 67.add-binary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "67.add-binary.swift"; sourceTree = "<group>"; };
 		DAFCA46628FB055100CF1DE6 /* 69.sqrt-x.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "69.sqrt-x.swift"; sourceTree = "<group>"; };
+		DAFCA46828FBD09000CF1DE6 /* 70.climbing-stairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "70.climbing-stairs.swift"; sourceTree = "<group>"; };
+		DAFCA46A28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "83.remove-duplicates-from-sorted-list.swift"; sourceTree = "<group>"; };
+		DAFCA46C28FBD64700CF1DE6 /* 88.merge-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "88.merge-sorted-array.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,9 @@
 				DAFCA46228FAF6EC00CF1DE6 /* 66.plus-one.swift */,
 				DAFCA46428FAFA4100CF1DE6 /* 67.add-binary.swift */,
 				DAFCA46628FB055100CF1DE6 /* 69.sqrt-x.swift */,
+				DAFCA46828FBD09000CF1DE6 /* 70.climbing-stairs.swift */,
+				DAFCA46A28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift */,
+				DAFCA46C28FBD64700CF1DE6 /* 88.merge-sorted-array.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -348,6 +357,7 @@
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
 				DAFCA39E28F6B70400CF1DE6 /* 47.permutations-ii.swift in Sources */,
 				DAFCA3B328F900A700CF1DE6 /* 14.longest-common-prefix.swift in Sources */,
+				DAFCA46D28FBD64700CF1DE6 /* 88.merge-sorted-array.swift in Sources */,
 				DAFCA3A028F6B70400CF1DE6 /* 77.combinations.swift in Sources */,
 				DAFCA3B728F9362600CF1DE6 /* 26.remove-duplicates-from-sorted-array.swift in Sources */,
 				DAFCA3AD28F8090700CF1DE6 /* 1.two-sum.swift in Sources */,
@@ -360,7 +370,9 @@
 				DAFCA3B528F9140900CF1DE6 /* 20.valid-parentheses.swift in Sources */,
 				DAFCA40728FAD75800CF1DE6 /* Defines.swift in Sources */,
 				DAFCA46528FAFA4100CF1DE6 /* 67.add-binary.swift in Sources */,
+				DAFCA46B28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift in Sources */,
 				DAFCA46728FB055100CF1DE6 /* 69.sqrt-x.swift in Sources */,
+				DAFCA46928FBD09000CF1DE6 /* 70.climbing-stairs.swift in Sources */,
 				DAFCA3B128F81DB700CF1DE6 /* 13.roman-to-integer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

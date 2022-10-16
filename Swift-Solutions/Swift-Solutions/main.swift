@@ -6,28 +6,19 @@
 //
 
 import Foundation
+import AlgoBase
 
-#if LeetCode
 let sol = Solution()
 //let cases = READNUMS()
 let cases = [
-    1,
-    8,
-    15,
-    24,
-    35,
-    48,
-    63,
-    80,
-    88,
-    2147483647,
-    2147395599,
+    (nums1: [1,2,3,0,0,0], m: 3, nums2: [2,5,6], n: 3),
+    (nums1: [1], m: 1, nums2: [], n: 0),
+    (nums1: [0], m: 0, nums2: [1], n: 1)
 ]
 for x in cases {
-    print(sol.mySqrt(x))
+    var t = x.nums1
+    let _ = sol.merge(&t, x.m, x.nums2, x.n)
+//    print(ans)
+    print(t)
 }
-
-#else
-Primer.p5_2()
-#endif
 
