@@ -39,6 +39,9 @@
 		DAFCA46928FBD09000CF1DE6 /* 70.climbing-stairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46828FBD09000CF1DE6 /* 70.climbing-stairs.swift */; };
 		DAFCA46B28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46A28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift */; };
 		DAFCA46D28FBD64700CF1DE6 /* 88.merge-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46C28FBD64700CF1DE6 /* 88.merge-sorted-array.swift */; };
+		DAFCA46F28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA46E28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift */; };
+		DAFCA47428FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA47228FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift */; };
+		DAFCA47528FBE7E100CF1DE6 /* 144.binary-tree-preorder-traversal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA47328FBE7E100CF1DE6 /* 144.binary-tree-preorder-traversal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D01F32D281AE26D00794410 /* Solutions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Solutions; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D01F32D281AE26D00794410 /* Titan */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Titan; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D01F330281AE26D00794410 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0D0C132C282007EC0021D8BA /* testcase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testcase.txt; sourceTree = "<group>"; };
 		0D0C133228200E020021D8BA /* TestCases.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCases.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +113,9 @@
 		DAFCA46828FBD09000CF1DE6 /* 70.climbing-stairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "70.climbing-stairs.swift"; sourceTree = "<group>"; };
 		DAFCA46A28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "83.remove-duplicates-from-sorted-list.swift"; sourceTree = "<group>"; };
 		DAFCA46C28FBD64700CF1DE6 /* 88.merge-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "88.merge-sorted-array.swift"; sourceTree = "<group>"; };
+		DAFCA46E28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "94.binary-tree-inorder-traversal.swift"; sourceTree = "<group>"; };
+		DAFCA47228FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "145.binary-tree-postorder-traversal.swift"; sourceTree = "<group>"; };
+		DAFCA47328FBE7E100CF1DE6 /* 144.binary-tree-preorder-traversal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "144.binary-tree-preorder-traversal.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +150,7 @@
 		0D01F32E281AE26D00794410 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0D01F32D281AE26D00794410 /* Solutions */,
+				0D01F32D281AE26D00794410 /* Titan */,
 				0D0C133228200E020021D8BA /* TestCases.bundle */,
 			);
 			name = Products;
@@ -199,6 +205,9 @@
 				DAFCA46828FBD09000CF1DE6 /* 70.climbing-stairs.swift */,
 				DAFCA46A28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift */,
 				DAFCA46C28FBD64700CF1DE6 /* 88.merge-sorted-array.swift */,
+				DAFCA46E28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift */,
+				DAFCA47328FBE7E100CF1DE6 /* 144.binary-tree-preorder-traversal.swift */,
+				DAFCA47228FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -256,9 +265,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0D01F32C281AE26D00794410 /* Solutions */ = {
+		0D01F32C281AE26D00794410 /* Titan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D01F334281AE26D00794410 /* Build configuration list for PBXNativeTarget "Solutions" */;
+			buildConfigurationList = 0D01F334281AE26D00794410 /* Build configuration list for PBXNativeTarget "Titan" */;
 			buildPhases = (
 				0D01F329281AE26D00794410 /* Sources */,
 				0D01F32A281AE26D00794410 /* Frameworks */,
@@ -270,9 +279,9 @@
 			dependencies = (
 				0D0C133B28201BEB0021D8BA /* PBXTargetDependency */,
 			);
-			name = Solutions;
+			name = Titan;
 			productName = Solutions;
-			productReference = 0D01F32D281AE26D00794410 /* Solutions */;
+			productReference = 0D01F32D281AE26D00794410 /* Titan */;
 			productType = "com.apple.product-type.tool";
 		};
 		0D0C133128200E020021D8BA /* TestCases */ = {
@@ -323,7 +332,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0D01F32C281AE26D00794410 /* Solutions */,
+				0D01F32C281AE26D00794410 /* Titan */,
 				0D0C133128200E020021D8BA /* TestCases */,
 			);
 		};
@@ -349,7 +358,9 @@
 				DAFCA46328FAF6EC00CF1DE6 /* 66.plus-one.swift in Sources */,
 				DAFCA39F28F6B70400CF1DE6 /* 78.subsets.swift in Sources */,
 				DAFCA3A428F6B70400CF1DE6 /* 46.permutations.swift in Sources */,
+				DAFCA47428FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift in Sources */,
 				DAFCA3A228F6B70400CF1DE6 /* 31.next-permutation.swift in Sources */,
+				DAFCA46F28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift in Sources */,
 				DAFCA3A728F6B70A00CF1DE6 /* 21.merge-two-sorted-lists.swift in Sources */,
 				DAFCA45B28FAEBD700CF1DE6 /* 27.remove-element.swift in Sources */,
 				DAFCA3A328F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift in Sources */,
@@ -372,6 +383,7 @@
 				DAFCA46528FAFA4100CF1DE6 /* 67.add-binary.swift in Sources */,
 				DAFCA46B28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift in Sources */,
 				DAFCA46728FB055100CF1DE6 /* 69.sqrt-x.swift in Sources */,
+				DAFCA47528FBE7E100CF1DE6 /* 144.binary-tree-preorder-traversal.swift in Sources */,
 				DAFCA46928FBD09000CF1DE6 /* 70.climbing-stairs.swift in Sources */,
 				DAFCA3B128F81DB700CF1DE6 /* 13.roman-to-integer.swift in Sources */,
 			);
@@ -585,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D01F334281AE26D00794410 /* Build configuration list for PBXNativeTarget "Solutions" */ = {
+		0D01F334281AE26D00794410 /* Build configuration list for PBXNativeTarget "Titan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D01F335281AE26D00794410 /* Debug */,
