@@ -20,7 +20,7 @@
  *     }
  * }
  */
-class Solution {
+extension Solution {
     func postorderTraversal(_ root: TreeNode?) -> [Int] {
         var ans = [Int]()
         var stack = [TreeNode]()

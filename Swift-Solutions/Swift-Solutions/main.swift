@@ -11,13 +11,14 @@ import AlgoBase
 let sol = Solution()
 //let cases = READNUMS()
 let cases = [
-    [1, nil, 2, 3, 4, 5, 6],
-    [],
+    ([1, 2, 3], [1, 2, 3]),
+    ([1, 2], [1, nil, 2]),
+    ([1, 2, 1], [1, 1, 2]),
 ]
 for x in cases {
-    let r = TreeNode.arrayToTree(x)
-    print(sol.postorderTraversal(r))
-    print(sol.postorderTraversal2(r))
-//    print(t)
+    let t1 = TreeNode.arrayToTree(x.0)
+    let t2 = TreeNode.arrayToTree(x.1)
+    let ans = sol.isSameTree(t1, t2)
+    print(ans)
 }
 

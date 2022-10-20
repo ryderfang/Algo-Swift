@@ -10,6 +10,8 @@
 		0D01F331281AE26D00794410 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01F330281AE26D00794410 /* main.swift */; };
 		0D0C133628200E100021D8BA /* testcase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D0C132C282007EC0021D8BA /* testcase.txt */; };
 		0DA8E5BB2834AA8B00FA2C0B /* bm83.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */; };
+		DAED6E97290175C4003B7433 /* 12.integer-to-roman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */; };
+		DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E9829017CD4003B7433 /* 100.same-tree.swift */; };
 		DAFCA39E28F6B70400CF1DE6 /* 47.permutations-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA39628F6B70400CF1DE6 /* 47.permutations-ii.swift */; };
 		DAFCA39F28F6B70400CF1DE6 /* 78.subsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA39728F6B70400CF1DE6 /* 78.subsets.swift */; };
 		DAFCA3A028F6B70400CF1DE6 /* 77.combinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA39828F6B70400CF1DE6 /* 77.combinations.swift */; };
@@ -83,6 +85,8 @@
 		0D0C132C282007EC0021D8BA /* testcase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testcase.txt; sourceTree = "<group>"; };
 		0D0C133228200E020021D8BA /* TestCases.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCases.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bm83.swift; sourceTree = "<group>"; };
+		DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "12.integer-to-roman.swift"; sourceTree = "<group>"; };
+		DAED6E9829017CD4003B7433 /* 100.same-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "100.same-tree.swift"; sourceTree = "<group>"; };
 		DAFCA39628F6B70400CF1DE6 /* 47.permutations-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "47.permutations-ii.swift"; sourceTree = "<group>"; };
 		DAFCA39728F6B70400CF1DE6 /* 78.subsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 78.subsets.swift; sourceTree = "<group>"; };
 		DAFCA39828F6B70400CF1DE6 /* 77.combinations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 77.combinations.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				DAFCA46A28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift */,
 				DAFCA46C28FBD64700CF1DE6 /* 88.merge-sorted-array.swift */,
 				DAFCA46E28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift */,
+				DAED6E9829017CD4003B7433 /* 100.same-tree.swift */,
 				DAFCA47328FBE7E100CF1DE6 /* 144.binary-tree-preorder-traversal.swift */,
 				DAFCA47228FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift */,
 			);
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
+				DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */,
 				DAFCA39B28F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift */,
 				DAFCA39A28F6B70400CF1DE6 /* 31.next-permutation.swift */,
 				DAFCA39C28F6B70400CF1DE6 /* 46.permutations.swift */,
@@ -358,6 +364,7 @@
 				DAFCA46328FAF6EC00CF1DE6 /* 66.plus-one.swift in Sources */,
 				DAFCA39F28F6B70400CF1DE6 /* 78.subsets.swift in Sources */,
 				DAFCA3A428F6B70400CF1DE6 /* 46.permutations.swift in Sources */,
+				DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */,
 				DAFCA47428FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift in Sources */,
 				DAFCA3A228F6B70400CF1DE6 /* 31.next-permutation.swift in Sources */,
 				DAFCA46F28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift in Sources */,
@@ -384,6 +391,7 @@
 				DAFCA46B28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift in Sources */,
 				DAFCA46728FB055100CF1DE6 /* 69.sqrt-x.swift in Sources */,
 				DAFCA47528FBE7E100CF1DE6 /* 144.binary-tree-preorder-traversal.swift in Sources */,
+				DAED6E97290175C4003B7433 /* 12.integer-to-roman.swift in Sources */,
 				DAFCA46928FBD09000CF1DE6 /* 70.climbing-stairs.swift in Sources */,
 				DAFCA3B128F81DB700CF1DE6 /* 13.roman-to-integer.swift in Sources */,
 			);
