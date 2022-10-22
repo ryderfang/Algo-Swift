@@ -20,6 +20,7 @@ public class TreeNode {
     }
 }
 
+// !!!: Constructor
 public extension TreeNode {
     func array() -> [Int?] {
         var ans: [Int?] = []
@@ -34,7 +35,7 @@ public extension TreeNode {
             }
         }
         // remove nils at last
-        while ans.last == nil {
+        while let last = ans.last, last == nil {
             ans.removeLast()
         }
         return ans

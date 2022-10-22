@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=100 lang=swift
+ * @lc app=leetcode id=104 lang=swift
  *
- * [100] Same Tree
+ * [104] Maximum Depth of Binary Tree
  */
 
 // @lc code=start
@@ -20,18 +20,10 @@
  *     }
  * }
  */
-extension Solution {
-    func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
-        let vp = p?.val, vq = q?.val
-        if vp == nil && vq == nil {
-            return true
-        }
-        if vp == vq {
-            return isSameTree(p?.left, q?.left) && isSameTree(p?.right, q?.right)
-        }
-        return false
+class Solution {
+    func maxDepth(_ root: TreeNode?) -> Int {
+        0
     }
 }
-
 // @lc code=end
 
