@@ -7,7 +7,7 @@
 // @lc code=start
 
 // 杨辉三角
-class Solution {
+extension Solution {
     func getRow(_ rowIndex: Int) -> [Int] {
         if rowIndex == 0 {
             return [1]

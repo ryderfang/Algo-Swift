@@ -12,14 +12,13 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    1,
-    2,
-    5,
-    10,
-    30,
+    "A man, a plan, a canal: Panama",
+    "race a car",
+    " ",
+    "0P",
 ]
 for x in cases {
-    let ans = sol.getRow(x)
+    let ans = sol.isPalindrome(x)
     print(ans)
 }
 

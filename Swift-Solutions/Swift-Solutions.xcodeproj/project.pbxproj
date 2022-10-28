@@ -15,6 +15,8 @@
 		0D763867290C029E004CD387 /* 112.path-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763866290C029E004CD387 /* 112.path-sum.swift */; };
 		0D763869290C0BF8004CD387 /* 118.pascals-triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763868290C0BF8004CD387 /* 118.pascals-triangle.swift */; };
 		0D76386B290C0E9D004CD387 /* 119.pascals-triangle-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76386A290C0E9D004CD387 /* 119.pascals-triangle-ii.swift */; };
+		0D76386D290C139A004CD387 /* 121.best-time-to-buy-and-sell-stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76386C290C139A004CD387 /* 121.best-time-to-buy-and-sell-stock.swift */; };
+		0D76386F290C18FA004CD387 /* 125.valid-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76386E290C18FA004CD387 /* 125.valid-palindrome.swift */; };
 		0DA8E5BB2834AA8B00FA2C0B /* bm83.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */; };
 		DAED6E97290175C4003B7433 /* 12.integer-to-roman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */; };
 		DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E9829017CD4003B7433 /* 100.same-tree.swift */; };
@@ -98,6 +100,8 @@
 		0D763866290C029E004CD387 /* 112.path-sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "112.path-sum.swift"; sourceTree = "<group>"; };
 		0D763868290C0BF8004CD387 /* 118.pascals-triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "118.pascals-triangle.swift"; sourceTree = "<group>"; };
 		0D76386A290C0E9D004CD387 /* 119.pascals-triangle-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "119.pascals-triangle-ii.swift"; sourceTree = "<group>"; };
+		0D76386C290C139A004CD387 /* 121.best-time-to-buy-and-sell-stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "121.best-time-to-buy-and-sell-stock.swift"; sourceTree = "<group>"; };
+		0D76386E290C18FA004CD387 /* 125.valid-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "125.valid-palindrome.swift"; sourceTree = "<group>"; };
 		0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bm83.swift; sourceTree = "<group>"; };
 		DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "12.integer-to-roman.swift"; sourceTree = "<group>"; };
 		DAED6E9829017CD4003B7433 /* 100.same-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "100.same-tree.swift"; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				0D763866290C029E004CD387 /* 112.path-sum.swift */,
 				0D763868290C0BF8004CD387 /* 118.pascals-triangle.swift */,
 				0D76386A290C0E9D004CD387 /* 119.pascals-triangle-ii.swift */,
+				0D76386C290C139A004CD387 /* 121.best-time-to-buy-and-sell-stock.swift */,
+				0D76386E290C18FA004CD387 /* 125.valid-palindrome.swift */,
 				DAFCA47328FBE7E100CF1DE6 /* 144.binary-tree-preorder-traversal.swift */,
 				DAFCA47228FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift */,
 			);
@@ -387,6 +393,7 @@
 				DAFCA3AF28F814CD00CF1DE6 /* 9.palindrome-number.swift in Sources */,
 				DAED6E9D29043626003B7433 /* 104.maximum-depth-of-binary-tree.swift in Sources */,
 				DAFCA46328FAF6EC00CF1DE6 /* 66.plus-one.swift in Sources */,
+				0D76386F290C18FA004CD387 /* 125.valid-palindrome.swift in Sources */,
 				DAFCA39F28F6B70400CF1DE6 /* 78.subsets.swift in Sources */,
 				DAFCA3A428F6B70400CF1DE6 /* 46.permutations.swift in Sources */,
 				DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */,
@@ -417,6 +424,7 @@
 				DAFCA3B528F9140900CF1DE6 /* 20.valid-parentheses.swift in Sources */,
 				DAFCA40728FAD75800CF1DE6 /* Defines.swift in Sources */,
 				0D763869290C0BF8004CD387 /* 118.pascals-triangle.swift in Sources */,
+				0D76386D290C139A004CD387 /* 121.best-time-to-buy-and-sell-stock.swift in Sources */,
 				DAFCA46528FAFA4100CF1DE6 /* 67.add-binary.swift in Sources */,
 				DAED6E9B290180F7003B7433 /* 101.symmetric-tree.swift in Sources */,
 				DAFCA46B28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift in Sources */,
