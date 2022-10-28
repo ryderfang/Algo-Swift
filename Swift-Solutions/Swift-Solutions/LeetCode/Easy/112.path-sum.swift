@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=111 lang=swift
+ * @lc app=leetcode id=112 lang=swift
  *
- * [111] Minimum Depth of Binary Tree
+ * [112] Path Sum
  */
 
 // @lc code=start
@@ -21,20 +21,13 @@
  * }
  */
 extension Solution {
-    func minDepth(_ root: TreeNode?) -> Int {
-        guard let node = root else { return 0 }
+    func hasPathSum(_ root: TreeNode?, _ targetSum: Int) -> Bool {
+        guard let node = root else { return false }
         if node.left == nil && node.right == nil {
-            return 1
+            return node.val == targetSum
         }
-        var minLeft = Int.max
-        if let left = node.left {
-            minLeft = minDepth(left)
-        }
-        var minRight = Int.max
-        if let right = node.right {
-            minRight = minDepth(right)
-        }
-        return min(minLeft, minRight) + 1
+        let newTarget = targetSum - node.val
+        return hasPathSum(node.left, newTarget) || hasPathSum(node.right, newTarget)
     }
 }
 // @lc code=end

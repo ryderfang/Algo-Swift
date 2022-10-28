@@ -12,12 +12,14 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [3,9,20,nil,nil,15,7],
-    [2,nil,3,nil,4,nil,5,nil,6],
+    1,
+    2,
+    5,
+    10,
+    30,
 ]
 for x in cases {
-    let t = TreeNode.arrayToTree(x)
-    let ans = sol.minDepth(t)
+    let ans = sol.getRow(x)
     print(ans)
 }
 
