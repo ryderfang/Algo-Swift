@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=104 lang=swift
+ * @lc app=leetcode id=108 lang=swift
  *
- * [104] Maximum Depth of Binary Tree
+ * [108] Convert Sorted Array to Binary Search Tree
  */
 
 // @lc code=start
@@ -21,9 +21,17 @@
  * }
  */
 extension Solution {
-    func maxDepth(_ root: TreeNode?) -> Int {
-        guard let node = root else { return 0 }
-        return max(maxDepth(node.left), maxDepth(node.right)) + 1
+    func sortedArrayToBST(_ nums: [Int]) -> TreeNode? {
+        guard nums.count > 0 else { return nil }
+        let sz = nums.count
+        if sz == 1 {
+            return TreeNode(nums[0])
+        }
+        let mid: Int = (sz - 1) / 2
+        let root = TreeNode(nums[mid])
+        root.left = sortedArrayToBST(Array<Int>(nums[0..<mid]))
+        root.right = sortedArrayToBST(Array<Int>(nums[mid+1..<sz]))
+        return root
     }
 }
 // @lc code=end

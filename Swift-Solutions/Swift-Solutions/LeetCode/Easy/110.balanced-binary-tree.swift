@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=104 lang=swift
+ * @lc app=leetcode id=110 lang=swift
  *
- * [104] Maximum Depth of Binary Tree
+ * [110] Balanced Binary Tree
  */
 
 // @lc code=start
@@ -21,9 +21,19 @@
  * }
  */
 extension Solution {
-    func maxDepth(_ root: TreeNode?) -> Int {
-        guard let node = root else { return 0 }
-        return max(maxDepth(node.left), maxDepth(node.right)) + 1
+    func isBalanced(_ root: TreeNode?) -> Bool {
+        func _height(_ node: TreeNode?) -> Int {
+            guard let node = node else { return 0 }
+            return max(_height(node.left), _height(node.right)) + 1
+        }
+        guard let node = root else { return true }
+        if !isBalanced(node.left) || !isBalanced(node.right) {
+            return false
+        }
+        if abs(_height(node.left) - _height(node.right)) > 1 {
+            return false
+        }
+        return true
     }
 }
 // @lc code=end

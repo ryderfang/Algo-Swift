@@ -9,16 +9,15 @@ import Foundation
 import AlgoBase
 
 let sol = Solution()
+
 //let cases = READNUMS()
 let cases = [
-    [1,2,2,3,4,4,3],
-    [1,2,2,nil,3,nil,3],
-    [1,2,2,2,nil,2],
+    [3,9,20,nil,nil,15,7],
+    [2,nil,3,nil,4,nil,5,nil,6],
 ]
 for x in cases {
-    let t1 = TreeNode.arrayToTree(x)
-//    print(t1?.array())
-    let ans = sol.isSymmetric(t1)
+    let t = TreeNode.arrayToTree(x)
+    let ans = sol.minDepth(t)
     print(ans)
 }
 

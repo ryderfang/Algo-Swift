@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=104 lang=swift
+ * @lc app=leetcode id=111 lang=swift
  *
- * [104] Maximum Depth of Binary Tree
+ * [111] Minimum Depth of Binary Tree
  */
 
 // @lc code=start
@@ -20,10 +20,21 @@
  *     }
  * }
  */
-extension Solution {
-    func maxDepth(_ root: TreeNode?) -> Int {
+class Solution {
+    func minDepth(_ root: TreeNode?) -> Int {
         guard let node = root else { return 0 }
-        return max(maxDepth(node.left), maxDepth(node.right)) + 1
+        if node.left == nil && node.right == nil {
+            return 1
+        }
+        var minLeft = Int.max
+        if let left = node.left {
+            minLeft = minDepth(left)
+        }
+        var minRight = Int.max
+        if let right = node.right {
+            minRight = minDepth(right)
+        }
+        return min(minLeft, minRight) + 1
     }
 }
 // @lc code=end
