@@ -23,6 +23,11 @@
 		0D76387C290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76387B290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift */; };
 		0D76387E290E44A2004CD387 /* 168.excel-sheet-column-title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76387D290E44A1004CD387 /* 168.excel-sheet-column-title.swift */; };
 		0D763880290E4DD0004CD387 /* 169.majority-element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76387F290E4DD0004CD387 /* 169.majority-element.swift */; };
+		0D763882290E53B2004CD387 /* 171.excel-sheet-column-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763881290E53B2004CD387 /* 171.excel-sheet-column-number.swift */; };
+		0D763884290E56CD004CD387 /* 190.reverse-bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763883290E56CD004CD387 /* 190.reverse-bits.swift */; };
+		0D763886290E7C6F004CD387 /* 191.number-of-1-bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763885290E7C6F004CD387 /* 191.number-of-1-bits.swift */; };
+		0D763888290E8405004CD387 /* 203.remove-linked-list-elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763887290E8405004CD387 /* 203.remove-linked-list-elements.swift */; };
+		0D76388A290E8672004CD387 /* 205.isomorphic-strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763889290E8672004CD387 /* 205.isomorphic-strings.swift */; };
 		0DA8E5BB2834AA8B00FA2C0B /* bm83.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */; };
 		DAED6E97290175C4003B7433 /* 12.integer-to-roman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */; };
 		DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E9829017CD4003B7433 /* 100.same-tree.swift */; };
@@ -114,6 +119,11 @@
 		0D76387B290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "160.intersection-of-two-linked-lists.swift"; sourceTree = "<group>"; };
 		0D76387D290E44A1004CD387 /* 168.excel-sheet-column-title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "168.excel-sheet-column-title.swift"; sourceTree = "<group>"; };
 		0D76387F290E4DD0004CD387 /* 169.majority-element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "169.majority-element.swift"; sourceTree = "<group>"; };
+		0D763881290E53B2004CD387 /* 171.excel-sheet-column-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "171.excel-sheet-column-number.swift"; sourceTree = "<group>"; };
+		0D763883290E56CD004CD387 /* 190.reverse-bits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "190.reverse-bits.swift"; sourceTree = "<group>"; };
+		0D763885290E7C6F004CD387 /* 191.number-of-1-bits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "191.number-of-1-bits.swift"; sourceTree = "<group>"; };
+		0D763887290E8405004CD387 /* 203.remove-linked-list-elements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "203.remove-linked-list-elements.swift"; sourceTree = "<group>"; };
+		0D763889290E8672004CD387 /* 205.isomorphic-strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "205.isomorphic-strings.swift"; sourceTree = "<group>"; };
 		0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bm83.swift; sourceTree = "<group>"; };
 		DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "12.integer-to-roman.swift"; sourceTree = "<group>"; };
 		DAED6E9829017CD4003B7433 /* 100.same-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "100.same-tree.swift"; sourceTree = "<group>"; };
@@ -260,7 +270,12 @@
 				0D76387B290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift */,
 				0D76387D290E44A1004CD387 /* 168.excel-sheet-column-title.swift */,
 				0D76387F290E4DD0004CD387 /* 169.majority-element.swift */,
+				0D763881290E53B2004CD387 /* 171.excel-sheet-column-number.swift */,
+				0D763883290E56CD004CD387 /* 190.reverse-bits.swift */,
+				0D763885290E7C6F004CD387 /* 191.number-of-1-bits.swift */,
 				0D763875290CF92D004CD387 /* 202.happy-number.swift */,
+				0D763887290E8405004CD387 /* 203.remove-linked-list-elements.swift */,
+				0D763889290E8672004CD387 /* 205.isomorphic-strings.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -423,6 +438,7 @@
 				DAFCA3A228F6B70400CF1DE6 /* 31.next-permutation.swift in Sources */,
 				DAFCA46F28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift in Sources */,
 				DAFCA3A728F6B70A00CF1DE6 /* 21.merge-two-sorted-lists.swift in Sources */,
+				0D76388A290E8672004CD387 /* 205.isomorphic-strings.swift in Sources */,
 				DAFCA45B28FAEBD700CF1DE6 /* 27.remove-element.swift in Sources */,
 				0D76386B290C0E9D004CD387 /* 119.pascals-triangle-ii.swift in Sources */,
 				0D763863290BF80E004CD387 /* 110.balanced-binary-tree.swift in Sources */,
@@ -431,7 +447,9 @@
 				DAFCA3AB28F6B71200CF1DE6 /* 60.permutation-sequence.swift in Sources */,
 				0D763880290E4DD0004CD387 /* 169.majority-element.swift in Sources */,
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
+				0D763882290E53B2004CD387 /* 171.excel-sheet-column-number.swift in Sources */,
 				DAFCA39E28F6B70400CF1DE6 /* 47.permutations-ii.swift in Sources */,
+				0D763886290E7C6F004CD387 /* 191.number-of-1-bits.swift in Sources */,
 				DAFCA3B328F900A700CF1DE6 /* 14.longest-common-prefix.swift in Sources */,
 				DAFCA46D28FBD64700CF1DE6 /* 88.merge-sorted-array.swift in Sources */,
 				DAFCA3A028F6B70400CF1DE6 /* 77.combinations.swift in Sources */,
@@ -447,8 +465,10 @@
 				DAFCA40728FAD75800CF1DE6 /* Defines.swift in Sources */,
 				0D763869290C0BF8004CD387 /* 118.pascals-triangle.swift in Sources */,
 				0D763874290CF7F2004CD387 /* 136.single-number.swift in Sources */,
+				0D763884290E56CD004CD387 /* 190.reverse-bits.swift in Sources */,
 				0D76386D290C139A004CD387 /* 121.best-time-to-buy-and-sell-stock.swift in Sources */,
 				DAFCA46528FAFA4100CF1DE6 /* 67.add-binary.swift in Sources */,
+				0D763888290E8405004CD387 /* 203.remove-linked-list-elements.swift in Sources */,
 				DAED6E9B290180F7003B7433 /* 101.symmetric-tree.swift in Sources */,
 				DAFCA46B28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift in Sources */,
 				DAFCA46728FB055100CF1DE6 /* 69.sqrt-x.swift in Sources */,

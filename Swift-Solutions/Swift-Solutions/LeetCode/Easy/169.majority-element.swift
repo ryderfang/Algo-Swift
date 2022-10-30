@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     // 投票算法 (vote algorithm)
     func majorityElement(_ nums: [Int]) -> Int {
         var candidate = 0, vote = 0

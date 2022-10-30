@@ -49,6 +49,11 @@ extension String {
     public static func charArray() -> [String] {
         return (UnicodeScalar("A").value...UnicodeScalar("Z").value).map { String(UnicodeScalar($0)!) }
     }
+
+    public mutating func zfill(_ width: Int) {
+        guard self.count < width else { return }
+        self.insert(contentsOf: [Character](repeating: "0", count: width - self.count), at: self.startIndex)
+    }
 }
 
 fileprivate extension String {

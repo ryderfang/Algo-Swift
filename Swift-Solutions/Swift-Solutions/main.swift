@@ -12,13 +12,14 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [3,2,3],
-    [2,2,1,1,1,2,2],
-    [3,3,4],
+    ("egg", "add"),
+    ("foo", "bar"),
+    ("paper", "title"),
+    ("badc", "baba"),
 ]
 for (i, x) in cases.enumerated() {
-    print("###_\(i)_###")
-    let ans = sol.majorityElement(x)
+    print("--- <\(i+1)> ---")
+    let ans = sol.isIsomorphic(x.0, x.1)
     print(ans)
 }
 

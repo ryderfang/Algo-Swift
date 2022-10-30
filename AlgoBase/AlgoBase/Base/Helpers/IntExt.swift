@@ -45,6 +45,40 @@ extension Int {
     }
 }
 
+// MARK: Binary
+extension Int {
+    public func binaryStr() -> String {
+        return String(self, radix: 2)
+    }
+
+    // the number of '1' bits self has
+    public func hammingWeight() -> Int {
+        var n = self, result = 0
+        while n != 0 {
+            result += 1
+            // https://stackoverflow.com/questions/4678333/n-n-1-what-does-this-expression-do
+            n &= n - 1
+        }
+        return result
+
+        // or
+//        return self.nonzeroBitCount
+    }
+
+    public func isPowOfTwo() -> Bool {
+        let n = self
+        return n > 0 && (n & (n - 1)) == 0
+    }
+}
+
+extension String {
+    public func binaryToInt() -> Int {
+        return strtol(self, nil, 2)
+    }
+}
+
+
+// MARK: BigInt
 public class BigInt {
     let maxSize : Int = 1000
     var negative : Bool = false
