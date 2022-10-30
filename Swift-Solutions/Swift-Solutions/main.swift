@@ -10,16 +10,21 @@ import AlgoBase
 
 let sol = Solution()
 
+class Solution {
+    
+}
+
 //let cases = READNUMS()
 let cases = [
-    ("egg", "add"),
-    ("foo", "bar"),
-    ("paper", "title"),
-    ("badc", "baba"),
+    ([1,2,3,1], 3),
+    ([1,0,1,1], 1),
+    ([1,2,3,1,2,3], 2),
+    ([1], 1),
+    ([99,99], 2)
 ]
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
-    let ans = sol.isIsomorphic(x.0, x.1)
+    let ans = sol.containsNearbyDuplicate(x.0, x.1)
     print(ans)
 }
 

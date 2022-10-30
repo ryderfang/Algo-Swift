@@ -16,6 +16,7 @@ public class ListNode {
 }
 
 public extension ListNode {
+    // should not have cycle
     func array() -> [Int] {
         var p: ListNode? = self
         var ans = [Int]()

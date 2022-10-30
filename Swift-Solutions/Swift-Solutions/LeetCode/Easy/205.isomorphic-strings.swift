@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func isIsomorphic(_ s: String, _ t: String) -> Bool {
         guard s.count == t.count else { return false }
         var mp = [Character: Character]()
