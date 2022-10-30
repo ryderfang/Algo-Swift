@@ -20,7 +20,7 @@
  *     }
  * }
  */
-class Solution {
+extension Solution {
     func binaryTreePaths(_ root: TreeNode?) -> [String] {
         guard let node = root else { return [] }
         // leaf
