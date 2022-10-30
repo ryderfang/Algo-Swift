@@ -65,18 +65,12 @@ extension Int {
 //        return self.nonzeroBitCount
     }
 
-    public func isPowOfTwo() -> Bool {
+    func isPowerOfTwo(_ n: Int) -> Bool {
         let n = self
-        return n > 0 && (n & (n - 1)) == 0
+        guard n > 0 else { return false }
+        return (n & (n - 1)) == 0
     }
 }
-
-extension String {
-    public func binaryToInt() -> Int {
-        return strtol(self, nil, 2)
-    }
-}
-
 
 // MARK: BigInt
 public class BigInt {

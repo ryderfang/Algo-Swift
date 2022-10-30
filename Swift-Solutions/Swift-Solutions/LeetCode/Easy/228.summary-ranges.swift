@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func summaryRanges(_ nums: [Int]) -> [String] {
         let n = nums.count
         guard n > 0 else { return [] }

@@ -2,11 +2,19 @@
 
 ![Swift](https://img.shields.io/badge/Swift-%23FF4088.svg?&style=for-the-badge&logo=swift&logoColor=white)
 
-This repo is about algorithm codes writing with Swift. Two parts included.
+This repo is about algorithm codes writing by Swift. Two parts included.
 
 ## 🗝 Solutions
 
-Mainly my solutions of [LeetCode](https://leetcode.com/problemset/all/) problems in Swift.
+My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with **Swift**.
+
+### ⏳Progress
+
+| Difficulty | Progress |
+| :----- | :----- |
+| Easy   | 47/603 |
+| Medium | 9/1312 |
+| Hard   | 2/543  |
 
 ## 📦 Base
 

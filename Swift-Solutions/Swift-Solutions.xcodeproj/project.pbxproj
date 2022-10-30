@@ -34,6 +34,11 @@
 		0D763892290EB25C004CD387 /* 225.implement-stack-using-queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763891290EB25C004CD387 /* 225.implement-stack-using-queues.swift */; };
 		0D763895290EB51A004CD387 /* 226.invert-binary-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763893290EB51A004CD387 /* 226.invert-binary-tree.swift */; };
 		0D763896290EB51A004CD387 /* 228.summary-ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763894290EB51A004CD387 /* 228.summary-ranges.swift */; };
+		0D763898290EBF13004CD387 /* 231.power-of-two.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763897290EBF13004CD387 /* 231.power-of-two.swift */; };
+		0D76389A290EC059004CD387 /* 232.implement-queue-using-stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763899290EC059004CD387 /* 232.implement-queue-using-stacks.swift */; };
+		0D76389C290EC152004CD387 /* 234.palindrome-linked-list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76389B290EC152004CD387 /* 234.palindrome-linked-list.swift */; };
+		0D76389E290EC5DF004CD387 /* 242.valid-anagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76389D290EC5DF004CD387 /* 242.valid-anagram.swift */; };
+		0D7638A0290EC6B9004CD387 /* 257.binary-tree-paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76389F290EC6B9004CD387 /* 257.binary-tree-paths.swift */; };
 		0DA8E5BB2834AA8B00FA2C0B /* bm83.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */; };
 		DAED6E97290175C4003B7433 /* 12.integer-to-roman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */; };
 		DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E9829017CD4003B7433 /* 100.same-tree.swift */; };
@@ -136,6 +141,11 @@
 		0D763891290EB25C004CD387 /* 225.implement-stack-using-queues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "225.implement-stack-using-queues.swift"; sourceTree = "<group>"; };
 		0D763893290EB51A004CD387 /* 226.invert-binary-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "226.invert-binary-tree.swift"; sourceTree = "<group>"; };
 		0D763894290EB51A004CD387 /* 228.summary-ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "228.summary-ranges.swift"; sourceTree = "<group>"; };
+		0D763897290EBF13004CD387 /* 231.power-of-two.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "231.power-of-two.swift"; sourceTree = "<group>"; };
+		0D763899290EC059004CD387 /* 232.implement-queue-using-stacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "232.implement-queue-using-stacks.swift"; sourceTree = "<group>"; };
+		0D76389B290EC152004CD387 /* 234.palindrome-linked-list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "234.palindrome-linked-list.swift"; sourceTree = "<group>"; };
+		0D76389D290EC5DF004CD387 /* 242.valid-anagram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "242.valid-anagram.swift"; sourceTree = "<group>"; };
+		0D76389F290EC6B9004CD387 /* 257.binary-tree-paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "257.binary-tree-paths.swift"; sourceTree = "<group>"; };
 		0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bm83.swift; sourceTree = "<group>"; };
 		DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "12.integer-to-roman.swift"; sourceTree = "<group>"; };
 		DAED6E9829017CD4003B7433 /* 100.same-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "100.same-tree.swift"; sourceTree = "<group>"; };
@@ -294,6 +304,11 @@
 				0D763891290EB25C004CD387 /* 225.implement-stack-using-queues.swift */,
 				0D763893290EB51A004CD387 /* 226.invert-binary-tree.swift */,
 				0D763894290EB51A004CD387 /* 228.summary-ranges.swift */,
+				0D763897290EBF13004CD387 /* 231.power-of-two.swift */,
+				0D763899290EC059004CD387 /* 232.implement-queue-using-stacks.swift */,
+				0D76389B290EC152004CD387 /* 234.palindrome-linked-list.swift */,
+				0D76389D290EC5DF004CD387 /* 242.valid-anagram.swift */,
+				0D76389F290EC6B9004CD387 /* 257.binary-tree-paths.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -449,6 +464,7 @@
 				DAFCA39F28F6B70400CF1DE6 /* 78.subsets.swift in Sources */,
 				DAFCA3A428F6B70400CF1DE6 /* 46.permutations.swift in Sources */,
 				DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */,
+				0D76389A290EC059004CD387 /* 232.implement-queue-using-stacks.swift in Sources */,
 				0D763876290CF92D004CD387 /* 202.happy-number.swift in Sources */,
 				0D76387E290E44A2004CD387 /* 168.excel-sheet-column-title.swift in Sources */,
 				0D763861290ACF61004CD387 /* 108.convert-sorted-array-to-binary-search-tree.swift in Sources */,
@@ -460,12 +476,14 @@
 				0D76388A290E8672004CD387 /* 205.isomorphic-strings.swift in Sources */,
 				DAFCA45B28FAEBD700CF1DE6 /* 27.remove-element.swift in Sources */,
 				0D76386B290C0E9D004CD387 /* 119.pascals-triangle-ii.swift in Sources */,
+				0D763898290EBF13004CD387 /* 231.power-of-two.swift in Sources */,
 				0D763863290BF80E004CD387 /* 110.balanced-binary-tree.swift in Sources */,
 				DAFCA3A328F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift in Sources */,
 				0D763867290C029E004CD387 /* 112.path-sum.swift in Sources */,
 				0D763895290EB51A004CD387 /* 226.invert-binary-tree.swift in Sources */,
 				DAFCA3AB28F6B71200CF1DE6 /* 60.permutation-sequence.swift in Sources */,
 				0D763880290E4DD0004CD387 /* 169.majority-element.swift in Sources */,
+				0D76389E290EC5DF004CD387 /* 242.valid-anagram.swift in Sources */,
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
 				0D763882290E53B2004CD387 /* 171.excel-sheet-column-number.swift in Sources */,
 				DAFCA39E28F6B70400CF1DE6 /* 47.permutations-ii.swift in Sources */,
@@ -491,6 +509,8 @@
 				0D76386D290C139A004CD387 /* 121.best-time-to-buy-and-sell-stock.swift in Sources */,
 				DAFCA46528FAFA4100CF1DE6 /* 67.add-binary.swift in Sources */,
 				0D763888290E8405004CD387 /* 203.remove-linked-list-elements.swift in Sources */,
+				0D7638A0290EC6B9004CD387 /* 257.binary-tree-paths.swift in Sources */,
+				0D76389C290EC152004CD387 /* 234.palindrome-linked-list.swift in Sources */,
 				DAED6E9B290180F7003B7433 /* 101.symmetric-tree.swift in Sources */,
 				DAFCA46B28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift in Sources */,
 				DAFCA46728FB055100CF1DE6 /* 69.sqrt-x.swift in Sources */,

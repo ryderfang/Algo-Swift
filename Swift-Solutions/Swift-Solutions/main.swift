@@ -16,13 +16,14 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [0,1,2,4,5,7],
-    [0,2,3,4,6,8,9],
-    [],
+    [1,2,3,nil,5],
+    [1],
 ]
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
-    let ans = sol.summaryRanges(x)
+//    let head = ListNode.arrayToList(x)
+    let root = TreeNode.arrayToTree(x)
+    let ans = sol.binaryTreePaths(root)
     print(ans)
 }
 

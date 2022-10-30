@@ -54,6 +54,10 @@ extension String {
         guard self.count < width else { return }
         self.insert(contentsOf: [Character](repeating: "0", count: width - self.count), at: self.startIndex)
     }
+
+    public func binaryToInt() -> Int {
+        return strtol(self, nil, 2)
+    }
 }
 
 fileprivate extension String {
