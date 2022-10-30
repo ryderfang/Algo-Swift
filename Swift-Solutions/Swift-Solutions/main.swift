@@ -10,21 +10,19 @@ import AlgoBase
 
 let sol = Solution()
 
-class Solution {
-    
-}
+//class Solution {
+//
+//}
 
 //let cases = READNUMS()
 let cases = [
-    ([1,2,3,1], 3),
-    ([1,0,1,1], 1),
-    ([1,2,3,1,2,3], 2),
-    ([1], 1),
-    ([99,99], 2)
+    [0,1,2,4,5,7],
+    [0,2,3,4,6,8,9],
+    [],
 ]
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
-    let ans = sol.containsNearbyDuplicate(x.0, x.1)
+    let ans = sol.summaryRanges(x)
     print(ans)
 }
 
