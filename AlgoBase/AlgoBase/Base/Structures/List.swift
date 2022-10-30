@@ -40,6 +40,26 @@ public extension ListNode {
     }
 }
 
+public extension ListNode {
+    func tail() -> ListNode? {
+        var node: ListNode? = self
+        while node?.next != nil {
+            node = node?.next
+        }
+        return node
+    }
+
+    // skip k steps
+    func skip(_ k: Int = 1) -> ListNode? {
+        var node: ListNode? = self
+        for _ in 0..<k {
+            guard node?.next != nil else { return nil }
+            node = node?.next
+        }
+        return node
+    }
+}
+
 // MARK: Equatable
 extension ListNode/*: Equatable*/ {
     // List may has circles so have to compare pointer address.

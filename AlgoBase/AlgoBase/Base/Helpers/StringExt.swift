@@ -42,8 +42,12 @@ extension Character {
 }
 
 extension String {
-    public func toIntArray() -> [Int?] {
+    public func intArray() -> [Int?] {
         return self.map { Int(String($0)) }
+    }
+
+    public static func charArray() -> [String] {
+        return (UnicodeScalar("A").value...UnicodeScalar("Z").value).map { String(UnicodeScalar($0)!) }
     }
 }
 

@@ -29,7 +29,7 @@
      }
  }
 
-class Solution {
+extension Solution {
     // two-pointers
     func hasCycle(_ head: ListNode?) -> Bool {
         var slow = head

@@ -12,14 +12,13 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-//    [3,2,0,-4],
-    [1,2],
-//    [1],
+    [3,2,3],
+    [2,2,1,1,1,2,2],
+    [3,3,4],
 ]
-for x in cases {
-    let head = ListNode.arrayToList(x)
-    head?.next?.next = head
-    let ans = sol.hasCycle(head)
+for (i, x) in cases.enumerated() {
+    print("###_\(i)_###")
+    let ans = sol.majorityElement(x)
     print(ans)
 }
 

@@ -20,6 +20,9 @@
 		0D763874290CF7F2004CD387 /* 136.single-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763873290CF7F2004CD387 /* 136.single-number.swift */; };
 		0D763876290CF92D004CD387 /* 202.happy-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763875290CF92D004CD387 /* 202.happy-number.swift */; };
 		0D763878290CFEE3004CD387 /* 141.linked-list-cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763877290CFEE3004CD387 /* 141.linked-list-cycle.swift */; };
+		0D76387C290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76387B290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift */; };
+		0D76387E290E44A2004CD387 /* 168.excel-sheet-column-title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76387D290E44A1004CD387 /* 168.excel-sheet-column-title.swift */; };
+		0D763880290E4DD0004CD387 /* 169.majority-element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76387F290E4DD0004CD387 /* 169.majority-element.swift */; };
 		0DA8E5BB2834AA8B00FA2C0B /* bm83.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */; };
 		DAED6E97290175C4003B7433 /* 12.integer-to-roman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */; };
 		DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E9829017CD4003B7433 /* 100.same-tree.swift */; };
@@ -108,6 +111,9 @@
 		0D763873290CF7F2004CD387 /* 136.single-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "136.single-number.swift"; sourceTree = "<group>"; };
 		0D763875290CF92D004CD387 /* 202.happy-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "202.happy-number.swift"; sourceTree = "<group>"; };
 		0D763877290CFEE3004CD387 /* 141.linked-list-cycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "141.linked-list-cycle.swift"; sourceTree = "<group>"; };
+		0D76387B290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "160.intersection-of-two-linked-lists.swift"; sourceTree = "<group>"; };
+		0D76387D290E44A1004CD387 /* 168.excel-sheet-column-title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "168.excel-sheet-column-title.swift"; sourceTree = "<group>"; };
+		0D76387F290E4DD0004CD387 /* 169.majority-element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "169.majority-element.swift"; sourceTree = "<group>"; };
 		0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bm83.swift; sourceTree = "<group>"; };
 		DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "12.integer-to-roman.swift"; sourceTree = "<group>"; };
 		DAED6E9829017CD4003B7433 /* 100.same-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "100.same-tree.swift"; sourceTree = "<group>"; };
@@ -251,6 +257,9 @@
 				0D763877290CFEE3004CD387 /* 141.linked-list-cycle.swift */,
 				DAFCA47328FBE7E100CF1DE6 /* 144.binary-tree-preorder-traversal.swift */,
 				DAFCA47228FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift */,
+				0D76387B290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift */,
+				0D76387D290E44A1004CD387 /* 168.excel-sheet-column-title.swift */,
+				0D76387F290E4DD0004CD387 /* 169.majority-element.swift */,
 				0D763875290CF92D004CD387 /* 202.happy-number.swift */,
 			);
 			path = Easy;
@@ -407,8 +416,10 @@
 				DAFCA3A428F6B70400CF1DE6 /* 46.permutations.swift in Sources */,
 				DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */,
 				0D763876290CF92D004CD387 /* 202.happy-number.swift in Sources */,
+				0D76387E290E44A2004CD387 /* 168.excel-sheet-column-title.swift in Sources */,
 				0D763861290ACF61004CD387 /* 108.convert-sorted-array-to-binary-search-tree.swift in Sources */,
 				DAFCA47428FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift in Sources */,
+				0D76387C290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift in Sources */,
 				DAFCA3A228F6B70400CF1DE6 /* 31.next-permutation.swift in Sources */,
 				DAFCA46F28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift in Sources */,
 				DAFCA3A728F6B70A00CF1DE6 /* 21.merge-two-sorted-lists.swift in Sources */,
@@ -418,6 +429,7 @@
 				DAFCA3A328F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift in Sources */,
 				0D763867290C029E004CD387 /* 112.path-sum.swift in Sources */,
 				DAFCA3AB28F6B71200CF1DE6 /* 60.permutation-sequence.swift in Sources */,
+				0D763880290E4DD0004CD387 /* 169.majority-element.swift in Sources */,
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
 				DAFCA39E28F6B70400CF1DE6 /* 47.permutations-ii.swift in Sources */,
 				DAFCA3B328F900A700CF1DE6 /* 14.longest-common-prefix.swift in Sources */,
