@@ -71,6 +71,13 @@ public extension TreeNode {
     }
 }
 
+// MARK: fileprivate
+//extension TreeNode: Equatable {
+//    public static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+//        return lhs.val == rhs.val && lhs.left == rhs.left && lhs.right == rhs.right
+//    }
+//}
+
 // MARK: - Recursive Traversal
 public extension TreeNode {
     func inorderTraversal(_ root: TreeNode?) -> [Int] {

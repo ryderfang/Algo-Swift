@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func isPalindrome(_ s: String) -> Bool {
         let alpha = s.map { ch in
             if ("a"..."z").contains(ch) || ("A"..."Z").contains(ch) ||

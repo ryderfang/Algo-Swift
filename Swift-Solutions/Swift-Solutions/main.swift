@@ -12,13 +12,14 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    "A man, a plan, a canal: Panama",
-    "race a car",
-    " ",
-    "0P",
+//    [3,2,0,-4],
+    [1,2],
+//    [1],
 ]
 for x in cases {
-    let ans = sol.isPalindrome(x)
+    let head = ListNode.arrayToList(x)
+    head?.next?.next = head
+    let ans = sol.hasCycle(head)
     print(ans)
 }
 

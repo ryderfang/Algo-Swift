@@ -39,3 +39,18 @@ public extension ListNode {
         return head
     }
 }
+
+// MARK: Equatable
+extension ListNode/*: Equatable*/ {
+    // List may has circles so have to compare pointer address.
+    fileprivate static func getObjectAddress(object: AnyObject) -> String {
+        let str = Unmanaged<AnyObject>.passUnretained(object).toOpaque()
+        return String(describing: str)
+    }
+
+    // fileprivate
+//    public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
+//        return getObjectAddress(object: lhs) == getObjectAddress(object: rhs)
+//        return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
+//    }
+}

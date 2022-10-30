@@ -41,6 +41,12 @@ extension Character {
     }
 }
 
+extension String {
+    public func toIntArray() -> [Int?] {
+        return self.map { Int(String($0)) }
+    }
+}
+
 fileprivate extension String {
     // 扩展下标方法
     subscript (i: Int) -> Character {
