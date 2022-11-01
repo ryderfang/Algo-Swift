@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     // Cheater: num < 10 ? num : (num % 9 == 0 ? 9 : num % 9)
     func addDigits(_ num: Int) -> Int {
         func _next(_ n: Int) -> Int {

@@ -30,3 +30,14 @@ public func READNUMS(fname: String = "testcase") -> [[Int]] {
     }
     return result
 }
+
+// for lc278
+public protocol VersionControl {
+    func isBadVersion(_ version: Int) -> Bool
+}
+
+extension VersionControl {
+    func isBadVersion(_ version: Int) -> Bool {
+        false
+    }
+}
