@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func moveZeroes(_ nums: inout [Int]) {
         let n = nums.count
         guard n > 1 else { return }

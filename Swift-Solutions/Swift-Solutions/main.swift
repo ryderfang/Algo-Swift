@@ -16,17 +16,19 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [0,1,0,3,12],
-    [0,1],
-    [4,2,4,0,0,3,0,5,1,0],
+    ("abba", "dog cat cat dog"),
+    ("abba", "dog cat cat fish"),
+    ("aaaa", "dog cat cat dog"),
+    ("abba", "dog dog dog dog"),
+    ("abc", "b c a"),
 ]
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
-    var tmp = x
-    let ans = sol.moveZeroes(&tmp)
+//    var tmp = x
+    let ans = sol.wordPattern(x.0, x.1)
     print(ans)
-    print(tmp)
+//    print(tmp)
 }
 
