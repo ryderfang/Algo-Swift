@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func wordPattern(_ pattern: String, _ s: String) -> Bool {
         let pArray: [String] = pattern.map { String($0) }
         let pLen = pArray.count

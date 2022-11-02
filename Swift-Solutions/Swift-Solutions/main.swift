@@ -16,18 +16,21 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ("abba", "dog cat cat dog"),
-    ("abba", "dog cat cat fish"),
-    ("aaaa", "dog cat cat dog"),
-    ("abba", "dog dog dog dog"),
-    ("abc", "b c a"),
+    0,
+    2,
+    5,
+    10,
+    64,
 ]
+
+//let dummy = NumArray([-2, 0, 3, -5, 2, -1])
+
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.wordPattern(x.0, x.1)
+    let ans = sol.isPowerOfFour(x)
     print(ans)
 //    print(tmp)
 }

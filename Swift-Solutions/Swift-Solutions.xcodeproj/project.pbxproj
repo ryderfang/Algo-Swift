@@ -46,6 +46,11 @@
 		0DBE143129114B1200F5ECE1 /* 278.first-bad-version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */; };
 		0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */; };
 		0DBE143529128D7F00F5ECE1 /* 290.word-pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143429128D7F00F5ECE1 /* 290.word-pattern.swift */; };
+		0DBE14372912958A00F5ECE1 /* 292.nim-game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE14362912958A00F5ECE1 /* 292.nim-game.swift */; };
+		0DBE14392912977700F5ECE1 /* 303.range-sum-query-immutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE14382912977700F5ECE1 /* 303.range-sum-query-immutable.swift */; };
+		0DBE143B2912993100F5ECE1 /* 326.power-of-three.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143A2912993100F5ECE1 /* 326.power-of-three.swift */; };
+		0DBE143D29129C7700F5ECE1 /* 338.counting-bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143C29129C7700F5ECE1 /* 338.counting-bits.swift */; };
+		0DBE143F2912C46500F5ECE1 /* 342.power-of-four.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143E2912C46500F5ECE1 /* 342.power-of-four.swift */; };
 		DAED6E97290175C4003B7433 /* 12.integer-to-roman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */; };
 		DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E9829017CD4003B7433 /* 100.same-tree.swift */; };
 		DAED6E9B290180F7003B7433 /* 101.symmetric-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6E9A290180F7003B7433 /* 101.symmetric-tree.swift */; };
@@ -159,6 +164,11 @@
 		0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "278.first-bad-version.swift"; sourceTree = "<group>"; };
 		0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "283.move-zeroes.swift"; sourceTree = "<group>"; };
 		0DBE143429128D7F00F5ECE1 /* 290.word-pattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "290.word-pattern.swift"; sourceTree = "<group>"; };
+		0DBE14362912958A00F5ECE1 /* 292.nim-game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "292.nim-game.swift"; sourceTree = "<group>"; };
+		0DBE14382912977700F5ECE1 /* 303.range-sum-query-immutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "303.range-sum-query-immutable.swift"; sourceTree = "<group>"; };
+		0DBE143A2912993100F5ECE1 /* 326.power-of-three.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "326.power-of-three.swift"; sourceTree = "<group>"; };
+		0DBE143C29129C7700F5ECE1 /* 338.counting-bits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "338.counting-bits.swift"; sourceTree = "<group>"; };
+		0DBE143E2912C46500F5ECE1 /* 342.power-of-four.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "342.power-of-four.swift"; sourceTree = "<group>"; };
 		DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "12.integer-to-roman.swift"; sourceTree = "<group>"; };
 		DAED6E9829017CD4003B7433 /* 100.same-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "100.same-tree.swift"; sourceTree = "<group>"; };
 		DAED6E9A290180F7003B7433 /* 101.symmetric-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "101.symmetric-tree.swift"; sourceTree = "<group>"; };
@@ -327,6 +337,11 @@
 				0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */,
 				0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */,
 				0DBE143429128D7F00F5ECE1 /* 290.word-pattern.swift */,
+				0DBE14362912958A00F5ECE1 /* 292.nim-game.swift */,
+				0DBE14382912977700F5ECE1 /* 303.range-sum-query-immutable.swift */,
+				0DBE143A2912993100F5ECE1 /* 326.power-of-three.swift */,
+				0DBE143C29129C7700F5ECE1 /* 338.counting-bits.swift */,
+				0DBE143E2912C46500F5ECE1 /* 342.power-of-four.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -478,6 +493,7 @@
 				0D76388E290EA6C4004CD387 /* 217.contains-duplicate.swift in Sources */,
 				DAED6E9D29043626003B7433 /* 104.maximum-depth-of-binary-tree.swift in Sources */,
 				DAFCA46328FAF6EC00CF1DE6 /* 66.plus-one.swift in Sources */,
+				0DBE143F2912C46500F5ECE1 /* 342.power-of-four.swift in Sources */,
 				0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */,
 				0D76386F290C18FA004CD387 /* 125.valid-palindrome.swift in Sources */,
 				DAFCA39F28F6B70400CF1DE6 /* 78.subsets.swift in Sources */,
@@ -487,7 +503,9 @@
 				0D763876290CF92D004CD387 /* 202.happy-number.swift in Sources */,
 				0D76387E290E44A2004CD387 /* 168.excel-sheet-column-title.swift in Sources */,
 				0D763861290ACF61004CD387 /* 108.convert-sorted-array-to-binary-search-tree.swift in Sources */,
+				0DBE14392912977700F5ECE1 /* 303.range-sum-query-immutable.swift in Sources */,
 				DAFCA47428FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift in Sources */,
+				0DBE143B2912993100F5ECE1 /* 326.power-of-three.swift in Sources */,
 				0D76387C290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift in Sources */,
 				DAFCA3A228F6B70400CF1DE6 /* 31.next-permutation.swift in Sources */,
 				DAFCA46F28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift in Sources */,
@@ -508,6 +526,7 @@
 				0D76389E290EC5DF004CD387 /* 242.valid-anagram.swift in Sources */,
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
 				0D763882290E53B2004CD387 /* 171.excel-sheet-column-number.swift in Sources */,
+				0DBE143D29129C7700F5ECE1 /* 338.counting-bits.swift in Sources */,
 				DAFCA39E28F6B70400CF1DE6 /* 47.permutations-ii.swift in Sources */,
 				0D763886290E7C6F004CD387 /* 191.number-of-1-bits.swift in Sources */,
 				DAFCA3B328F900A700CF1DE6 /* 14.longest-common-prefix.swift in Sources */,
@@ -528,6 +547,7 @@
 				0D763869290C0BF8004CD387 /* 118.pascals-triangle.swift in Sources */,
 				0D763874290CF7F2004CD387 /* 136.single-number.swift in Sources */,
 				0D763896290EB51A004CD387 /* 228.summary-ranges.swift in Sources */,
+				0DBE14372912958A00F5ECE1 /* 292.nim-game.swift in Sources */,
 				0D763884290E56CD004CD387 /* 190.reverse-bits.swift in Sources */,
 				0D76386D290C139A004CD387 /* 121.best-time-to-buy-and-sell-stock.swift in Sources */,
 				DAFCA46528FAFA4100CF1DE6 /* 67.add-binary.swift in Sources */,

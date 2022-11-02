@@ -70,6 +70,21 @@ extension Int {
         guard n > 0 else { return false }
         return (n & (n - 1)) == 0
     }
+
+    func isPowerOfThree(_ n: Int) -> Bool {
+        guard n > 0 else { return false }
+        // calculated by python:
+        // list(map(lambda x: 3 ** x, list(range(0,20))))
+        // 3^20 = 3486784401 > 2147483647 = 2^31 - 1
+        let p = [1, 3, 9, 27, 81, 243, 729, 2187, 6561, 19683, 59049, 177147, 531441, 1594323, 4782969, 14348907, 43046721, 129140163, 387420489, 1162261467]
+        return p.contains(n)
+    }
+
+    // 4^n = 2^(2*n)
+    // 4^n = 3 * (4^n-1 + 4^n-2 + ... + 4 + 1)
+    func isPowerOfFour(_ n: Int) -> Bool {
+        return n > 0 && (n & (n - 1) == 0) && (n - 1) % 3 == 0
+    }
 }
 
 // MARK: BigInt
