@@ -31,7 +31,7 @@ public func READNUMS(fname: String = "testcase") -> [[Int]] {
     return result
 }
 
-// for lc278
+// lc278
 public protocol VersionControl {
     func isBadVersion(_ version: Int) -> Bool
 }
@@ -39,5 +39,16 @@ public protocol VersionControl {
 extension VersionControl {
     func isBadVersion(_ version: Int) -> Bool {
         false
+    }
+}
+
+// lc374
+public protocol GuessGame {
+    func guess(_ num: Int) -> Int
+}
+
+extension GuessGame {
+    func guess(_ num: Int) -> Int {
+        -1
     }
 }
