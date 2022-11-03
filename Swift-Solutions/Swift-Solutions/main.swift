@@ -16,11 +16,12 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    0,
-    2,
-    5,
-    10,
-    64,
+    1,
+    3,
+    4,
+    9,
+    81,
+    2147395600,
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -30,7 +31,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.isPowerOfFour(x)
+    let ans = sol.isPerfectSquare(x)
     print(ans)
 //    print(tmp)
 }
