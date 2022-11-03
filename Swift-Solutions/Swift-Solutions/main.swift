@@ -16,12 +16,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    1,
-    3,
-    4,
-    9,
-    81,
-    2147395600,
+    ("abc", "ahbgdc"),
+    ("axc", "ahbgdc"),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -31,7 +27,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.isPerfectSquare(x)
+    let ans = sol.isSubsequence(x.0, x.1)
     print(ans)
 //    print(tmp)
 }

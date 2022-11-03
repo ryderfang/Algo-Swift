@@ -14,7 +14,7 @@
  * func guess(_ num: Int) -> Int 
  */
 
-class Solution : GuessGame {
+extension Solution : GuessGame {
     func guessNumber(_ n: Int) -> Int {
         var l = 1, r = n
         while l <= r {
