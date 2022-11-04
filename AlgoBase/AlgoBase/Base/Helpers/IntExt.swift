@@ -47,8 +47,37 @@ extension Int {
 
 // MARK: Binary
 extension Int {
-    public func binaryStr() -> String {
-        return String(self, radix: 2)
+    public func toBinary(width: Int = 32) -> String {
+        guard self != 0 else { return "0" }
+        var bits = ""
+        var n = self
+        while n != 0 && bits.count < width {
+            bits = String(n & 1) + bits
+            n >>= 1
+        }
+        return bits
+    }
+
+    // lc405
+    public func toHex(width: Int = 32, uppercase: Bool = false) -> String {
+        guard self != 0 else { return "0" }
+        // only valid for positive
+        if self > 0 {
+            return String(self, radix: 16, uppercase: uppercase)
+        }
+        var hex = ""
+        var n = self
+        while n != 0 && hex.count < width / 4 {
+            let digit = n & 15
+            var char = String(digit)
+            if digit > 9 {
+                let ascii: UInt32 = (uppercase ? UnicodeScalar("A") : UnicodeScalar("a")).value + UInt32(digit) - 10
+                char = String(UnicodeScalar(ascii)!)
+            }
+            hex = char + hex
+            n >>= 4
+        }
+        return hex
     }
 
     // the number of '1' bits self has

@@ -33,6 +33,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x
     let ans = sol.toHex(x)
     print(ans)
+    print(x.toHex(), x.toBinary())
 //    print(tmp)
 }
 

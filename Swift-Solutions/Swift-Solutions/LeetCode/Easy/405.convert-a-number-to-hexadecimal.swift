@@ -60,6 +60,23 @@ class Solution {
     func toHex1(_ num: Int) -> String {
         return binaryToHex(toBinary(num))
     }
+
+    func toHex(_ num: Int) -> String {
+        guard num != 0 else { return "0" }
+        var hex = ""
+        var n = num
+        while n != 0 && hex.count < 8 {
+            let digit = n & 15
+            var char = String(digit)
+            if digit > 9 {
+                let ascii: UInt32 = UnicodeScalar("a").value + UInt32(digit) - 10
+                char = String(UnicodeScalar(ascii)!)
+            }
+            hex = char + hex
+            n >>= 4
+        }
+        return hex
+    }
 }
 // @lc code=end
 
