@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     // 非连续子串
     func isSubsequence(_ s: String, _ t: String) -> Bool {
         let sz_s = s.count, sz_t = t.count

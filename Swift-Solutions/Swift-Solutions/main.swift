@@ -16,8 +16,12 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ("abc", "ahbgdc"),
-    ("axc", "ahbgdc"),
+    0,
+    26,
+    -1,
+    100,
+    1000,
+    -200,
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -27,7 +31,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.isSubsequence(x.0, x.1)
+    let ans = sol.toHex(x)
     print(ans)
 //    print(tmp)
 }
