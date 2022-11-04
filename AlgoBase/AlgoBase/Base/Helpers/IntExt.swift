@@ -47,11 +47,11 @@ extension Int {
 
 // MARK: Binary
 extension Int {
-    public func toBinary(width: Int = 32) -> String {
+    public func toBinary(bitWidth: Int = 32) -> String {
         guard self != 0 else { return "0" }
         var bits = ""
         var n = self
-        while n != 0 && bits.count < width {
+        while n != 0 && bits.count < bitWidth {
             bits = String(n & 1) + bits
             n >>= 1
         }
@@ -59,7 +59,7 @@ extension Int {
     }
 
     // lc405
-    public func toHex(width: Int = 32, uppercase: Bool = false) -> String {
+    public func toHex(bitWidth: Int = 32, uppercase: Bool = false) -> String {
         guard self != 0 else { return "0" }
         // only valid for positive
         if self > 0 {
@@ -67,7 +67,7 @@ extension Int {
         }
         var hex = ""
         var n = self
-        while n != 0 && hex.count < width / 4 {
+        while n != 0 && hex.count < bitWidth / 4 {
             let digit = n & 15
             var char = String(digit)
             if digit > 9 {

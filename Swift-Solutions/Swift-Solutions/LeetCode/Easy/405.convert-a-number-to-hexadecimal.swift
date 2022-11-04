@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func toBinaryStr(_ num: Int) -> String {
         toBinary(num).map { String($0) }.joined()
     }

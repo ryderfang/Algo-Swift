@@ -34,6 +34,7 @@ extension Character {
 
     // "0" -> 0
     public func toInt() -> Int? {
+        // Int(self.asciiValue! - Character("0").asciiValue!)
         guard let intValue = Int(String(self)) else {
             return nil
         }
