@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func countSegments(_ s: String) -> Int {
         var ans = 0
         var flag = false

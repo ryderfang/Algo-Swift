@@ -16,10 +16,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    "Hello,  my name is John",
-    "Hello",
-    "",
-    "                ",
+    ([1,2,3], [1,1]),
+    ([1,2],[1,2,3])
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -29,7 +27,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.countSegments(x)
+    let ans = sol.findContentChildren(x.0, x.1)
     print(ans)
 //    print(tmp)
 }
