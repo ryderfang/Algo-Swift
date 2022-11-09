@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func islandPerimeter(_ grid: [[Int]]) -> Int {
         var ans = 0
         let r = grid.count
