@@ -16,8 +16,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ([1,2,3], [1,1]),
-    ([1,2],[1,2,3])
+    [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]],
+    [[1]],
+    [[1,0]],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -27,7 +28,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.findContentChildren(x.0, x.1)
+    let ans = sol.islandPerimeter(x)
     print(ans)
 //    print(tmp)
 }
