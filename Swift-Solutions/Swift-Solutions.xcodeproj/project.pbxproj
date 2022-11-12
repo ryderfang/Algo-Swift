@@ -30,6 +30,9 @@
 		0D74F499291F5D2B000E9237 /* 501.find-mode-in-binary-search-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F498291F5D2B000E9237 /* 501.find-mode-in-binary-search-tree.swift */; };
 		0D74F49B291FF3A5000E9237 /* 504.base-7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F49A291FF3A5000E9237 /* 504.base-7.swift */; };
 		0D74F49D291FF4C1000E9237 /* 506.relative-ranks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F49C291FF4C1000E9237 /* 506.relative-ranks.swift */; };
+		0D74F49F291FF74B000E9237 /* 507.perfect-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F49E291FF74B000E9237 /* 507.perfect-number.swift */; };
+		0D74F4A1291FF852000E9237 /* 509.fibonacci-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4A0291FF852000E9237 /* 509.fibonacci-number.swift */; };
+		0D74F4A4291FFB4F000E9237 /* 520.detect-capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4A3291FFB4F000E9237 /* 520.detect-capital.swift */; };
 		0D763861290ACF61004CD387 /* 108.convert-sorted-array-to-binary-search-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763860290ACF61004CD387 /* 108.convert-sorted-array-to-binary-search-tree.swift */; };
 		0D763863290BF80E004CD387 /* 110.balanced-binary-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763862290BF80E004CD387 /* 110.balanced-binary-tree.swift */; };
 		0D763865290BFDCE004CD387 /* 111.minimum-depth-of-binary-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763864290BFDCE004CD387 /* 111.minimum-depth-of-binary-tree.swift */; };
@@ -182,6 +185,9 @@
 		0D74F498291F5D2B000E9237 /* 501.find-mode-in-binary-search-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "501.find-mode-in-binary-search-tree.swift"; sourceTree = "<group>"; };
 		0D74F49A291FF3A5000E9237 /* 504.base-7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "504.base-7.swift"; sourceTree = "<group>"; };
 		0D74F49C291FF4C1000E9237 /* 506.relative-ranks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "506.relative-ranks.swift"; sourceTree = "<group>"; };
+		0D74F49E291FF74B000E9237 /* 507.perfect-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "507.perfect-number.swift"; sourceTree = "<group>"; };
+		0D74F4A0291FF852000E9237 /* 509.fibonacci-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "509.fibonacci-number.swift"; sourceTree = "<group>"; };
+		0D74F4A3291FFB4F000E9237 /* 520.detect-capital.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "520.detect-capital.swift"; sourceTree = "<group>"; };
 		0D763860290ACF61004CD387 /* 108.convert-sorted-array-to-binary-search-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "108.convert-sorted-array-to-binary-search-tree.swift"; sourceTree = "<group>"; };
 		0D763862290BF80E004CD387 /* 110.balanced-binary-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "110.balanced-binary-tree.swift"; sourceTree = "<group>"; };
 		0D763864290BFDCE004CD387 /* 111.minimum-depth-of-binary-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "111.minimum-depth-of-binary-tree.swift"; sourceTree = "<group>"; };
@@ -347,6 +353,9 @@
 		0D0C861228632D4B0010C108 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
+				0D74F4A3291FFB4F000E9237 /* 520.detect-capital.swift */,
+				0D74F4A0291FF852000E9237 /* 509.fibonacci-number.swift */,
+				0D74F49E291FF74B000E9237 /* 507.perfect-number.swift */,
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
@@ -611,6 +620,7 @@
 				0D763876290CF92D004CD387 /* 202.happy-number.swift in Sources */,
 				0D76387E290E44A2004CD387 /* 168.excel-sheet-column-title.swift in Sources */,
 				0D763861290ACF61004CD387 /* 108.convert-sorted-array-to-binary-search-tree.swift in Sources */,
+				0D74F4A4291FFB4F000E9237 /* 520.detect-capital.swift in Sources */,
 				0DBE14392912977700F5ECE1 /* 303.range-sum-query-immutable.swift in Sources */,
 				DAFCA47428FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift in Sources */,
 				0DBE143B2912993100F5ECE1 /* 326.power-of-three.swift in Sources */,
@@ -650,6 +660,7 @@
 				0D74F487291BE09B000E9237 /* 461.hamming-distance.swift in Sources */,
 				0DBE143D29129C7700F5ECE1 /* 338.counting-bits.swift in Sources */,
 				DAFCA39E28F6B70400CF1DE6 /* 47.permutations-ii.swift in Sources */,
+				0D74F4A1291FF852000E9237 /* 509.fibonacci-number.swift in Sources */,
 				0D763886290E7C6F004CD387 /* 191.number-of-1-bits.swift in Sources */,
 				DAFCA3B328F900A700CF1DE6 /* 14.longest-common-prefix.swift in Sources */,
 				DAFCA46D28FBD64700CF1DE6 /* 88.merge-sorted-array.swift in Sources */,
@@ -699,6 +710,7 @@
 				DAFCA46928FBD09000CF1DE6 /* 70.climbing-stairs.swift in Sources */,
 				DAFCA3B128F81DB700CF1DE6 /* 13.roman-to-integer.swift in Sources */,
 				0D763865290BFDCE004CD387 /* 111.minimum-depth-of-binary-tree.swift in Sources */,
+				0D74F49F291FF74B000E9237 /* 507.perfect-number.swift in Sources */,
 				0D74F47F29154BCB000E9237 /* 441.arranging-coins.swift in Sources */,
 				0D763878290CFEE3004CD387 /* 141.linked-list-cycle.swift in Sources */,
 				0D76388C290E9783004CD387 /* 206.reverse-linked-list.swift in Sources */,

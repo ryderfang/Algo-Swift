@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func findRelativeRanks(_ score: [Int]) -> [String] {
         var scoreWithRank = [(Int, Int)]()
         for (i, x) in score.enumerated() {

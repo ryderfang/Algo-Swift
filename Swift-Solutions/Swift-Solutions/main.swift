@@ -16,8 +16,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [5,4,3,2,1],
-    [10,3,8,9,4],
+    "FlaG",
+    "USA",
+    "leetcode"
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -27,7 +28,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.findRelativeRanks(x)
+    let ans = sol.detectCapitalUse(x)
     print(ans)
 //    print(tmp)
 }
