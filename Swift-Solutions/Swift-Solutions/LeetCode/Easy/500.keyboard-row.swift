@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func findWords(_ words: [String]) -> [String] {
         var mp = [Character: Int]()
         let keyboard = [
