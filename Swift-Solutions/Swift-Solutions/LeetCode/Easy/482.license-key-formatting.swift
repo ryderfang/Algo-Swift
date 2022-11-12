@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func licenseKeyFormatting(_ s: String, _ k: Int) -> String {
         let components = s.components(separatedBy: "-").joined().uppercased()
         let arr: [Character] = Array(components)
