@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     // [6, 28, 496, 8128, 33550336] only these are perfect!
     func checkPerfectNumber(_ num: Int) -> Bool {
         guard num > 5 else { return false }

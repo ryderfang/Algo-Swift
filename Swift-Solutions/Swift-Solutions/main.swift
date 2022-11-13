@@ -10,10 +10,6 @@ import AlgoBase
 
 let sol = Solution()
 
-//class Solution {
-//
-//}
-
 //let cases = READNUMS()
 let cases = [
     28,

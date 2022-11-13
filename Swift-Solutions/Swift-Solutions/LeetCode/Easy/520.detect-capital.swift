@@ -5,6 +5,9 @@
  */
 
 // @lc code=start
+#if !LC_SOLUTION_EXT
+class Solution {}
+#endif
 extension Solution {
     func detectCapitalUse(_ word: String) -> Bool {
         guard word.count > 0 else { return false }

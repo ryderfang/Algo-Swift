@@ -8,7 +8,7 @@ This repo is about algorithm codes writing by Swift. Two parts included.
 
 My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with **Swift**.
 
-### ⏳Progress
+### ⏳ Progress
 
 | Difficulty | Progress |
 | :----- | :----- |
@@ -18,7 +18,7 @@ My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with *
 
 > Motivation comes from incentive.
 
-- 🔸 Lv.1  "100 easy" 🎯🎉
+- 🔸 ~~Lv.1 "100 easy"~~ 🎯🎉
 - 🔹 Lv.10 "200 easy"
 - 🔶 Lv.20 [🥉] "500 easy"
 - 🔷 Lv.30 "AK easy"
@@ -43,6 +43,58 @@ While solving problems I summarize those code snippets as templates. Thanks to r
 * [SunZhiC/DataStructuresInSwift](https://github.com/SunZhiC/DataStructuresInSwift)
 
 * LeetCode Solution Pages, such as https://leetcode.com/problems/merge-k-sorted-lists/solution/
+
+#### ‼️ VSCode-LeetCode extension
+
+To fix `redeclaration of 'Solution' issue`, I modified the extension.
+
+* path: `~/.vscode/extensions/leetcode.vscode-leetcode-0.18.1`
+
+
+1. add `Custom Flags` to `Build Settings` of Xcode project
+
+![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-11-13-EycSUM.png)
+
+2. change template
+
+* `/node_modules/vsc-leetcode-cli/templates/codeonly.tpl`
+
+```swift
+// codeonly.tpl
+${comment.start}
+${comment.line} @lc app=${app} id=${fid} lang=${lang}
+${comment.line}
+${comment.line} [${fid}] ${name}
+${comment.end}
+
+${comment.singleLine} @lc code=start
+#if !LC_SOLUTION_EXT
+class Solution {}
+#endif
+${code}
+${comment.singleLine} @lc code=end
+```
+
+3. change js logic
+
+* `node_modules/vsc-leetcode-cli/lib/core.js`
+
+```
+core.exportProblem = function(problem, opts) {
+  const data = _.extend({}, problem);
+  // ... 
+  data.code = (opts.code || data.code || '').replace(/\r\n/g, '\n');
+  data.comment = h.langToCommentStyle(data.lang);
+  data.percent = data.percent.toFixed(2);
+  data.testcase = util.inspect(data.testcase || '');
+
+  // fix 'swift' redeclaration issue
+  data.code = data.code.replace(/class/g, 'extension');
+
+  // ...
+  return file.render(opts.tpl, data);
+};
+```
 
 ### 📚 Books
 

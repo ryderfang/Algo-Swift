@@ -31,6 +31,11 @@ public func READNUMS(fname: String = "testcase") -> [[Int]] {
     return result
 }
 
+// Globally
+class Solution {
+
+}
+
 // lc278
 public protocol VersionControl {
     func isBadVersion(_ version: Int) -> Bool
