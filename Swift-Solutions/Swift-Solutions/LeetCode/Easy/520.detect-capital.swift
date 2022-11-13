@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class Solution {
+extension Solution {
     func detectCapitalUse(_ word: String) -> Bool {
         guard word.count > 0 else { return false }
         if word.uppercased() == word {
