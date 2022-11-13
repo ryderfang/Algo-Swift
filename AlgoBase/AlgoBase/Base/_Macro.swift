@@ -14,5 +14,5 @@ public func TICK() {
 }
 
 public func TOCK(function: String = #function) {
-    print(String(format: "[%@] cost: %.2lf s", function, -g_start_time.timeIntervalSinceNow))
+    print(String(format: "[%@] cost: %.3lf s", function, -g_start_time.timeIntervalSinceNow))
 }
