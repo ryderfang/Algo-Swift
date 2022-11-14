@@ -9,6 +9,9 @@
 class Solution {}
 #endif
 extension Solution {
+    // 最长回文子串
+    // 可使用 dp 优化:
+    // dp[i][j] = { s[i] == s[j] && (dp[i+1][j-1] || j - i <= 2) }
     func longestPalindrome(_ s: String) -> String {
         func _isPalindrome(_ s: String) -> Bool {
             return s == String(s.reversed())
