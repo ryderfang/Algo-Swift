@@ -7,6 +7,9 @@
 
 import Foundation
 
+// Int == Int64
+// Int32.max -> 2**31-1 = 2147483647
+// Int32.min -> -2**31 = -2147483648
 extension Int {
     public func isPrime() -> Bool {
         if self < 2 {

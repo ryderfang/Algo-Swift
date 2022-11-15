@@ -12,17 +12,14 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    2147483647,
-    -2147483648,
-    0,
-    -1,
-    1563847412,
-    123,
-    -123,
-    120,
-    1463847412,
-    -1563847412,
-    -2147483412,
+//    "42",
+//    "   -42",
+//    "4193 with words",
+//    "+2147483647",
+//    "2147483648",
+//    "-2147483648",
+//    "-2147483712",
+    "20000000000000000000",
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -32,7 +29,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.reverse(x)
+    let ans = sol.myAtoi(x)
     print(ans)
 //    print(tmp)
 }

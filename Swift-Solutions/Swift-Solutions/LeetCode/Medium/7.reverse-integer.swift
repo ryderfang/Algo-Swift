@@ -31,7 +31,7 @@ extension Solution {
             return negative ? -ans : ans
         }
         guard x != 0 else { return 0 }
-        if x == -2147483648 {
+        if x == Int(Int32.min) {
             return 0
         }
         // x > -2147483648
@@ -42,7 +42,7 @@ extension Solution {
         }
 
         let digits = _toDigits(n)
-        var limit = Array(_toDigits(2147483647).reversed())
+        var limit = Array(_toDigits(Int(Int32.max)).reversed())
         if negative {
             limit[9] += 1
         }
