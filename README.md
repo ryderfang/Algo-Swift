@@ -12,8 +12,8 @@ My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with *
 
 | Difficulty | Progress |
 | :----- | :----- |
-| Easy   | 47/603 |
-| Medium | 9/1312 |
+| Easy   | 100/603 |
+| Medium | 12/1312 |
 | Hard   | 2/543  |
 
 > Motivation comes from incentive.
@@ -97,6 +97,8 @@ core.exportProblem = function(problem, opts) {
 ```
 
 ### 📚 Books
+
+![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-11-15-ZoByQo.png)
 
 I bought several books about algorithm years ago, mostly writen by Liu Rujia (as known as [@srbga](https://www.topcoder.com/members/srbga)).
 

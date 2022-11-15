@@ -12,9 +12,17 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ("PAYPALISHIRING", 3),
-    ("PAYPALISHIRING", 4),
-    ("A", 1)
+    2147483647,
+    -2147483648,
+    0,
+    -1,
+    1563847412,
+    123,
+    -123,
+    120,
+    1463847412,
+    -1563847412,
+    -2147483412,
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -24,7 +32,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans: String = sol.convert(x.0, x.1)
+    let ans = sol.reverse(x)
     print(ans)
 //    print(tmp)
 }
