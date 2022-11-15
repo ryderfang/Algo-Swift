@@ -12,14 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-//    "42",
-//    "   -42",
-//    "4193 with words",
-//    "+2147483647",
-//    "2147483648",
-//    "-2147483648",
-//    "-2147483712",
-    "20000000000000000000",
+    [1,8,6,2,5,4,8,3,7],
+    [1,1],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -29,7 +23,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.myAtoi(x)
+    let ans = sol.maxArea(x)
     print(ans)
 //    print(tmp)
 }
