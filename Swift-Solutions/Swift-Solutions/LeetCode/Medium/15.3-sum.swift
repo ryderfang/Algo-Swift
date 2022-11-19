@@ -10,6 +10,37 @@ class Solution {}
 #endif
 extension Solution {
     func threeSum(_ nums: [Int]) -> [[Int]] {
+        let nums = nums.sorted()
+        let n = nums.count
+        guard n >= 3 else { return [] }
+        var ans = [[Int]]()
+        for i in 0..<n {
+            // 相同数字只取第一个
+            if i > 0 && nums[i] == nums[i-1] { continue }
+            // target = 0
+            let x = 0 - nums[i]
+            var l = i + 1, r = n - 1
+            // two-pointer
+            while l < r {
+                let sum = nums[l] + nums[r]
+                if sum == x {
+                    ans.append([nums[i], nums[l], nums[r]])
+                    // 找到一个之后继续，可能还有其他组合
+                    l += 1
+                    r -= 1
+                    // 去重
+                    while l < r && nums[l] == nums[l-1] { l += 1 }
+                    while l < r && nums[r] == nums[r+1] { r -= 1 }
+                } else {
+                    // 排序的好处
+                    sum > x ? r -= 1 : (l += 1)
+                }
+            }
+        }
+        return ans
+    }
+
+    func _threeSum(_ nums: [Int]) -> [[Int]] {
         // x : count
         var mp = [Int: Int]()
         var m_nums = [Int]()
