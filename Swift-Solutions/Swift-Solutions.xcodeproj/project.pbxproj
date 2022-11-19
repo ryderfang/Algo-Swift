@@ -14,6 +14,8 @@
 		0D4C2AC52923C76D00E73722 /* 11.container-with-most-water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C2AC42923C76D00E73722 /* 11.container-with-most-water.swift */; };
 		0D4C2AC72924F15700E73722 /* 15.3-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C2AC62924F15700E73722 /* 15.3-sum.swift */; };
 		0D4C2AC92927C4A000E73722 /* 16.3-sum-closest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C2AC82927C4A000E73722 /* 16.3-sum-closest.swift */; };
+		0D4C2ACC2928C4F400E73722 /* 17.letter-combinations-of-a-phone-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C2ACA2928C4F300E73722 /* 17.letter-combinations-of-a-phone-number.swift */; };
+		0D4C2ACD2928C4F400E73722 /* 18.4-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C2ACB2928C4F300E73722 /* 18.4-sum.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -177,6 +179,8 @@
 		0D4C2AC42923C76D00E73722 /* 11.container-with-most-water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "11.container-with-most-water.swift"; sourceTree = "<group>"; };
 		0D4C2AC62924F15700E73722 /* 15.3-sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "15.3-sum.swift"; sourceTree = "<group>"; };
 		0D4C2AC82927C4A000E73722 /* 16.3-sum-closest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "16.3-sum-closest.swift"; sourceTree = "<group>"; };
+		0D4C2ACA2928C4F300E73722 /* 17.letter-combinations-of-a-phone-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "17.letter-combinations-of-a-phone-number.swift"; sourceTree = "<group>"; };
+		0D4C2ACB2928C4F300E73722 /* 18.4-sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "18.4-sum.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -486,6 +490,8 @@
 				DAED6E96290175C4003B7433 /* 12.integer-to-roman.swift */,
 				0D4C2AC62924F15700E73722 /* 15.3-sum.swift */,
 				0D4C2AC82927C4A000E73722 /* 16.3-sum-closest.swift */,
+				0D4C2ACA2928C4F300E73722 /* 17.letter-combinations-of-a-phone-number.swift */,
+				0D4C2ACB2928C4F300E73722 /* 18.4-sum.swift */,
 				DAFCA39B28F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift */,
 				DAFCA39A28F6B70400CF1DE6 /* 31.next-permutation.swift */,
 				DAFCA39C28F6B70400CF1DE6 /* 46.permutations.swift */,
@@ -658,11 +664,13 @@
 				DAFCA3A728F6B70A00CF1DE6 /* 21.merge-two-sorted-lists.swift in Sources */,
 				0DADAC252913FCA600C30C0F /* 345.reverse-vowels-of-a-string.swift in Sources */,
 				0D74F47D2915495F000E9237 /* 434.number-of-segments-in-a-string.swift in Sources */,
+				0D4C2ACD2928C4F400E73722 /* 18.4-sum.swift in Sources */,
 				0D76388A290E8672004CD387 /* 205.isomorphic-strings.swift in Sources */,
 				0D74F48F291F3973000E9237 /* 485.max-consecutive-ones.swift in Sources */,
 				DAFCA45B28FAEBD700CF1DE6 /* 27.remove-element.swift in Sources */,
 				0D74F49B291FF3A5000E9237 /* 504.base-7.swift in Sources */,
 				0D76386B290C0E9D004CD387 /* 119.pascals-triangle-ii.swift in Sources */,
+				0D4C2ACC2928C4F400E73722 /* 17.letter-combinations-of-a-phone-number.swift in Sources */,
 				0DBE142F29114A4100F5ECE1 /* 268.missing-number.swift in Sources */,
 				0D74F47B291545C0000E9237 /* 415.add-strings.swift in Sources */,
 				0D763898290EBF13004CD387 /* 231.power-of-two.swift in Sources */,
