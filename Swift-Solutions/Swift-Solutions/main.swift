@@ -12,9 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [-1,0,1,2,-1,-4],
-    [0,1,1],
-    [0,0,0,0,0,0,0],
+    ("sadbutsad", "sad"),
+    ("leetcode", "leeto"),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -24,8 +23,9 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.threeSum(x)
+    let ans = sol.strStr(x.0, x.1)
     print(ans)
+//    print(ans?.array() ?? [])
 //    print(tmp)
 }
 
