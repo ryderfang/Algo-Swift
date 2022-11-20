@@ -12,6 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
+    ("ababcdefabcgt", "abcdefabcg"),
+    ("ababcdefabcgt", "aaacaaaaac"),
     ("sadbutsad", "sad"),
     ("leetcode", "leeto"),
 ]
