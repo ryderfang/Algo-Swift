@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D74F4A82920AE60000E9237 /* Prime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4A72920AE60000E9237 /* Prime.swift */; };
 		0D76387A290E2978004CD387 /* ObjExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763879290E2978004CD387 /* ObjExt.swift */; };
+		0D9E9B8C292BCEE7005486CE /* HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8B292BCEE7005486CE /* HelperTests.swift */; };
 		0DADAC272914007F00C30C0F /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC262914007F00C30C0F /* QuickSort.swift */; };
 		0DADAC3329140DE700C30C0F /* DictionaryExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3229140DE700C30C0F /* DictionaryExt.swift */; };
 		DAFCA41D28FAD8D700CF1DE6 /* AlgoBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		0D74F4A72920AE60000E9237 /* Prime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prime.swift; sourceTree = "<group>"; };
 		0D763879290E2978004CD387 /* ObjExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjExt.swift; sourceTree = "<group>"; };
+		0D9E9B8B292BCEE7005486CE /* HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperTests.swift; sourceTree = "<group>"; };
 		0DADAC262914007F00C30C0F /* QuickSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
 		0DADAC3229140DE700C30C0F /* DictionaryExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExt.swift; sourceTree = "<group>"; };
 		DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlgoBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFCA42128FAD8D700CF1DE6 /* AlgoBaseTests.swift */,
+				0D9E9B8B292BCEE7005486CE /* HelperTests.swift */,
 			);
 			path = AlgoBaseTests;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFCA42228FAD8D700CF1DE6 /* AlgoBaseTests.swift in Sources */,
+				0D9E9B8C292BCEE7005486CE /* HelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
