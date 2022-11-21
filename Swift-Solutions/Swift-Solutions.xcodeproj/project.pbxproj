@@ -75,6 +75,7 @@
 		0D7638A0290EC6B9004CD387 /* 257.binary-tree-paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76389F290EC6B9004CD387 /* 257.binary-tree-paths.swift */; };
 		0D7638A2290ECD52004CD387 /* 258.add-digits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7638A1290ECD52004CD387 /* 258.add-digits.swift */; };
 		0D7638A4290ECE80004CD387 /* 263.ugly-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7638A3290ECE80004CD387 /* 263.ugly-number.swift */; };
+		0D9E9B8A292A7CF0005486CE /* 29.divide-two-integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B89292A7CF0005486CE /* 29.divide-two-integers.swift */; };
 		0DA8E5BB2834AA8B00FA2C0B /* bm83.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */; };
 		0DADAC252913FCA600C30C0F /* 345.reverse-vowels-of-a-string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC242913FCA600C30C0F /* 345.reverse-vowels-of-a-string.swift */; };
 		0DADAC29291401AB00C30C0F /* 349.intersection-of-two-arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC28291401AB00C30C0F /* 349.intersection-of-two-arrays.swift */; };
@@ -243,6 +244,7 @@
 		0D76389F290EC6B9004CD387 /* 257.binary-tree-paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "257.binary-tree-paths.swift"; sourceTree = "<group>"; };
 		0D7638A1290ECD52004CD387 /* 258.add-digits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "258.add-digits.swift"; sourceTree = "<group>"; };
 		0D7638A3290ECE80004CD387 /* 263.ugly-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "263.ugly-number.swift"; sourceTree = "<group>"; };
+		0D9E9B89292A7CF0005486CE /* 29.divide-two-integers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "29.divide-two-integers.swift"; sourceTree = "<group>"; };
 		0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bm83.swift; sourceTree = "<group>"; };
 		0DADAC242913FCA600C30C0F /* 345.reverse-vowels-of-a-string.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "345.reverse-vowels-of-a-string.swift"; sourceTree = "<group>"; };
 		0DADAC28291401AB00C30C0F /* 349.intersection-of-two-arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "349.intersection-of-two-arrays.swift"; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 				0DCF946E2928DF1F009D3B1A /* 22.generate-parentheses.swift */,
 				0DCF94702928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift */,
 				0DCF94722928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift */,
+				0D9E9B89292A7CF0005486CE /* 29.divide-two-integers.swift */,
 				DAFCA39A28F6B70400CF1DE6 /* 31.next-permutation.swift */,
 				DAFCA39C28F6B70400CF1DE6 /* 46.permutations.swift */,
 				DAFCA39628F6B70400CF1DE6 /* 47.permutations-ii.swift */,
@@ -665,6 +668,7 @@
 				0DBE14392912977700F5ECE1 /* 303.range-sum-query-immutable.swift in Sources */,
 				DAFCA47428FBE7E100CF1DE6 /* 145.binary-tree-postorder-traversal.swift in Sources */,
 				0DBE143B2912993100F5ECE1 /* 326.power-of-three.swift in Sources */,
+				0D9E9B8A292A7CF0005486CE /* 29.divide-two-integers.swift in Sources */,
 				0D76387C290E3398004CD387 /* 160.intersection-of-two-linked-lists.swift in Sources */,
 				0D74F48129154D9E000E9237 /* 448.find-all-numbers-disappeared-in-an-array.swift in Sources */,
 				0D74F4AE29213357000E9237 /* 6.zigzag-conversion.swift in Sources */,

@@ -61,6 +61,17 @@ extension Int {
         return bits
     }
 
+    // convert dividend to binary, high to low
+    public func toBits() -> [Int] {
+        var bits = [Int]()
+        var n = self
+        while n != 0 {
+            bits = [n & 1] + bits
+            n >>= 1
+        }
+        return bits
+    }
+
     // lc405
     public func toHex(bitWidth: Int = 32, uppercase: Bool = false) -> String {
         guard self != 0 else { return "0" }
