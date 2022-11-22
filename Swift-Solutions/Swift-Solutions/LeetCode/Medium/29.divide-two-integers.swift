@@ -12,6 +12,30 @@ extension Solution {
     // 不能使用 * / %
     func divide(_ dividend: Int, _ divisor: Int) -> Int {
         guard dividend != 0 else { return 0 }
+        let intMax = Int(Int32.max)
+        let intMin = Int(Int32.min)
+        // -2^31/-1 is the only chance to overflow
+        if dividend == intMin && divisor == -1 {
+            return intMax
+        }
+        var remainder = abs(dividend)
+        let down = abs(divisor)
+        var quotient = 0
+        for x in stride(from: 31, through: 0, by: -1) {
+            if remainder >= (down << x) {
+                quotient += (1 << x)
+                remainder -= (down << x)
+            }
+        }
+        if (dividend > 0) != (divisor > 0) {
+            quotient = -quotient
+        }
+        print(remainder)
+        return quotient
+    }
+
+    func _divide(_ dividend: Int, _ divisor: Int) -> Int {
+        guard dividend != 0 else { return 0 }
         // 2^31 - 1
         let intMax = Int(Int32.max)
         // -2^31
@@ -20,20 +44,8 @@ extension Solution {
         if dividend == intMin && divisor == -1 {
             return intMax
         }
-        // else result is in [intMin, intMax]
-        var positive = true
-        if (dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0) {
-            positive = false
-        }
         var a = abs(dividend)
-        let b = abs(divisor > 0 ? divisor : -divisor)
-        if a < b {
-            return 0
-        } else if a == b {
-            return positive ? 1 : -1
-        }
-
-        // a > b
+        let b = abs(divisor)
         var quotient = 0
         // convert dividend to binary, high to low
         var abits = [Int]()
@@ -54,7 +66,10 @@ extension Solution {
         }
 
         print(remainder)
-        return positive ? quotient : -quotient
+        if (dividend > 0) != (divisor > 0) {
+            quotient = -quotient
+        }
+        return quotient
     }
 }
 // @lc code=end

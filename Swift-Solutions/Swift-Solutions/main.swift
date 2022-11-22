@@ -12,7 +12,7 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (1000, 42),
+    (1000, -42),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
