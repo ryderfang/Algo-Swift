@@ -79,6 +79,7 @@
 		0D9E9B8E292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8D292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift */; };
 		0D9E9B90292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8F292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift */; };
 		0D9E9B92292E75F0005486CE /* 36.valid-sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B91292E75F0005486CE /* 36.valid-sudoku.swift */; };
+		0D9E9B94292E7CE6005486CE /* 38.count-and-say.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B93292E7CE6005486CE /* 38.count-and-say.swift */; };
 		0DA8E5BB2834AA8B00FA2C0B /* bm83.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */; };
 		0DADAC252913FCA600C30C0F /* 345.reverse-vowels-of-a-string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC242913FCA600C30C0F /* 345.reverse-vowels-of-a-string.swift */; };
 		0DADAC29291401AB00C30C0F /* 349.intersection-of-two-arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC28291401AB00C30C0F /* 349.intersection-of-two-arrays.swift */; };
@@ -251,6 +252,7 @@
 		0D9E9B8D292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "33.search-in-rotated-sorted-array.swift"; sourceTree = "<group>"; };
 		0D9E9B8F292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "34.find-first-and-last-position-of-element-in-sorted-array.swift"; sourceTree = "<group>"; };
 		0D9E9B91292E75F0005486CE /* 36.valid-sudoku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "36.valid-sudoku.swift"; sourceTree = "<group>"; };
+		0D9E9B93292E7CE6005486CE /* 38.count-and-say.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "38.count-and-say.swift"; sourceTree = "<group>"; };
 		0DA8E5BA2834AA8B00FA2C0B /* bm83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bm83.swift; sourceTree = "<group>"; };
 		0DADAC242913FCA600C30C0F /* 345.reverse-vowels-of-a-string.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "345.reverse-vowels-of-a-string.swift"; sourceTree = "<group>"; };
 		0DADAC28291401AB00C30C0F /* 349.intersection-of-two-arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "349.intersection-of-two-arrays.swift"; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 				0D9E9B8D292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift */,
 				0D9E9B8F292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift */,
 				0D9E9B91292E75F0005486CE /* 36.valid-sudoku.swift */,
+				0D9E9B93292E7CE6005486CE /* 38.count-and-say.swift */,
 				DAFCA39C28F6B70400CF1DE6 /* 46.permutations.swift */,
 				DAFCA39628F6B70400CF1DE6 /* 47.permutations-ii.swift */,
 				DAFCA39828F6B70400CF1DE6 /* 77.combinations.swift */,
@@ -748,6 +751,7 @@
 				DAFCA3B528F9140900CF1DE6 /* 20.valid-parentheses.swift in Sources */,
 				0DADAC382914120B00C30C0F /* 392.is-subsequence.swift in Sources */,
 				DAFCA40728FAD75800CF1DE6 /* Defines.swift in Sources */,
+				0D9E9B94292E7CE6005486CE /* 38.count-and-say.swift in Sources */,
 				0D763869290C0BF8004CD387 /* 118.pascals-triangle.swift in Sources */,
 				0D763874290CF7F2004CD387 /* 136.single-number.swift in Sources */,
 				0D763896290EB51A004CD387 /* 228.summary-ranges.swift in Sources */,
