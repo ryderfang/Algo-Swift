@@ -12,7 +12,12 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (1000, -42),
+    ([5,7,7,8,8,10], 8),
+    ([5,6,6,6,8,10], 6),
+    ([], 0),
+    ([1], 1),
+    ([1, 3], 1),
+    ([2,2], 2),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -22,7 +27,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.divide(x.0, x.1)
+    let ans = sol.searchRange(x.0, x.1)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
