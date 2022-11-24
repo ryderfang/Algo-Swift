@@ -12,10 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ([2,3,6,7], 7),
-    ([2,3,5], 8),
-    ([2], 1),
-    ([2,3], 6)
+    [2,3,1,1,4],
+    [2,3,0,1,4],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -29,7 +27,7 @@ for (i, x) in cases.enumerated() {
 //            Character($0)
 //        }
 //    }
-    let ans = sol.combinationSum(x.0, x.1)
+    let ans = sol.jump(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
