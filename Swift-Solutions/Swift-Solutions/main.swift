@@ -12,8 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [2,3,1,1,4],
-    [2,3,0,1,4],
+    (2.00000, 10),
+    (2.10000, 3),
+    (2.00000, -2),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -27,7 +28,7 @@ for (i, x) in cases.enumerated() {
 //            Character($0)
 //        }
 //    }
-    let ans = sol.jump(x)
+    let ans = sol.myPow(x.0, x.1)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
