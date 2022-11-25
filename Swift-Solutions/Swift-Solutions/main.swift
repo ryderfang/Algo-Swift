@@ -12,9 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (2.00000, 10),
-    (2.10000, 3),
-    (2.00000, -2),
+    [[1,2,3],[4,5,6],[7,8,9]],
+    [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -23,14 +22,10 @@ for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
-//    let tmp = x.map {
-//        $0.map {
-//            Character($0)
-//        }
-//    }
-    let ans = sol.myPow(x.0, x.1)
-    print(ans)
+    var tmp = x
+    let ans = sol.rotate(&tmp)
+//    print(ans)
 //    print(ans?.array() ?? [])
-//    print(tmp)
+    print(tmp)
 }
 

@@ -508,8 +508,6 @@
 		0D0C861328632D540010C108 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
-				0D9E9B9E292FC1D5005486CE /* 48.rotate-image.swift */,
-				0D9E9B9D292FC1D5005486CE /* 50.pow-x-n.swift */,
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
 				0D74F4A92920CB7F000E9237 /* 3.longest-substring-without-repeating-characters.swift */,
 				0D74F4AB292105B9000E9237 /* 5.longest-palindromic-substring.swift */,
@@ -538,6 +536,8 @@
 				0D9E9B9B292FAEAE005486CE /* 45.jump-game-ii.swift */,
 				DAFCA39C28F6B70400CF1DE6 /* 46.permutations.swift */,
 				DAFCA39628F6B70400CF1DE6 /* 47.permutations-ii.swift */,
+				0D9E9B9E292FC1D5005486CE /* 48.rotate-image.swift */,
+				0D9E9B9D292FC1D5005486CE /* 50.pow-x-n.swift */,
 				DAFCA39828F6B70400CF1DE6 /* 77.combinations.swift */,
 				DAFCA39728F6B70400CF1DE6 /* 78.subsets.swift */,
 				DAFCA39D28F6B70400CF1DE6 /* 90.subsets-ii.swift */,
