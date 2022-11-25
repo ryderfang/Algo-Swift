@@ -12,8 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [[1,2,3],[4,5,6],[7,8,9]],
-    [[1,2,3,4],[5,6,7,8],[9,10,11,12]],
+    [2,3,1,1,4],
+    [0,2,3],
+    [3,2,1,0,4],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -23,7 +24,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.spiralOrder(x)
+    let ans = sol.canJump(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
