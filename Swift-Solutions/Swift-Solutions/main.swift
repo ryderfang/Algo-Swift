@@ -12,10 +12,10 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ("2", "3"),
-    ("123", "456"),
-    ("123456789", "987654321"),
-    ("9", "9"),
+    [-2,1,-3,4,-1,2,1,-5,4],
+    [5,4,-1,7,8],
+    [1],
+    [-1],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,7 +25,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.multiply(x.0, x.1)
+    let ans = sol.maxSubArray(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
