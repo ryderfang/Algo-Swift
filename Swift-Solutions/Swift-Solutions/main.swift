@@ -12,10 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [-2,1,-3,4,-1,2,1,-5,4],
-    [5,4,-1,7,8],
-    [1],
-    [-1],
+    [[1,2,3],[4,5,6],[7,8,9]],
+    [[1,2,3,4],[5,6,7,8],[9,10,11,12]],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,7 +23,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.maxSubArray(x)
+    let ans = sol.spiralOrder(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

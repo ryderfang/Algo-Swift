@@ -101,6 +101,7 @@
 		0DADAC3D2915235100C30C0F /* 404.sum-of-left-leaves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3C2915235100C30C0F /* 404.sum-of-left-leaves.swift */; };
 		0DADAC3F291524E200C30C0F /* 405.convert-a-number-to-hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3E291524E100C30C0F /* 405.convert-a-number-to-hexadecimal.swift */; };
 		0DB6C7BC29310E7F00CBBC67 /* 53.maximum-subarray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7BB29310E7F00CBBC67 /* 53.maximum-subarray.swift */; };
+		0DB6C7BE2931197C00CBBC67 /* 54.spiral-matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7BD2931197C00CBBC67 /* 54.spiral-matrix.swift */; };
 		0DBE142F29114A4100F5ECE1 /* 268.missing-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */; };
 		0DBE143129114B1200F5ECE1 /* 278.first-bad-version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */; };
 		0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */; };
@@ -282,6 +283,7 @@
 		0DADAC3C2915235100C30C0F /* 404.sum-of-left-leaves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "404.sum-of-left-leaves.swift"; sourceTree = "<group>"; };
 		0DADAC3E291524E100C30C0F /* 405.convert-a-number-to-hexadecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "405.convert-a-number-to-hexadecimal.swift"; sourceTree = "<group>"; };
 		0DB6C7BB29310E7F00CBBC67 /* 53.maximum-subarray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "53.maximum-subarray.swift"; sourceTree = "<group>"; };
+		0DB6C7BD2931197C00CBBC67 /* 54.spiral-matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "54.spiral-matrix.swift"; sourceTree = "<group>"; };
 		0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "268.missing-number.swift"; sourceTree = "<group>"; };
 		0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "278.first-bad-version.swift"; sourceTree = "<group>"; };
 		0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "283.move-zeroes.swift"; sourceTree = "<group>"; };
@@ -512,7 +514,7 @@
 		0D0C861328632D540010C108 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
-				0DB6C7BB29310E7F00CBBC67 /* 53.maximum-subarray.swift */,
+				0DB6C7BD2931197C00CBBC67 /* 54.spiral-matrix.swift */,
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
 				0D74F4A92920CB7F000E9237 /* 3.longest-substring-without-repeating-characters.swift */,
 				0D74F4AB292105B9000E9237 /* 5.longest-palindromic-substring.swift */,
@@ -544,6 +546,7 @@
 				0D9E9B9E292FC1D5005486CE /* 48.rotate-image.swift */,
 				0D9E9BA32930EA44005486CE /* 49.group-anagrams.swift */,
 				0D9E9B9D292FC1D5005486CE /* 50.pow-x-n.swift */,
+				0DB6C7BB29310E7F00CBBC67 /* 53.maximum-subarray.swift */,
 				DAFCA39828F6B70400CF1DE6 /* 77.combinations.swift */,
 				DAFCA39728F6B70400CF1DE6 /* 78.subsets.swift */,
 				DAFCA39D28F6B70400CF1DE6 /* 90.subsets-ii.swift */,
@@ -761,6 +764,7 @@
 				DAFCA3A028F6B70400CF1DE6 /* 77.combinations.swift in Sources */,
 				DAFCA3B728F9362600CF1DE6 /* 26.remove-duplicates-from-sorted-array.swift in Sources */,
 				0D74F495291F52C9000E9237 /* 496.next-greater-element-i.swift in Sources */,
+				0DB6C7BE2931197C00CBBC67 /* 54.spiral-matrix.swift in Sources */,
 				DAFCA3AD28F8090700CF1DE6 /* 1.two-sum.swift in Sources */,
 				0D74F4852917CA71000E9237 /* 459.repeated-substring-pattern.swift in Sources */,
 				0D74F48B291BE494000E9237 /* 476.number-complement.swift in Sources */,
