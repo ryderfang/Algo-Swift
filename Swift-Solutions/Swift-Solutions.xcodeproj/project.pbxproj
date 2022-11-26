@@ -117,6 +117,8 @@
 		0DB6C7DB293233D600CBBC67 /* 74.search-a-2-d-matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7DA293233D600CBBC67 /* 74.search-a-2-d-matrix.swift */; };
 		0DB6C7DD2932370F00CBBC67 /* 75.sort-colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7DC2932370F00CBBC67 /* 75.sort-colors.swift */; };
 		0DB6C7DF29326C2100CBBC67 /* 79.word-search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7DE29326C2100CBBC67 /* 79.word-search.swift */; };
+		0DB6C7E2293274E200CBBC67 /* 81.search-in-rotated-sorted-array-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7E0293274E200CBBC67 /* 81.search-in-rotated-sorted-array-ii.swift */; };
+		0DB6C7E3293274E200CBBC67 /* 80.remove-duplicates-from-sorted-array-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7E1293274E200CBBC67 /* 80.remove-duplicates-from-sorted-array-ii.swift */; };
 		0DBE142F29114A4100F5ECE1 /* 268.missing-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */; };
 		0DBE143129114B1200F5ECE1 /* 278.first-bad-version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */; };
 		0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */; };
@@ -314,6 +316,8 @@
 		0DB6C7DA293233D600CBBC67 /* 74.search-a-2-d-matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "74.search-a-2-d-matrix.swift"; sourceTree = "<group>"; };
 		0DB6C7DC2932370F00CBBC67 /* 75.sort-colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "75.sort-colors.swift"; sourceTree = "<group>"; };
 		0DB6C7DE29326C2100CBBC67 /* 79.word-search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "79.word-search.swift"; sourceTree = "<group>"; };
+		0DB6C7E0293274E200CBBC67 /* 81.search-in-rotated-sorted-array-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "81.search-in-rotated-sorted-array-ii.swift"; sourceTree = "<group>"; };
+		0DB6C7E1293274E200CBBC67 /* 80.remove-duplicates-from-sorted-array-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "80.remove-duplicates-from-sorted-array-ii.swift"; sourceTree = "<group>"; };
 		0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "268.missing-number.swift"; sourceTree = "<group>"; };
 		0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "278.first-bad-version.swift"; sourceTree = "<group>"; };
 		0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "283.move-zeroes.swift"; sourceTree = "<group>"; };
@@ -593,6 +597,8 @@
 				DAFCA39828F6B70400CF1DE6 /* 77.combinations.swift */,
 				DAFCA39728F6B70400CF1DE6 /* 78.subsets.swift */,
 				0DB6C7DE29326C2100CBBC67 /* 79.word-search.swift */,
+				0DB6C7E1293274E200CBBC67 /* 80.remove-duplicates-from-sorted-array-ii.swift */,
+				0DB6C7E0293274E200CBBC67 /* 81.search-in-rotated-sorted-array-ii.swift */,
 				DAFCA39D28F6B70400CF1DE6 /* 90.subsets-ii.swift */,
 			);
 			path = Medium;
@@ -862,6 +868,7 @@
 				0DADAC2D2914045000C30C0F /* 367.valid-perfect-square.swift in Sources */,
 				0DCF94712928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift in Sources */,
 				0D01F331281AE26D00794410 /* main.swift in Sources */,
+				0DB6C7E2293274E200CBBC67 /* 81.search-in-rotated-sorted-array-ii.swift in Sources */,
 				DAFCA3B528F9140900CF1DE6 /* 20.valid-parentheses.swift in Sources */,
 				0DADAC382914120B00C30C0F /* 392.is-subsequence.swift in Sources */,
 				DAFCA40728FAD75800CF1DE6 /* Defines.swift in Sources */,
@@ -880,6 +887,7 @@
 				0D763888290E8405004CD387 /* 203.remove-linked-list-elements.swift in Sources */,
 				0D7638A0290EC6B9004CD387 /* 257.binary-tree-paths.swift in Sources */,
 				0D76389C290EC152004CD387 /* 234.palindrome-linked-list.swift in Sources */,
+				0DB6C7E3293274E200CBBC67 /* 80.remove-duplicates-from-sorted-array-ii.swift in Sources */,
 				DAED6E9B290180F7003B7433 /* 101.symmetric-tree.swift in Sources */,
 				0DADAC392914120B00C30C0F /* 389.find-the-difference.swift in Sources */,
 				DAFCA46B28FBD32800CF1DE6 /* 83.remove-duplicates-from-sorted-list.swift in Sources */,
