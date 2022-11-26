@@ -12,26 +12,21 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    1,
-    2,
-    3,
-    4,
-    7,
+    ([1,2,3,4,5], 2),
+    ([0,1,2], 4),
+    ([1], 10),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
 
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
-//    let head = ListNode.arrayToList(x)
+    let head = ListNode.arrayToList(x.0)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.generateMatrix(x)
+    let ans = sol.rotateRight(head, x.1)
 //    print(ans)
-    for x in ans {
-        print(x)
-    }
-//    print(ans?.array() ?? [])
+    print(ans?.array() ?? [])
 //    print(tmp)
 }
 
