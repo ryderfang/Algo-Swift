@@ -10,6 +10,7 @@
 class Solution {}
 #endif
 extension Solution {
+    // 2481
     func numberOfCuts(_ n: Int) -> Int {
         guard n > 1 else { return 0 }
         if n & 1 == 0 {
@@ -19,6 +20,7 @@ extension Solution {
         }
     }
 
+    // 2482
     func onesMinusZeros(_ grid: [[Int]]) -> [[Int]] {
         let m = grid.count
         let n = grid[0].count
@@ -47,6 +49,7 @@ extension Solution {
         return diff
     }
 
+    // 2483
     func bestClosingTime(_ customers: String) -> Int {
         let n = customers.count
         var lessN = [Int](repeating: 0, count: n+1)
