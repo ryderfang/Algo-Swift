@@ -12,8 +12,11 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [[1,3],[2,6],[8,10],[15,18]],
-    [[1,4],[4,5]],
+    1,
+    2,
+    3,
+    4,
+    7,
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -23,8 +26,11 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.merge(x)
-    print(ans)
+    let ans = sol.generateMatrix(x)
+//    print(ans)
+    for x in ans {
+        print(x)
+    }
 //    print(ans?.array() ?? [])
 //    print(tmp)
 }
