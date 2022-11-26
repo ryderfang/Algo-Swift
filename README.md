@@ -13,7 +13,7 @@ My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with *
 | Difficulty | Progress |
 | :----- | :----- |
 | Easy   | 100/603 |
-| Medium | 22/1312 |
+| Medium | 46/1312 |
 | Hard   | 2/543  |
 
 > Motivation comes from incentive.
