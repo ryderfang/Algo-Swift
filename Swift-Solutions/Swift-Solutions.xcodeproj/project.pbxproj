@@ -111,6 +111,7 @@
 		0DB6C7CF2932164B00CBBC67 /* 61.rotate-list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7CE2932164B00CBBC67 /* 61.rotate-list.swift */; };
 		0DB6C7D129321F5200CBBC67 /* 62.unique-paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7D029321F5100CBBC67 /* 62.unique-paths.swift */; };
 		0DB6C7D3293222FD00CBBC67 /* 63.unique-paths-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7D2293222FD00CBBC67 /* 63.unique-paths-ii.swift */; };
+		0DB6C7D52932245000CBBC67 /* 64.minimum-path-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7D42932245000CBBC67 /* 64.minimum-path-sum.swift */; };
 		0DBE142F29114A4100F5ECE1 /* 268.missing-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */; };
 		0DBE143129114B1200F5ECE1 /* 278.first-bad-version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */; };
 		0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */; };
@@ -302,6 +303,7 @@
 		0DB6C7CE2932164B00CBBC67 /* 61.rotate-list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "61.rotate-list.swift"; sourceTree = "<group>"; };
 		0DB6C7D029321F5100CBBC67 /* 62.unique-paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "62.unique-paths.swift"; sourceTree = "<group>"; };
 		0DB6C7D2293222FD00CBBC67 /* 63.unique-paths-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "63.unique-paths-ii.swift"; sourceTree = "<group>"; };
+		0DB6C7D42932245000CBBC67 /* 64.minimum-path-sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "64.minimum-path-sum.swift"; sourceTree = "<group>"; };
 		0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "268.missing-number.swift"; sourceTree = "<group>"; };
 		0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "278.first-bad-version.swift"; sourceTree = "<group>"; };
 		0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "283.move-zeroes.swift"; sourceTree = "<group>"; };
@@ -533,8 +535,7 @@
 		0D0C861328632D540010C108 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
-				0DB6C7D2293222FD00CBBC67 /* 63.unique-paths-ii.swift */,
-				0DB6C7D029321F5100CBBC67 /* 62.unique-paths.swift */,
+				0DB6C7D42932245000CBBC67 /* 64.minimum-path-sum.swift */,
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
 				0D74F4A92920CB7F000E9237 /* 3.longest-substring-without-repeating-characters.swift */,
 				0D74F4AB292105B9000E9237 /* 5.longest-palindromic-substring.swift */,
@@ -573,6 +574,8 @@
 				0DB6C7CA2931F79400CBBC67 /* 57.insert-interval.swift */,
 				0DB6C7CC29320BE500CBBC67 /* 59.spiral-matrix-ii.swift */,
 				0DB6C7CE2932164B00CBBC67 /* 61.rotate-list.swift */,
+				0DB6C7D029321F5100CBBC67 /* 62.unique-paths.swift */,
+				0DB6C7D2293222FD00CBBC67 /* 63.unique-paths-ii.swift */,
 				DAFCA39828F6B70400CF1DE6 /* 77.combinations.swift */,
 				DAFCA39728F6B70400CF1DE6 /* 78.subsets.swift */,
 				DAFCA39D28F6B70400CF1DE6 /* 90.subsets-ii.swift */,
@@ -828,6 +831,7 @@
 				DAFCA46128FAF3A900CF1DE6 /* 58.length-of-last-word.swift in Sources */,
 				0D74F4832917C5F5000E9237 /* 455.assign-cookies.swift in Sources */,
 				0D9E9B96292E81A7005486CE /* 39.combination-sum.swift in Sources */,
+				0DB6C7D52932245000CBBC67 /* 64.minimum-path-sum.swift in Sources */,
 				DAFCA3AA28F6B71200CF1DE6 /* 23.merge-k-sorted-lists.swift in Sources */,
 				DAFCA3A528F6B70400CF1DE6 /* 90.subsets-ii.swift in Sources */,
 				DAFCA45F28FAF04D00CF1DE6 /* 35.search-insert-position.swift in Sources */,
