@@ -18,7 +18,8 @@ extension Solution {
                 if i == 0 && j == 0 {
                     ans[i][j] = grid[i][j]
                 } else {
-                    ans[i][j] = min(i > 0 ? ans[i-1][j] : Int.max, j > 0 ? ans[i][j-1] : Int.max) + grid[i][j]
+                    ans[i][j] = min(i > 0 ? ans[i-1][j] : Int.max,
+                                    j > 0 ? ans[i][j-1] : Int.max) + grid[i][j]
                 }
             }
         }

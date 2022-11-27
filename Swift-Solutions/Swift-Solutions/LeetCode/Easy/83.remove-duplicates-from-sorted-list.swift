@@ -16,7 +16,7 @@
  * }
  */
 extension Solution {
-    func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+    func deleteDuplicates1(_ head: ListNode?) -> ListNode? {
         guard head != nil else { return nil }
         var p = head
         while p?.next != nil {
