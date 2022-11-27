@@ -9,7 +9,7 @@
 class Solution {}
 #endif
 extension Solution {
-    func removeDuplicates(_ nums: inout [Int]) -> Int {
+    fileprivate func removeDuplicates(_ nums: inout [Int]) -> Int {
         var n = nums.count
         guard n > 1 else { return 1 }
         var cnt = 1

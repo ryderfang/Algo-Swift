@@ -9,8 +9,39 @@
 class Solution {}
 #endif
 extension Solution {
+    fileprivate func search(_ nums: [Int], _ target: Int) -> Int {
+        let n = nums.count
+        var l = 0, r = n - 1
+        while l <= r {
+            let m = l + (r - l) / 2
+            if nums[m] == target {
+                return m
+            }
+            let setL: () -> Void = {
+                l = m + 1
+            }
+            let setR: () -> Void = {
+                r = m - 1
+            }
+            if nums[m] >= nums[l] {
+                if nums[l] <= target && target < nums[m] {
+                    setR()
+                } else {
+                    setL()
+                }
+            } else {
+                if nums[m] < target && target <= nums[r] {
+                    setL()
+                } else {
+                    setR()
+                }
+            }
+        }
+        return -1
+    }
+
     // can solve with one-loop
-    func search(_ nums: [Int], _ target: Int) -> Int {
+    func _search(_ nums: [Int], _ target: Int) -> Int {
         let n = nums.count
         // find the demarcation point
         var left = 0, right = n - 1

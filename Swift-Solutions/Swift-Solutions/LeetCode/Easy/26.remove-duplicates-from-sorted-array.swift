@@ -6,7 +6,7 @@
 
 // @lc code=start
 extension Solution {
-    func removeDuplicates1(_ nums: inout [Int]) -> Int {
+    fileprivate func removeDuplicates(_ nums: inout [Int]) -> Int {
         var ret = nums.count
         var i = 0
         while i < ret {
