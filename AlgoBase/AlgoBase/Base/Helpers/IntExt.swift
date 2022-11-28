@@ -34,6 +34,7 @@ extension Int {
         // 48
         let zero = Int(("0" as UnicodeScalar).value)
         return Character(UnicodeScalar(self + zero)!)
+//        return String(self).first
     }
 
     // [A...Z] -> [65...90]

@@ -12,10 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    1,
-    2,
-    3,
-    5,
+    "12",
+    "226",
+    "06",
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,7 +24,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x.0)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.grayCode(x)
+    let ans = sol.numDecodings(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
