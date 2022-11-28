@@ -12,21 +12,20 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    "12",
-    "226",
-    "06",
+    ([1,2,3,4,5], 1, 5),
+    ([5], 1, 1),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
 
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
-//    let head = ListNode.arrayToList(x.0)
+    let head = ListNode.arrayToList(x.0)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.numDecodings(x)
+    let ans = sol.reverseBetween(head, x.1, x.2)
     print(ans)
-//    print(ans?.array() ?? [])
+    print(ans?.array() ?? [])
 //    print(tmp)
 }
 
