@@ -12,9 +12,10 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    "25525511135",
-    "000",
-    "10102"
+    1,
+    2,
+    3,
+    4,
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -24,9 +25,12 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x.0)
 //    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.restoreIpAddresses(x)
-    print(ans)
+    let ans = sol.generateTrees(x)
+//    print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
+    for x in ans {
+        print(x?.array().map { $0 != nil ? $0! : nil } ?? [])
+    }
 }
 
