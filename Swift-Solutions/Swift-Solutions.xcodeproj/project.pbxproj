@@ -126,6 +126,7 @@
 		0DB6C7EF2934F4D300CBBC67 /* 92.reverse-linked-list-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7EE2934F4D300CBBC67 /* 92.reverse-linked-list-ii.swift */; };
 		0DB6C7F129363C2900CBBC67 /* 93.restore-ip-addresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7F029363C2800CBBC67 /* 93.restore-ip-addresses.swift */; };
 		0DB6C7F32936497E00CBBC67 /* 95.unique-binary-search-trees-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7F22936497E00CBBC67 /* 95.unique-binary-search-trees-ii.swift */; };
+		0DB6C7F529365D1200CBBC67 /* 96.unique-binary-search-trees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7F429365D1100CBBC67 /* 96.unique-binary-search-trees.swift */; };
 		0DBE142F29114A4100F5ECE1 /* 268.missing-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */; };
 		0DBE143129114B1200F5ECE1 /* 278.first-bad-version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */; };
 		0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */; };
@@ -332,6 +333,7 @@
 		0DB6C7EE2934F4D300CBBC67 /* 92.reverse-linked-list-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "92.reverse-linked-list-ii.swift"; sourceTree = "<group>"; };
 		0DB6C7F029363C2800CBBC67 /* 93.restore-ip-addresses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "93.restore-ip-addresses.swift"; sourceTree = "<group>"; };
 		0DB6C7F22936497E00CBBC67 /* 95.unique-binary-search-trees-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "95.unique-binary-search-trees-ii.swift"; sourceTree = "<group>"; };
+		0DB6C7F429365D1100CBBC67 /* 96.unique-binary-search-trees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "96.unique-binary-search-trees.swift"; sourceTree = "<group>"; };
 		0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "268.missing-number.swift"; sourceTree = "<group>"; };
 		0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "278.first-bad-version.swift"; sourceTree = "<group>"; };
 		0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "283.move-zeroes.swift"; sourceTree = "<group>"; };
@@ -621,6 +623,7 @@
 				0DB6C7EE2934F4D300CBBC67 /* 92.reverse-linked-list-ii.swift */,
 				0DB6C7F029363C2800CBBC67 /* 93.restore-ip-addresses.swift */,
 				0DB6C7F22936497E00CBBC67 /* 95.unique-binary-search-trees-ii.swift */,
+				0DB6C7F429365D1100CBBC67 /* 96.unique-binary-search-trees.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -860,6 +863,7 @@
 				0D74F48D291BE707000E9237 /* 482.license-key-formatting.swift in Sources */,
 				0D9E9B92292E75F0005486CE /* 36.valid-sudoku.swift in Sources */,
 				0D763882290E53B2004CD387 /* 171.excel-sheet-column-number.swift in Sources */,
+				0DB6C7F529365D1200CBBC67 /* 96.unique-binary-search-trees.swift in Sources */,
 				0D9E9B90292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift in Sources */,
 				0DB6C7DB293233D600CBBC67 /* 74.search-a-2-d-matrix.swift in Sources */,
 				0DADAC2B291402BD00C30C0F /* 350.intersection-of-two-arrays-ii.swift in Sources */,
