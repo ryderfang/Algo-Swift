@@ -64,7 +64,7 @@ extension String {
 fileprivate extension String {
     // 扩展下标方法
     subscript (i: Int) -> Character {
-            return self[self.index(self.startIndex, offsetBy: i)]
+        return self[self.index(self.startIndex, offsetBy: i)]
     }
 
     subscript (i: Int) -> String {
