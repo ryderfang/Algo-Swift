@@ -12,10 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ("aabcc", "dbbca", "aadbbcbcac"),
-    ("aabcc", "dbbca", "aadbbbaccc"),
-    ("", "", ""),
-    ("aabc", "abad", "aabcabad"),
+//    [1,3,nil,nil,2],
+//    [3,1,4,nil,nil,2],
+    [146,71,-13,55,nil,231,399,321,nil,nil,nil,nil,nil,-33]
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -23,14 +22,10 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    let head = ListNode.arrayToList(x.0)
-//    let root = TreeNode.arrayToTree(x)
+    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.isInterleave(x.0, x.1, x.2)
-    print(ans)
-//    print(ans?.array() ?? [])
+    let ans = sol.recoverTree(root)
+//    print(ans)
+    print(root?.array() ?? [])
 //    print(tmp)
-//    for x in ans {
-//        print(x?.array().map { $0 != nil ? $0! : nil } ?? [])
-//    }
 }
-
