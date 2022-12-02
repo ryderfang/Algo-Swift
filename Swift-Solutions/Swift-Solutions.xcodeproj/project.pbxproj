@@ -569,8 +569,6 @@
 		0D0C861328632D540010C108 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
-				0DB6C7F82938F37100CBBC67 /* 98.validate-binary-search-tree.swift */,
-				0DB6C7F62938E91A00CBBC67 /* 97.interleaving-string.swift */,
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
 				0D74F4A92920CB7F000E9237 /* 3.longest-substring-without-repeating-characters.swift */,
 				0D74F4AB292105B9000E9237 /* 5.longest-palindromic-substring.swift */,
@@ -630,6 +628,8 @@
 				0DB6C7F029363C2800CBBC67 /* 93.restore-ip-addresses.swift */,
 				0DB6C7F22936497E00CBBC67 /* 95.unique-binary-search-trees-ii.swift */,
 				0DB6C7F429365D1100CBBC67 /* 96.unique-binary-search-trees.swift */,
+				0DB6C7F62938E91A00CBBC67 /* 97.interleaving-string.swift */,
+				0DB6C7F82938F37100CBBC67 /* 98.validate-binary-search-tree.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
