@@ -12,9 +12,12 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-//    [1,3,nil,nil,2],
-//    [3,1,4,nil,nil,2],
-    [146,71,-13,55,nil,231,399,321,nil,nil,nil,nil,nil,-33]
+    [1,3,nil,nil,2],
+    [3,1,4,nil,nil,2],
+    [3,9,20,nil,nil,15,7],
+    [146,71,-13,55,nil,231,399,321,nil,nil,nil,nil,nil,-33],
+    [1],
+    [],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -24,8 +27,8 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x.0)
     let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.recoverTree(root)
-//    print(ans)
-    print(root?.array() ?? [])
+    let ans = sol.levelOrder(root)
+    print(ans)
+//    print(root?.array() ?? [])
 //    print(tmp)
 }
