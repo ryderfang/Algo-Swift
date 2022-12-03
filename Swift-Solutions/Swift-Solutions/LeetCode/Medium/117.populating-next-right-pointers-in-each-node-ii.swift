@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=116 lang=swift
+ * @lc app=leetcode id=117 lang=swift
  *
- * [116] Populating Next Right Pointers in Each Node
+ * [117] Populating Next Right Pointers in Each Node II
  */
 
 // @lc code=start
@@ -25,16 +25,15 @@ class Solution {}
  */
 
 extension Solution {
-    func connect1(_ root: Node?) -> Node? {
+    func connect(_ root: Node?) -> Node? {
         guard let root = root else { return nil }
-        var tree: [Node?] = [root]
+        var tree: [Node] = [root]
         while !tree.isEmpty {
-            guard tree.compactMap({ $0 }).count > 0 else { break }
+            guard tree.count > 0 else { break }
             for i in 0..<tree.count {
-                guard let node = tree[i] else { continue }
-                node.next = i < tree.count - 1 ? tree[i+1] : nil
+                tree[i].next = i < tree.count - 1 ? tree[i+1] : nil
             }
-            tree = tree.compactMap { $0 }.flatMap { [$0?.left, $0?.right] }
+            tree = tree.flatMap { [$0.left, $0.right].compactMap { $0 } }
         }
         return root
     }
