@@ -12,9 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-//    [100,4,200,1,3,2],
-//    [0,3,7,2,5,8,4,6,0,1],
-    [1,2,0,1],
+    [4,9,0,5,1],
+    [1,2,3],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -22,10 +21,10 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    let head = ListNode.arrayToList(x)
-//    let root = TreeNode.arrayToTree(x)
+    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
-    let ans = sol.longestConsecutive(x)
+    let ans = sol.sumNumbers(root)
     print(ans)
 //    print(ans?.nextArray() ?? [])
 //    print(tmp)
