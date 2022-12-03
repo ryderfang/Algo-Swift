@@ -30,6 +30,10 @@ public extension TreeNode {
             result.append(contentsOf: tree.map { $0?.val })
             tree = tree.compactMap { $0 }.flatMap { [$0?.left, $0?.right] }
         }
+        // remove nils at last
+        while let last = result.last, last == nil {
+            result.removeLast()
+        }
         return result
     }
 
