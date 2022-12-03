@@ -8,7 +8,7 @@
 extension Solution {
     // f[i] = max(f[i-1], p[i] - minP[i-1])
     // optimize
-    func maxProfit(_ prices: [Int]) -> Int {
+    func maxProfit1(_ prices: [Int]) -> Int {
         guard prices.count > 1 else { return 0 }
         let n = prices.count
         var minPrice = prices[0]
@@ -20,7 +20,7 @@ extension Solution {
         return ans
     }
 
-    func maxProfit1(_ prices: [Int]) -> Int {
+    func _maxProfit1(_ prices: [Int]) -> Int {
         guard prices.count > 1 else { return 0 }
         let n = prices.count
         var minP = [Int](repeating: 0, count: n)
