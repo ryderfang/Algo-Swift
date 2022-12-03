@@ -18,6 +18,13 @@ final class TreeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func testConstruct() {
+        let arr = [3,9,20,nil,nil,15,7]
+        let root = TreeNode.arrayToTree(arr)
+        XCTAssertNotNil(root)
+        XCTAssertEqual(root?.array() ?? [], arr)
+    }
+
     func testInorder() {
         let root = TreeNode.arrayToTree([3,9,20,nil,nil,15,7])
         XCTAssertEqual(TreeNode.inOrder(root), [9,3,15,20,7])

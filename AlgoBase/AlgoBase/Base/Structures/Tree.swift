@@ -23,6 +23,17 @@ public class TreeNode {
 // !!!: Constructor
 public extension TreeNode {
     func array() -> [Int?] {
+        var result = [Int?]()
+        var tree: [TreeNode?] = [self]
+        while !tree.isEmpty {
+            guard tree.compactMap({ $0 }).count > 0 else { break }
+            result.append(contentsOf: tree.map { $0?.val })
+            tree = tree.compactMap { $0 }.flatMap { [$0?.left, $0?.right] }
+        }
+        return result
+    }
+
+    func _array() -> [Int?] {
         var ans: [Int?] = []
         var queue: [TreeNode?] = [self]
         while !queue.isEmpty {
