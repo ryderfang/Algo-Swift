@@ -12,10 +12,7 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ([5,4,8,11,nil,13,4,7,2,nil,nil,5,1], 22),
-    ([1,2,3], 5),
-    ([1,2], 0),
-    ([1,2], 1)
+    [1,2,5,3,4,nil,6],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -23,10 +20,10 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    let head = ListNode.arrayToList(x)
-    let root = TreeNode.arrayToTree(x.0)
+    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.pathSum(root, x.1)
-    print(ans)
-//    print(ans?.array() ?? [])
+    let ans = sol.flatten(root)
+//    print(ans)
+    print(root?.array() ?? [])
 //    print(tmp)
 }
