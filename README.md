@@ -89,7 +89,7 @@ core.exportProblem = function(problem, opts) {
   data.testcase = util.inspect(data.testcase || '');
 
   // fix 'swift' redeclaration issue
-  data.code = data.code.replace(/class/g, 'extension');
+  data.code = data.code.replace(/class Solution/g, 'extension Solution');
 
   // ...
   return file.render(opts.tpl, data);

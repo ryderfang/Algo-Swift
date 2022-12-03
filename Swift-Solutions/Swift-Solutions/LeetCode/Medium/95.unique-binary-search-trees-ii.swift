@@ -10,7 +10,7 @@ class Solution {}
 #endif
 /**
  * Definition for a binary tree node.
- * public extension TreeNode {
+ * public class TreeNode {
  *     public var val: Int
  *     public var left: TreeNode?
  *     public var right: TreeNode?

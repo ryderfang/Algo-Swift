@@ -10,7 +10,7 @@ class Solution {}
 #endif
 /**
  * Definition for a Node.
- * public extension Node {
+ * public class Node {
  *     public var val: Int
  *     public var left: Node?
  *     public var right: Node?

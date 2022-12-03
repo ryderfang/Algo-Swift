@@ -10,7 +10,7 @@ class Solution {}
 #endif
 /**
  * Definition for singly-linked list.
- * public extension ListNode {
+ * public class ListNode {
  *     public var val: Int
  *     public var next: ListNode?
  *     public init() { self.val = 0; self.next = nil; }
