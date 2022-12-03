@@ -12,6 +12,7 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
+    [3,9,20,nil,nil,15,7],
     [1,3,nil,nil,2],
     [3,1,4,nil,nil,2],
     [3,9,20,nil,nil,15,7],
@@ -27,7 +28,7 @@ for (i, x) in cases.enumerated() {
 //    let head = ListNode.arrayToList(x.0)
     let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.levelOrder(root)
+    let ans = sol.zigzagLevelOrder(root)
     print(ans)
 //    print(root?.array() ?? [])
 //    print(tmp)
