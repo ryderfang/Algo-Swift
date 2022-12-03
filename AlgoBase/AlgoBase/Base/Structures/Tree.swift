@@ -26,13 +26,13 @@ public extension TreeNode {
         var ans: [Int?] = []
         var queue: [TreeNode?] = [self]
         while !queue.isEmpty {
-            if let node = queue.removeFirst() {
-                ans.append(node.val)
-                queue.append(node.left)
-                queue.append(node.right)
-            } else {
+            guard let node = queue.removeFirst() else {
                 ans.append(nil)
+                continue
             }
+            ans.append(node.val)
+            queue.append(node.left)
+            queue.append(node.right)
         }
         // remove nils at last
         while let last = ans.last, last == nil {
@@ -41,7 +41,7 @@ public extension TreeNode {
         return ans
     }
 
-    // level traversal
+    // TODO: to be optimized
     static func arrayToTree(_ nums: [Int?]) -> TreeNode? {
         guard nums.count > 0 else { return nil }
         guard let rootVal = nums[0] else { return nil }
@@ -80,7 +80,7 @@ public extension TreeNode {
 
 // MARK: - Recursive Traversal
 public extension TreeNode {
-    func inorderTraversal(_ root: TreeNode?) -> [Int] {
+    static func inOrder(_ root: TreeNode?) -> [Int] {
         var ans = [Int]()
         func _inorder(_ node: TreeNode?, _ res: inout [Int]) {
             guard let node = node else { return }
@@ -92,7 +92,7 @@ public extension TreeNode {
         return ans
     }
 
-    func preorderTraversal(_ root: TreeNode?) -> [Int] {
+    static func preOrder(_ root: TreeNode?) -> [Int] {
         var ans = [Int]()
         func _preorder(_ node: TreeNode?, _ res: inout [Int]) {
             guard let node = node else { return }
@@ -104,7 +104,7 @@ public extension TreeNode {
         return ans
     }
 
-    func postorderTraversal(_ root: TreeNode?) -> [Int] {
+    static func postOrder(_ root: TreeNode?) -> [Int] {
         var ans = [Int]()
         func _postorder(_ node: TreeNode?, _ res: inout [Int]) {
             guard let node = node else { return }
@@ -119,50 +119,56 @@ public extension TreeNode {
 
 // MARK: - Iteratively Traversal
 public extension TreeNode {
-    func inorderTraversal_i(_ root: TreeNode?) -> [Int] {
+    // 左根右
+    static func inOrderIterative(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
         var ans = [Int]()
         var stack = [TreeNode]()
-        var node = root
+        var node: TreeNode? = root
         while !stack.isEmpty || node != nil {
-            while node != nil {
-                stack.append(node!)
-                node = node?.left
+            while let tmp = node {
+                stack.append(tmp)
+                node = tmp.left
             }
-            let top = stack.popLast()
-            ans.append(top!.val)
-            node = top!.right
+            let top = stack.removeLast()
+            ans.append(top.val)
+            node = top.right
         }
         return ans
     }
 
-    func preorderTraversal_i(_ root: TreeNode?) -> [Int] {
+    // 根左右
+    static func preOrderIterative(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
         var ans = [Int]()
         var stack = [TreeNode]()
-        var node = root
+        var node: TreeNode? = root
         while !stack.isEmpty || node != nil {
-            while node != nil {
-                stack.append(node!)
-                ans.append(node!.val)
-                node = node!.left
+            while let tmp = node {
+                stack.append(tmp)
+                ans.append(tmp.val)
+                node = tmp.left
             }
-            let top = stack.popLast()
-            node = top!.right
+            let top = stack.removeLast()
+            node = top.right
         }
         return ans
     }
 
-    func postorderTraversal_i(_ root: TreeNode?) -> [Int] {
+    // 右右根
+    static func postOrderIterative(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
         var ans = [Int]()
         var stack = [TreeNode]()
-        var node = root
+        var node: TreeNode? = root
         while !stack.isEmpty || node != nil {
-            while node != nil {
-                stack.append(node!)
-                ans.insert(node!.val, at: 0)
-                node = node?.right
+            while let tmp = node {
+                stack.append(tmp)
+                ans.insert(tmp.val, at: 0)
+                node = tmp.right
             }
-            let top = stack.popLast()
-            node = top!.left
+            let top = stack.removeLast()
+            node = top.left
         }
         return ans
     }

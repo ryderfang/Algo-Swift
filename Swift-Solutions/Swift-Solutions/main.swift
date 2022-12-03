@@ -12,13 +12,10 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [3,9,20,nil,nil,15,7],
-    [1,3,nil,nil,2],
-    [3,1,4,nil,nil,2],
-    [3,9,20,nil,nil,15,7],
-    [146,71,-13,55,nil,231,399,321,nil,nil,nil,nil,nil,-33],
-    [1],
-    [],
+//    ([3,9,20,15,7], [9,3,15,20,7]),
+    ([-1], [-1]),
+    ([1,2], [2,1]),
+    ([9,3,15,20,7], [9,15,7,20,3]),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -26,10 +23,10 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    let head = ListNode.arrayToList(x.0)
-    let root = TreeNode.arrayToTree(x)
+//    let root = TreeNode.arrayToTree(x)
 //    var tmp = x
-    let ans = sol.zigzagLevelOrder(root)
-    print(ans)
-//    print(root?.array() ?? [])
+    let ans = sol.buildTree(x.0, x.1)
+//    print(ans)
+    print(ans?.array() ?? [])
 //    print(tmp)
 }
