@@ -16,6 +16,9 @@
 		0DB6C7E529331CE500CBBC67 /* ArrayExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7E429331CE500CBBC67 /* ArrayExt.swift */; };
 		0DB6C805293B1DCF00CBBC67 /* TreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C804293B1DCF00CBBC67 /* TreeTests.swift */; };
 		0DB6C82E293C39C500CBBC67 /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C82D293C39C500CBBC67 /* UnionFind.swift */; };
+		0DB6C830293E346500CBBC67 /* BFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C82F293E346500CBBC67 /* BFS.swift */; };
+		0DB6C832293E347200CBBC67 /* DFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C831293E347200CBBC67 /* DFS.swift */; };
+		0DB6C834293E370100CBBC67 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C833293E370100CBBC67 /* SearchTests.swift */; };
 		DAFCA41D28FAD8D700CF1DE6 /* AlgoBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */; };
 		DAFCA42228FAD8D700CF1DE6 /* AlgoBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA42128FAD8D700CF1DE6 /* AlgoBaseTests.swift */; };
 		DAFCA42328FAD8D700CF1DE6 /* AlgoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +60,9 @@
 		0DB6C7E429331CE500CBBC67 /* ArrayExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExt.swift; sourceTree = "<group>"; };
 		0DB6C804293B1DCF00CBBC67 /* TreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeTests.swift; sourceTree = "<group>"; };
 		0DB6C82D293C39C500CBBC67 /* UnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
+		0DB6C82F293E346500CBBC67 /* BFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFS.swift; sourceTree = "<group>"; };
+		0DB6C831293E347200CBBC67 /* DFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFS.swift; sourceTree = "<group>"; };
+		0DB6C833293E370100CBBC67 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlgoBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgoBase.h; sourceTree = "<group>"; };
 		DAFCA41C28FAD8D700CF1DE6 /* AlgoBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +155,7 @@
 				DAFCA42128FAD8D700CF1DE6 /* AlgoBaseTests.swift */,
 				0D9E9B8B292BCEE7005486CE /* HelperTests.swift */,
 				0DB6C804293B1DCF00CBBC67 /* TreeTests.swift */,
+				0DB6C833293E370100CBBC67 /* SearchTests.swift */,
 			);
 			path = AlgoBaseTests;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				DAFCA43628FAD91B00CF1DE6 /* BinarySearch.swift */,
+				0DB6C82F293E346500CBBC67 /* BFS.swift */,
+				0DB6C831293E347200CBBC67 /* DFS.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -360,6 +369,7 @@
 				DAFCA44228FAD91C00CF1DE6 /* Primer.swift in Sources */,
 				DAFCA44328FAD91C00CF1DE6 /* IntExt.swift in Sources */,
 				0DB6C82E293C39C500CBBC67 /* UnionFind.swift in Sources */,
+				0DB6C832293E347200CBBC67 /* DFS.swift in Sources */,
 				DAFCA44C28FAD91C00CF1DE6 /* Permutations.swift in Sources */,
 				DAFCA44A28FAD91C00CF1DE6 /* Queue.swift in Sources */,
 				DAFCA44528FAD91C00CF1DE6 /* List.swift in Sources */,
@@ -369,6 +379,7 @@
 				0DADAC3329140DE700C30C0F /* DictionaryExt.swift in Sources */,
 				DAFCA44D28FAD91C00CF1DE6 /* Combinations.swift in Sources */,
 				DAFCA47128FBE68900CF1DE6 /* Tree.swift in Sources */,
+				0DB6C830293E346500CBBC67 /* BFS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFCA42228FAD8D700CF1DE6 /* AlgoBaseTests.swift in Sources */,
+				0DB6C834293E370100CBBC67 /* SearchTests.swift in Sources */,
 				0DB6C805293B1DCF00CBBC67 /* TreeTests.swift in Sources */,
 				0D9E9B8C292BCEE7005486CE /* HelperTests.swift in Sources */,
 			);

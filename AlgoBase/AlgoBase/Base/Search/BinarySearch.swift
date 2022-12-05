@@ -44,3 +44,7 @@ class BinarySearch {
         return -1
     }
 }
+
+class Search {
+    
+}
