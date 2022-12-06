@@ -11,24 +11,24 @@ import Foundation
 // - 用于动态维护查询等价类
 // - 用于图论中动态差点集连通
 // 维护和查询复杂度略大于 O(1)
-class UnionFind {
+fileprivate class UnionFind {
     private var parent: [Int]
     private var rank: [Int]
 
-    init(_ n: Int) {
-        parent = [Int](repeating: 0, count: n + 1)
-        rank = [Int](repeating: 1, count: n + 1)
-        for x in parent {
-            parent[x] = x
+    init(_ n: Int, withRank: Bool = false ) {
+        parent = Array(0...n)
+        rank = [Int]()
+        if withRank {
+            rank = [Int](repeating: 0, count: n + 1)
         }
     }
 
-    public func setFriend(_ i: Int, _ j: Int) {
-        merge(i, j)
+    public func setFriend(_ x: Int, _ y: Int) {
+        merge(x, y)
     }
 
-    public func isFriend(_ i: Int, _ j: Int) -> Bool {
-        return find(i) == find(j)
+    public func isFriend(_ x: Int, _ y: Int) -> Bool {
+        return find(x) == find(y)
     }
 }
 
@@ -42,34 +42,19 @@ private extension UnionFind {
         }
     }
 
-    func merge(_ i: Int, _ j: Int) {
-        let x = min(i, j)
-        let y = max(i, j)
+    func merge(_ x: Int, _ y: Int) {
         parent[find(x)] = find(y)
     }
 }
 
 private extension UnionFind {
-    func _find(_ x: Int) -> Int {
-        if parent[x] == x {
-            return x
+    func _merge(_ x: Int, _ y: Int) {
+        let px = find(x), py = find(y)
+        if rank[px] > rank[py] {
+            parent[py] = px
         } else {
-            parent[x] = _find(parent[x])
-            return parent[x]
-        }
-    }
-
-    func _merge(_ i: Int, _ j: Int) {
-        let parent_i = _find(i)
-        let parent_j = _find(j)
-        guard parent_i != parent_j else { return }
-        if rank[parent_i] > rank[parent_j] {
-            parent[parent_j] = parent_i
-        } else if parent[parent_i] < parent[parent_j] {
-            parent[parent_i] = parent_j
-        } else {
-            parent[parent_j] = parent_i
-            rank[parent_i] += 1
+            parent[px] = py
+            rank[py] += (rank[px] == rank[py] ? 1 : 0)
         }
     }
 }

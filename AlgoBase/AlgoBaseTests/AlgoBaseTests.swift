@@ -33,4 +33,9 @@ final class AlgoBaseTests: XCTestCase {
         }
     }
 
+    func testSort() {
+        var nums = [1, 8, 4, 2, 11, 7, 3]
+        Sort.quickSort(0, nums.count - 1, &nums)
+        XCTAssertEqual(nums, [1, 2, 3, 4, 7, 8, 11])
+    }
 }
