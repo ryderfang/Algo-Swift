@@ -153,6 +153,7 @@
 		0DB6C827293B745200CBBC67 /* 128.longest-consecutive-sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C826293B745200CBBC67 /* 128.longest-consecutive-sequence.swift */; };
 		0DB6C829293B798B00CBBC67 /* 129.sum-root-to-leaf-numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C828293B798B00CBBC67 /* 129.sum-root-to-leaf-numbers.swift */; };
 		0DB6C82B293B7E9100CBBC67 /* 130.surrounded-regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C82A293B7E9100CBBC67 /* 130.surrounded-regions.swift */; };
+		0DB6C836293F815E00CBBC67 /* 131.palindrome-partitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C835293F815E00CBBC67 /* 131.palindrome-partitioning.swift */; };
 		0DBE142F29114A4100F5ECE1 /* 268.missing-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */; };
 		0DBE143129114B1200F5ECE1 /* 278.first-bad-version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */; };
 		0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */; };
@@ -386,6 +387,7 @@
 		0DB6C826293B745200CBBC67 /* 128.longest-consecutive-sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "128.longest-consecutive-sequence.swift"; sourceTree = "<group>"; };
 		0DB6C828293B798B00CBBC67 /* 129.sum-root-to-leaf-numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "129.sum-root-to-leaf-numbers.swift"; sourceTree = "<group>"; };
 		0DB6C82A293B7E9100CBBC67 /* 130.surrounded-regions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "130.surrounded-regions.swift"; sourceTree = "<group>"; };
+		0DB6C835293F815E00CBBC67 /* 131.palindrome-partitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "131.palindrome-partitioning.swift"; sourceTree = "<group>"; };
 		0DBE142E29114A4000F5ECE1 /* 268.missing-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "268.missing-number.swift"; sourceTree = "<group>"; };
 		0DBE143029114B1200F5ECE1 /* 278.first-bad-version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "278.first-bad-version.swift"; sourceTree = "<group>"; };
 		0DBE143229114DC200F5ECE1 /* 283.move-zeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "283.move-zeroes.swift"; sourceTree = "<group>"; };
@@ -617,7 +619,6 @@
 		0D0C861328632D540010C108 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
-				0DB6C82A293B7E9100CBBC67 /* 130.surrounded-regions.swift */,
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
 				0D74F4A92920CB7F000E9237 /* 3.longest-substring-without-repeating-characters.swift */,
 				0D74F4AB292105B9000E9237 /* 5.longest-palindromic-substring.swift */,
@@ -694,6 +695,8 @@
 				0DB6C824293B6CE300CBBC67 /* 122.best-time-to-buy-and-sell-stock-ii.swift */,
 				0DB6C826293B745200CBBC67 /* 128.longest-consecutive-sequence.swift */,
 				0DB6C828293B798B00CBBC67 /* 129.sum-root-to-leaf-numbers.swift */,
+				0DB6C82A293B7E9100CBBC67 /* 130.surrounded-regions.swift */,
+				0DB6C835293F815E00CBBC67 /* 131.palindrome-partitioning.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -914,6 +917,7 @@
 				0DB6C807293B2A8E00CBBC67 /* 107.binary-tree-level-order-traversal-ii.swift in Sources */,
 				0DB6C7FB293A2DE400CBBC67 /* 99.recover-binary-search-tree.swift in Sources */,
 				0D74F48F291F3973000E9237 /* 485.max-consecutive-ones.swift in Sources */,
+				0DB6C836293F815E00CBBC67 /* 131.palindrome-partitioning.swift in Sources */,
 				DAFCA45B28FAEBD700CF1DE6 /* 27.remove-element.swift in Sources */,
 				0DB6C809293B3A8F00CBBC67 /* 109.convert-sorted-list-to-binary-search-tree.swift in Sources */,
 				0D74F49B291FF3A5000E9237 /* 504.base-7.swift in Sources */,
