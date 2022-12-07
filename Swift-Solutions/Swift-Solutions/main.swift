@@ -12,7 +12,14 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [1],
+    ([1,2,3,4,5], [3,4,5,1,2]),
+    ([2,3,4], [3,4,3]),
+    ([1,1,1,1,1,1,0,100],[0,0,0,0,0,0,100,0]),
+    ([4],[5]),
+    ([2],[2]),
+    ([5],[4]),
+    ([5,8,2,8], [6,5,6,6])
+    // -1,3,-4,2
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -23,15 +30,7 @@ for (i, x) in cases.enumerated() {
 //    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.map { Character($0) } }
-    var node1 = Node(1)
-    var node2 = Node(2)
-    var node3 = Node(3)
-    var node4 = Node(4)
-    node1.neighbors = [node2, node4]
-    node2.neighbors = [node1, node3]
-    node3.neighbors = [node2, node4]
-    node4.neighbors = [node1, node3]
-    let ans = sol.cloneGraph(node1)
+    let ans = sol.canCompleteCircuit(x.0, x.1)
     print(ans)
 //    print(ans?.nextArray() ?? [])
 //    print(tmp)
