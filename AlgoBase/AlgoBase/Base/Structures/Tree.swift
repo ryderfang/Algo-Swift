@@ -28,12 +28,15 @@ public class Node {
     public var next: Node?
     // lc133
     public var neighbors: [Node?]
+    // lc138
+    public var random: Node?
     public init(_ val: Int) {
         self.val = val
         self.left = nil
         self.right = nil
         self.next = nil
         self.neighbors = []
+        self.random = nil
     }
 }
 
