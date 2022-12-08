@@ -12,7 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [1]
+    [2,2,3,2],
+    [0,1,0,1,0,1,99],
+    [-2,-2,1,1,4,1,4,4,-4,-2],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -23,13 +25,7 @@ for (i, x) in cases.enumerated() {
 //    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.map { Character($0) } }
-    let head = Node(1)
-    let next = Node(2)
-    head.next = next
-    head.random = next
-    next.next = nil
-    next.random = next
-    let ans = sol.copyRandomList(head)
+    let ans = sol.singleNumber(x)
     print(ans)
 //    print(ans?.nextArray() ?? [])
 //    print(tmp)

@@ -627,7 +627,6 @@
 		0D0C861328632D540010C108 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
-				0DB6C83D294216D100CBBC67 /* 138.copy-list-with-random-pointer.swift */,
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
 				0D74F4A92920CB7F000E9237 /* 3.longest-substring-without-repeating-characters.swift */,
 				0D74F4AB292105B9000E9237 /* 5.longest-palindromic-substring.swift */,
@@ -709,6 +708,7 @@
 				0DB6C837293F85F200CBBC67 /* 133.clone-graph.swift */,
 				0DB6C8392940C15900CBBC67 /* 134.gas-station.swift */,
 				0DB6C83B2940D65400CBBC67 /* 137.single-number-ii.swift */,
+				0DB6C83D294216D100CBBC67 /* 138.copy-list-with-random-pointer.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
