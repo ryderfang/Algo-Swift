@@ -12,21 +12,23 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ("leetcode", ["leet","code"]),
-    ("applepenapple", ["apple","pen"]),
-    ("catsandog", ["cats","dog","sand","and","cat"])
+    [3,2,0,-4],
+    [1,2],
+    [1],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
 
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
-//    let head = ListNode.arrayToList(x)
+    let head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.map { Character($0) } }
-    let ans = sol.wordBreak(x.0, x.1)
-    print(ans)
+//    head?.next?.next?.next?.next = head?.next
+//    head?.next?.next = head
+    let ans = sol.detectCycle(head)
+    print(ans?.val ?? -1)
 //    print(ans?.nextArray() ?? [])
 //    print(tmp)
 }

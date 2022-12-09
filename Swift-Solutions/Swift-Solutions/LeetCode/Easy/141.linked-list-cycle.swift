@@ -5,6 +5,9 @@
  */
 
 // @lc code=start
+#if !LC_SOLUTION_EXT
+class Solution {}
+#endif
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -17,25 +20,13 @@
  * }
  */
 
- extension ListNode: Equatable {
-     fileprivate static func getObjectAddress(object: AnyObject) -> String {
-         let str = Unmanaged<AnyObject>.passUnretained(object).toOpaque()
-         return String(describing: str)
-     }
-
-     public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
-//         return getObjectAddress(object: lhs) == getObjectAddress(object: rhs)
-         return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
-     }
- }
-
 extension Solution {
     // two-pointers
     func hasCycle(_ head: ListNode?) -> Bool {
         var slow = head
         var fast = head?.next?.next
         while slow != nil && fast != nil {
-            guard slow != fast else { return true }
+            guard slow !== fast else { return true }
             slow = slow?.next
             fast = fast?.next?.next
         }

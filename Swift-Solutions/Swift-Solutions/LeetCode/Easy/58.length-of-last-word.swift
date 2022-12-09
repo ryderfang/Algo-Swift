@@ -5,6 +5,9 @@
  */
 
 // @lc code=start
+#if !LC_SOLUTION_EXT
+class Solution {}
+#endif
 extension Solution {
     func lengthOfLastWord(_ s: String) -> Int {
         var lastWord = ""

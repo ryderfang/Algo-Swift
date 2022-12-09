@@ -64,14 +64,14 @@ public extension ListNode {
 // MARK: Equatable
 extension ListNode/*: Equatable*/ {
     // List may has circles so have to compare pointer address.
-    fileprivate static func getObjectAddress(object: AnyObject) -> String {
-        let str = Unmanaged<AnyObject>.passUnretained(object).toOpaque()
-        return String(describing: str)
-    }
+//    fileprivate static func getObjectAddress(object: AnyObject) -> String {
+//        let str = Unmanaged<AnyObject>.passUnretained(object).toOpaque()
+//        return String(describing: str)
+//    }
 
     // fileprivate
-//    public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
-//        return getObjectAddress(object: lhs) == getObjectAddress(object: rhs)
+    private static func == (lhs: ListNode, rhs: ListNode) -> Bool {
 //        return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
-//    }
+        return lhs !== rhs
+    }
 }
