@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Push: O(1)
+// Pop: O(1)
 struct stack<Element> {
     fileprivate var items: [Element] = []
     mutating func push(_ val: Element) {
