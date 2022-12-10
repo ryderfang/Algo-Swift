@@ -11,7 +11,7 @@
  */
 
 extension Solution : VersionControl {
-    func firstBadVersion(_ n: Int) -> Int {
+    private func firstBadVersion(_ n: Int) -> Int {
         var left = 1, right = n
         while left < right {
             let mid = left + (right - left) / 2
