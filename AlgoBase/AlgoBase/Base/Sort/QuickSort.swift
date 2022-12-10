@@ -8,6 +8,13 @@
 import Foundation
 
 class Sort {
+}
+
+extension Sort {
+    static func quickSort(_ nums: inout [Int]) {
+        quickSort(0, nums.count - 1, &nums)
+    }
+
     static func quickSort(_ beg: Int, _ end: Int, _ nums: inout [Int]) {
         var i = beg, j = end, x = nums[(beg + end) / 2]
         while true {

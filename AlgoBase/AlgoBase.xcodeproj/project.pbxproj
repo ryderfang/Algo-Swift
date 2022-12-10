@@ -19,6 +19,7 @@
 		0DB6C830293E346500CBBC67 /* BFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C82F293E346500CBBC67 /* BFS.swift */; };
 		0DB6C832293E347200CBBC67 /* DFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C831293E347200CBBC67 /* DFS.swift */; };
 		0DB6C834293E370100CBBC67 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C833293E370100CBBC67 /* SearchTests.swift */; };
+		0DB6C84829447FF100CBBC67 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C84729447FF100CBBC67 /* InsertionSort.swift */; };
 		DAFCA41D28FAD8D700CF1DE6 /* AlgoBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */; };
 		DAFCA42228FAD8D700CF1DE6 /* AlgoBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA42128FAD8D700CF1DE6 /* AlgoBaseTests.swift */; };
 		DAFCA42328FAD8D700CF1DE6 /* AlgoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +64,7 @@
 		0DB6C82F293E346500CBBC67 /* BFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFS.swift; sourceTree = "<group>"; };
 		0DB6C831293E347200CBBC67 /* DFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFS.swift; sourceTree = "<group>"; };
 		0DB6C833293E370100CBBC67 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
+		0DB6C84729447FF100CBBC67 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
 		DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlgoBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgoBase.h; sourceTree = "<group>"; };
 		DAFCA41C28FAD8D700CF1DE6 /* AlgoBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				0DADAC262914007F00C30C0F /* QuickSort.swift */,
+				0DB6C84729447FF100CBBC67 /* InsertionSort.swift */,
 			);
 			path = Sort;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				DAFCA44F28FAD91C00CF1DE6 /* AlgoBase.docc in Sources */,
 				0DADAC3329140DE700C30C0F /* DictionaryExt.swift in Sources */,
 				DAFCA44D28FAD91C00CF1DE6 /* Combinations.swift in Sources */,
+				0DB6C84829447FF100CBBC67 /* InsertionSort.swift in Sources */,
 				DAFCA47128FBE68900CF1DE6 /* Tree.swift in Sources */,
 				0DB6C830293E346500CBBC67 /* BFS.swift in Sources */,
 			);
