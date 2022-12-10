@@ -11,7 +11,7 @@ class Solution {}
 extension Solution {
     func canCompleteCircuit(_ gas: [Int], _ cost: [Int]) -> Int {
         let n = gas.count
-        var diff = gas.enumerated().map { $0.element - cost[$0.offset] }
+        let diff = gas.enumerated().map { $0.element - cost[$0.offset] }
         let sum = diff.reduce(0, +)
         if sum < 0 {
             return -1

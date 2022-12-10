@@ -19,11 +19,11 @@ My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with *
 > Motivation comes from incentive.
 
 - 🔸 ~~Lv.1 "100 easy"~~ 🎯🎉
-- 🔹 Lv.10 "200 easy"
+- 🔹 Lv.10 "200 easy" 🚶🚶🚶
 - 🔶 Lv.20 [🥉] "500 easy"
 - 🔷 Lv.30 "AK easy"
-- 🟢 Lv.40 "100 medium" 🚶🚶🚶
-- 🟠 Lv.50 [🥈] "200 medium"
+- 🟢 ~~Lv.40 "100 medium"~~ 🎯🎉
+- 🟠 Lv.50 [🥈] "200 medium" 🚶🚶🚶
 - 🔵 Lv.60 "400 medium
 - 🟣 Lv.70 "600 medium"
 - 🟩 Lv.80 "100 hard"

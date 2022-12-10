@@ -22,7 +22,7 @@ class MinStack {
     }
     
     func pop() {
-        let last = stack.removeLast()
+        stack.removeLast()
     }
     
     func top() -> Int {
