@@ -12,9 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ["2","1","+","3","*"],
-    ["4","13","5","/","+"],
-    ["10","6","9","3","+","-11","*","/","*","17","+","5","+"],
+    "the sky is blue",
+    "  hello world  ",
+    "a good   example",
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,7 +25,7 @@ for (i, x) in cases.enumerated() {
 //    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
-    let ans = sol.evalRPN(x)
+    let ans = sol.reverseWords(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
