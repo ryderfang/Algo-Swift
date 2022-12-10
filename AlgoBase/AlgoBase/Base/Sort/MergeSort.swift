@@ -12,6 +12,6 @@ import Foundation
 // 空间：O(n)
 extension Sort {
     static func mergeSort(_ nums: inout [Int]) {
-
+        
     }
 }

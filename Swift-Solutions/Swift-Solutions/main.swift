@@ -12,6 +12,7 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
+    [3,2,1],
     [4,2,1,3,3,10,-1,2,9],
     [-1,5,3,4,0,10,2,2,1],
 ]
@@ -24,7 +25,7 @@ for (i, x) in cases.enumerated() {
 //    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
-    let ans = sol.insertionSortList(head)
+    let ans = sol.sortList(head)
     print(ans?.array() ?? [])
 //    print(tmp)
 }
