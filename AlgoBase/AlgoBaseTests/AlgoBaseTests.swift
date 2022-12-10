@@ -44,4 +44,10 @@ final class AlgoBaseTests: XCTestCase {
         Sort.insertionSort(&nums)
         XCTAssertEqual(nums, [1, 2, 3, 4, 7, 8, 11])
     }
+
+    func testShellSort() {
+        var nums = [1, 8, 4, 2, 11, 7, 3]
+        Sort.shellSort(&nums)
+        XCTAssertEqual(nums, [1, 2, 3, 4, 7, 8, 11])
+    }
 }

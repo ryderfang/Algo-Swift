@@ -31,8 +31,10 @@ extension Solution {
                 p = p?.next
             }
             if p === next {
+                // next is the largest
                 q = next
             } else {
+                // insert next between "pre" and "p"
                 q?.next = next.next
                 next.next = p
                 if pre == nil {

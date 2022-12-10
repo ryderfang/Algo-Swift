@@ -10,6 +10,9 @@ import Foundation
 class Sort {
 }
 
+// 快速排序（不稳定）
+// 时间：O(nlogn)
+// 空间：O(logn)
 extension Sort {
     static func quickSort(_ nums: inout [Int]) {
         quickSort(0, nums.count - 1, &nums)

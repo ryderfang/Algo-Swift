@@ -20,6 +20,11 @@
 		0DB6C832293E347200CBBC67 /* DFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C831293E347200CBBC67 /* DFS.swift */; };
 		0DB6C834293E370100CBBC67 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C833293E370100CBBC67 /* SearchTests.swift */; };
 		0DB6C84829447FF100CBBC67 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C84729447FF100CBBC67 /* InsertionSort.swift */; };
+		0DB6C84E2944922300CBBC67 /* ShellSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C84D2944922300CBBC67 /* ShellSort.swift */; };
+		0DB6C850294493E400CBBC67 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C84F294493E400CBBC67 /* BubbleSort.swift */; };
+		0DB6C8522944941A00CBBC67 /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C8512944941A00CBBC67 /* SelectionSort.swift */; };
+		0DB6C8542944945500CBBC67 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C8532944945500CBBC67 /* MergeSort.swift */; };
+		0DB6C8562944946000CBBC67 /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C8552944946000CBBC67 /* HeapSort.swift */; };
 		DAFCA41D28FAD8D700CF1DE6 /* AlgoBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */; };
 		DAFCA42228FAD8D700CF1DE6 /* AlgoBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA42128FAD8D700CF1DE6 /* AlgoBaseTests.swift */; };
 		DAFCA42328FAD8D700CF1DE6 /* AlgoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +70,11 @@
 		0DB6C831293E347200CBBC67 /* DFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFS.swift; sourceTree = "<group>"; };
 		0DB6C833293E370100CBBC67 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		0DB6C84729447FF100CBBC67 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
+		0DB6C84D2944922300CBBC67 /* ShellSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellSort.swift; sourceTree = "<group>"; };
+		0DB6C84F294493E400CBBC67 /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
+		0DB6C8512944941A00CBBC67 /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
+		0DB6C8532944945500CBBC67 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
+		0DB6C8552944946000CBBC67 /* HeapSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSort.swift; sourceTree = "<group>"; };
 		DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlgoBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgoBase.h; sourceTree = "<group>"; };
 		DAFCA41C28FAD8D700CF1DE6 /* AlgoBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,8 +119,13 @@
 		0D763870290C1AE7004CD387 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
-				0DADAC262914007F00C30C0F /* QuickSort.swift */,
+				0DB6C84F294493E400CBBC67 /* BubbleSort.swift */,
+				0DB6C8552944946000CBBC67 /* HeapSort.swift */,
 				0DB6C84729447FF100CBBC67 /* InsertionSort.swift */,
+				0DB6C8532944945500CBBC67 /* MergeSort.swift */,
+				0DADAC262914007F00C30C0F /* QuickSort.swift */,
+				0DB6C8512944941A00CBBC67 /* SelectionSort.swift */,
+				0DB6C84D2944922300CBBC67 /* ShellSort.swift */,
 			);
 			path = Sort;
 			sourceTree = "<group>";
@@ -364,6 +379,7 @@
 				DAFCA45528FADA9500CF1DE6 /* PriorityQueue.swift in Sources */,
 				DAFCA44E28FAD91C00CF1DE6 /* LehmerCode.swift in Sources */,
 				DAFCA44628FAD91C00CF1DE6 /* NumberTheory.swift in Sources */,
+				0DB6C84E2944922300CBBC67 /* ShellSort.swift in Sources */,
 				DAFCA44828FAD91C00CF1DE6 /* _Macro.swift in Sources */,
 				0DB6C7E529331CE500CBBC67 /* ArrayExt.swift in Sources */,
 				DAFCA44728FAD91C00CF1DE6 /* BinarySearch.swift in Sources */,
@@ -376,12 +392,16 @@
 				DAFCA44C28FAD91C00CF1DE6 /* Permutations.swift in Sources */,
 				DAFCA44A28FAD91C00CF1DE6 /* Queue.swift in Sources */,
 				DAFCA44528FAD91C00CF1DE6 /* List.swift in Sources */,
+				0DB6C850294493E400CBBC67 /* BubbleSort.swift in Sources */,
 				0DADAC272914007F00C30C0F /* QuickSort.swift in Sources */,
 				0D76387A290E2978004CD387 /* ObjExt.swift in Sources */,
+				0DB6C8562944946000CBBC67 /* HeapSort.swift in Sources */,
 				DAFCA44F28FAD91C00CF1DE6 /* AlgoBase.docc in Sources */,
 				0DADAC3329140DE700C30C0F /* DictionaryExt.swift in Sources */,
+				0DB6C8542944945500CBBC67 /* MergeSort.swift in Sources */,
 				DAFCA44D28FAD91C00CF1DE6 /* Combinations.swift in Sources */,
 				0DB6C84829447FF100CBBC67 /* InsertionSort.swift in Sources */,
+				0DB6C8522944941A00CBBC67 /* SelectionSort.swift in Sources */,
 				DAFCA47128FBE68900CF1DE6 /* Tree.swift in Sources */,
 				0DB6C830293E346500CBBC67 /* BFS.swift in Sources */,
 			);
