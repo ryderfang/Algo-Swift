@@ -32,13 +32,23 @@ final class SearchTests: XCTestCase {
         Search.bfs([1], 1, &visited, path)
     }
 
+    func testBFS2() {
+        Search.bfs(start: 1, n: n, path)
+    }
+
     func testDFS() {
         var visited = [Int](repeating: 0, count: n + 1)
-        Search.dfs(1, &visited, path)
+        var output = [Int]()
+        Search.dfs(1, &visited, path, &output)
+        print(output)
+    }
+
+    func testDFS2() {
+        Search.dfs(start: 1, n: n, path)
     }
 
     func testConnected() {
-        var graph = Search.connectedGraph(path)
+        let graph = Search.connectedGraph(path)
         print(graph)
     }
 }

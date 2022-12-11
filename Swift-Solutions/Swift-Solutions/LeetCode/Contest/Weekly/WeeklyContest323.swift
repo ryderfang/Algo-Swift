@@ -50,48 +50,60 @@ extension Solution {
     func maxPoints(_ grid: [[Int]], _ queries: [Int]) -> [Int] {
         let m = grid.count
         let n = grid[0].count
-        var path = [[Int]](repeating: [Int](repeating: Int.max, count: n), count: m)
-        path[0][0] = grid[0][0] + 1
-        var reLoop = true
-        while reLoop {
-            reLoop = false
-            for i in 0..<m {
-                for j in 0..<n {
-                    if i == 0 && j == 0 {
-                        continue
-                    }
-                    var tmp = Int.max
-                    if i > 0 {
-                        tmp = min(tmp, path[i-1][j])
-                    }
-                    if j > 0 {
-                        tmp = min(tmp, path[i][j-1])
-                    }
-                    if i < m - 1 {
-                        tmp = min(tmp, path[i+1][j])
-                    }
-                    if j < n - 1 {
-                        tmp = min(tmp, path[i][j+1])
-                    }
-                    let new = min(max(tmp, grid[i][j] + 1), path[i][j])
-                    if path[i][j] != new {
-                        path[i][j] = new
-                        reLoop = true
-                    }
+        var sorted = [(Int, Int, Int)]()
+        for (i, q) in queries.enumerated() {
+            sorted.append((i, q, 0))
+        }
+        sorted = sorted.sorted(by: { $0.1 < $1.1 })
+
+        var visited = [[Int]](repeating: [Int](repeating: 0, count: n), count: m)
+        var queue: [(Int, Int, Int)] = [(0, 0, grid[0][0])]
+        func _bfs(_ target: Int, _ result: inout Int) {
+            while !queue.isEmpty {
+                guard let idx = queue.firstIndex(where: { $0.2 < target }) else { return }
+                let r = queue[idx].0
+                let c = queue[idx].1
+                queue.remove(at: idx)
+                visited[r][c] = 1
+                result += 1
+
+                if r > 0 && visited[r-1][c] == 0 {
+                    queue.append((r - 1, c, grid[r-1][c]))
+                    visited[r-1][c] = 1
+                }
+                if c > 0 && visited[r][c-1] == 0 {
+                    queue.append((r, c - 1, grid[r][c-1]))
+                    visited[r][c-1] = 1
+                }
+                if r < m - 1 && visited[r+1][c] == 0 {
+                    queue.append((r + 1, c, grid[r+1][c]))
+                    visited[r+1][c] = 1
+                }
+                if c < n - 1 && visited[r][c+1] == 0 {
+                    queue.append((r, c + 1, grid[r][c+1]))
+                    visited[r][c+1] = 1
                 }
             }
         }
-        var ans = [Int]()
-        for x in queries {
-            var result = 0
-            for i in 0..<m {
-                for j in 0..<n {
-                    if path[i][j] <= x {
-                        result += 1
-                    }
+
+        let q = queries.count
+        for i in 0..<q {
+            if i > 0 {
+                // 更大的 target 走过的路包含较小的 target
+                sorted[i].2 += sorted[i-1].2
+                // 相同 query 不需要重复计算
+                if sorted[i].1 == sorted[i-1].1 {
+                    sorted[i].2 = sorted[i-1].2
+                    continue
                 }
             }
-            ans.append(result)
+            _bfs(sorted[i].1, &sorted[i].2)
+        }
+
+
+        var ans = [Int](repeating: 0, count: q)
+        for pair in sorted {
+            ans[pair.0] = pair.2
         }
         return ans
     }
