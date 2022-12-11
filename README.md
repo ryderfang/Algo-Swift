@@ -20,7 +20,7 @@ My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with *
 
 - 🔸 ~~Lv.1 "100 easy"~~ 🎯🎉
 - 🔹 Lv.10 "200 easy" 🚶🚶🚶
-- 🔶 Lv.20 [🥉] "500 easy"
+- 🔶 Lv.20 [🥉] "400 easy"
 - 🔷 Lv.30 "AK easy"
 - 🟢 ~~Lv.40 "100 medium"~~ 🎯🎉
 - 🟠 Lv.50 [🥈] "200 medium" 🚶🚶🚶

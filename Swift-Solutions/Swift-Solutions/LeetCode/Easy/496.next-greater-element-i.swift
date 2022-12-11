@@ -7,7 +7,6 @@
 // @lc code=start
 extension Solution {
     func nextGreaterElement(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-        let n1 = nums1.count
         var ans = [Int]()
         for x in nums1 {
             var found = false

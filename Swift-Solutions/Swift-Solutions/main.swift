@@ -12,8 +12,11 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (["BSTIterator", "next", "next", "hasNext", "next", "hasNext", "next", "hasNext", "next", "hasNext"],
-     [[7, 3, 15, nil, nil, 9, 20], [], [], [], [], [], [], [], [], []])
+    ("aba", "cdc"),
+    ("aaa", "bbb"),
+    ("aaa", "aaa"),
+    ("aefawfawfawfaw", "aefawfeawfwafwaef"),
+    ("a", "aaa"),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,10 +28,10 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
-    classHandler(ops: x.0, datas: x.1)
+//    classHandler(ops: x.0, datas: x.1)
+    let ans = sol.findLUSlength(x.0, x.1)
 
-//    let ans = sol.trailingZeroes(x)
-//    print(ans)
+    print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
 }
@@ -43,6 +46,7 @@ func classHandler(ops: [String], datas: [[Int?]]) {
         case "BSTIterator":
             let root = TreeNode.arrayToTree(data)
             sut = BSTIterator(root)
+            print("null")
             break
         case "next":
             print(sut.next())
