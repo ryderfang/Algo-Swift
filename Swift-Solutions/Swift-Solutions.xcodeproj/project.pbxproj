@@ -18,6 +18,7 @@
 		0D4C2ACD2928C4F400E73722 /* 18.4-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C2ACB2928C4F300E73722 /* 18.4-sum.swift */; };
 		0D4E52532945EB28000796BB /* 166.fraction-to-recurring-decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52522945EB28000796BB /* 166.fraction-to-recurring-decimal.swift */; };
 		0D4E52572945FC48000796BB /* 167.two-sum-ii-input-array-is-sorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52562945FC48000796BB /* 167.two-sum-ii-input-array-is-sorted.swift */; };
+		0D4E525A29460042000796BB /* 172.factorial-trailing-zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E525929460041000796BB /* 172.factorial-trailing-zeroes.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -270,6 +271,7 @@
 		0D4C2ACB2928C4F300E73722 /* 18.4-sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "18.4-sum.swift"; sourceTree = "<group>"; };
 		0D4E52522945EB28000796BB /* 166.fraction-to-recurring-decimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "166.fraction-to-recurring-decimal.swift"; sourceTree = "<group>"; };
 		0D4E52562945FC48000796BB /* 167.two-sum-ii-input-array-is-sorted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "167.two-sum-ii-input-array-is-sorted.swift"; sourceTree = "<group>"; };
+		0D4E525929460041000796BB /* 172.factorial-trailing-zeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "172.factorial-trailing-zeroes.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -654,7 +656,7 @@
 		0D0C861328632D540010C108 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
-				0D4E52562945FC48000796BB /* 167.two-sum-ii-input-array-is-sorted.swift */,
+				0D4E525929460041000796BB /* 172.factorial-trailing-zeroes.swift */,
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
 				0D74F4A92920CB7F000E9237 /* 3.longest-substring-without-repeating-characters.swift */,
 				0D74F4AB292105B9000E9237 /* 5.longest-palindromic-substring.swift */,
@@ -751,6 +753,7 @@
 				0DB6C8622944C94400CBBC67 /* 162.find-peak-element.swift */,
 				0DB6C8642944D5BB00CBBC67 /* 165.compare-version-numbers.swift */,
 				0D4E52522945EB28000796BB /* 166.fraction-to-recurring-decimal.swift */,
+				0D4E52562945FC48000796BB /* 167.two-sum-ii-input-array-is-sorted.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -1018,6 +1021,7 @@
 				0DB6C81B293B40CB00CBBC67 /* 113.path-sum-ii.swift in Sources */,
 				0DADAC2B291402BD00C30C0F /* 350.intersection-of-two-arrays-ii.swift in Sources */,
 				0D74F487291BE09B000E9237 /* 461.hamming-distance.swift in Sources */,
+				0D4E525A29460042000796BB /* 172.factorial-trailing-zeroes.swift in Sources */,
 				0DBE143D29129C7700F5ECE1 /* 338.counting-bits.swift in Sources */,
 				0DB6C82B293B7E9100CBBC67 /* 130.surrounded-regions.swift in Sources */,
 				0DB6C7F72938E91A00CBBC67 /* 97.interleaving-string.swift in Sources */,

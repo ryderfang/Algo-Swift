@@ -12,9 +12,15 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ([2,7,11,15], 9),
-    ([2,3,4], 6),
-    ([-1,0], -1),
+    1,
+    2,
+    3,
+    5,
+    10,
+    15,
+    19,
+    20,
+    30,
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,7 +31,8 @@ for (i, x) in cases.enumerated() {
 //    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
-    let ans = sol.twoSum(x.0, x.1)
+//    print(Array(1...x).reduce(1, *))
+    let ans = sol.trailingZeroes(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
