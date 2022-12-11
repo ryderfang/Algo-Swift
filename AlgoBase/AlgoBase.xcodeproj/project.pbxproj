@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4E52552945ECC3000796BB /* DoubleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52542945ECC3000796BB /* DoubleExt.swift */; };
 		0D74F4A82920AE60000E9237 /* Prime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4A72920AE60000E9237 /* Prime.swift */; };
 		0D76387A290E2978004CD387 /* ObjExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763879290E2978004CD387 /* ObjExt.swift */; };
 		0D9E9B8C292BCEE7005486CE /* HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8B292BCEE7005486CE /* HelperTests.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D4E52542945ECC3000796BB /* DoubleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExt.swift; sourceTree = "<group>"; };
 		0D74F4A72920AE60000E9237 /* Prime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prime.swift; sourceTree = "<group>"; };
 		0D763879290E2978004CD387 /* ObjExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjExt.swift; sourceTree = "<group>"; };
 		0D9E9B8B292BCEE7005486CE /* HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperTests.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				0DB6C7E429331CE500CBBC67 /* ArrayExt.swift */,
 				0DADAC3229140DE700C30C0F /* DictionaryExt.swift */,
+				0D4E52542945ECC3000796BB /* DoubleExt.swift */,
 				DAFCA43028FAD91B00CF1DE6 /* IntExt.swift */,
 				0D763879290E2978004CD387 /* ObjExt.swift */,
 				DAFCA43128FAD91B00CF1DE6 /* StringExt.swift */,
@@ -395,6 +398,7 @@
 				0DB6C850294493E400CBBC67 /* BubbleSort.swift in Sources */,
 				0DADAC272914007F00C30C0F /* QuickSort.swift in Sources */,
 				0D76387A290E2978004CD387 /* ObjExt.swift in Sources */,
+				0D4E52552945ECC3000796BB /* DoubleExt.swift in Sources */,
 				0DB6C8562944946000CBBC67 /* HeapSort.swift in Sources */,
 				DAFCA44F28FAD91C00CF1DE6 /* AlgoBase.docc in Sources */,
 				0DADAC3329140DE700C30C0F /* DictionaryExt.swift in Sources */,
