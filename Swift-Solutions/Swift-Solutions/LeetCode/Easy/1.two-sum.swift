@@ -23,7 +23,7 @@ extension Solution {
         return []
     }
 
-    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    func __twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         return twoSumPlus(nums, target).first!
     }
 
