@@ -23,6 +23,7 @@
 		0D4E525E29460A1C000796BB /* 521.longest-uncommon-subsequence-i.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E525D29460A1C000796BB /* 521.longest-uncommon-subsequence-i.swift */; };
 		0D4E526129475696000796BB /* 783.minimum-distance-between-bst-nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */; };
 		0D4E526229475696000796BB /* 530.minimum-absolute-difference-in-bst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E526029475696000796BB /* 530.minimum-absolute-difference-in-bst.swift */; };
+		0D4E526429475DFA000796BB /* 541.reverse-string-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E526329475DFA000796BB /* 541.reverse-string-ii.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -280,6 +281,7 @@
 		0D4E525D29460A1C000796BB /* 521.longest-uncommon-subsequence-i.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "521.longest-uncommon-subsequence-i.swift"; sourceTree = "<group>"; };
 		0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "783.minimum-distance-between-bst-nodes.swift"; sourceTree = "<group>"; };
 		0D4E526029475696000796BB /* 530.minimum-absolute-difference-in-bst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "530.minimum-absolute-difference-in-bst.swift"; sourceTree = "<group>"; };
+		0D4E526329475DFA000796BB /* 541.reverse-string-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "541.reverse-string-ii.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -557,8 +559,7 @@
 		0D0C861228632D4B0010C108 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
-				0D4E526029475696000796BB /* 530.minimum-absolute-difference-in-bst.swift */,
-				0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */,
+				0D4E526329475DFA000796BB /* 541.reverse-string-ii.swift */,
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
@@ -660,6 +661,8 @@
 				0D74F4A0291FF852000E9237 /* 509.fibonacci-number.swift */,
 				0D74F4A3291FFB4F000E9237 /* 520.detect-capital.swift */,
 				0D4E525D29460A1C000796BB /* 521.longest-uncommon-subsequence-i.swift */,
+				0D4E526029475696000796BB /* 530.minimum-absolute-difference-in-bst.swift */,
+				0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -989,6 +992,7 @@
 				0D74F49B291FF3A5000E9237 /* 504.base-7.swift in Sources */,
 				0D76386B290C0E9D004CD387 /* 119.pascals-triangle-ii.swift in Sources */,
 				0D4C2ACC2928C4F400E73722 /* 17.letter-combinations-of-a-phone-number.swift in Sources */,
+				0D4E526429475DFA000796BB /* 541.reverse-string-ii.swift in Sources */,
 				0DB6C7FF293A433F00CBBC67 /* 103.binary-tree-zigzag-level-order-traversal.swift in Sources */,
 				0DB6C7E92933914500CBBC67 /* 86.partition-list.swift in Sources */,
 				0DBE142F29114A4100F5ECE1 /* 268.missing-number.swift in Sources */,
