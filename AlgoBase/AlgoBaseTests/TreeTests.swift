@@ -26,9 +26,12 @@ final class TreeTests: XCTestCase {
     }
 
     func testInorder() {
-        let root = TreeNode.arrayToTree([3,9,20,nil,nil,15,7])
+        var root = TreeNode.arrayToTree([3,9,20,nil,nil,15,7])
         XCTAssertEqual(TreeNode.inOrder(root), [9,3,15,20,7])
         XCTAssertEqual(TreeNode.inOrderIterative(root), [9,3,15,20,7])
+        root = TreeNode.arrayToTree([1,nil,2])
+        XCTAssertEqual(TreeNode.inOrder(root), [1,2])
+        XCTAssertEqual(TreeNode.inOrderIterative(root), [1,2])
     }
 
     func testPreOrder() {

@@ -12,11 +12,11 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ("aba", "cdc"),
-    ("aaa", "bbb"),
-    ("aaa", "aaa"),
-    ("aefawfawfawfaw", "aefawfeawfwafwaef"),
-    ("a", "aaa"),
+//    [4,2,6,1,3],
+//    [1,0,48,nil,nil,12,49],
+//    [1,nil,3,2],
+//    [1,nil,2],
+    [543,384,652,nil,445,nil,699],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -24,12 +24,12 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    var head = ListNode.arrayToList(x)
-//    let root = TreeNode.arrayToTree(x)
+    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
 //    classHandler(ops: x.0, datas: x.1)
-    let ans = sol.findLUSlength(x.0, x.1)
+    let ans = sol.getMinimumDifference(root)
 
     print(ans)
 //    print(ans?.array() ?? [])
