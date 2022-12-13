@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D4E52552945ECC3000796BB /* DoubleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52542945ECC3000796BB /* DoubleExt.swift */; };
+		0D4E526E2948AC54000796BB /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E526D2948AC54000796BB /* Node.swift */; };
 		0D74F4A82920AE60000E9237 /* Prime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4A72920AE60000E9237 /* Prime.swift */; };
 		0D76387A290E2978004CD387 /* ObjExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763879290E2978004CD387 /* ObjExt.swift */; };
 		0D9E9B8C292BCEE7005486CE /* HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8B292BCEE7005486CE /* HelperTests.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		0D4E52542945ECC3000796BB /* DoubleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExt.swift; sourceTree = "<group>"; };
+		0D4E526D2948AC54000796BB /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		0D74F4A72920AE60000E9237 /* Prime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prime.swift; sourceTree = "<group>"; };
 		0D763879290E2978004CD387 /* ObjExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjExt.swift; sourceTree = "<group>"; };
 		0D9E9B8B292BCEE7005486CE /* HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperTests.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				DAFCA43A28FAD91B00CF1DE6 /* Queue.swift */,
 				DAFCA43928FAD91B00CF1DE6 /* Stack.swift */,
 				DAFCA47028FBE68900CF1DE6 /* Tree.swift */,
+				0D4E526D2948AC54000796BB /* Node.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				DAFCA44428FAD91C00CF1DE6 /* StringExt.swift in Sources */,
 				DAFCA44B28FAD91C00CF1DE6 /* Heap.swift in Sources */,
 				0D9E9BA22930C950005486CE /* BigInt.swift in Sources */,
+				0D4E526E2948AC54000796BB /* Node.swift in Sources */,
 				DAFCA45528FADA9500CF1DE6 /* PriorityQueue.swift in Sources */,
 				DAFCA44E28FAD91C00CF1DE6 /* LehmerCode.swift in Sources */,
 				DAFCA44628FAD91C00CF1DE6 /* NumberTheory.swift in Sources */,
