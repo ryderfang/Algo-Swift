@@ -25,6 +25,7 @@
 		0D4E526229475696000796BB /* 530.minimum-absolute-difference-in-bst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E526029475696000796BB /* 530.minimum-absolute-difference-in-bst.swift */; };
 		0D4E526429475DFA000796BB /* 541.reverse-string-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E526329475DFA000796BB /* 541.reverse-string-ii.swift */; };
 		0D4E526629489DCB000796BB /* 543.diameter-of-binary-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E526529489DCA000796BB /* 543.diameter-of-binary-tree.swift */; };
+		0D4E52682948A8F0000796BB /* 551.student-attendance-record-i.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52672948A8F0000796BB /* 551.student-attendance-record-i.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -284,6 +285,7 @@
 		0D4E526029475696000796BB /* 530.minimum-absolute-difference-in-bst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "530.minimum-absolute-difference-in-bst.swift"; sourceTree = "<group>"; };
 		0D4E526329475DFA000796BB /* 541.reverse-string-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "541.reverse-string-ii.swift"; sourceTree = "<group>"; };
 		0D4E526529489DCA000796BB /* 543.diameter-of-binary-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "543.diameter-of-binary-tree.swift"; sourceTree = "<group>"; };
+		0D4E52672948A8F0000796BB /* 551.student-attendance-record-i.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "551.student-attendance-record-i.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -561,7 +563,6 @@
 		0D0C861228632D4B0010C108 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
-				0D4E526529489DCA000796BB /* 543.diameter-of-binary-tree.swift */,
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
@@ -665,6 +666,8 @@
 				0D4E525D29460A1C000796BB /* 521.longest-uncommon-subsequence-i.swift */,
 				0D4E526029475696000796BB /* 530.minimum-absolute-difference-in-bst.swift */,
 				0D4E526329475DFA000796BB /* 541.reverse-string-ii.swift */,
+				0D4E526529489DCA000796BB /* 543.diameter-of-binary-tree.swift */,
+				0D4E52672948A8F0000796BB /* 551.student-attendance-record-i.swift */,
 				0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */,
 			);
 			path = Easy;
@@ -942,6 +945,7 @@
 				0D74F497291F591F000E9237 /* 500.keyboard-row.swift in Sources */,
 				DAFCA46328FAF6EC00CF1DE6 /* 66.plus-one.swift in Sources */,
 				0DADAC2F29140A0000C30C0F /* 374.guess-number-higher-or-lower.swift in Sources */,
+				0D4E52682948A8F0000796BB /* 551.student-attendance-record-i.swift in Sources */,
 				0DBE143F2912C46500F5ECE1 /* 342.power-of-four.swift in Sources */,
 				0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */,
 				0DB6C7EF2934F4D300CBBC67 /* 92.reverse-linked-list-ii.swift in Sources */,
