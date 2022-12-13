@@ -9,7 +9,7 @@
 class Solution {}
 #endif
 extension Solution {
-    func reverseWords(_ s: String) -> String {
+    func reverseWords1(_ s: String) -> String {
         let components = s.split(separator: " ")
 //        var components: [String] = s.components(separatedBy: " ")
 //        components = components
