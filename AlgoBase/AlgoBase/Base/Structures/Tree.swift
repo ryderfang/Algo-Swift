@@ -170,7 +170,20 @@ public extension TreeNode {
         return ans
     }
 
-    // 右右根
+    static func preOrderIterative2(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
+        var ans = [Int]()
+        var stack = [root]
+        while !stack.isEmpty {
+            let top = stack.removeLast()
+            ans.append(top.val)
+            // 子节点逆序入栈 (lc589)
+            stack.append(contentsOf: [top.right, top.left].compactMap { $0 })
+        }
+        return ans
+    }
+
+    // 左右根
     static func postOrderIterative(_ root: TreeNode?) -> [Int] {
         guard let root = root else { return [] }
         var ans = [Int]()
