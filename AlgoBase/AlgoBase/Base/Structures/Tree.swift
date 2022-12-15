@@ -139,6 +139,54 @@ public extension TreeNode {
         guard let root = root else { return [] }
         var ans = [Int]()
         var stack = [TreeNode]()
+        var curr: TreeNode? = root
+        while !stack.isEmpty || curr != nil {
+            while let tmp = curr {
+                stack.append(tmp)
+                curr = tmp.left
+            }
+            let top = stack.removeLast()
+            ans.append(top.val)
+            curr = top.right
+        }
+        return ans
+    }
+
+    // 根左右
+    static func preOrderIterative(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
+        var ans = [Int]()
+        var stack = [root]
+        while !stack.isEmpty {
+            let top = stack.removeLast()
+            ans.append(top.val)
+            // 子节点逆序入栈 (lc589)
+            stack.append(contentsOf: [top.right, top.left].compactMap { $0 })
+        }
+        return ans
+    }
+
+    // 左右根
+    static func postOrderIterative(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
+        var ans = [Int]()
+        var stack = [root]
+        while !stack.isEmpty {
+            let top = stack.removeLast()
+            ans.insert(top.val, at: 0)
+            // 子节点顺序入栈 (lc590)
+            stack.append(contentsOf: [top.left, top.right].compactMap { $0 })
+        }
+        return ans
+    }
+}
+
+
+public extension TreeNode {
+    static func inOrderIterative2(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
+        var ans = [Int]()
+        var stack = [TreeNode]()
         var node: TreeNode? = root
         while !stack.isEmpty || node != nil {
             while let tmp = node {
@@ -152,8 +200,7 @@ public extension TreeNode {
         return ans
     }
 
-    // 根左右
-    static func preOrderIterative(_ root: TreeNode?) -> [Int] {
+    static func preOrderIterative2(_ root: TreeNode?) -> [Int] {
         guard let root = root else { return [] }
         var ans = [Int]()
         var stack = [TreeNode]()
@@ -170,21 +217,7 @@ public extension TreeNode {
         return ans
     }
 
-    static func preOrderIterative2(_ root: TreeNode?) -> [Int] {
-        guard let root = root else { return [] }
-        var ans = [Int]()
-        var stack = [root]
-        while !stack.isEmpty {
-            let top = stack.removeLast()
-            ans.append(top.val)
-            // 子节点逆序入栈 (lc589)
-            stack.append(contentsOf: [top.right, top.left].compactMap { $0 })
-        }
-        return ans
-    }
-
-    // 左右根
-    static func postOrderIterative(_ root: TreeNode?) -> [Int] {
+    static func postOrderIterative2(_ root: TreeNode?) -> [Int] {
         guard let root = root else { return [] }
         var ans = [Int]()
         var stack = [TreeNode]()
