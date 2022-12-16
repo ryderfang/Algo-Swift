@@ -12,10 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [1,2,3,4],
-    [1,2,3,nil,4],
-    [3,9,20,nil,nil,15,7],
-    [3,9,20,15,7],
+    [1,2,2,4],
+    [1,1],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -23,12 +21,12 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    var head = ListNode.arrayToList(x)
-    let root = TreeNode.arrayToTree(x)
+//    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
 //    classHandler(ops: x.0, datas: x.1)
-    let ans = sol.averageOfLevels(root)
+    let ans = sol.findErrorNums(x)
 
     print(ans)
 //    print(ans?.array() ?? [])
