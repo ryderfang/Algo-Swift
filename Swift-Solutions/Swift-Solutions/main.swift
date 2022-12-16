@@ -14,6 +14,8 @@ let sol = Solution()
 let cases = [
     [1,2,3,4],
     [1,2,3,nil,4],
+    [3,9,20,nil,nil,15,7],
+    [3,9,20,15,7],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -26,7 +28,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x
 
 //    classHandler(ops: x.0, datas: x.1)
-    let ans = sol.tree2str(root)
+    let ans = sol.averageOfLevels(root)
 
     print(ans)
 //    print(ans?.array() ?? [])

@@ -24,7 +24,7 @@ extension Search {
         bfs(next, depth + 1, &visited, path)
     }
 
-    // 非递归
+    // 非递归 (队列）
     public static func bfs(start: Int, n: Int, _ path: [Int: [Int]]) {
         var visited = Set<Int>()
         visited.insert(start)

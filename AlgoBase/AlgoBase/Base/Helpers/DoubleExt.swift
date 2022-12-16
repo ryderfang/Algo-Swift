@@ -19,4 +19,9 @@ fileprivate extension Double {
         let divisor = pow(10.0, Double(places))
         return Double(Int(self * divisor)) / divisor
     }
+
+    // 只有输出时，后面的 0 才有意义
+    func truncate(places: Int) -> String {
+        return String(format: "%.\(places)f", self)
+    }
 }

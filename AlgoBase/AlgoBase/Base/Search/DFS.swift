@@ -21,7 +21,7 @@ extension Search {
         }
     }
 
-    // 非递归
+    // 非递归（栈）
     public static func dfs(start: Int, n: Int, _ path: [Int: [Int]]) {
         var visited = Set<Int>()
         visited.insert(start)
