@@ -12,8 +12,7 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ([5,3,6,2,4,nil,7], 28),
-    ([5,3,6,2,4,nil,7], 9),
+    [[2,3,4],[5,6,7],[8,9,10],[11,12,13],[14,15,16]]
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -21,12 +20,12 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    var head = ListNode.arrayToList(x)
-    let root = TreeNode.arrayToTree(x.0)
+//    let root = TreeNode.arrayToTree(x.0)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
 //    classHandler(ops: x.0, datas: x.1)
-    let ans = sol.findTarget(root, x.1)
+    let ans = sol.imageSmoother(x)
 
     print(ans)
 //    print(ans?.array() ?? [])
