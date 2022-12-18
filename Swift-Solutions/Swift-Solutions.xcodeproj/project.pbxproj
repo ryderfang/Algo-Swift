@@ -52,6 +52,7 @@
 		0D4E529A294EF7C4000796BB /* 674.longest-continuous-increasing-subsequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E5299294EF7C4000796BB /* 674.longest-continuous-increasing-subsequence.swift */; };
 		0D4E529C294EFD5B000796BB /* 680.valid-palindrome-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E529B294EFD5B000796BB /* 680.valid-palindrome-ii.swift */; };
 		0D4E529E294F0AA4000796BB /* 682.baseball-game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E529D294F0AA4000796BB /* 682.baseball-game.swift */; };
+		0D4E52A0294F153F000796BB /* 693.binary-number-with-alternating-bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E529F294F153F000796BB /* 693.binary-number-with-alternating-bits.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -338,6 +339,7 @@
 		0D4E5299294EF7C4000796BB /* 674.longest-continuous-increasing-subsequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "674.longest-continuous-increasing-subsequence.swift"; sourceTree = "<group>"; };
 		0D4E529B294EFD5B000796BB /* 680.valid-palindrome-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "680.valid-palindrome-ii.swift"; sourceTree = "<group>"; };
 		0D4E529D294F0AA4000796BB /* 682.baseball-game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "682.baseball-game.swift"; sourceTree = "<group>"; };
+		0D4E529F294F153F000796BB /* 693.binary-number-with-alternating-bits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "693.binary-number-with-alternating-bits.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -615,7 +617,7 @@
 		0D0C861228632D4B0010C108 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
-				0D4E529D294F0AA4000796BB /* 682.baseball-game.swift */,
+				0D4E529F294F153F000796BB /* 693.binary-number-with-alternating-bits.swift */,
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
@@ -746,6 +748,7 @@
 				0D4E5297294DEC28000796BB /* 671.second-minimum-node-in-a-binary-tree.swift */,
 				0D4E5299294EF7C4000796BB /* 674.longest-continuous-increasing-subsequence.swift */,
 				0D4E529B294EFD5B000796BB /* 680.valid-palindrome-ii.swift */,
+				0D4E529D294F0AA4000796BB /* 682.baseball-game.swift */,
 				0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */,
 			);
 			path = Easy;
@@ -1128,6 +1131,7 @@
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
 				0D74F48D291BE707000E9237 /* 482.license-key-formatting.swift in Sources */,
 				0D9E9B92292E75F0005486CE /* 36.valid-sudoku.swift in Sources */,
+				0D4E52A0294F153F000796BB /* 693.binary-number-with-alternating-bits.swift in Sources */,
 				0D763882290E53B2004CD387 /* 171.excel-sheet-column-number.swift in Sources */,
 				0DB6C7F529365D1200CBBC67 /* 96.unique-binary-search-trees.swift in Sources */,
 				0D9E9B90292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift in Sources */,
