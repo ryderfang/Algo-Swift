@@ -50,4 +50,11 @@ final class AlgoBaseTests: XCTestCase {
         Sort.shellSort(&nums)
         XCTAssertEqual(nums, [1, 2, 3, 4, 7, 8, 11])
     }
+
+    func testPrimes() {
+        XCTAssertEqual(Prime.getPrimes(100), Prime.getPrimes2(100))
+        for x in Prime.getPrimes(100) {
+            XCTAssertTrue(Prime.isPrime(x))
+        }
+    }
 }

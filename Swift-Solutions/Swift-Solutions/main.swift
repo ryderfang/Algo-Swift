@@ -12,9 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [2,2,5,nil,nil,5,7],
-    [2,2,2],
-    [1,1,3,1,1,3,4,3,1,1,1,3,8,4,8,3,3,1,6,2,1],
+    (3, [[5,3],[4,7],[2,3]]),
+    (2, [[1,2]]),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -22,12 +21,12 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    var head = ListNode.arrayToList(x)
-    let root = TreeNode.arrayToTree(x)
+//    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
 //    classHandler(ops: x.0, datas: x.1)
-    let ans = sol.findSecondMinimumValue(root)
+    let ans = sol.cycleLengthQueries(x.0, x.1)
 
     print(ans)
 //    print(ans?.array() ?? [])
