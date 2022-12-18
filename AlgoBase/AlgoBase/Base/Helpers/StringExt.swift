@@ -61,8 +61,10 @@ extension String {
     }
 }
 
+// MARK: 扩展下标方法
+// HINT: 会超时 !? (lc680)
+// 最好还是直接转成数组操作：.map { String($0) }
 fileprivate extension String {
-    // 扩展下标方法
     subscript (i: Int) -> Character {
         return self[self.index(self.startIndex, offsetBy: i)]
     }
