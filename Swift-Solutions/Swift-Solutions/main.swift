@@ -12,14 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    11,
+    "00110011",
+    "10101",
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -32,7 +26,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x
 
 //    classHandler(ops: x.0, datas: x.1)
-    let ans = sol.hasAlternatingBits(x)
+    let ans = sol.countBinarySubstrings(x)
 
     print(ans)
 //    print(ans?.array() ?? [])

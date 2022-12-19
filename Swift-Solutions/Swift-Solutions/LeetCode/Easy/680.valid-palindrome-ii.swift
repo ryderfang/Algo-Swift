@@ -10,7 +10,7 @@ class Solution {}
 #endif
 extension Solution {
     func validPalindrome(_ s: String) -> Bool {
-        var s = s.map { String($0) }
+        let s = s.map { String($0) }
         let n = s.count
         guard n > 1 else { return true }
         var i = 0, j = n - 1 - i
