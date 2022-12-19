@@ -54,6 +54,9 @@
 		0D4E529E294F0AA4000796BB /* 682.baseball-game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E529D294F0AA4000796BB /* 682.baseball-game.swift */; };
 		0D4E52A0294F153F000796BB /* 693.binary-number-with-alternating-bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E529F294F153F000796BB /* 693.binary-number-with-alternating-bits.swift */; };
 		0D4E52A2295086DB000796BB /* 696.count-binary-substrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52A1295086DB000796BB /* 696.count-binary-substrings.swift */; };
+		0D4E52A429508BDB000796BB /* 697.degree-of-an-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52A329508BDB000796BB /* 697.degree-of-an-array.swift */; };
+		0D4E52A629508E31000796BB /* 700.search-in-a-binary-search-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52A529508E31000796BB /* 700.search-in-a-binary-search-tree.swift */; };
+		0D4E52A829508EAB000796BB /* 703.kth-largest-element-in-a-stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52A729508EAB000796BB /* 703.kth-largest-element-in-a-stream.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -342,6 +345,9 @@
 		0D4E529D294F0AA4000796BB /* 682.baseball-game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "682.baseball-game.swift"; sourceTree = "<group>"; };
 		0D4E529F294F153F000796BB /* 693.binary-number-with-alternating-bits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "693.binary-number-with-alternating-bits.swift"; sourceTree = "<group>"; };
 		0D4E52A1295086DB000796BB /* 696.count-binary-substrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "696.count-binary-substrings.swift"; sourceTree = "<group>"; };
+		0D4E52A329508BDB000796BB /* 697.degree-of-an-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "697.degree-of-an-array.swift"; sourceTree = "<group>"; };
+		0D4E52A529508E31000796BB /* 700.search-in-a-binary-search-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "700.search-in-a-binary-search-tree.swift"; sourceTree = "<group>"; };
+		0D4E52A729508EAB000796BB /* 703.kth-largest-element-in-a-stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "703.kth-largest-element-in-a-stream.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -752,6 +758,9 @@
 				0D4E529D294F0AA4000796BB /* 682.baseball-game.swift */,
 				0D4E529F294F153F000796BB /* 693.binary-number-with-alternating-bits.swift */,
 				0D4E52A1295086DB000796BB /* 696.count-binary-substrings.swift */,
+				0D4E52A329508BDB000796BB /* 697.degree-of-an-array.swift */,
+				0D4E52A529508E31000796BB /* 700.search-in-a-binary-search-tree.swift */,
+				0D4E52A729508EAB000796BB /* 703.kth-largest-element-in-a-stream.swift */,
 				0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */,
 			);
 			path = Easy;
@@ -1027,6 +1036,7 @@
 				0D4E5286294C8DB2000796BB /* 606.construct-string-from-binary-tree.swift in Sources */,
 				0DADAC3D2915235100C30C0F /* 404.sum-of-left-leaves.swift in Sources */,
 				0DB6C813293B3B2D00CBBC67 /* WeeklyContest329.swift in Sources */,
+				0D4E52A829508EAB000796BB /* 703.kth-largest-element-in-a-stream.swift in Sources */,
 				0D74F497291F591F000E9237 /* 500.keyboard-row.swift in Sources */,
 				DAFCA46328FAF6EC00CF1DE6 /* 66.plus-one.swift in Sources */,
 				0DADAC2F29140A0000C30C0F /* 374.guess-number-higher-or-lower.swift in Sources */,
@@ -1040,6 +1050,7 @@
 				0D4E526C2948AB3E000796BB /* 559.maximum-depth-of-n-ary-tree.swift in Sources */,
 				DAFCA39F28F6B70400CF1DE6 /* 78.subsets.swift in Sources */,
 				DAFCA3A428F6B70400CF1DE6 /* 46.permutations.swift in Sources */,
+				0D4E52A629508E31000796BB /* 700.search-in-a-binary-search-tree.swift in Sources */,
 				0DB6C81D293B449700CBBC67 /* 114.flatten-binary-tree-to-linked-list.swift in Sources */,
 				0D4C2AC72924F15700E73722 /* 15.3-sum.swift in Sources */,
 				0D74F493291F480C000E9237 /* 495.teemo-attacking.swift in Sources */,
@@ -1128,6 +1139,7 @@
 				0D763880290E4DD0004CD387 /* 169.majority-element.swift in Sources */,
 				0DB6C7CD29320BE500CBBC67 /* 59.spiral-matrix-ii.swift in Sources */,
 				0D4E5276294A0460000796BB /* 572.subtree-of-another-tree.swift in Sources */,
+				0D4E52A429508BDB000796BB /* 697.degree-of-an-array.swift in Sources */,
 				0D7638A4290ECE80004CD387 /* 263.ugly-number.swift in Sources */,
 				0D76389E290EC5DF004CD387 /* 242.valid-anagram.swift in Sources */,
 				0DCF946F2928DF20009D3B1A /* 22.generate-parentheses.swift in Sources */,

@@ -12,8 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    "00110011",
-    "10101",
+    (["KthLargest", "add", "add", "add", "add", "add"],
+    [[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]])
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,32 +25,30 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
-//    classHandler(ops: x.0, datas: x.1)
-    let ans = sol.countBinarySubstrings(x)
+    ClassHandler.test(ops: x.0, datas: x.1)
+//    let ans = sol.findShortestSubArray(x)
 
-    print(ans)
+//    print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
 }
 
-func classHandler(ops: [String], datas: [[Int?]]) {
-    let n = ops.count
-    var sut = BSTIterator(nil)
-    for i in 0..<n {
-        let op = ops[i]
-        let data = datas[i]
-        switch op {
-        case "BSTIterator":
-            let root = TreeNode.arrayToTree(data)
-            sut = BSTIterator(root)
-            print("nil")
-            break
-        case "next":
-            print(sut.next())
-        case "hasNext":
-            print(sut.hasNext())
-        default:
-            break
+struct ClassHandler {
+    static func test(ops: [String], datas: [[Any]]) {
+        let n = ops.count
+        var sut: KthLargest!
+        for i in 0..<n {
+            let op = ops[i]
+            let data = datas[i]
+            switch op {
+            case "KthLargest":
+                sut = KthLargest(data[0] as! Int, data[1] as! [Int])
+                print("nil")
+            case "add":
+                print(sut.add(data[0] as! Int))
+            default:
+                break
+            }
         }
     }
 }
