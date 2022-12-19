@@ -9,7 +9,7 @@
 class Solution {}
 #endif
 extension Solution {
-    fileprivate func search(_ nums: [Int], _ target: Int) -> Int {
+    fileprivate func search1(_ nums: [Int], _ target: Int) -> Int {
         let n = nums.count
         var l = 0, r = n - 1
         while l <= r {

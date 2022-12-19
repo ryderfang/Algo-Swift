@@ -9,7 +9,7 @@
 class Solution {}
 #endif
 extension Solution {
-    func search(_ nums: [Int], _ target: Int) -> Bool {
+    func search1(_ nums: [Int], _ target: Int) -> Bool {
         let n = nums.count
         var l = 0, r = n - 1
         while l <= r {

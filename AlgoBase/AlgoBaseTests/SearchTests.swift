@@ -51,4 +51,14 @@ final class SearchTests: XCTestCase {
         let graph = Search.connectedGraph(path)
         print(graph)
     }
+
+    func testBinarySearch() {
+        XCTAssertEqual(BinarySearch.search([5], 5), 0)
+        XCTAssertEqual(BinarySearch.search([5], 4), 0)
+        XCTAssertEqual(BinarySearch.search([-1,0,3,5,9,12], 2), 2)
+        XCTAssertEqual(BinarySearch.find([-1,0,3,5,9,12], 2), -1)
+        XCTAssertEqual(BinarySearch.find([5], 4), -1)
+        XCTAssertEqual(BinarySearch.find2([5], 5), 0)
+        XCTAssertEqual(BinarySearch.find2([-1,0,3,5,9,12], 9), 4)
+    }
 }

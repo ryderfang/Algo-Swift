@@ -14,7 +14,7 @@ class BinarySearch {
      * @return the index where it would be if it were inserted in order
      * https://leetcode.com/problems/search-insert-position/description/
     **/
-    func search(_ nums: [Int], _ target: Int) -> Int {
+    static func search(_ nums: [Int], _ target: Int) -> Int {
         var l = 0, r = nums.count
         while l < r {
             let m = l + (r - l) / 2
@@ -28,18 +28,30 @@ class BinarySearch {
     }
 
     // @return the index if the target is found, otherwise return -1
-    func checkIfExists(_ nums: [Int], _ target: Int) -> Int {
+    static func find(_ nums: [Int], _ target: Int) -> Int {
         var l = 0, r = nums.count
         while l < r {
             let m = l + (r - l) / 2
+            guard nums[m] != target else { return m }
             if nums[m] < target {
                 l = m + 1
             } else {
                 r = m
             }
         }
-        if ((0..<nums.count).contains(l) && nums[l] == target) {
-            return l
+        return -1
+    }
+
+    static func find2(_ nums: [Int], _ target: Int) -> Int {
+        var l = 0, r = nums.count - 1 // diff
+        while l <= r {
+            let m = l + (r - l) / 2
+            guard nums[m] != target else { return m }
+            if nums[m] < target {
+                l = m + 1
+            } else {
+                r = m - 1   // diff
+            }
         }
         return -1
     }
