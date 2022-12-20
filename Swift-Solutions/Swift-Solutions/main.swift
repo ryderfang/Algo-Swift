@@ -12,8 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (["MyHashMap", "put", "put", "get", "get", "put", "get", "remove", "get"],
-    [[], [1, 1], [2, 2], [1], [3], [2, 1], [2], [2], [2]])
+    "Hello",
+    "LOVELY",
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,9 +25,9 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
-    ClassHandler.test(ops: x.0, datas: x.1)
-//    let ans = sol.search(x.0, x.1)
-//    print(ans)
+//    ClassHandler.test(ops: x.0, datas: x.1)
+    let ans = sol.toLowerCase(x)
+    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)

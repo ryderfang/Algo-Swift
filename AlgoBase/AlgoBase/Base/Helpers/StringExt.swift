@@ -40,6 +40,16 @@ extension Character {
         }
         return intValue
     }
+
+    func toLower() -> Character {
+        guard let ascii = self.asciiValue, ascii >= 65 && ascii <= 90 else { return self }
+        return Character(UnicodeScalar(ascii + 32))
+    }
+
+    func toUpper() -> Character {
+        guard let ascii = self.asciiValue, ascii >= 97 && ascii <= 122 else { return self }
+        return Character(UnicodeScalar(ascii - 32))
+    }
 }
 
 extension String {

@@ -60,6 +60,8 @@
 		0D4E52AA29509586000796BB /* 704.binary-search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52A929509586000796BB /* 704.binary-search.swift */; };
 		0D4E52AC29509AF5000796BB /* 705.design-hash-set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52AB29509AF4000796BB /* 705.design-hash-set.swift */; };
 		0D4E52AE29509CBF000796BB /* 706.design-hash-map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52AD29509CBE000796BB /* 706.design-hash-map.swift */; };
+		0D4E52B02951E8B4000796BB /* 709.to-lower-case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52AF2951E8B4000796BB /* 709.to-lower-case.swift */; };
+		0D4E52B22951ED50000796BB /* 717.1-bit-and-2-bit-characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52B12951ED50000796BB /* 717.1-bit-and-2-bit-characters.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -354,6 +356,8 @@
 		0D4E52A929509586000796BB /* 704.binary-search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "704.binary-search.swift"; sourceTree = "<group>"; };
 		0D4E52AB29509AF4000796BB /* 705.design-hash-set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "705.design-hash-set.swift"; sourceTree = "<group>"; };
 		0D4E52AD29509CBE000796BB /* 706.design-hash-map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "706.design-hash-map.swift"; sourceTree = "<group>"; };
+		0D4E52AF2951E8B4000796BB /* 709.to-lower-case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "709.to-lower-case.swift"; sourceTree = "<group>"; };
+		0D4E52B12951ED50000796BB /* 717.1-bit-and-2-bit-characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "717.1-bit-and-2-bit-characters.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -770,6 +774,8 @@
 				0D4E52A929509586000796BB /* 704.binary-search.swift */,
 				0D4E52AB29509AF4000796BB /* 705.design-hash-set.swift */,
 				0D4E52AD29509CBE000796BB /* 706.design-hash-map.swift */,
+				0D4E52AF2951E8B4000796BB /* 709.to-lower-case.swift */,
+				0D4E52B12951ED50000796BB /* 717.1-bit-and-2-bit-characters.swift */,
 				0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */,
 			);
 			path = Easy;
@@ -1087,6 +1093,7 @@
 				0DB6C819293B3B2D00CBBC67 /* WeeklyContest325.swift in Sources */,
 				0DB6C7F32936497E00CBBC67 /* 95.unique-binary-search-trees-ii.swift in Sources */,
 				0D74F4AE29213357000E9237 /* 6.zigzag-conversion.swift in Sources */,
+				0D4E52B02951E8B4000796BB /* 709.to-lower-case.swift in Sources */,
 				DAFCA3A228F6B70400CF1DE6 /* 31.next-permutation.swift in Sources */,
 				DAFCA46F28FBE67200CF1DE6 /* 94.binary-tree-inorder-traversal.swift in Sources */,
 				DAFCA3A728F6B70A00CF1DE6 /* 21.merge-two-sorted-lists.swift in Sources */,
@@ -1226,6 +1233,7 @@
 				DAFCA40728FAD75800CF1DE6 /* Defines.swift in Sources */,
 				0DB6C815293B3B2D00CBBC67 /* WeeklyContest323.swift in Sources */,
 				0DB6C8402942399400CBBC67 /* 139.word-break.swift in Sources */,
+				0D4E52B22951ED50000796BB /* 717.1-bit-and-2-bit-characters.swift in Sources */,
 				0DB6C801293B0DF600CBBC67 /* 105.construct-binary-tree-from-preorder-and-inorder-traversal.swift in Sources */,
 				0DB6C85F2944BFF600CBBC67 /* 153.find-minimum-in-rotated-sorted-array.swift in Sources */,
 				0DB6C8612944C61400CBBC67 /* 155.min-stack.swift in Sources */,
