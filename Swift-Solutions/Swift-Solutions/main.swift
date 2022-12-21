@@ -12,8 +12,7 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    "Hello",
-    "LOVELY",
+    ([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2)
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -26,7 +25,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
-    let ans = sol.toLowerCase(x)
+    let ans = sol.floodFill(x.0, x.1, x.2, x.3)
     print(ans)
 
 //    print(ans?.array() ?? [])
