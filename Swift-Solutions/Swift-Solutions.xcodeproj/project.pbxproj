@@ -72,6 +72,9 @@
 		0D4E52C22955C5A5000796BB /* 748.shortest-completing-word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52C12955C5A4000796BB /* 748.shortest-completing-word.swift */; };
 		0D4E52C42955CA0B000796BB /* 762.prime-number-of-set-bits-in-binary-representation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52C32955CA0A000796BB /* 762.prime-number-of-set-bits-in-binary-representation.swift */; };
 		0D4E52C62955CC92000796BB /* 766.toeplitz-matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52C52955CC92000796BB /* 766.toeplitz-matrix.swift */; };
+		0D4E52C82955CE77000796BB /* 771.jewels-and-stones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52C72955CE77000796BB /* 771.jewels-and-stones.swift */; };
+		0D4E52CA2955CF46000796BB /* 796.rotate-string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52C92955CF46000796BB /* 796.rotate-string.swift */; };
+		0D4E52CC2955D4B3000796BB /* 804.unique-morse-code-words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52CB2955D4B3000796BB /* 804.unique-morse-code-words.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -378,6 +381,9 @@
 		0D4E52C12955C5A4000796BB /* 748.shortest-completing-word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "748.shortest-completing-word.swift"; sourceTree = "<group>"; };
 		0D4E52C32955CA0A000796BB /* 762.prime-number-of-set-bits-in-binary-representation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "762.prime-number-of-set-bits-in-binary-representation.swift"; sourceTree = "<group>"; };
 		0D4E52C52955CC92000796BB /* 766.toeplitz-matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "766.toeplitz-matrix.swift"; sourceTree = "<group>"; };
+		0D4E52C72955CE77000796BB /* 771.jewels-and-stones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "771.jewels-and-stones.swift"; sourceTree = "<group>"; };
+		0D4E52C92955CF46000796BB /* 796.rotate-string.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "796.rotate-string.swift"; sourceTree = "<group>"; };
+		0D4E52CB2955D4B3000796BB /* 804.unique-morse-code-words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "804.unique-morse-code-words.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -655,6 +661,7 @@
 		0D0C861228632D4B0010C108 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
+				0D4E52CB2955D4B3000796BB /* 804.unique-morse-code-words.swift */,
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
@@ -805,7 +812,9 @@
 				0D4E52C12955C5A4000796BB /* 748.shortest-completing-word.swift */,
 				0D4E52C32955CA0A000796BB /* 762.prime-number-of-set-bits-in-binary-representation.swift */,
 				0D4E52C52955CC92000796BB /* 766.toeplitz-matrix.swift */,
+				0D4E52C72955CE77000796BB /* 771.jewels-and-stones.swift */,
 				0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */,
+				0D4E52C92955CF46000796BB /* 796.rotate-string.swift */,
 				0D4E52B52951EFF9000796BB /* 1991.find-the-middle-index-in-array.swift */,
 			);
 			path = Easy;
@@ -1105,6 +1114,7 @@
 				DAED6E9929017CD4003B7433 /* 100.same-tree.swift in Sources */,
 				0D4E529A294EF7C4000796BB /* 674.longest-continuous-increasing-subsequence.swift in Sources */,
 				0D76389A290EC059004CD387 /* 232.implement-queue-using-stacks.swift in Sources */,
+				0D4E52CC2955D4B3000796BB /* 804.unique-morse-code-words.swift in Sources */,
 				0D763876290CF92D004CD387 /* 202.happy-number.swift in Sources */,
 				0D76387E290E44A2004CD387 /* 168.excel-sheet-column-title.swift in Sources */,
 				0D4E5278294A10A1000796BB /* 575.distribute-candies.swift in Sources */,
@@ -1192,6 +1202,7 @@
 				0D4E5276294A0460000796BB /* 572.subtree-of-another-tree.swift in Sources */,
 				0D4E52A429508BDB000796BB /* 697.degree-of-an-array.swift in Sources */,
 				0D7638A4290ECE80004CD387 /* 263.ugly-number.swift in Sources */,
+				0D4E52CA2955CF46000796BB /* 796.rotate-string.swift in Sources */,
 				0D76389E290EC5DF004CD387 /* 242.valid-anagram.swift in Sources */,
 				0DCF946F2928DF20009D3B1A /* 22.generate-parentheses.swift in Sources */,
 				0DB6C84A2944818700CBBC67 /* 147.insertion-sort-list.swift in Sources */,
@@ -1211,6 +1222,7 @@
 				0D4E525A29460042000796BB /* 172.factorial-trailing-zeroes.swift in Sources */,
 				0D4E52702948AE6B000796BB /* 561.array-partition.swift in Sources */,
 				0DBE143D29129C7700F5ECE1 /* 338.counting-bits.swift in Sources */,
+				0D4E52C82955CE77000796BB /* 771.jewels-and-stones.swift in Sources */,
 				0DB6C82B293B7E9100CBBC67 /* 130.surrounded-regions.swift in Sources */,
 				0DB6C7F72938E91A00CBBC67 /* 97.interleaving-string.swift in Sources */,
 				0DB6C7CB2931F79400CBBC67 /* 57.insert-interval.swift in Sources */,
