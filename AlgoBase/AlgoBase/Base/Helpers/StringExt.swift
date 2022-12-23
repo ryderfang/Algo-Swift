@@ -41,6 +41,12 @@ extension Character {
         return intValue
     }
 
+    // "a" -> 0 .. "z" -> 25
+    public func index() -> Int {
+        guard let ascii = self.asciiValue else { return -1 }
+        return Int(ascii - 97)
+    }
+
     func toLower() -> Character {
         guard let ascii = self.asciiValue, ascii >= 65 && ascii <= 90 else { return self }
         return Character(UnicodeScalar(ascii + 32))

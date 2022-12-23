@@ -7,8 +7,9 @@
 
 import Foundation
 
-class Permutations {
-    //MARK: 全排列 - 无重复元素
+// MARK: 组合学
+class Combinatorics {
+    // MARK: 全排列 - 无重复元素
     func permute(_ nums: [Int]) -> [[Int]] {
         guard !nums.isEmpty else { return [] }
         
@@ -142,7 +143,7 @@ class Permutations {
     }
     
     
-    //MARK: 字典序下一个排列
+    // MARK: 字典序下一个排列
     func nextPermutation(_ nums: inout [Int]) {
         let sz = nums.count
         guard sz > 1 else {
@@ -170,7 +171,7 @@ class Permutations {
         nums[(small+1)...].reverse()
     }
     
-    //MARK: 字典序第 k 个排列 (k 从 1 开始)
+    // MARK: 字典序第 k 个排列 (k 从 1 开始)
     func getPermutation(_ n: Int, _ k: Int) -> String {
         var p = [Int](repeating: 0, count: n)
         var t = k - 1

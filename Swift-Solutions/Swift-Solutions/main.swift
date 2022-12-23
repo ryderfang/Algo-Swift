@@ -12,8 +12,7 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ("abcde", "cdeab"),
-    ("abcde", "abced"),
+    ([10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10], "abcdefghijklmnopqrstuvwxyz")
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -27,7 +26,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.rotateString(x.0, x.1)
+    let ans = sol.numberOfLines(x.0, x.1)
     print(ans)
 
 //    print(ans?.array() ?? [])

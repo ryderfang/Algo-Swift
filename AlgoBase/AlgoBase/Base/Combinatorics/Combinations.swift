@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Combinations {
+extension Combinatorics {
     // MARK: C(n, k)
     func combine(_ n: Int, _ k: Int) -> [[Int]] {
         var ans = [[Int]]()
