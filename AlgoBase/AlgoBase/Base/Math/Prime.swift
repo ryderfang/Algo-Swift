@@ -7,8 +7,11 @@
 
 import Foundation
 
-class Prime {
-    static func isPrime(_ n: Int) -> Bool {
+/* primes below 100:
+ [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+**/
+public class Prime {
+    public static func isPrime(_ n: Int) -> Bool {
         guard n > 1 else { return false }
         guard n > 4 else { return true }
         let t = Int(sqrt(Double(n)))
@@ -19,7 +22,7 @@ class Prime {
     }
 
     // 素材筛 (欧拉筛)
-    static func getPrimes(_ Limit: Int) -> [Int] {
+    public static func getPrimes(_ Limit: Int) -> [Int] {
         var isPrime = [Bool](repeating: true, count: Limit)
         (isPrime[0], isPrime[1]) = (false, false)
         var plist = [Int]()
@@ -40,7 +43,7 @@ class Prime {
     }
 
     // 素材筛 (The Sieve of Eratosthenes, 埃氏筛)
-    static func getPrimes2(_ Limit: Int) -> [Int] {
+    public static func getPrimes2(_ Limit: Int) -> [Int] {
         var isPrime = [Bool](repeating: true, count: Limit)
         (isPrime[0], isPrime[1]) = (false, false)
         var plist = [Int]()

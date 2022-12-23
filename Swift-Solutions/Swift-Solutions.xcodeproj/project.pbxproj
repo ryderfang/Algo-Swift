@@ -70,6 +70,8 @@
 		0D4E52BE29533127000796BB /* 746.min-cost-climbing-stairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52BD29533127000796BB /* 746.min-cost-climbing-stairs.swift */; };
 		0D4E52C02953336C000796BB /* 747.largest-number-at-least-twice-of-others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52BF2953336C000796BB /* 747.largest-number-at-least-twice-of-others.swift */; };
 		0D4E52C22955C5A5000796BB /* 748.shortest-completing-word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52C12955C5A4000796BB /* 748.shortest-completing-word.swift */; };
+		0D4E52C42955CA0B000796BB /* 762.prime-number-of-set-bits-in-binary-representation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52C32955CA0A000796BB /* 762.prime-number-of-set-bits-in-binary-representation.swift */; };
+		0D4E52C62955CC92000796BB /* 766.toeplitz-matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52C52955CC92000796BB /* 766.toeplitz-matrix.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -374,6 +376,8 @@
 		0D4E52BD29533127000796BB /* 746.min-cost-climbing-stairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "746.min-cost-climbing-stairs.swift"; sourceTree = "<group>"; };
 		0D4E52BF2953336C000796BB /* 747.largest-number-at-least-twice-of-others.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "747.largest-number-at-least-twice-of-others.swift"; sourceTree = "<group>"; };
 		0D4E52C12955C5A4000796BB /* 748.shortest-completing-word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "748.shortest-completing-word.swift"; sourceTree = "<group>"; };
+		0D4E52C32955CA0A000796BB /* 762.prime-number-of-set-bits-in-binary-representation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "762.prime-number-of-set-bits-in-binary-representation.swift"; sourceTree = "<group>"; };
+		0D4E52C52955CC92000796BB /* 766.toeplitz-matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "766.toeplitz-matrix.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -651,7 +655,6 @@
 		0D0C861228632D4B0010C108 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
-				0D4E52C12955C5A4000796BB /* 748.shortest-completing-word.swift */,
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
@@ -799,6 +802,9 @@
 				0D4E52BB29532EF3000796BB /* 744.find-smallest-letter-greater-than-target.swift */,
 				0D4E52BD29533127000796BB /* 746.min-cost-climbing-stairs.swift */,
 				0D4E52BF2953336C000796BB /* 747.largest-number-at-least-twice-of-others.swift */,
+				0D4E52C12955C5A4000796BB /* 748.shortest-completing-word.swift */,
+				0D4E52C32955CA0A000796BB /* 762.prime-number-of-set-bits-in-binary-representation.swift */,
+				0D4E52C52955CC92000796BB /* 766.toeplitz-matrix.swift */,
 				0D4E525F29475695000796BB /* 783.minimum-distance-between-bst-nodes.swift */,
 				0D4E52B52951EFF9000796BB /* 1991.find-the-middle-index-in-array.swift */,
 			);
@@ -1272,6 +1278,7 @@
 				0D9E9B94292E7CE6005486CE /* 38.count-and-say.swift in Sources */,
 				0D763869290C0BF8004CD387 /* 118.pascals-triangle.swift in Sources */,
 				0D763874290CF7F2004CD387 /* 136.single-number.swift in Sources */,
+				0D4E52C62955CC92000796BB /* 766.toeplitz-matrix.swift in Sources */,
 				0D763896290EB51A004CD387 /* 228.summary-ranges.swift in Sources */,
 				0DADAC29291401AB00C30C0F /* 349.intersection-of-two-arrays.swift in Sources */,
 				0DB6C7C42931EE6C00CBBC67 /* BiweeklyContest92.swift in Sources */,
@@ -1293,6 +1300,7 @@
 				0DB6C7E3293274E200CBBC67 /* 80.remove-duplicates-from-sorted-array-ii.swift in Sources */,
 				DAED6E9B290180F7003B7433 /* 101.symmetric-tree.swift in Sources */,
 				0DB6C83E294216D100CBBC67 /* 138.copy-list-with-random-pointer.swift in Sources */,
+				0D4E52C42955CA0B000796BB /* 762.prime-number-of-set-bits-in-binary-representation.swift in Sources */,
 				0DB6C821293B629400CBBC67 /* 117.populating-next-right-pointers-in-each-node-ii.swift in Sources */,
 				0D4E528A294C9966000796BB /* 628.maximum-product-of-three-numbers.swift in Sources */,
 				0DADAC392914120B00C30C0F /* 389.find-the-difference.swift in Sources */,
