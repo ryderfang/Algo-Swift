@@ -77,6 +77,7 @@
 		0D4E52CC2955D4B3000796BB /* 804.unique-morse-code-words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52CB2955D4B3000796BB /* 804.unique-morse-code-words.swift */; };
 		0D4E52CE2955D6E4000796BB /* 806.number-of-lines-to-write-string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52CD2955D6E4000796BB /* 806.number-of-lines-to-write-string.swift */; };
 		0D4E52D02955DA6C000796BB /* 812.largest-triangle-area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52CF2955DA6C000796BB /* 812.largest-triangle-area.swift */; };
+		0D4E52D52956F355000796BB /* 819.most-common-word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52D42956F354000796BB /* 819.most-common-word.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -388,6 +389,7 @@
 		0D4E52CB2955D4B3000796BB /* 804.unique-morse-code-words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "804.unique-morse-code-words.swift"; sourceTree = "<group>"; };
 		0D4E52CD2955D6E4000796BB /* 806.number-of-lines-to-write-string.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "806.number-of-lines-to-write-string.swift"; sourceTree = "<group>"; };
 		0D4E52CF2955DA6C000796BB /* 812.largest-triangle-area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "812.largest-triangle-area.swift"; sourceTree = "<group>"; };
+		0D4E52D42956F354000796BB /* 819.most-common-word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "819.most-common-word.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -665,6 +667,7 @@
 		0D0C861228632D4B0010C108 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
+				0D4E52D42956F354000796BB /* 819.most-common-word.swift */,
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
@@ -1200,6 +1203,7 @@
 				0D763863290BF80E004CD387 /* 110.balanced-binary-tree.swift in Sources */,
 				DAFCA3A328F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift in Sources */,
 				0D763867290C029E004CD387 /* 112.path-sum.swift in Sources */,
+				0D4E52D52956F355000796BB /* 819.most-common-word.swift in Sources */,
 				0D763895290EB51A004CD387 /* 226.invert-binary-tree.swift in Sources */,
 				DAFCA3AB28F6B71200CF1DE6 /* 60.permutation-sequence.swift in Sources */,
 				0DADAC3129140B6800C30C0F /* 383.ransom-note.swift in Sources */,
