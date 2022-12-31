@@ -10,6 +10,7 @@
 		0D4E52552945ECC3000796BB /* DoubleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52542945ECC3000796BB /* DoubleExt.swift */; };
 		0D4E526E2948AC54000796BB /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E526D2948AC54000796BB /* Node.swift */; };
 		0D4E52D32955DB89000796BB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52D22955DB89000796BB /* Geometry.swift */; };
+		0D4E52E129604FC9000796BB /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52E029604FC9000796BB /* Polygon.swift */; };
 		0D74F4A82920AE60000E9237 /* Prime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4A72920AE60000E9237 /* Prime.swift */; };
 		0D76387A290E2978004CD387 /* ObjExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763879290E2978004CD387 /* ObjExt.swift */; };
 		0D9E9B8C292BCEE7005486CE /* HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8B292BCEE7005486CE /* HelperTests.swift */; };
@@ -63,6 +64,7 @@
 		0D4E52542945ECC3000796BB /* DoubleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExt.swift; sourceTree = "<group>"; };
 		0D4E526D2948AC54000796BB /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		0D4E52D22955DB89000796BB /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		0D4E52E029604FC9000796BB /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 		0D74F4A72920AE60000E9237 /* Prime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prime.swift; sourceTree = "<group>"; };
 		0D763879290E2978004CD387 /* ObjExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjExt.swift; sourceTree = "<group>"; };
 		0D9E9B8B292BCEE7005486CE /* HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperTests.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				0D4E52D22955DB89000796BB /* Geometry.swift */,
+				0D4E52E029604FC9000796BB /* Polygon.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				0D4E526E2948AC54000796BB /* Node.swift in Sources */,
 				DAFCA45528FADA9500CF1DE6 /* PriorityQueue.swift in Sources */,
 				DAFCA44E28FAD91C00CF1DE6 /* LehmerCode.swift in Sources */,
+				0D4E52E129604FC9000796BB /* Polygon.swift in Sources */,
 				DAFCA44628FAD91C00CF1DE6 /* NumberTheory.swift in Sources */,
 				0DB6C84E2944922300CBBC67 /* ShellSort.swift in Sources */,
 				DAFCA44828FAD91C00CF1DE6 /* _Macro.swift in Sources */,
