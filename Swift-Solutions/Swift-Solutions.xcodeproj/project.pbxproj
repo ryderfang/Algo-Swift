@@ -80,6 +80,7 @@
 		0D4E52D52956F355000796BB /* 819.most-common-word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52D42956F354000796BB /* 819.most-common-word.swift */; };
 		0D4E52D729570658000796BB /* 821.shortest-distance-to-a-character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52D629570658000796BB /* 821.shortest-distance-to-a-character.swift */; };
 		0D4E52D929571D9B000796BB /* 824.goat-latin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52D829571D9B000796BB /* 824.goat-latin.swift */; };
+		0D4E52DB2960452F000796BB /* 830.positions-of-large-groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52DA2960452F000796BB /* 830.positions-of-large-groups.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -394,6 +395,7 @@
 		0D4E52D42956F354000796BB /* 819.most-common-word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "819.most-common-word.swift"; sourceTree = "<group>"; };
 		0D4E52D629570658000796BB /* 821.shortest-distance-to-a-character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "821.shortest-distance-to-a-character.swift"; sourceTree = "<group>"; };
 		0D4E52D829571D9B000796BB /* 824.goat-latin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "824.goat-latin.swift"; sourceTree = "<group>"; };
+		0D4E52DA2960452F000796BB /* 830.positions-of-large-groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "830.positions-of-large-groups.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -830,6 +832,7 @@
 				0D4E52D42956F354000796BB /* 819.most-common-word.swift */,
 				0D4E52D629570658000796BB /* 821.shortest-distance-to-a-character.swift */,
 				0D4E52D829571D9B000796BB /* 824.goat-latin.swift */,
+				0D4E52DA2960452F000796BB /* 830.positions-of-large-groups.swift */,
 				0D4E52B52951EFF9000796BB /* 1991.find-the-middle-index-in-array.swift */,
 			);
 			path = Easy;
@@ -1305,6 +1308,7 @@
 				0DB6C801293B0DF600CBBC67 /* 105.construct-binary-tree-from-preorder-and-inorder-traversal.swift in Sources */,
 				0DB6C85F2944BFF600CBBC67 /* 153.find-minimum-in-rotated-sorted-array.swift in Sources */,
 				0DB6C8612944C61400CBBC67 /* 155.min-stack.swift in Sources */,
+				0D4E52DB2960452F000796BB /* 830.positions-of-large-groups.swift in Sources */,
 				0D9E9BA0292FC1D5005486CE /* 48.rotate-image.swift in Sources */,
 				0D9E9B94292E7CE6005486CE /* 38.count-and-say.swift in Sources */,
 				0D763869290C0BF8004CD387 /* 118.pascals-triangle.swift in Sources */,

@@ -12,8 +12,11 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    "The quick brown fox jumped over the lazy dog",
-    "Each word consists of lowercase and uppercase letters only",
+    "abbxxxxzzy",
+    "abc",
+    "abcdddeeeeaabbbcd",
+    "aaa",
+    "babaaaabbb",
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -27,7 +30,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.toGoatLatin(x)
+    let ans = sol.largeGroupPositions(x)
     print(ans)
 
 //    print(ans?.array() ?? [])
