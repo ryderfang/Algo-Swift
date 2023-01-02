@@ -12,12 +12,10 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ("ab#c", "ad#c"),
-    ("ab##", "c#d#"),
-    ("a#c", "b"),
-    ("xywrrmp","xywrrm#p"),
-    ("bxj##tw", "bxj###tw"),
-    ("y#fo##f", "y#fx#o##f"),
+    5,
+    22,
+    8,
+    10,
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -31,7 +29,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.backspaceCompare(x.0, x.1)
+    let ans = sol.binaryGap(x)
     print(ans)
 
 //    print(ans?.array() ?? [])
