@@ -12,10 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    5,
-    22,
-    8,
-    10,
+    [[1,2],[3,4]],
+    [[1,1,1],[1,0,1],[1,1,1]],
+    [[2,2,2],[2,1,2],[2,2,2]],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -29,7 +28,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.binaryGap(x)
+    let ans = sol.surfaceArea(x)
     print(ans)
 
 //    print(ans?.array() ?? [])
