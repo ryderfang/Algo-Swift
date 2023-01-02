@@ -89,6 +89,8 @@
 		0D64836B2962DC5C00458B69 /* 867.transpose-matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64836A2962DC5B00458B69 /* 867.transpose-matrix.swift */; };
 		0D64836D2962DD5A00458B69 /* 868.binary-gap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64836C2962DD5A00458B69 /* 868.binary-gap.swift */; };
 		0D64836F2962E50B00458B69 /* 872.leaf-similar-trees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64836E2962E50B00458B69 /* 872.leaf-similar-trees.swift */; };
+		0D6483712962ECBA00458B69 /* 876.middle-of-the-linked-list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6483702962ECBA00458B69 /* 876.middle-of-the-linked-list.swift */; };
+		0D6483732962EFE800458B69 /* 883.projection-area-of-3-d-shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6483722962EFE800458B69 /* 883.projection-area-of-3-d-shapes.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -412,6 +414,8 @@
 		0D64836A2962DC5B00458B69 /* 867.transpose-matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "867.transpose-matrix.swift"; sourceTree = "<group>"; };
 		0D64836C2962DD5A00458B69 /* 868.binary-gap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "868.binary-gap.swift"; sourceTree = "<group>"; };
 		0D64836E2962E50B00458B69 /* 872.leaf-similar-trees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "872.leaf-similar-trees.swift"; sourceTree = "<group>"; };
+		0D6483702962ECBA00458B69 /* 876.middle-of-the-linked-list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "876.middle-of-the-linked-list.swift"; sourceTree = "<group>"; };
+		0D6483722962EFE800458B69 /* 883.projection-area-of-3-d-shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "883.projection-area-of-3-d-shapes.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -857,6 +861,8 @@
 				0D64836A2962DC5B00458B69 /* 867.transpose-matrix.swift */,
 				0D64836C2962DD5A00458B69 /* 868.binary-gap.swift */,
 				0D64836E2962E50B00458B69 /* 872.leaf-similar-trees.swift */,
+				0D6483702962ECBA00458B69 /* 876.middle-of-the-linked-list.swift */,
+				0D6483722962EFE800458B69 /* 883.projection-area-of-3-d-shapes.swift */,
 				0D4E52B52951EFF9000796BB /* 1991.find-the-middle-index-in-array.swift */,
 			);
 			path = Easy;
@@ -1338,6 +1344,7 @@
 				0DB6C801293B0DF600CBBC67 /* 105.construct-binary-tree-from-preorder-and-inorder-traversal.swift in Sources */,
 				0DB6C85F2944BFF600CBBC67 /* 153.find-minimum-in-rotated-sorted-array.swift in Sources */,
 				0DB6C8612944C61400CBBC67 /* 155.min-stack.swift in Sources */,
+				0D6483732962EFE800458B69 /* 883.projection-area-of-3-d-shapes.swift in Sources */,
 				0D4E52DB2960452F000796BB /* 830.positions-of-large-groups.swift in Sources */,
 				0D9E9BA0292FC1D5005486CE /* 48.rotate-image.swift in Sources */,
 				0D9E9B94292E7CE6005486CE /* 38.count-and-say.swift in Sources */,
@@ -1393,6 +1400,7 @@
 				0D763865290BFDCE004CD387 /* 111.minimum-depth-of-binary-tree.swift in Sources */,
 				0DB6C85C2944B99F00CBBC67 /* 152.maximum-product-subarray.swift in Sources */,
 				0D74F49F291FF74B000E9237 /* 507.perfect-number.swift in Sources */,
+				0D6483712962ECBA00458B69 /* 876.middle-of-the-linked-list.swift in Sources */,
 				0DB6C818293B3B2D00CBBC67 /* WeeklyContest324.swift in Sources */,
 				0D74F47F29154BCB000E9237 /* 441.arranging-coins.swift in Sources */,
 				0D4E52BC29532EF3000796BB /* 744.find-smallest-letter-greater-than-target.swift in Sources */,
