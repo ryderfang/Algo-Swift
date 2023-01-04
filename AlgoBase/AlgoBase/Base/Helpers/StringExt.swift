@@ -12,15 +12,15 @@ extension Character {
     // [a...z] -> [97...122]
     // [A...Z] -> [65...90]
     // 这里只判断英文字符 [a-zA-z]
-    // isLetter 对于非英文字母也返回 true
+    // !!!: isLetter 对于非英文字母也返回 true
     public func isAlpha() -> Bool {
         return ("a"..."z").contains(self) || ("A"..."Z").contains(self)
     }
     
     // 只判断阿拉伯数字 [0-9] -> AlphaValue [48...57]
-    // isNumber 还包括 ㊈ 𝟠 这种 unicode 字符
+    // !!!: isNumber 还包括 ㊈ 𝟠 这种 unicode 字符
     public func isDigit() -> Bool {
-        return ("0"..."9").contains(self)
+       return ("0"..."9").contains(self)
     }
 
     // ④ -> 4
