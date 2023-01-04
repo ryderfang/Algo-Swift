@@ -10,25 +10,25 @@ import Foundation
 class NumberTheory {
     // 最小公倍数
     // gcd(a, b) * lcm(a, b) = a * b
-    public static func lcm(a: Int, b: Int) -> Int {
-        return (a * b) / self.gcd(a: a, b: b)
+    public static func lcm(_ a: Int, _ b: Int) -> Int {
+        return (a * b) / gcd(a, b)
     }
     
     // 最大公约数
-    public static func gcd(a: Int, b: Int) -> Int {
+    public static func gcd(_ a: Int, _ b: Int) -> Int {
         if b == 0 {
             return a
         }
-        return gcd(a: b, b: a % b)
+        return gcd(b, a % b)
     }
     
     // 扩展的欧几里德算法 (最大公约数算法)
     // 返回 gcd(a, b) 的同时，获取 a * x + b * y = gcd(a, b) 的唯一解
-    public static func exgcd(a: Int, b: Int) -> (Int, Int, Int) {
+    public static func exgcd(_ a: Int, _ b: Int) -> (Int, Int, Int) {
         if b == 0 {
             return (a, 1, 0)
         }
-        let (d, x, y) = exgcd(a: b, b: a % b)
+        let (d, x, y) = exgcd(b, a % b)
         return (d, y, x - (a / b) * y)
     }
     
@@ -42,7 +42,7 @@ class NumberTheory {
         for i in 0..<k {
             let m = n / r[i]
             // b * m mod r[i] = 1
-            let (_, b, _) = exgcd(a: m, b: r[i])
+            let (_, b, _) = exgcd(m, r[i])
             ans = (ans + a[i] * m * b % n) % n
         }
         return (ans % n + n) % n
