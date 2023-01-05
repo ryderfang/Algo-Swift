@@ -12,7 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+    (["RecentCounter", "ping", "ping", "ping", "ping"],
+    [[], [1], [100], [3001], [3002]])
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -24,10 +25,10 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
-//    ClassHandler.test(ops: x.0, datas: x.1)
+    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.numUniqueEmails(x)
-    print(ans)
+//    let ans = sol.numUniqueEmails(x)
+//    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
@@ -36,22 +37,16 @@ for (i, x) in cases.enumerated() {
 struct ClassHandler {
     static func test(ops: [String], datas: [[Int]]) {
         let n = ops.count
-        var sut = MyHashMap()
+        let sut = RecentCounter()
         let className = String(describing: sut).components(separatedBy: ".").last
         for i in 0..<n {
             let op = ops[i]
             let data = datas[i]
             switch op {
             case className:
-                sut = MyHashMap()
                 print("null")
-            case "put":
-                sut.put(data[0], data[1])
-                print("null")
-            case "get":
-                print(sut.get(data[0]))
-            case "remove":
-                sut.remove(data[0])
+            case "ping":
+                print(sut.ping(data[0]))
             default:
                 break
             }

@@ -103,6 +103,8 @@
 		0D64838829659FDA00458B69 /* 922.sort-array-by-parity-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64838729659FD900458B69 /* 922.sort-array-by-parity-ii.swift */; };
 		0D64838A2965A10100458B69 /* 925.long-pressed-name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6483892965A10100458B69 /* 925.long-pressed-name.swift */; };
 		0D64838C2966F01900458B69 /* 929.unique-email-addresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64838B2966F01900458B69 /* 929.unique-email-addresses.swift */; };
+		0D64838E2966F35700458B69 /* 933.number-of-recent-calls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64838D2966F35700458B69 /* 933.number-of-recent-calls.swift */; };
+		0D6483902966F78F00458B69 /* 938.range-sum-of-bst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64838F2966F78F00458B69 /* 938.range-sum-of-bst.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -440,6 +442,8 @@
 		0D64838729659FD900458B69 /* 922.sort-array-by-parity-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "922.sort-array-by-parity-ii.swift"; sourceTree = "<group>"; };
 		0D6483892965A10100458B69 /* 925.long-pressed-name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "925.long-pressed-name.swift"; sourceTree = "<group>"; };
 		0D64838B2966F01900458B69 /* 929.unique-email-addresses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "929.unique-email-addresses.swift"; sourceTree = "<group>"; };
+		0D64838D2966F35700458B69 /* 933.number-of-recent-calls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "933.number-of-recent-calls.swift"; sourceTree = "<group>"; };
+		0D64838F2966F78F00458B69 /* 938.range-sum-of-bst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "938.range-sum-of-bst.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -717,6 +721,7 @@
 		0D0C861228632D4B0010C108 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
+				0D64838F2966F78F00458B69 /* 938.range-sum-of-bst.swift */,
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
@@ -899,6 +904,7 @@
 				0D64838729659FD900458B69 /* 922.sort-array-by-parity-ii.swift */,
 				0D6483892965A10100458B69 /* 925.long-pressed-name.swift */,
 				0D64838B2966F01900458B69 /* 929.unique-email-addresses.swift */,
+				0D64838D2966F35700458B69 /* 933.number-of-recent-calls.swift */,
 				0D4E52B52951EFF9000796BB /* 1991.find-the-middle-index-in-array.swift */,
 			);
 			path = Easy;
@@ -1222,6 +1228,7 @@
 				0DB6C819293B3B2D00CBBC67 /* WeeklyContest325.swift in Sources */,
 				0DB6C7F32936497E00CBBC67 /* 95.unique-binary-search-trees-ii.swift in Sources */,
 				0D4E52E329605086000796BB /* 844.backspace-string-compare.swift in Sources */,
+				0D6483902966F78F00458B69 /* 938.range-sum-of-bst.swift in Sources */,
 				0D74F4AE29213357000E9237 /* 6.zigzag-conversion.swift in Sources */,
 				0D4E52B02951E8B4000796BB /* 709.to-lower-case.swift in Sources */,
 				0D6483692962DB3700458B69 /* 860.lemonade-change.swift in Sources */,
@@ -1295,6 +1302,7 @@
 				0D7638A4290ECE80004CD387 /* 263.ugly-number.swift in Sources */,
 				0D4E52CA2955CF46000796BB /* 796.rotate-string.swift in Sources */,
 				0D76389E290EC5DF004CD387 /* 242.valid-anagram.swift in Sources */,
+				0D64838E2966F35700458B69 /* 933.number-of-recent-calls.swift in Sources */,
 				0DCF946F2928DF20009D3B1A /* 22.generate-parentheses.swift in Sources */,
 				0DB6C84A2944818700CBBC67 /* 147.insertion-sort-list.swift in Sources */,
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
