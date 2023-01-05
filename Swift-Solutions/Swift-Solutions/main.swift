@@ -12,7 +12,7 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    "ab-cd",
+    ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -26,7 +26,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.reverseOnlyLetters(x)
+    let ans = sol.numUniqueEmails(x)
     print(ans)
 
 //    print(ans?.array() ?? [])
