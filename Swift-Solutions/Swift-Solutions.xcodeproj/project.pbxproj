@@ -105,6 +105,8 @@
 		0D64838C2966F01900458B69 /* 929.unique-email-addresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64838B2966F01900458B69 /* 929.unique-email-addresses.swift */; };
 		0D64838E2966F35700458B69 /* 933.number-of-recent-calls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64838D2966F35700458B69 /* 933.number-of-recent-calls.swift */; };
 		0D6483902966F78F00458B69 /* 938.range-sum-of-bst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64838F2966F78F00458B69 /* 938.range-sum-of-bst.swift */; };
+		0D6483922968137B00458B69 /* 941.valid-mountain-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6483912968137B00458B69 /* 941.valid-mountain-array.swift */; };
+		0D6483942968157700458B69 /* 942.di-string-match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6483932968157700458B69 /* 942.di-string-match.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -444,6 +446,8 @@
 		0D64838B2966F01900458B69 /* 929.unique-email-addresses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "929.unique-email-addresses.swift"; sourceTree = "<group>"; };
 		0D64838D2966F35700458B69 /* 933.number-of-recent-calls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "933.number-of-recent-calls.swift"; sourceTree = "<group>"; };
 		0D64838F2966F78F00458B69 /* 938.range-sum-of-bst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "938.range-sum-of-bst.swift"; sourceTree = "<group>"; };
+		0D6483912968137B00458B69 /* 941.valid-mountain-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "941.valid-mountain-array.swift"; sourceTree = "<group>"; };
+		0D6483932968157700458B69 /* 942.di-string-match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "942.di-string-match.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -721,7 +725,6 @@
 		0D0C861228632D4B0010C108 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
-				0D64838F2966F78F00458B69 /* 938.range-sum-of-bst.swift */,
 				DAFCA3AC28F8090700CF1DE6 /* 1.two-sum.swift */,
 				DAFCA3AE28F814CC00CF1DE6 /* 9.palindrome-number.swift */,
 				DAFCA3B028F81DB700CF1DE6 /* 13.roman-to-integer.swift */,
@@ -905,6 +908,9 @@
 				0D6483892965A10100458B69 /* 925.long-pressed-name.swift */,
 				0D64838B2966F01900458B69 /* 929.unique-email-addresses.swift */,
 				0D64838D2966F35700458B69 /* 933.number-of-recent-calls.swift */,
+				0D64838F2966F78F00458B69 /* 938.range-sum-of-bst.swift */,
+				0D6483912968137B00458B69 /* 941.valid-mountain-array.swift */,
+				0D6483932968157700458B69 /* 942.di-string-match.swift */,
 				0D4E52B52951EFF9000796BB /* 1991.find-the-middle-index-in-array.swift */,
 			);
 			path = Easy;
@@ -1306,11 +1312,13 @@
 				0DCF946F2928DF20009D3B1A /* 22.generate-parentheses.swift in Sources */,
 				0DB6C84A2944818700CBBC67 /* 147.insertion-sort-list.swift in Sources */,
 				DAFCA3A128F6B70400CF1DE6 /* 2.add-two-numbers.swift in Sources */,
+				0D6483922968137B00458B69 /* 941.valid-mountain-array.swift in Sources */,
 				0D4E52AC29509AF5000796BB /* 705.design-hash-set.swift in Sources */,
 				0D64838A2965A10100458B69 /* 925.long-pressed-name.swift in Sources */,
 				0D74F48D291BE707000E9237 /* 482.license-key-formatting.swift in Sources */,
 				0D9E9B92292E75F0005486CE /* 36.valid-sudoku.swift in Sources */,
 				0D4E52A0294F153F000796BB /* 693.binary-number-with-alternating-bits.swift in Sources */,
+				0D6483942968157700458B69 /* 942.di-string-match.swift in Sources */,
 				0D763882290E53B2004CD387 /* 171.excel-sheet-column-number.swift in Sources */,
 				0DB6C7F529365D1200CBBC67 /* 96.unique-binary-search-trees.swift in Sources */,
 				0D9E9B90292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift in Sources */,

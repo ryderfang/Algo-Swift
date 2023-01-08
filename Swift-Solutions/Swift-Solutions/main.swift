@@ -12,8 +12,15 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (["RecentCounter", "ping", "ping", "ping", "ping"],
-    [[], [1], [100], [3001], [3002]])
+//    ("ac", "b"),
+//    ("abcc", "aab"),
+//    ("abcde", "fghij"),
+//    ("wilfuzpxqserkdcvbgajtyhon",
+//    "rlmyvwvucqxsjodbelmgjkabnxegihuwats"),
+//    "IDID",
+//    "III",
+//    "DDI",
+    "IDIDDDDIIIDDIDDI"
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,10 +32,10 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
-    ClassHandler.test(ops: x.0, datas: x.1)
+//    ClassHandler.test(ops: x.0, datas: x.1)
 
-//    let ans = sol.numUniqueEmails(x)
-//    print(ans)
+    let ans = sol.diStringMatch(x)
+    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
