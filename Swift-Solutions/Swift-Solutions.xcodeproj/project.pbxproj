@@ -111,6 +111,8 @@
 		0D648398296EDC4900458B69 /* 953.verifying-an-alien-dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D648397296EDC4900458B69 /* 953.verifying-an-alien-dictionary.swift */; };
 		0D64839A296EE19300458B69 /* 961.n-repeated-element-in-size-2-n-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D648399296EE19300458B69 /* 961.n-repeated-element-in-size-2-n-array.swift */; };
 		0D64839C296EE8D600458B69 /* 965.univalued-binary-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64839B296EE8D600458B69 /* 965.univalued-binary-tree.swift */; };
+		0D64839E296EEC9600458B69 /* 976.largest-perimeter-triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64839D296EEC9600458B69 /* 976.largest-perimeter-triangle.swift */; };
+		0D6483A0296EEDCA00458B69 /* 977.squares-of-a-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64839F296EEDCA00458B69 /* 977.squares-of-a-sorted-array.swift */; };
 		0D74F47529153FCF000E9237 /* 409.longest-palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */; };
 		0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */; };
 		0D74F47929154282000E9237 /* 414.third-maximum-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F47829154282000E9237 /* 414.third-maximum-number.swift */; };
@@ -456,6 +458,8 @@
 		0D648397296EDC4900458B69 /* 953.verifying-an-alien-dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "953.verifying-an-alien-dictionary.swift"; sourceTree = "<group>"; };
 		0D648399296EE19300458B69 /* 961.n-repeated-element-in-size-2-n-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "961.n-repeated-element-in-size-2-n-array.swift"; sourceTree = "<group>"; };
 		0D64839B296EE8D600458B69 /* 965.univalued-binary-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "965.univalued-binary-tree.swift"; sourceTree = "<group>"; };
+		0D64839D296EEC9600458B69 /* 976.largest-perimeter-triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "976.largest-perimeter-triangle.swift"; sourceTree = "<group>"; };
+		0D64839F296EEDCA00458B69 /* 977.squares-of-a-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "977.squares-of-a-sorted-array.swift"; sourceTree = "<group>"; };
 		0D74F47429153FCF000E9237 /* 409.longest-palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "409.longest-palindrome.swift"; sourceTree = "<group>"; };
 		0D74F4762915412B000E9237 /* 412.fizz-buzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "412.fizz-buzz.swift"; sourceTree = "<group>"; };
 		0D74F47829154282000E9237 /* 414.third-maximum-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "414.third-maximum-number.swift"; sourceTree = "<group>"; };
@@ -923,6 +927,8 @@
 				0D648397296EDC4900458B69 /* 953.verifying-an-alien-dictionary.swift */,
 				0D648399296EE19300458B69 /* 961.n-repeated-element-in-size-2-n-array.swift */,
 				0D64839B296EE8D600458B69 /* 965.univalued-binary-tree.swift */,
+				0D64839D296EEC9600458B69 /* 976.largest-perimeter-triangle.swift */,
+				0D64839F296EEDCA00458B69 /* 977.squares-of-a-sorted-array.swift */,
 				0D4E52B52951EFF9000796BB /* 1991.find-the-middle-index-in-array.swift */,
 			);
 			path = Easy;
@@ -1312,6 +1318,7 @@
 				0D763867290C029E004CD387 /* 112.path-sum.swift in Sources */,
 				0D4E52D52956F355000796BB /* 819.most-common-word.swift in Sources */,
 				0D763895290EB51A004CD387 /* 226.invert-binary-tree.swift in Sources */,
+				0D64839E296EEC9600458B69 /* 976.largest-perimeter-triangle.swift in Sources */,
 				DAFCA3AB28F6B71200CF1DE6 /* 60.permutation-sequence.swift in Sources */,
 				0DADAC3129140B6800C30C0F /* 383.ransom-note.swift in Sources */,
 				0D763880290E4DD0004CD387 /* 169.majority-element.swift in Sources */,
@@ -1380,6 +1387,7 @@
 				0D9E9B96292E81A7005486CE /* 39.combination-sum.swift in Sources */,
 				0D648384296596A700458B69 /* 914.x-of-a-kind-in-a-deck-of-cards.swift in Sources */,
 				0DB6C7D52932245000CBBC67 /* 64.minimum-path-sum.swift in Sources */,
+				0D6483A0296EEDCA00458B69 /* 977.squares-of-a-sorted-array.swift in Sources */,
 				0D4E5296294DE6C1000796BB /* 661.image-smoother.swift in Sources */,
 				0D4E52D929571D9B000796BB /* 824.goat-latin.swift in Sources */,
 				DAFCA3AA28F6B71200CF1DE6 /* 23.merge-k-sorted-lists.swift in Sources */,

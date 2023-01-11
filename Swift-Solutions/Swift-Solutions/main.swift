@@ -12,9 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (["hello","leetcode"], "hlabcdefgijkmnopqrstuvwxyz"),
-    (["word","world","row"], "worldabcefghijkmnpqstuvxyz"),
-    (["apple","app"], "abcdefghijklmnopqrstuvwxyz"),
+    [-4,-1,0,3,10],
+    [-7,-3,2,3,11],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -28,7 +27,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.isAlienSorted(x.0, x.1)
+    let ans = sol.sortedSquares(x)
     print(ans)
 
 //    print(ans?.array() ?? [])

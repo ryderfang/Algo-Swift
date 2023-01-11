@@ -26,7 +26,7 @@ class Solution {}
 extension Solution {
     func isUnivalTree(_ root: TreeNode?) -> Bool {
         guard let root = root else { return true }
-        var uniVal = root.val
+        let uniVal = root.val
         var stack: [TreeNode?] = [root.left, root.right]
         while !stack.isEmpty {
             let top = stack.removeLast()
