@@ -12,8 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [-4,-1,0,3,10],
-    [-7,-3,2,3,11],
+    ([1,2,3,nil,4,nil,5], 5, 4),
+    ([1,2,3,nil,4], 2, 3),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -21,13 +21,13 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    var head = ListNode.arrayToList(x)
-//    let root = TreeNode.arrayToTree(x)
+    let root = TreeNode.arrayToTree(x.0)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.sortedSquares(x)
+    let ans = sol.isCousins(root, x.1, x.2)
     print(ans)
 
 //    print(ans?.array() ?? [])
