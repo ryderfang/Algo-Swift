@@ -96,7 +96,7 @@
 		DAFCA43728FAD91B00CF1DE6 /* _Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Macro.swift; sourceTree = "<group>"; };
 		DAFCA43928FAD91B00CF1DE6 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		DAFCA43A28FAD91B00CF1DE6 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
-		DAFCA43B28FAD91B00CF1DE6 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		DAFCA43B28FAD91B00CF1DE6 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; tabWidth = 4; };
 		DAFCA43D28FAD91B00CF1DE6 /* Permutations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permutations.swift; sourceTree = "<group>"; };
 		DAFCA43E28FAD91B00CF1DE6 /* Combinations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Combinations.swift; sourceTree = "<group>"; };
 		DAFCA43F28FAD91B00CF1DE6 /* LehmerCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LehmerCode.swift; sourceTree = "<group>"; };
@@ -257,11 +257,11 @@
 			children = (
 				DAFCA43B28FAD91B00CF1DE6 /* Heap.swift */,
 				DAFCA43228FAD91B00CF1DE6 /* List.swift */,
+				0D4E526D2948AC54000796BB /* Node.swift */,
 				DAFCA45428FADA9500CF1DE6 /* PriorityQueue.swift */,
 				DAFCA43A28FAD91B00CF1DE6 /* Queue.swift */,
 				DAFCA43928FAD91B00CF1DE6 /* Stack.swift */,
 				DAFCA47028FBE68900CF1DE6 /* Tree.swift */,
-				0D4E526D2948AC54000796BB /* Node.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";

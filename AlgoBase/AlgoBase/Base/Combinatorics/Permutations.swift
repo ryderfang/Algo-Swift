@@ -8,8 +8,13 @@
 import Foundation
 
 // MARK: 组合学
-class Combinatorics {
+public class Combinatorics {
+    public init() {
+        // do nothing
+    }
+
     // MARK: 全排列 - 无重复元素
+    public
     func permute(_ nums: [Int]) -> [[Int]] {
         guard !nums.isEmpty else { return [] }
         

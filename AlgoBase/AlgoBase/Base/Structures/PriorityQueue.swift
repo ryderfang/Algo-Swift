@@ -1,110 +1,117 @@
 //
 //  PriorityQueue.swift
-//  AlgoBase
+//  Platform
 //
-//  Created by ryfang on 2022/10/15.
+//  Created by Krunoslav Zaher on 12/27/15.
+//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
-import Foundation
+// https://github.com/ReactiveX/RxSwift/blob/main/Platform/DataStructures/PriorityQueue.swift
+// 大根堆 var pq = PriorityQueue<Int>(nums, >)
 
-private final class HeapBasedMinPQ {
-    private var pq: [Int?] = [nil]
-    private var n: Int
+fileprivate struct PriorityQueue<Element> {
+    private let hasHigherPriority: (Element, Element) -> Bool
+    private let isEqual: (Element, Element) -> Bool
 
-    public init(with array: [Int]) {
-        n = array.count
+    private var elements = [Element]()
 
-        guard !array.isEmpty else { return }
-        pq = .init(repeating: nil, count: array.count + 1)
-
-        for i in 0..<array.count {
-            pq[i + 1] = array[i]
-        }
-
-        for k in (1...pq.count / 2).reversed() {
-            sink(k)
-        }
+    init(_ array: [Element], _ sort: @escaping (Element, Element) -> Bool) where Element: Equatable {
+        self.init(array, sort, { $0 == $1 })
     }
 
-    public func insert(_ value: Int) {
-        if pq.count - 1 == n {
-            resize(pq.count * 2)
-        }
-
-        n += 1
-        pq[n] = value
-        swim(n)
-    }
-
-    public func deleteMin() -> Int? {
-        guard !isEmpty() else { return nil }
-        let minItem = pq[1]
-
-        exchange(1, n)
-        pq[n] = nil
-        n -= 1
-        sink(1)
-
-        if n > 0, n == (pq.count - 1) / 4 {
-            resize(pq.count / 2)
-        }
-
-        return minItem
-    }
-
-    public func minItem() -> Int? {
-        return isEmpty() ? nil : pq[1]
-    }
-
-    public func size() -> Int {
-        return n
-    }
-
-    private func isEmpty() -> Bool {
-        return n == 0
-    }
-
-    private func sink(_ k: Int) {
-        var k = k
-
-        while 2 * k <= n {
-            var j = 2 * k
-
-            if j < n, pq[j]! > pq[j + 1]! {
-                j += 1
-            }
-
-            guard pq[k]! > pq[j]! else { break }
-            exchange(k, j)
-            k = j
+    init(_ array: [Element], _ hasHigherPriority: @escaping (Element, Element) -> Bool, _ isEqual: @escaping (Element, Element) -> Bool) {
+        self.hasHigherPriority = hasHigherPriority
+        self.isEqual = isEqual
+        for x in array {
+            self.enqueue(x)
         }
     }
 
-    private func swim(_ k: Int) {
-        var k = k
-
-        while k > 1, pq[k]! < pq[k / 2]! {
-            exchange(k, k / 2)
-            k /= 2
-        }
+    mutating func enqueue(_ element: Element) {
+        elements.append(element)
+        bubbleToHigherPriority(elements.count - 1)
     }
 
-    private func exchange(_ i: Int, _ j: Int) {
-        let swap = pq[i]!
-        pq[i]! = pq[j]!
-        pq[j]! = swap
+    func peek() -> Element? {
+        elements.first
     }
 
-    private func resize(_ capacity: Int) {
-        guard capacity > n else { return }
-        var temp: [Int?] = .init(repeating: nil, count: capacity)
+    var isEmpty: Bool {
+        elements.count == 0
+    }
 
-        if !isEmpty() {
-            for i in 1...n {
-                temp[i] = pq[i]
+    mutating func dequeue() -> Element? {
+        guard let front = peek() else { return nil }
+        removeAt(0)
+        return front
+    }
+
+    mutating func remove(_ element: Element) {
+        for i in 0 ..< elements.count {
+            if self.isEqual(elements[i], element) {
+                removeAt(i)
+                return
             }
         }
+    }
 
-        pq = temp
+    private mutating func removeAt(_ index: Int) {
+        let removingLast = index == elements.count - 1
+        if !removingLast {
+            elements.swapAt(index, elements.count - 1)
+        }
+
+        _ = elements.popLast()
+
+        if !removingLast {
+            bubbleToHigherPriority(index)
+            bubbleToLowerPriority(index)
+        }
+    }
+
+    private mutating func bubbleToHigherPriority(_ initialUnbalancedIndex: Int) {
+        precondition(initialUnbalancedIndex >= 0)
+        precondition(initialUnbalancedIndex < elements.count)
+
+        var unbalancedIndex = initialUnbalancedIndex
+
+        while unbalancedIndex > 0 {
+            let parentIndex = (unbalancedIndex - 1) / 2
+            guard self.hasHigherPriority(elements[unbalancedIndex], elements[parentIndex]) else { break }
+            elements.swapAt(unbalancedIndex, parentIndex)
+            unbalancedIndex = parentIndex
+        }
+    }
+
+    private mutating func bubbleToLowerPriority(_ initialUnbalancedIndex: Int) {
+        precondition(initialUnbalancedIndex >= 0)
+        precondition(initialUnbalancedIndex < elements.count)
+
+        var unbalancedIndex = initialUnbalancedIndex
+        while true {
+            let leftChildIndex = unbalancedIndex * 2 + 1
+            let rightChildIndex = unbalancedIndex * 2 + 2
+
+            var highestPriorityIndex = unbalancedIndex
+
+            if leftChildIndex < elements.count && self.hasHigherPriority(elements[leftChildIndex], elements[highestPriorityIndex]) {
+                highestPriorityIndex = leftChildIndex
+            }
+
+            if rightChildIndex < elements.count && self.hasHigherPriority(elements[rightChildIndex], elements[highestPriorityIndex]) {
+                highestPriorityIndex = rightChildIndex
+            }
+
+            guard highestPriorityIndex != unbalancedIndex else { break }
+            elements.swapAt(highestPriorityIndex, unbalancedIndex)
+
+            unbalancedIndex = highestPriorityIndex
+        }
+    }
+}
+
+extension PriorityQueue : CustomDebugStringConvertible {
+    var debugDescription: String {
+        elements.debugDescription
     }
 }

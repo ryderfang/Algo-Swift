@@ -5,10 +5,121 @@
 //  Created by Ryder Fang on 2022/5/3.
 //
 
-import Foundation
+// https://github.com/ReactiveX/RxSwift/blob/main/Platform/DataStructures/Queue.swift
+struct Queue<T> {
+    private let resizeFactor = 2
+    private var storage: ContiguousArray<T?>
+    private var innerCount = 0
+    private var pushNextIndex = 0
+    private let initialCapacity: Int
 
-// MARK: Queue
-fileprivate struct Queue<T> {
+    init(capacity: Int) {
+        initialCapacity = capacity
+        storage = ContiguousArray<T?>(repeating: nil, count: capacity)
+    }
+
+    private var dequeueIndex: Int {
+        let index = pushNextIndex - count
+        return index < 0 ? index + storage.count : index
+    }
+
+    var isEmpty: Bool { count == 0 }
+    var count: Int { innerCount }
+
+    // O(1)
+    func peek() -> T {
+        precondition(count > 0)
+        return storage[dequeueIndex]!
+    }
+
+    // O(1)
+    mutating func enqueue(_ element: T) {
+        if count == storage.count {
+            resizeTo(Swift.max(storage.count, 1) * resizeFactor)
+        }
+
+        storage[pushNextIndex] = element
+        pushNextIndex += 1
+        innerCount += 1
+
+        if pushNextIndex >= storage.count {
+            pushNextIndex -= storage.count
+        }
+    }
+
+    // O(1)
+    mutating func dequeue() -> T? {
+        if self.count == 0 {
+            return nil
+        }
+        defer {
+            let downsizeLimit = storage.count / (resizeFactor * resizeFactor)
+            if count < downsizeLimit && downsizeLimit >= initialCapacity {
+                resizeTo(storage.count / resizeFactor)
+            }
+        }
+        return dequeueElementOnly()
+    }
+}
+
+extension Queue: Sequence {
+    mutating private func resizeTo(_ size: Int) {
+        var newStorage = ContiguousArray<T?>(repeating: nil, count: size)
+
+        let count = self.count
+
+        let dequeueIndex = self.dequeueIndex
+        let spaceToEndOfQueue = storage.count - dequeueIndex
+
+        // first batch is from dequeue index to end of array
+        let countElementsInFirstBatch = Swift.min(count, spaceToEndOfQueue)
+        // second batch is wrapped from start of array to end of queue
+        let numberOfElementsInSecondBatch = count - countElementsInFirstBatch
+
+        newStorage[0 ..< countElementsInFirstBatch] = storage[dequeueIndex ..< (dequeueIndex + countElementsInFirstBatch)]
+        newStorage[countElementsInFirstBatch ..< (countElementsInFirstBatch + numberOfElementsInSecondBatch)] = storage[0 ..< numberOfElementsInSecondBatch]
+
+        self.innerCount = count
+        pushNextIndex = count
+        storage = newStorage
+    }
+
+    private mutating func dequeueElementOnly() -> T {
+        precondition(count > 0)
+
+        let index = dequeueIndex
+        defer {
+            storage[index] = nil
+            innerCount -= 1
+        }
+        return storage[index]!
+    }
+
+    func makeIterator() -> AnyIterator<T> {
+        var i = dequeueIndex
+        var innerCount = count
+
+        return AnyIterator {
+            if innerCount == 0 {
+                return nil
+            }
+
+            defer {
+                innerCount -= 1
+                i += 1
+            }
+
+            if i >= self.storage.count {
+                i -= self.storage.count
+            }
+
+            return self.storage[i]
+        }
+    }
+}
+
+// MARK: ArrayQueue
+fileprivate struct ArrayQueue<T> {
     private var array: [T] = []
 
     public var count: Int {
