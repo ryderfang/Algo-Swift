@@ -12,15 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-//    ("ac", "b"),
-//    ("abcc", "aab"),
-//    ("abcde", "fghij"),
-//    ("wilfuzpxqserkdcvbgajtyhon",
-//    "rlmyvwvucqxsjodbelmgjkabnxegihuwats"),
-//    "IDID",
-//    "III",
-//    "DDI",
-    "IDIDDDDIIIDDIDDI"
+    (["hello","leetcode"], "hlabcdefgijkmnopqrstuvwxyz"),
+    (["word","world","row"], "worldabcefghijkmnpqstuvxyz"),
+    (["apple","app"], "abcdefghijklmnopqrstuvwxyz"),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -34,7 +28,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.diStringMatch(x)
+    let ans = sol.isAlienSorted(x.0, x.1)
     print(ans)
 
 //    print(ans?.array() ?? [])
