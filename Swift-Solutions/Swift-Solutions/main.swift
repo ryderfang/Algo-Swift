@@ -12,8 +12,10 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ["bella","label","roller"],
-    ["cool","lock","cook"],
+    [10,2],
+    [3,30,34,5,9],
+    [0,0],
+    [0,1]
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -27,7 +29,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.commonChars(x)
+    let ans = sol.largestNumber(x)
     print(ans)
 
 //    print(ans?.array() ?? [])

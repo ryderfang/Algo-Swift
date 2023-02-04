@@ -58,21 +58,29 @@ extension Character {
     }
 }
 
-extension String {
-    public func intArray() -> [Int?] {
+fileprivate extension String {
+    func intArray() -> [Int?] {
         return self.map { Int(String($0)) }
     }
 
-    public static func charArray() -> [String] {
+    static func charArray() -> [String] {
         return (UnicodeScalar("A").value...UnicodeScalar("Z").value).map { String(UnicodeScalar($0)!) }
     }
 
-    public mutating func zfill(_ width: Int) {
+    // 前补0
+    mutating func zfill(_ width: Int) {
         guard self.count < width else { return }
         self.insert(contentsOf: [Character](repeating: "0", count: width - self.count), at: self.startIndex)
     }
 
-    public func binaryToInt() -> Int {
+    // remove leading zeros
+    func removeLeadingZeros() -> String {
+        guard let idx = self.firstIndex(where: { $0 != "0" }),
+              idx < self.endIndex else { return "0" }
+        return String(self[idx..<self.endIndex])
+    }
+
+    func binaryToInt() -> Int {
         return strtol(self, nil, 2)
     }
 }

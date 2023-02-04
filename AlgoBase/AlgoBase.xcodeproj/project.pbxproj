@@ -209,7 +209,7 @@
 				DAFCA43728FAD91B00CF1DE6 /* _Macro.swift */,
 				DAFCA43C28FAD91B00CF1DE6 /* Combinatorics */,
 				0D4E52D12955DB55000796BB /* Geometry */,
-				DAFCA42F28FAD91B00CF1DE6 /* Helpers */,
+				DAFCA42F28FAD91B00CF1DE6 /* Extensions */,
 				DAFCA43328FAD91B00CF1DE6 /* Math */,
 				DAFCA43528FAD91B00CF1DE6 /* Search */,
 				0D763870290C1AE7004CD387 /* Sort */,
@@ -219,7 +219,7 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		DAFCA42F28FAD91B00CF1DE6 /* Helpers */ = {
+		DAFCA42F28FAD91B00CF1DE6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				0DB6C7E429331CE500CBBC67 /* ArrayExt.swift */,
@@ -229,7 +229,7 @@
 				0D763879290E2978004CD387 /* ObjExt.swift */,
 				DAFCA43128FAD91B00CF1DE6 /* StringExt.swift */,
 			);
-			path = Helpers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DAFCA43328FAD91B00CF1DE6 /* Math */ = {

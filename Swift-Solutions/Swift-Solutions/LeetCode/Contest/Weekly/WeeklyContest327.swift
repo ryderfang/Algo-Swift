@@ -71,12 +71,115 @@ extension Solution {
     }
 
     func findCrossingTime(_ n: Int, _ k: Int, _ time: [[Int]]) -> Int {
-        let L2N = [Int]()
-        let L2R = [Int]()
-        let bridge = [Int]()
-        let R2L = [Int]()
-        let R2O = [Int]()
-        return 0
+        struct Worker {
+            var leftToRight: Int
+            var pickOld: Int
+            var rightToLeft: Int
+            var putNew: Int
+            var index: Int
+            var timeLeft: Int
+            init(_ l2r: Int, _ po: Int, _ r2l: Int, _ pn: Int, _ i: Int) {
+                leftToRight = l2r
+                pickOld = po
+                rightToLeft = r2l
+                putNew = pn
+                index = i
+                timeLeft = -1
+            }
+        }
+        var workers = [Worker]()
+        for i in 0..<k {
+            workers.append(Worker(time[i][0], time[i][1], time[i][2], time[i][3], i))
+        }
+
+        // put new
+        var pn = [Worker]()
+        // wait on left
+        var left = PriorityQueue<Worker>(workers, { w1, w2 in
+            let s1 = w1.leftToRight + w1.rightToLeft
+            let s2 = w2.leftToRight + w2.rightToLeft
+            guard s1 == s2 else { return s1 > s2 }
+            return w1.index > w2.index
+        }, { $0.index == $1.index } )
+
+        // debug
+//        while let top = left.dequeue() {
+//            print(top)
+//        }
+
+        enum Direction {
+            case toLeft
+            case toRight
+        }
+        // worker on bridge, to right or left
+        var bridge: (Worker?, Direction) = (nil, .toRight)
+        // wait on right
+        var right = PriorityQueue<Worker>([], { w1, w2 in
+            let s1 = w1.leftToRight + w1.rightToLeft
+            let s2 = w2.leftToRight + w2.rightToLeft
+            guard s1 == s2 else { return s1 > s2 }
+            return w1.index > w2.index
+        }, { $0.index == $1.index } )
+        // pick old
+        var po = [Worker]()
+        var remains = n
+        // pn -> left -> bridge -> po -> right -> bridge -> pn
+        var ans = 0
+        while true {
+            var newLeft = [Worker]()
+            for var w in pn {
+                w.timeLeft -= 1
+                if w.timeLeft == 0 {
+                    w.timeLeft = w.leftToRight
+                    newLeft.append(w)
+                }
+            }
+            var newRight = [Worker]()
+            for var w in po {
+                w.timeLeft -= 1
+                if w.timeLeft == 0 {
+                    w.timeLeft = w.rightToLeft
+                    newRight.append(w)
+                }
+            }
+            if var bw = bridge.0 {
+                bw.timeLeft -= 1
+                if bw.timeLeft == 0 {
+                    switch bridge.1 {
+                    case .toLeft:
+                        bw.timeLeft = bw.putNew
+                        pn.append(bw)
+
+                        // end condition
+                        if remains == 0 && po.count == 0 && right.peek() == nil {
+                            return ans + 1
+                        }
+
+                    case .toRight:
+                        bw.timeLeft = bw.pickOld
+                        po.append(bw)
+                    }
+                }
+            } else {
+                // bridge free
+                if right.peek() != nil {
+                    // pick one cross
+
+                } else if po.count < remains && left.peek() != nil {
+                    // pick one cross
+                }
+            }
+
+            for w in newLeft {
+                left.enqueue(w)
+            }
+            for w in newRight {
+                right.enqueue(w)
+            }
+            ans += 1
+        }
+
+        return ans
     }
 }
 
@@ -180,4 +283,5 @@ fileprivate struct PriorityQueue<Element> {
         }
     }
 }
+
 // @lc code=end
