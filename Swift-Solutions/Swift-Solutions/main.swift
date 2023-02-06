@@ -12,10 +12,8 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [10,2],
-    [3,30,34,5,9],
-    [0,0],
-    [0,1]
+    ([1,2,3,4,5,6,7], 3),
+    ([-1,-100,3,99], 2)
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -25,12 +23,12 @@ for (i, x) in cases.enumerated() {
 //    var head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x.0)
 //    let node = Node.arrayToNode(x)
-//    var tmp = x
+    var tmp = x.0
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.largestNumber(x)
-    print(ans)
+    let _ = sol.rotate(&tmp, x.1)
+    print(tmp)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
