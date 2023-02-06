@@ -12,8 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ([1,2,3,4,5,6,7], 3),
-    ([-1,-100,3,99], 2)
+    [1,2,3,nil,5,nil,4],
+    [1,nil,3],
+    []
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -21,14 +22,14 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    var head = ListNode.arrayToList(x)
-//    let root = TreeNode.arrayToTree(x.0)
+    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
-    var tmp = x.0
+//    var tmp = x.0
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let _ = sol.rotate(&tmp, x.1)
-    print(tmp)
+    let ans = sol.rightSideView(root)
+    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
