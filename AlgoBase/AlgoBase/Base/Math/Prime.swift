@@ -22,19 +22,19 @@ public class Prime {
     }
 
     // 素材筛 (欧拉筛)
-    public static func getPrimes(_ Limit: Int) -> [Int] {
-        var isPrime = [Bool](repeating: true, count: Limit)
-        (isPrime[0], isPrime[1]) = (false, false)
+    public static func getPrimes(_ n: Int) -> [Int] {
+        var p = [Bool](repeating: true, count: n)
+        (p[0], p[1]) = (false, false)
         var plist = [Int]()
-        for i in 2..<Limit {
-            if isPrime[i] {
+        for i in 2..<n {
+            if p[i] {
                 plist.append(i)
             }
-            for p in plist {
-                guard p * i < Limit else { break }
-                isPrime[p * i] = false
+            for x in plist {
+                guard x * i < n else { break }
+                p[x * i] = false
                 // 避免重复，每个合数只需要被最小的素数筛过
-                if i % p == 0 {
+                if i % x == 0 {
                     break
                 }
             }
@@ -43,16 +43,16 @@ public class Prime {
     }
 
     // 素材筛 (The Sieve of Eratosthenes, 埃氏筛)
-    public static func getPrimes2(_ Limit: Int) -> [Int] {
-        var isPrime = [Bool](repeating: true, count: Limit)
-        (isPrime[0], isPrime[1]) = (false, false)
+    public static func getPrimes2(_ n: Int) -> [Int] {
+        var p = [Bool](repeating: true, count: n)
+        (p[0], p[1]) = (false, false)
         var plist = [Int]()
-        for i in 2..<Limit {
-            if isPrime[i] {
+        for i in 2..<n {
+            if p[i] {
                 plist.append(i)
                 // [i * i, n) 比 [2 * i, n) 效率稍高
-                for j in stride(from: i * i, to: Limit, by: i) {
-                    isPrime[j] = false
+                for j in stride(from: i * i, to: n, by: i) {
+                    p[j] = false
                 }
             }
         }

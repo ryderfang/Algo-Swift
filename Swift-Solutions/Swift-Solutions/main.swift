@@ -12,9 +12,12 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [1,2,3,nil,5,nil,4],
-    [1,nil,3],
-    []
+    (3, 5),
+    (1, 1),
+    (5, 7),
+    (0, 0),
+    (33, 63),
+    (1, 2147483647)
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -22,13 +25,13 @@ let cases = [
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    var head = ListNode.arrayToList(x)
-    let root = TreeNode.arrayToTree(x)
+//    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.0
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.rightSideView(root)
+    let ans = sol.rangeBitwiseAnd(x.0, x.1)
     print(ans)
 
 //    print(ans?.array() ?? [])
@@ -52,5 +55,11 @@ struct ClassHandler {
                 break
             }
         }
+    }
+}
+
+fileprivate extension Array where Element == String {
+    func charArray() -> [Character] {
+        return self.map { Character($0) }
     }
 }
