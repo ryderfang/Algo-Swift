@@ -12,12 +12,13 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (3, 5),
-    (1, 1),
-    (5, 7),
-    (0, 0),
-    (33, 63),
-    (1, 2147483647)
+//    (1, 3, [[1,1,2,1],[1,1,3,1],[1,1,4,1]]),
+//    (3, 2, [[1,9,1,8],[10,10,10,10]]),
+    [-3,-2,-1,0,0],
+    [-2,-1,-1,1,2,3],
+    [-3,-2,-1,0,0,1,2],
+    [5,20,66,1314],
+    [0,0,1,2,3],
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -31,7 +32,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.rangeBitwiseAnd(x.0, x.1)
+    let ans = sol.maximumCount1(x)
     print(ans)
 
 //    print(ans?.array() ?? [])

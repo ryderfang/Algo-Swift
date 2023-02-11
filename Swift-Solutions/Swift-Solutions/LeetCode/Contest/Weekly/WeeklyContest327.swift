@@ -10,15 +10,46 @@
 class Solution {}
 #endif
 extension Solution {
+    func maximumCount1(_ nums: [Int]) -> Int {
+//        var pos = 0, neg = 0
+//        for x in nums {
+//            if x > 0 {
+//                pos += 1
+//            } else if x < 0 {
+//                neg += 1
+//            }
+//        }
+//        return max(pos, neg)
+        return max(nums.filter { $0 > 0 }.count, nums.filter { $0 < 0 }.count)
+    }
+
     func maximumCount(_ nums: [Int]) -> Int {
+        let n = nums.count
         var pos = 0, neg = 0
-        for x in nums {
-            if x > 0 {
-                pos += 1
-            } else if x < 0 {
-                neg += 1
+        var (l, r) = (0, n - 1)
+        while l <= r {
+            let m = l + (r - l) / 2
+            let x = nums[m]
+            if x <= 0 {
+                l = m + 1
+            } else {
+                r = m - 1
             }
         }
+        pos = n - 1 - r
+
+        (l, r) = (0, n - 1)
+        while l <= r {
+            let m = l + (r - l) / 2
+            let x = nums[m]
+            if x >= 0 {
+                r = m - 1
+            } else {
+                l = m + 1
+            }
+        }
+        neg = l
+        print(pos, neg)
         return max(pos, neg)
     }
 
@@ -71,131 +102,97 @@ extension Solution {
     }
 
     func findCrossingTime(_ n: Int, _ k: Int, _ time: [[Int]]) -> Int {
-        struct Worker {
+        struct Worker: Equatable {
             var leftToRight: Int
             var pickOld: Int
             var rightToLeft: Int
             var putNew: Int
             var index: Int
-            var timeLeft: Int
+            var priority: Int
             init(_ l2r: Int, _ po: Int, _ r2l: Int, _ pn: Int, _ i: Int) {
                 leftToRight = l2r
                 pickOld = po
                 rightToLeft = r2l
                 putNew = pn
                 index = i
-                timeLeft = -1
+                // since index <= 10000
+                priority = (leftToRight + rightToLeft) * 10000 + index
+            }
+            static func == (lhs: Self, rhs: Self) -> Bool {
+                return lhs.index == rhs.index
+            }
+        }
+        struct Event: Equatable {
+            var time: Int
+            var worker: Worker
+            init(_ time: Int, _ worker: Worker) {
+                self.time = time
+                self.worker = worker
+            }
+            static func == (lhs: Self, rhs: Self) -> Bool {
+                return lhs.time == lhs.time
             }
         }
         var workers = [Worker]()
         for i in 0..<k {
             workers.append(Worker(time[i][0], time[i][1], time[i][2], time[i][3], i))
         }
-
-        // put new
-        var pn = [Worker]()
         // wait on left
-        var left = PriorityQueue<Worker>(workers, { w1, w2 in
-            let s1 = w1.leftToRight + w1.rightToLeft
-            let s2 = w2.leftToRight + w2.rightToLeft
-            guard s1 == s2 else { return s1 > s2 }
-            return w1.index > w2.index
-        }, { $0.index == $1.index } )
-
-        // debug
-//        while let top = left.dequeue() {
-//            print(top)
-//        }
-
-        enum Direction {
-            case toLeft
-            case toRight
-        }
-        // worker on bridge, to right or left
-        var bridge: (Worker?, Direction) = (nil, .toRight)
+        var leftBridge = PriorityQueue<Worker>(workers, { $0.priority > $1.priority })
         // wait on right
-        var right = PriorityQueue<Worker>([], { w1, w2 in
-            let s1 = w1.leftToRight + w1.rightToLeft
-            let s2 = w2.leftToRight + w2.rightToLeft
-            guard s1 == s2 else { return s1 > s2 }
-            return w1.index > w2.index
-        }, { $0.index == $1.index } )
-        // pick old
-        var po = [Worker]()
-        var remains = n
-        // pn -> left -> bridge -> po -> right -> bridge -> pn
-        var ans = 0
-        while true {
-            var newLeft = [Worker]()
-            for var w in pn {
-                w.timeLeft -= 1
-                if w.timeLeft == 0 {
-                    w.timeLeft = w.leftToRight
-                    newLeft.append(w)
+        var rightBridge = PriorityQueue<Worker>([], { $0.priority > $1.priority })
+        // put new, arrive left on future
+        var pickNew = PriorityQueue<Event>([], { $0.time < $1.time })
+        // pick old, arrive right on future
+        var pickOld = PriorityQueue<Event>([], { $0.time < $1.time })
+        var goods = n
+        var now = 0
+        while goods > 0 || !rightBridge.isEmpty || !pickOld.isEmpty {
+            while !pickNew.isEmpty {
+                guard let top = pickNew.front, top.time <= now else {
+                    break
                 }
+                pickNew.dequeue()
+                leftBridge.enqueue(top.worker)
             }
-            var newRight = [Worker]()
-            for var w in po {
-                w.timeLeft -= 1
-                if w.timeLeft == 0 {
-                    w.timeLeft = w.rightToLeft
-                    newRight.append(w)
+            while !pickOld.isEmpty {
+                guard let top = pickOld.front, top.time <= now else {
+                    break
                 }
+                pickOld.dequeue()
+                rightBridge.enqueue(top.worker)
             }
-            if var bw = bridge.0 {
-                bw.timeLeft -= 1
-                if bw.timeLeft == 0 {
-                    switch bridge.1 {
-                    case .toLeft:
-                        bw.timeLeft = bw.putNew
-                        pn.append(bw)
-
-                        // end condition
-                        if remains == 0 && po.count == 0 && right.peek() == nil {
-                            return ans + 1
-                        }
-
-                    case .toRight:
-                        bw.timeLeft = bw.pickOld
-                        po.append(bw)
-                    }
-                }
+            if let pr = rightBridge.dequeue() {
+                now += pr.rightToLeft
+                pickNew.enqueue(Event(now + pr.putNew, pr))
+            } else if let pl = leftBridge.dequeue(), goods > 0 {
+                goods -= 1
+                now += pl.leftToRight
+                pickOld.enqueue(Event(now + pl.pickOld, pl))
             } else {
-                // bridge free
-                if right.peek() != nil {
-                    // pick one cross
-
-                } else if po.count < remains && left.peek() != nil {
-                    // pick one cross
+                now = Int.max
+                // forward to future
+                if !pickNew.isEmpty {
+                    now = min(now, pickNew.front?.time ?? Int.max)
+                }
+                if !pickOld.isEmpty {
+                    now = min(now, pickOld.front?.time ?? Int.max)
                 }
             }
-
-            for w in newLeft {
-                left.enqueue(w)
-            }
-            for w in newRight {
-                right.enqueue(w)
-            }
-            ans += 1
         }
 
-        return ans
+        return now
     }
 }
 
 fileprivate struct PriorityQueue<Element> {
-    private let hasHigherPriority: (Element, Element) -> Bool
-    private let isEqual: (Element, Element) -> Bool
-
     private var elements = [Element]()
+    private let hasHigherPriority: (Element, Element) -> Bool
+    var isEmpty: Bool { elements.count == 0 }
+    var front: Element? { elements.first }
 
-    init(_ array: [Element], _ sort: @escaping (Element, Element) -> Bool) where Element: Equatable {
-        self.init(array, sort, { $0 == $1 })
-    }
-
-    init(_ array: [Element], _ hasHigherPriority: @escaping (Element, Element) -> Bool, _ isEqual: @escaping (Element, Element) -> Bool) {
-        self.hasHigherPriority = hasHigherPriority
-        self.isEqual = isEqual
+    init(_ array: [Element], _ sort: @escaping (Element, Element) -> Bool) {
+        self.hasHigherPriority = sort
         for x in array {
             self.enqueue(x)
         }
@@ -206,27 +203,11 @@ fileprivate struct PriorityQueue<Element> {
         bubbleToHigherPriority(elements.count - 1)
     }
 
-    func peek() -> Element? {
-        elements.first
-    }
-
-    var isEmpty: Bool {
-        elements.count == 0
-    }
-
+    @discardableResult
     mutating func dequeue() -> Element? {
-        guard let front = peek() else { return nil }
+        guard let front = front else { return nil }
         removeAt(0)
         return front
-    }
-
-    mutating func remove(_ element: Element) {
-        for i in 0 ..< elements.count {
-            if self.isEqual(elements[i], element) {
-                removeAt(i)
-                return
-            }
-        }
     }
 
     private mutating func removeAt(_ index: Int) {
@@ -234,9 +215,7 @@ fileprivate struct PriorityQueue<Element> {
         if !removingLast {
             elements.swapAt(index, elements.count - 1)
         }
-
         _ = elements.popLast()
-
         if !removingLast {
             bubbleToHigherPriority(index)
             bubbleToLowerPriority(index)
@@ -248,7 +227,6 @@ fileprivate struct PriorityQueue<Element> {
         precondition(initialUnbalancedIndex < elements.count)
 
         var unbalancedIndex = initialUnbalancedIndex
-
         while unbalancedIndex > 0 {
             let parentIndex = (unbalancedIndex - 1) / 2
             guard self.hasHigherPriority(elements[unbalancedIndex], elements[parentIndex]) else { break }
@@ -265,20 +243,15 @@ fileprivate struct PriorityQueue<Element> {
         while true {
             let leftChildIndex = unbalancedIndex * 2 + 1
             let rightChildIndex = unbalancedIndex * 2 + 2
-
             var highestPriorityIndex = unbalancedIndex
-
             if leftChildIndex < elements.count && self.hasHigherPriority(elements[leftChildIndex], elements[highestPriorityIndex]) {
                 highestPriorityIndex = leftChildIndex
             }
-
             if rightChildIndex < elements.count && self.hasHigherPriority(elements[rightChildIndex], elements[highestPriorityIndex]) {
                 highestPriorityIndex = rightChildIndex
             }
-
             guard highestPriorityIndex != unbalancedIndex else { break }
             elements.swapAt(highestPriorityIndex, unbalancedIndex)
-
             unbalancedIndex = highestPriorityIndex
         }
     }

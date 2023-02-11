@@ -10,18 +10,13 @@
 // 大根堆 var pq = PriorityQueue<Int>(nums, >)
 
 fileprivate struct PriorityQueue<Element> {
-    private let hasHigherPriority: (Element, Element) -> Bool
-    private let isEqual: (Element, Element) -> Bool
-
     private var elements = [Element]()
+    private let hasHigherPriority: (Element, Element) -> Bool
+    var isEmpty: Bool { elements.count == 0 }
+    var front: Element? { elements.first }
 
-    init(_ array: [Element], _ sort: @escaping (Element, Element) -> Bool) where Element: Equatable {
-        self.init(array, sort, { $0 == $1 })
-    }
-
-    init(_ array: [Element], _ hasHigherPriority: @escaping (Element, Element) -> Bool, _ isEqual: @escaping (Element, Element) -> Bool) {
-        self.hasHigherPriority = hasHigherPriority
-        self.isEqual = isEqual
+    init(_ array: [Element], _ sort: @escaping (Element, Element) -> Bool) {
+        self.hasHigherPriority = sort
         for x in array {
             self.enqueue(x)
         }
@@ -32,27 +27,11 @@ fileprivate struct PriorityQueue<Element> {
         bubbleToHigherPriority(elements.count - 1)
     }
 
-    func peek() -> Element? {
-        elements.first
-    }
-
-    var isEmpty: Bool {
-        elements.count == 0
-    }
-
+    @discardableResult
     mutating func dequeue() -> Element? {
-        guard let front = peek() else { return nil }
+        guard let front = front else { return nil }
         removeAt(0)
         return front
-    }
-
-    mutating func remove(_ element: Element) {
-        for i in 0 ..< elements.count {
-            if self.isEqual(elements[i], element) {
-                removeAt(i)
-                return
-            }
-        }
     }
 
     private mutating func removeAt(_ index: Int) {
@@ -60,9 +39,7 @@ fileprivate struct PriorityQueue<Element> {
         if !removingLast {
             elements.swapAt(index, elements.count - 1)
         }
-
         _ = elements.popLast()
-
         if !removingLast {
             bubbleToHigherPriority(index)
             bubbleToLowerPriority(index)
@@ -74,7 +51,6 @@ fileprivate struct PriorityQueue<Element> {
         precondition(initialUnbalancedIndex < elements.count)
 
         var unbalancedIndex = initialUnbalancedIndex
-
         while unbalancedIndex > 0 {
             let parentIndex = (unbalancedIndex - 1) / 2
             guard self.hasHigherPriority(elements[unbalancedIndex], elements[parentIndex]) else { break }
@@ -91,23 +67,42 @@ fileprivate struct PriorityQueue<Element> {
         while true {
             let leftChildIndex = unbalancedIndex * 2 + 1
             let rightChildIndex = unbalancedIndex * 2 + 2
-
             var highestPriorityIndex = unbalancedIndex
-
             if leftChildIndex < elements.count && self.hasHigherPriority(elements[leftChildIndex], elements[highestPriorityIndex]) {
                 highestPriorityIndex = leftChildIndex
             }
-
             if rightChildIndex < elements.count && self.hasHigherPriority(elements[rightChildIndex], elements[highestPriorityIndex]) {
                 highestPriorityIndex = rightChildIndex
             }
-
             guard highestPriorityIndex != unbalancedIndex else { break }
             elements.swapAt(highestPriorityIndex, unbalancedIndex)
-
             unbalancedIndex = highestPriorityIndex
         }
     }
+}
+
+// MARK: normally useless
+private extension PriorityQueue {
+//    private let isEqual: (Element, Element) -> Bool
+
+//    init(_ array: [Element],
+//         _ sort: @escaping (Element, Element) -> Bool,
+//         _ isEqual: @escaping (Element, Element) -> Bool) {
+//        self.hasHigherPriority = sort
+//        self.isEqual = isEqual
+//        for x in array {
+//            self.enqueue(x)
+//        }
+//    }
+//
+//    mutating func remove(_ element: Element) {
+//        for i in 0 ..< elements.count {
+//            if self.isEqual(elements[i], element) {
+//                removeAt(i)
+//                return
+//            }
+//        }
+//    }
 }
 
 extension PriorityQueue : CustomDebugStringConvertible {
