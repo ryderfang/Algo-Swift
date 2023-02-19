@@ -42,8 +42,9 @@ extension Character {
     }
 
     // "a" -> 0 .. "z" -> 25
+    // https://developer.apple.com/documentation/swift/range/~=(_:_:)
     public func index() -> Int {
-        guard let ascii = self.asciiValue else { return -1 }
+        guard let ascii = self.asciiValue, 97...122 ~= ascii else { return -1 }
         return Int(ascii - 97)
     }
 

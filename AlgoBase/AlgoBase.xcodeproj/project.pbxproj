@@ -29,6 +29,8 @@
 		0DB6C8522944941A00CBBC67 /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C8512944941A00CBBC67 /* SelectionSort.swift */; };
 		0DB6C8542944945500CBBC67 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C8532944945500CBBC67 /* MergeSort.swift */; };
 		0DB6C8562944946000CBBC67 /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C8552944946000CBBC67 /* HeapSort.swift */; };
+		0DF7953929990B7100893B80 /* DirectedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7953829990B7100893B80 /* DirectedGraph.swift */; };
+		0DF7953B29990BA800893B80 /* UndirectedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7953A29990BA800893B80 /* UndirectedGraph.swift */; };
 		DAFCA41D28FAD8D700CF1DE6 /* AlgoBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */; };
 		DAFCA42228FAD8D700CF1DE6 /* AlgoBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA42128FAD8D700CF1DE6 /* AlgoBaseTests.swift */; };
 		DAFCA42328FAD8D700CF1DE6 /* AlgoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,6 +85,8 @@
 		0DB6C8512944941A00CBBC67 /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
 		0DB6C8532944945500CBBC67 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		0DB6C8552944946000CBBC67 /* HeapSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSort.swift; sourceTree = "<group>"; };
+		0DF7953829990B7100893B80 /* DirectedGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectedGraph.swift; sourceTree = "<group>"; };
+		0DF7953A29990BA800893B80 /* UndirectedGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndirectedGraph.swift; sourceTree = "<group>"; };
 		DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlgoBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgoBase.h; sourceTree = "<group>"; };
 		DAFCA41C28FAD8D700CF1DE6 /* AlgoBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +159,15 @@
 			path = UnionFind;
 			sourceTree = "<group>";
 		};
+		0DF7953729990B2800893B80 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				0DF7953829990B7100893B80 /* DirectedGraph.swift */,
+				0DF7953A29990BA800893B80 /* UndirectedGraph.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
 		DAFCA40828FAD8D700CF1DE6 = {
 			isa = PBXGroup;
 			children = (
@@ -208,8 +221,9 @@
 			children = (
 				DAFCA43728FAD91B00CF1DE6 /* _Macro.swift */,
 				DAFCA43C28FAD91B00CF1DE6 /* Combinatorics */,
-				0D4E52D12955DB55000796BB /* Geometry */,
 				DAFCA42F28FAD91B00CF1DE6 /* Extensions */,
+				0D4E52D12955DB55000796BB /* Geometry */,
+				0DF7953729990B2800893B80 /* Graph */,
 				DAFCA43328FAD91B00CF1DE6 /* Math */,
 				DAFCA43528FAD91B00CF1DE6 /* Search */,
 				0D763870290C1AE7004CD387 /* Sort */,
@@ -417,8 +431,10 @@
 				DAFCA44528FAD91C00CF1DE6 /* List.swift in Sources */,
 				0DB6C850294493E400CBBC67 /* BubbleSort.swift in Sources */,
 				0DADAC272914007F00C30C0F /* QuickSort.swift in Sources */,
+				0DF7953929990B7100893B80 /* DirectedGraph.swift in Sources */,
 				0D76387A290E2978004CD387 /* ObjExt.swift in Sources */,
 				0D4E52552945ECC3000796BB /* DoubleExt.swift in Sources */,
+				0DF7953B29990BA800893B80 /* UndirectedGraph.swift in Sources */,
 				0DB6C8562944946000CBBC67 /* HeapSort.swift in Sources */,
 				DAFCA44F28FAD91C00CF1DE6 /* AlgoBase.docc in Sources */,
 				0DADAC3329140DE700C30C0F /* DictionaryExt.swift in Sources */,

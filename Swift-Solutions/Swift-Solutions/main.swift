@@ -12,13 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-//    (1, 3, [[1,1,2,1],[1,1,3,1],[1,1,4,1]]),
-//    (3, 2, [[1,9,1,8],[10,10,10,10]]),
-    [-3,-2,-1,0,0],
-    [-2,-1,-1,1,2,3],
-    [-3,-2,-1,0,0,1,2],
-    [5,20,66,1314],
-    [0,0,1,2,3],
+    (
+    ["Trie", "insert", "search", "search", "startsWith", "insert", "search"],
+    [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]])
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -30,19 +26,22 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.0
 
-//    ClassHandler.test(ops: x.0, datas: x.1)
+    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.maximumCount1(x)
-    print(ans)
+    print(1..<10 ~= 11)
+    print(1..<10 ~= 7)
+
+//    let ans = sol.canFinish(x.0, x.1)
+//    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
 }
 
 struct ClassHandler {
-    static func test(ops: [String], datas: [[Int]]) {
+    static func test(ops: [String], datas: [[String]]) {
         let n = ops.count
-        let sut = RecentCounter()
+        let sut = Trie()
         let className = String(describing: sut).components(separatedBy: ".").last
         for i in 0..<n {
             let op = ops[i]
@@ -50,8 +49,13 @@ struct ClassHandler {
             switch op {
             case className:
                 print("null")
-            case "ping":
-                print(sut.ping(data[0]))
+            case "insert":
+                print("null")
+                sut.insert(data[0])
+            case "search":
+                print(sut.search(data[0]))
+            case "startsWith":
+                print(sut.startsWith(data[0]))
             default:
                 break
             }
