@@ -12,9 +12,9 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (
-    ["Trie", "insert", "search", "search", "startsWith", "insert", "search"],
-    [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]])
+    (2, [[1,0]]),
+    (4, [[1,0],[2,0],[3,1],[3,2]]),
+    (1,[]),
 ]
 
 //let dummy = NumArray([-2, 0, 3, -5, 2, -1])
@@ -26,13 +26,10 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.0
 
-    ClassHandler.test(ops: x.0, datas: x.1)
+//    ClassHandler.test(ops: x.0, datas: x.1)
 
-    print(1..<10 ~= 11)
-    print(1..<10 ~= 7)
-
-//    let ans = sol.canFinish(x.0, x.1)
-//    print(ans)
+    let ans = sol.findOrder(x.0, x.1)
+    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
