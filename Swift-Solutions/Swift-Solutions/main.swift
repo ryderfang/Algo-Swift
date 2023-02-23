@@ -12,12 +12,13 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (2, [[1,0]]),
-    (4, [[1,0],[2,0],[3,1],[3,2]]),
-    (1,[]),
+    [2,3,2],
+    [1,2,3,1],
+    [1,2,3],
+    [200,3,140,20,10],
+    // 27
+    [6,6,4,8,4,3,3,10],
 ]
-
-//let dummy = NumArray([-2, 0, 3, -5, 2, -1])
 
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
@@ -28,7 +29,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.findOrder(x.0, x.1)
+    let ans = sol.rob(x)
     print(ans)
 
 //    print(ans?.array() ?? [])
@@ -38,7 +39,7 @@ for (i, x) in cases.enumerated() {
 struct ClassHandler {
     static func test(ops: [String], datas: [[String]]) {
         let n = ops.count
-        let sut = Trie()
+        let sut = WordDictionary()
         let className = String(describing: sut).components(separatedBy: ".").last
         for i in 0..<n {
             let op = ops[i]
@@ -46,13 +47,11 @@ struct ClassHandler {
             switch op {
             case className:
                 print("null")
-            case "insert":
+            case "addWord":
                 print("null")
-                sut.insert(data[0])
+                sut.addWord(data[0])
             case "search":
                 print(sut.search(data[0]))
-            case "startsWith":
-                print(sut.startsWith(data[0]))
             default:
                 break
             }

@@ -9,7 +9,7 @@
 class Solution {}
 #endif
 extension Solution {
-    func rob(_ nums: [Int]) -> Int {
+    func rob1(_ nums: [Int]) -> Int {
         let n = nums.count
         // f[i] -> max money when rob i
         var f = [Int](repeating: 0, count: n)

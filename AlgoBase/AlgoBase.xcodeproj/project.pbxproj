@@ -31,6 +31,7 @@
 		0DB6C8562944946000CBBC67 /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C8552944946000CBBC67 /* HeapSort.swift */; };
 		0DF7953929990B7100893B80 /* DirectedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7953829990B7100893B80 /* DirectedGraph.swift */; };
 		0DF7953B29990BA800893B80 /* UndirectedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7953A29990BA800893B80 /* UndirectedGraph.swift */; };
+		0DF7954529A224E100893B80 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7954429A224E100893B80 /* Trie.swift */; };
 		DAFCA41D28FAD8D700CF1DE6 /* AlgoBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */; };
 		DAFCA42228FAD8D700CF1DE6 /* AlgoBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCA42128FAD8D700CF1DE6 /* AlgoBaseTests.swift */; };
 		DAFCA42328FAD8D700CF1DE6 /* AlgoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -87,6 +88,7 @@
 		0DB6C8552944946000CBBC67 /* HeapSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSort.swift; sourceTree = "<group>"; };
 		0DF7953829990B7100893B80 /* DirectedGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectedGraph.swift; sourceTree = "<group>"; };
 		0DF7953A29990BA800893B80 /* UndirectedGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndirectedGraph.swift; sourceTree = "<group>"; };
+		0DF7954429A224E100893B80 /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
 		DAFCA41228FAD8D700CF1DE6 /* AlgoBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlgoBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgoBase.h; sourceTree = "<group>"; };
 		DAFCA41C28FAD8D700CF1DE6 /* AlgoBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -276,6 +278,7 @@
 				DAFCA43A28FAD91B00CF1DE6 /* Queue.swift */,
 				DAFCA43928FAD91B00CF1DE6 /* Stack.swift */,
 				DAFCA47028FBE68900CF1DE6 /* Tree.swift */,
+				0DF7954429A224E100893B80 /* Trie.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				0D4E52552945ECC3000796BB /* DoubleExt.swift in Sources */,
 				0DF7953B29990BA800893B80 /* UndirectedGraph.swift in Sources */,
 				0DB6C8562944946000CBBC67 /* HeapSort.swift in Sources */,
+				0DF7954529A224E100893B80 /* Trie.swift in Sources */,
 				DAFCA44F28FAD91C00CF1DE6 /* AlgoBase.docc in Sources */,
 				0DADAC3329140DE700C30C0F /* DictionaryExt.swift in Sources */,
 				0DB6C8542944945500CBBC67 /* MergeSort.swift in Sources */,
