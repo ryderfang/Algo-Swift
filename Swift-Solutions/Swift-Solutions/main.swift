@@ -12,12 +12,10 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    [2,3,2],
-    [1,2,3,1],
-    [1,2,3],
-    [200,3,140,20,10],
-    // 27
-    [6,6,4,8,4,3,3,10],
+    [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]],
+    [["0","1"],["1","0"]],
+    [["0"]],
+    [["1"]],
 ]
 
 for (i, x) in cases.enumerated() {
@@ -25,11 +23,11 @@ for (i, x) in cases.enumerated() {
 //    var head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
-//    var tmp = x.0
+    var tmp = x.map { $0.charArray() }
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.rob(x)
+    let ans = sol.maximalSquare(tmp)
     print(ans)
 
 //    print(ans?.array() ?? [])

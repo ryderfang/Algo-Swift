@@ -9,7 +9,7 @@
 class Solution {}
 #endif
 extension Solution {
-    func rob(_ nums: [Int]) -> Int {
+    func rob2(_ nums: [Int]) -> Int {
         let n = nums.count
         guard n > 1 else { return nums[0] }
         // f[i][0] 表示包含 nums[0] 时，到 i 的最大值
@@ -32,6 +32,21 @@ extension Solution {
         }
         // max(f[0..<n-1][0], f[1..<n][1])
         return max(ans0, ans1)
+    }
+
+    func rob(_ nums: [Int]) -> Int {
+        func _dp(_ start: Int, _ end: Int) -> Int {
+            var pre = 0, cur = 0, ans = 0
+            for i in start..<end {
+                ans = max(pre + nums[i], cur)
+                (pre, cur) = (cur, ans)
+            }
+            return ans
+        }
+        let n = nums.count
+        guard n > 0 else { return 0 }
+        guard n > 1 else { return nums[0] }
+        return max(_dp(0, n - 1), _dp(1, n))
     }
 }
 // @lc code=end
