@@ -12,23 +12,21 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-//    ([6,2,8,0,4,7,9,nil,nil,3,5], 2, 8),
-//    ([6,2,8,0,4,7,9,nil,nil,3,5], 2, 4),
-//    ([2,1], 2, 1),
-    ([-1,0,3,-2,4,nil,nil,8], 3, 8)
+    ([[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], 5),
+    ([[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], 20),
 ]
 
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    var head = ListNode.arrayToList(x)
-    let root = TreeNode.arrayToTree(x.0)
+//    let root = TreeNode.arrayToTree(x.0)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.charArray() }
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.lowestCommonAncestor(root, root?.right, root?.left?.left?.left)
-    print(ans?.val)
+    let ans = sol.searchMatrix(x.0, x.1)
+    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)

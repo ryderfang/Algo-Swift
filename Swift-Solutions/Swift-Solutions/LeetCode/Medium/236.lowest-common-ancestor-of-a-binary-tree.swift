@@ -43,9 +43,9 @@ extension Solution {
     // O(n+q)
     func lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
         guard let root = root, let p = p, let q = q else { return nil }
-        var mp = [Int: TreeNode]()
         let query = [p.val: [q.val], q.val: [p.val]]
-        var ufd = UnionFind()
+        let ufd = UnionFind()
+        var mp = [Int: TreeNode]()
         var visit = Set<Int>()
         var ans: TreeNode? = nil
         func _tarjan(_ node: TreeNode?)  {

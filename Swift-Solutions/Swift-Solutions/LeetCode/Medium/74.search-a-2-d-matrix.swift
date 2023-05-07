@@ -9,7 +9,7 @@
 class Solution {}
 #endif
 extension Solution {
-    func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
+    func searchMatrix1(_ matrix: [[Int]], _ target: Int) -> Bool {
         let m = matrix.count
         let n = matrix[0].count
         if target < matrix[0][0] || matrix[m-1][n-1] < target {
