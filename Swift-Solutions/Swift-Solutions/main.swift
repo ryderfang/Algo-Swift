@@ -12,8 +12,10 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ([3,1,4,nil,2], 1),
-    ([5,3,6,2,4,nil,nil,1], 3)
+//    ([6,2,8,0,4,7,9,nil,nil,3,5], 2, 8),
+//    ([6,2,8,0,4,7,9,nil,nil,3,5], 2, 4),
+//    ([2,1], 2, 1),
+    ([-1,0,3,-2,4,nil,nil,8], 3, 8)
 ]
 
 for (i, x) in cases.enumerated() {
@@ -25,8 +27,8 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.kthSmallest(root, x.1)
-    print(ans)
+    let ans = sol.lowestCommonAncestor(root, root?.right, root?.left?.left?.left)
+    print(ans?.val)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
