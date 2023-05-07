@@ -12,20 +12,20 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    (-3,0,3,4,0,-1,9,2),
-    (-2,-2,2,2,-2,-2,2,2),
+    ([3,1,4,nil,2], 1),
+    ([5,3,6,2,4,nil,nil,1], 3)
 ]
 
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    var head = ListNode.arrayToList(x)
-//    let root = TreeNode.arrayToTree(x)
+    let root = TreeNode.arrayToTree(x.0)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.charArray() }
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.computeArea(x.0, x.1, x.2, x.3, x.4, x.5, x.6, x.7)
+    let ans = sol.kthSmallest(root, x.1)
     print(ans)
 
 //    print(ans?.array() ?? [])

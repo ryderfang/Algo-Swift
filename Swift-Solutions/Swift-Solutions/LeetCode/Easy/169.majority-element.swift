@@ -6,8 +6,8 @@
 
 // @lc code=start
 extension Solution {
-    // 投票算法 (vote algorithm)
-    func majorityElement(_ nums: [Int]) -> Int {
+    // 投票算法 (Boyer-Moore voting algorithm)
+    func majorityElement1(_ nums: [Int]) -> Int {
         var candidate = 0, vote = 0
         for x in nums {
             if vote == 0 {
@@ -18,7 +18,7 @@ extension Solution {
         return candidate
     }
 
-    func majorityElement1(_ nums: [Int]) -> Int {
+    func majorityElement1_1(_ nums: [Int]) -> Int {
         var ans = [Int]()
         for x in nums {
             let top = ans.last
