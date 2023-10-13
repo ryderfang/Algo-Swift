@@ -12,8 +12,12 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    ([[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], 5),
-    ([[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], 20),
+    1,
+    10,
+    12,
+    100,  // 1536 = 2^9 * 3
+    1352, // 402653184 = 2^27 * 3
+    1690,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -25,7 +29,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.searchMatrix(x.0, x.1)
+    let ans = sol.nthUglyNumber(x)
     print(ans)
 
 //    print(ans?.array() ?? [])

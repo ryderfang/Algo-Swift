@@ -293,6 +293,9 @@
 		0DF087FC2A07597A00486C49 /* 236.lowest-common-ancestor-of-a-binary-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF087FA2A07597A00486C49 /* 236.lowest-common-ancestor-of-a-binary-tree.swift */; };
 		0DF087FE2A07D37400486C49 /* 238.product-of-array-except-self.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF087FD2A07D37300486C49 /* 238.product-of-array-except-self.swift */; };
 		0DF088002A07D5CF00486C49 /* 240.search-a-2-d-matrix-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF087FF2A07D5CE00486C49 /* 240.search-a-2-d-matrix-ii.swift */; };
+		0DF088022A07DDAC00486C49 /* 241.different-ways-to-add-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF088012A07DDAC00486C49 /* 241.different-ways-to-add-parentheses.swift */; };
+		0DF088052A092AD800486C49 /* 260.single-number-iii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF088032A092AD800486C49 /* 260.single-number-iii.swift */; };
+		0DF088062A092AD800486C49 /* 264.ugly-number-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF088042A092AD800486C49 /* 264.ugly-number-ii.swift */; };
 		0DF7952C2991357D00893B80 /* 198.house-robber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7952B2991357D00893B80 /* 198.house-robber.swift */; };
 		0DF7952E2991382C00893B80 /* 199.binary-tree-right-side-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7952D2991382C00893B80 /* 199.binary-tree-right-side-view.swift */; };
 		0DF7953029913E1000893B80 /* 200.number-of-islands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7952F29913E1000893B80 /* 200.number-of-islands.swift */; };
@@ -668,6 +671,9 @@
 		0DF087FA2A07597A00486C49 /* 236.lowest-common-ancestor-of-a-binary-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "236.lowest-common-ancestor-of-a-binary-tree.swift"; sourceTree = "<group>"; };
 		0DF087FD2A07D37300486C49 /* 238.product-of-array-except-self.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "238.product-of-array-except-self.swift"; sourceTree = "<group>"; };
 		0DF087FF2A07D5CE00486C49 /* 240.search-a-2-d-matrix-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "240.search-a-2-d-matrix-ii.swift"; sourceTree = "<group>"; };
+		0DF088012A07DDAC00486C49 /* 241.different-ways-to-add-parentheses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "241.different-ways-to-add-parentheses.swift"; sourceTree = "<group>"; };
+		0DF088032A092AD800486C49 /* 260.single-number-iii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "260.single-number-iii.swift"; sourceTree = "<group>"; };
+		0DF088042A092AD800486C49 /* 264.ugly-number-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "264.ugly-number-ii.swift"; sourceTree = "<group>"; };
 		0DF7952B2991357D00893B80 /* 198.house-robber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "198.house-robber.swift"; sourceTree = "<group>"; };
 		0DF7952D2991382C00893B80 /* 199.binary-tree-right-side-view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "199.binary-tree-right-side-view.swift"; sourceTree = "<group>"; };
 		0DF7952F29913E1000893B80 /* 200.number-of-islands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "200.number-of-islands.swift"; sourceTree = "<group>"; };
@@ -997,6 +1003,8 @@
 		0D0C861328632D540010C108 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
+				0DF088032A092AD800486C49 /* 260.single-number-iii.swift */,
+				0DF088042A092AD800486C49 /* 264.ugly-number-ii.swift */,
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
 				0D74F4A92920CB7F000E9237 /* 3.longest-substring-without-repeating-characters.swift */,
 				0D74F4AB292105B9000E9237 /* 5.longest-palindromic-substring.swift */,
@@ -1123,6 +1131,7 @@
 				0DF087F72A06A83B00486C49 /* 237.delete-node-in-a-linked-list.swift */,
 				0DF087FD2A07D37300486C49 /* 238.product-of-array-except-self.swift */,
 				0DF087FF2A07D5CE00486C49 /* 240.search-a-2-d-matrix-ii.swift */,
+				0DF088012A07DDAC00486C49 /* 241.different-ways-to-add-parentheses.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -1334,6 +1343,7 @@
 				0DB6C8582944B34E00CBBC67 /* 150.evaluate-reverse-polish-notation.swift in Sources */,
 				0D4E526229475696000796BB /* 530.minimum-absolute-difference-in-bst.swift in Sources */,
 				0D74F48129154D9E000E9237 /* 448.find-all-numbers-disappeared-in-an-array.swift in Sources */,
+				0DF088052A092AD800486C49 /* 260.single-number-iii.swift in Sources */,
 				0DB6C7F32936497E00CBBC67 /* 95.unique-binary-search-trees-ii.swift in Sources */,
 				0D4E52E329605086000796BB /* 844.backspace-string-compare.swift in Sources */,
 				0D6483902966F78F00458B69 /* 938.range-sum-of-bst.swift in Sources */,
@@ -1350,6 +1360,7 @@
 				0D4C2ACD2928C4F400E73722 /* 18.4-sum.swift in Sources */,
 				0DB6C7D9293231F700CBBC67 /* 73.set-matrix-zeroes.swift in Sources */,
 				0D4E5288294C94BC000796BB /* 617.merge-two-binary-trees.swift in Sources */,
+				0DF088022A07DDAC00486C49 /* 241.different-ways-to-add-parentheses.swift in Sources */,
 				0DF7954729A2316E00893B80 /* 213.house-robber-ii.swift in Sources */,
 				0DB6C7D7293226DF00CBBC67 /* 71.simplify-path.swift in Sources */,
 				0DB6C84429435D2800CBBC67 /* 143.reorder-list.swift in Sources */,
@@ -1556,6 +1567,7 @@
 				DAFCA46528FAFA4100CF1DE6 /* 67.add-binary.swift in Sources */,
 				0DF087FE2A07D37400486C49 /* 238.product-of-array-except-self.swift in Sources */,
 				0D4E52D02955DA6C000796BB /* 812.largest-triangle-area.swift in Sources */,
+				0DF088062A092AD800486C49 /* 264.ugly-number-ii.swift in Sources */,
 				0DF087F82A06A83B00486C49 /* 237.delete-node-in-a-linked-list.swift in Sources */,
 				0D763888290E8405004CD387 /* 203.remove-linked-list-elements.swift in Sources */,
 				0D7638A0290EC6B9004CD387 /* 257.binary-tree-paths.swift in Sources */,

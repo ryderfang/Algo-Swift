@@ -9,16 +9,18 @@
 class Solution {}
 #endif
 extension Solution {
-    func singleNumber(_ nums: [Int]) -> Int {
-        var (b1, b0) = (0, 0)
+    // why?
+    // [1] + (3) + (3) + ... + (3)
+    func singleNumber2(_ nums: [Int]) -> Int {
+        var (ones, twos) = (0, 0)
         for num in nums {
-            b0 = (b0 ^ num) & (~b1)
-            b1 = (b1 ^ num) & (~b0)
+            ones = (ones ^ num) & (~twos)
+            twos = (twos ^ num) & (~ones)
         }
-        return b0
+        return ones
     }
 
-    func singleNumber2(_ nums: [Int]) -> Int {
+    func singleNumber2_1(_ nums: [Int]) -> Int {
         var ans = 0
         for i in 0..<32 {
             let mask = 1 << i
