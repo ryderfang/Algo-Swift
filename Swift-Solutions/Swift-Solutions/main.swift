@@ -12,12 +12,11 @@ let sol = Solution()
 
 //let cases = READNUMS()
 let cases = [
-    1,
-    10,
-    12,
-    100,  // 1536 = 2^9 * 3
-    1352, // 402653184 = 2^27 * 3
-    1690,
+    [0,1,3,5,6],
+    [1,2,100],
+    [1],
+    [0,4,5,6,7],
+    [0],
 ]
 
 for (i, x) in cases.enumerated() {
@@ -29,7 +28,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.nthUglyNumber(x)
+    let ans = sol.hIndex(x)
     print(ans)
 
 //    print(ans?.array() ?? [])
