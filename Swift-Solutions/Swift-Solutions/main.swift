@@ -10,13 +10,14 @@ import AlgoBase
 
 let sol = Solution()
 
-//let cases = READNUMS()
+// let cases = READNUMS()
+
 let cases = [
-    [0,1,3,5,6],
-    [1,2,100],
-    [1],
-    [0,4,5,6,7],
-    [0],
+//    2,
+    4,
+    12,
+    13,
+    9993,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -28,12 +29,14 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.hIndex(x)
+    let ans = sol.numSquares(x)
     print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
 }
+
+print("\n--- <EOF> ---")
 
 struct ClassHandler {
     static func test(ops: [String], datas: [[String]]) {
