@@ -41,6 +41,31 @@ class PeekingIterator {
     }
 }
 
+// another solution
+class PeekingIterator2 {
+    private var iterator: IndexingIterator<Array<Int>>
+    private var lastValue: Int?
+
+    init(_ arr: IndexingIterator<Array<Int>>) {
+        self.iterator = arr
+        self.lastValue = iterator.next()
+    }
+
+    func next() -> Int {
+        let previous = lastValue
+        lastValue = iterator.next()
+        return previous ?? 0
+    }
+
+    func peek() -> Int {
+        return lastValue ?? 0
+    }
+
+    func hasNext() -> Bool {
+        return lastValue != nil
+    }
+}
+
 /**
  * Your PeekingIterator object will be instantiated and called as such:
  * let obj = PeekingIterator(arr)

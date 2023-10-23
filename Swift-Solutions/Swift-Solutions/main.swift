@@ -13,11 +13,10 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-//    2,
-    4,
-    12,
-    13,
-    9993,
+    [8,6,1,5,3],
+    [5,4,8,7,10,2],
+    [6,5,4,3,4,5],
+    [50,50,50],
 ]
 
 for (i, x) in cases.enumerated() {
@@ -29,7 +28,7 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.numSquares(x)
+    let ans = sol.minimumSum(x)
     print(ans)
 
 //    print(ans?.array() ?? [])
