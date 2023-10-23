@@ -13,8 +13,8 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    [[0,1,0],[0,0,1],[1,1,1],[0,0,0]],
-    [[1,1],[1,0]],
+    (["NumMatrix", "sumRegion", "sumRegion", "sumRegion"],
+    [[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]], [2, 1, 4, 3], [1, 1, 2, 2], [1, 2, 2, 4]])
 ]
 
 for (i, x) in cases.enumerated() {
@@ -24,34 +24,30 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.charArray() }
 
-//    ClassHandler.test(ops: x.0, datas: x.1)
+    ClassHandler.test(ops: x.0, datas: x.1)
 
-    var tmp = x
-    let ans = sol.gameOfLife(&tmp)
-    print(ans)
+//    let ans = sol.lengthOfLIS(x)
+//    print(ans)
 
 //    print(ans?.array() ?? [])
-    print(tmp)
+//    print(tmp)
 }
 
 print("\n--- <EOF> ---")
 
 struct ClassHandler {
-    static func test(ops: [String], datas: [[String]]) {
+    static func test(ops: [String], datas: [Any]) {
         let n = ops.count
-        let sut = WordDictionary()
-        let className = String(describing: sut).components(separatedBy: ".").last
-        for i in 0..<n {
+        let sut = NumMatrix(datas[0] as! [[Int]])
+        for i in 1..<n {
             let op = ops[i]
-            let data = datas[i]
+            let data = datas[i] as! [Int]
             switch op {
-            case className:
+            case "NumMatrix":
                 print("null")
-            case "addWord":
-                print("null")
-                sut.addWord(data[0])
-            case "search":
-                print(sut.search(data[0]))
+            case "sumRegion":
+                print(
+                sut.sumRegion(data[0], data[1], data[2], data[3]))
             default:
                 break
             }
