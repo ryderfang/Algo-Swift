@@ -13,10 +13,8 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    [8,6,1,5,3],
-    [5,4,8,7,10,2],
-    [6,5,4,3,4,5],
-    [50,50,50],
+    [[0,1,0],[0,0,1],[1,1,1],[0,0,0]],
+    [[1,1],[1,0]],
 ]
 
 for (i, x) in cases.enumerated() {
@@ -28,11 +26,12 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.minimumSum(x)
+    var tmp = x
+    let ans = sol.gameOfLife(&tmp)
     print(ans)
 
 //    print(ans?.array() ?? [])
-//    print(tmp)
+    print(tmp)
 }
 
 print("\n--- <EOF> ---")
