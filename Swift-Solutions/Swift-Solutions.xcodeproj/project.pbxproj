@@ -291,6 +291,8 @@
 		0DDF44352AE678E50053E862 /* 299.bulls-and-cows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF44342AE678E50053E862 /* 299.bulls-and-cows.swift */; };
 		0DDF44372AE67FDA0053E862 /* 300.longest-increasing-subsequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF44362AE67FD90053E862 /* 300.longest-increasing-subsequence.swift */; };
 		0DDF44392AE6CB140053E862 /* 304.range-sum-query-2-d-immutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF44382AE6CB140053E862 /* 304.range-sum-query-2-d-immutable.swift */; };
+		0DDF443B2AE6D2A30053E862 /* 306.additive-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF443A2AE6D2A30053E862 /* 306.additive-number.swift */; };
+		0DDF443F2AE80B8E0053E862 /* 307.range-sum-query-mutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF443E2AE80B8E0053E862 /* 307.range-sum-query-mutable.swift */; };
 		0DE6B801298E0AA500FA49A3 /* 179.largest-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6B800298E0AA500FA49A3 /* 179.largest-number.swift */; };
 		0DE6B803298E156900FA49A3 /* 187.repeated-dna-sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6B802298E156900FA49A3 /* 187.repeated-dna-sequences.swift */; };
 		0DE6B80529911F2A00FA49A3 /* 189.rotate-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6B80429911F2900FA49A3 /* 189.rotate-array.swift */; };
@@ -679,6 +681,8 @@
 		0DDF44342AE678E50053E862 /* 299.bulls-and-cows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "299.bulls-and-cows.swift"; sourceTree = "<group>"; };
 		0DDF44362AE67FD90053E862 /* 300.longest-increasing-subsequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "300.longest-increasing-subsequence.swift"; sourceTree = "<group>"; };
 		0DDF44382AE6CB140053E862 /* 304.range-sum-query-2-d-immutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "304.range-sum-query-2-d-immutable.swift"; sourceTree = "<group>"; };
+		0DDF443A2AE6D2A30053E862 /* 306.additive-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "306.additive-number.swift"; sourceTree = "<group>"; };
+		0DDF443E2AE80B8E0053E862 /* 307.range-sum-query-mutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "307.range-sum-query-mutable.swift"; sourceTree = "<group>"; };
 		0DE6B800298E0AA500FA49A3 /* 179.largest-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "179.largest-number.swift"; sourceTree = "<group>"; };
 		0DE6B802298E156900FA49A3 /* 187.repeated-dna-sequences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "187.repeated-dna-sequences.swift"; sourceTree = "<group>"; };
 		0DE6B80429911F2900FA49A3 /* 189.rotate-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "189.rotate-array.swift"; sourceTree = "<group>"; };
@@ -1023,7 +1027,7 @@
 		0D0C861328632D540010C108 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
-				0DDF44382AE6CB140053E862 /* 304.range-sum-query-2-d-immutable.swift */,
+				0DDF443E2AE80B8E0053E862 /* 307.range-sum-query-mutable.swift */,
 				DAFCA39928F6B70400CF1DE6 /* 2.add-two-numbers.swift */,
 				0D74F4A92920CB7F000E9237 /* 3.longest-substring-without-repeating-characters.swift */,
 				0D74F4AB292105B9000E9237 /* 5.longest-palindromic-substring.swift */,
@@ -1161,6 +1165,8 @@
 				0DDF44322AE66DA50053E862 /* 289.game-of-life.swift */,
 				0DDF44342AE678E50053E862 /* 299.bulls-and-cows.swift */,
 				0DDF44362AE67FD90053E862 /* 300.longest-increasing-subsequence.swift */,
+				0DDF44382AE6CB140053E862 /* 304.range-sum-query-2-d-immutable.swift */,
+				0DDF443A2AE6D2A30053E862 /* 306.additive-number.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -1331,6 +1337,7 @@
 				0D74F497291F591F000E9237 /* 500.keyboard-row.swift in Sources */,
 				DAFCA46328FAF6EC00CF1DE6 /* 66.plus-one.swift in Sources */,
 				0DADAC2F29140A0000C30C0F /* 374.guess-number-higher-or-lower.swift in Sources */,
+				0DDF443F2AE80B8E0053E862 /* 307.range-sum-query-mutable.swift in Sources */,
 				0D4E52682948A8F0000796BB /* 551.student-attendance-record-i.swift in Sources */,
 				0DBE143F2912C46500F5ECE1 /* 342.power-of-four.swift in Sources */,
 				0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */,
@@ -1428,6 +1435,7 @@
 				0D763898290EBF13004CD387 /* 231.power-of-two.swift in Sources */,
 				0D74F4772915412B000E9237 /* 412.fizz-buzz.swift in Sources */,
 				0DB6C7CF2932164B00CBBC67 /* 61.rotate-list.swift in Sources */,
+				0DDF443B2AE6D2A30053E862 /* 306.additive-number.swift in Sources */,
 				0D9E9B9F292FC1D5005486CE /* 50.pow-x-n.swift in Sources */,
 				0D4E5284294C8907000796BB /* 605.can-place-flowers.swift in Sources */,
 				0DF7954129A2000200893B80 /* 210.course-schedule-ii.swift in Sources */,

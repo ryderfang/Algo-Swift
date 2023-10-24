@@ -6,7 +6,7 @@
 
 // @lc code=start
 
-class NumArray {
+class NumArray1 {
     private let nums: [Int]
     private var sumTo: [Int]
 

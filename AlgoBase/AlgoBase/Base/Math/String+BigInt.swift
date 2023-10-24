@@ -2,7 +2,7 @@
 //  String+BigInt.swift
 //  AlgoBase
 //
-//  Created by ryfang on 2022/11/25.
+//  Created by ryfang on 2023/10/24.
 //
 
 fileprivate extension String {
@@ -15,7 +15,6 @@ fileprivate extension String {
         let len = max(a.count, b.count)
         a.append(contentsOf: [Int](repeating: 0, count: len - a.count))
         b.append(contentsOf: [Int](repeating: 0, count: len - b.count))
-        print(a, b)
         var carry: Int = 0
         for i in 0..<len {
             let tmp = a[i] + b[i] + carry
@@ -25,7 +24,6 @@ fileprivate extension String {
         if carry > 0 {
             a.append(carry)
         }
-        print(a)
         let ans = a.reversed().map { "\($0)" }.joined()
         return ans
     }

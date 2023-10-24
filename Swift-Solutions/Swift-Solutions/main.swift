@@ -13,8 +13,11 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    (["NumMatrix", "sumRegion", "sumRegion", "sumRegion"],
-    [[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]], [2, 1, 4, 3], [1, 1, 2, 2], [1, 2, 2, 4]])
+    "112358",
+    "199100199",
+    "199999999999999999989999999999999999999",
+    "000",
+    "00102",
 ]
 
 for (i, x) in cases.enumerated() {
@@ -24,10 +27,10 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.charArray() }
 
-    ClassHandler.test(ops: x.0, datas: x.1)
+//    ClassHandler.test(ops: x.0, datas: x.1)
 
-//    let ans = sol.lengthOfLIS(x)
-//    print(ans)
+    let ans = sol.isAdditiveNumber(x)
+    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
