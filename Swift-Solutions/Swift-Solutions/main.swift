@@ -13,11 +13,8 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    "112358",
-    "199100199",
-    "199999999999999999989999999999999999999",
-    "000",
-    "00102",
+    (["NumArray", "sumRange", "update", "sumRange"],
+     [[1, 3, 5], [0, 2], [1, 2], [0, 2]])
 ]
 
 for (i, x) in cases.enumerated() {
@@ -27,10 +24,10 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.charArray() }
 
-//    ClassHandler.test(ops: x.0, datas: x.1)
+    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.isAdditiveNumber(x)
-    print(ans)
+//    let ans = sol.isAdditiveNumber(x)
+//    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
@@ -41,16 +38,17 @@ print("\n--- <EOF> ---")
 struct ClassHandler {
     static func test(ops: [String], datas: [Any]) {
         let n = ops.count
-        let sut = NumMatrix(datas[0] as! [[Int]])
+        let sut = NumArray(datas[0] as! [Int])
         for i in 1..<n {
             let op = ops[i]
             let data = datas[i] as! [Int]
             switch op {
-            case "NumMatrix":
+            case "NumArray":
                 print("null")
-            case "sumRegion":
-                print(
-                sut.sumRegion(data[0], data[1], data[2], data[3]))
+            case "sumRange":
+                print(sut.sumRange(data[0], data[1]))
+            case "update":
+                sut.update(data[0], data[1])
             default:
                 break
             }
