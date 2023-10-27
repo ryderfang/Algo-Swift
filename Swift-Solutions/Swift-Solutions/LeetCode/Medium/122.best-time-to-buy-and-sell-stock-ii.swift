@@ -9,7 +9,7 @@
 class Solution {}
 #endif
 extension Solution {
-    func maxProfit(_ prices: [Int]) -> Int {
+    func maxProfit2(_ prices: [Int]) -> Int {
         let n = prices.count
         guard n > 1 else { return 0 }
         var ans = 0
