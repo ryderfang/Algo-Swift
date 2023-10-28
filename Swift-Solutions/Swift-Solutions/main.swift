@@ -13,18 +13,9 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    "bcab",
-    "bcabc",
-    "cbacdcbc",
-    "cbcac",
-    "dbdd",
-    "leetcode",
-    "bbcaac",
-    "bccab",
-    "rusrbofeggbbkyuyjsrzornpdguwzizqszpbicdquakqws",
-    // -> "bfegkuyjorndiqszpcaw"
-    "tknvntfipavdqjiyslpdlokuymbutpynnxqekoktlqzrhoyvbewklzuamhwtqygsiakymyqwqiqtouynaiowwf",
-    // -> adjbpnxeklqrhovwzgsimtuyf
+//    [1,5,1,1,6,4],
+//    [1,3,2,2,3],
+    [4,5,5,6],
 ]
 
 for (i, x) in cases.enumerated() {
@@ -36,8 +27,9 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    let ans = sol.removeDuplicateLetters(x)
-    print(ans)
+    var tmp = x
+    let ans = sol.wiggleSort(&tmp)
+    print(tmp)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)
