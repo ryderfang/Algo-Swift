@@ -15,7 +15,14 @@ let sol = Solution()
 let cases = [
 //    [1,5,1,1,6,4],
 //    [1,3,2,2,3],
-    [4,5,5,6],
+//    [4,5,5,6],
+
+    ([2,3,0,0,2], 4),
+    ([0,1,3,3], 5),
+    ([1,1,2], 1),
+    ([3,3,3,0,3,1], 4),
+    ([0,24,14], 7),
+    ([44,44,31,36,1,8,39,46], 45) // -> 16
 ]
 
 for (i, x) in cases.enumerated() {
@@ -27,9 +34,9 @@ for (i, x) in cases.enumerated() {
 
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
-    var tmp = x
-    let ans = sol.wiggleSort(&tmp)
-    print(tmp)
+//    var tmp = x
+    let ans = sol.minIncrementOperations(x.0, x.1)
+    print(ans)
 
 //    print(ans?.array() ?? [])
 //    print(tmp)

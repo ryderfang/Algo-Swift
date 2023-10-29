@@ -2,7 +2,7 @@
 //  WeeklyContest.swift
 //  Titan
 //
-//  Created by ryfang on 2022/11/26.
+//  Created by ryfang on 2023/10/22.
 //
 
 // @lc code=start
@@ -49,3 +49,5 @@ extension Solution {
         return ans == Int.max ? -1 : ans
     }
 }
+
+// @lc code=end
