@@ -38,3 +38,54 @@ extension Sort {
         }
     }
 }
+
+// Dutch National Flag (DNF problem)
+// -> 🇳🇱
+extension Sort {
+    func partitionDutchFlag<T: Comparable>(_ a: inout [T], low: Int, high: Int, pivotIndex: Int) -> (Int, Int) {
+      let pivot = a[pivotIndex]
+
+      var smaller = low
+      var equal = low
+      var larger = high
+
+      // This loop partitions the array into four (possibly empty) regions:
+      //   [low    ...smaller-1] contains all values < pivot,
+      //   [smaller...  equal-1] contains all values == pivot,
+      //   [equal  ...   larger] contains all values > pivot,
+      //   [larger ...     high] are values we haven't looked at yet.
+      while equal <= larger {
+        if a[equal] < pivot {
+          swap(&a, smaller, equal)
+          smaller += 1
+          equal += 1
+        } else if a[equal] == pivot {
+          equal += 1
+        } else {
+          swap(&a, equal, larger)
+          larger -= 1
+        }
+      }
+      return (smaller, larger)
+    }
+
+    func quicksortDutchFlag<T: Comparable>(_ a: inout [T], low: Int, high: Int) {
+      if low < high {
+        let pivotIndex = random(min: low, max: high)
+        let (p, q) = partitionDutchFlag(&a, low: low, high: high, pivotIndex: pivotIndex)
+        quicksortDutchFlag(&a, low: low, high: p - 1)
+        quicksortDutchFlag(&a, low: q + 1, high: high)
+      }
+    }
+
+    public func random(min: Int, max: Int) -> Int {
+      assert(min < max)
+      return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+    }
+
+    public func swap<T>(_ a: inout [T], _ i: Int, _ j: Int) {
+      if i != j {
+        a.swapAt(i, j)
+      }
+    }
+}

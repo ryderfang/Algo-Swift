@@ -28,8 +28,8 @@ extension Solution {
     func lowestCommonAncestor2_1(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
         guard let root = root, let p = p, let q = q else { return nil }
         if root.val == p.val || root.val == q.val { return root }
-        let left = lowestCommonAncestor(root.left, p, q)
-        let right = lowestCommonAncestor(root.right, p, q)
+        let left = lowestCommonAncestor2_1(root.left, p, q)
+        let right = lowestCommonAncestor2_1(root.right, p, q)
         if left != nil && right != nil {
             return root
         }

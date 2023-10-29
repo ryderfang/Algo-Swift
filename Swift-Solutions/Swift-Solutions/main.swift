@@ -13,33 +13,26 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-//    [1,5,1,1,6,4],
-//    [1,3,2,2,3],
-//    [4,5,5,6],
-
-    ([2,3,0,0,2], 4),
-    ([0,1,3,3], 5),
-    ([1,1,2], 1),
-    ([3,3,3,0,3,1], 4),
-    ([0,24,14], 7),
-    ([44,44,31,36,1,8,39,46], 45) // -> 16
+    [1,5,1,1,6,4],
+    [1,3,2,2,3,1],
+    [4,5,5,6],
+    [1,3,2,2,3,1],
 ]
 
 for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
+//    ClassHandler.test(ops: x.0, datas: x.1)
+
 //    var head = ListNode.arrayToList(x)
 //    let root = TreeNode.arrayToTree(x.0)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.charArray() }
 
-//    ClassHandler.test(ops: x.0, datas: x.1)
-
-//    var tmp = x
-    let ans = sol.minIncrementOperations(x.0, x.1)
+    var tmp = x
+    let ans = sol.wiggleSort(&tmp)
     print(ans)
-
 //    print(ans?.array() ?? [])
-//    print(tmp)
+    print(tmp)
 }
 
 print("\n--- <EOF> ---")

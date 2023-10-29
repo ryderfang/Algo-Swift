@@ -20,6 +20,28 @@ extension Solution {
     }
 }
 
+// another solution
+// partition: [0..<p) -> false, [p...] -> true
+fileprivate extension Array where Element: Comparable {
+    func kThLargest(_ k: Int) -> Element {
+        var low = startIndex, high = endIndex, mutableArrayCopy = self
+        while high - low > 1 {
+            let randomIndex = Int.random(in: low..<high), randomElement = mutableArrayCopy[randomIndex], pivot = mutableArrayCopy[low..<high].partition { $0 <= randomElement }
+            if k < pivot + 1 {
+                high = pivot
+            } else if k > pivot + 1 {
+                low = pivot
+                while mutableArrayCopy[low] == randomElement, k - low > 1 {
+                    low += 1
+                }
+            } else {
+                return randomElement
+            }
+        }
+        return mutableArrayCopy[low]
+    }
+}
+
 fileprivate struct PriorityQueue<Element> {
     private var elements = [Element]()
     private let hasHigherPriority: (Element, Element) -> Bool
