@@ -13,10 +13,13 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    [1,5,1,1,6,4],
-    [1,3,2,2,3,1],
-    [4,5,5,6],
-    [1,3,2,2,3,1],
+    "#",
+    "#,#",
+    "9,3,4,#,#,1,#,#,2,#,6,#,#",
+    "1,#",
+    "9,#,#,1",
+    "1,#,2,#,#",
+    "1,2,#,#,#",
 ]
 
 for (i, x) in cases.enumerated() {
@@ -28,11 +31,11 @@ for (i, x) in cases.enumerated() {
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.charArray() }
 
-    var tmp = x
-    let ans = sol.wiggleSort(&tmp)
+//    var tmp = x
+    let ans = sol.isValidSerialization(x)
     print(ans)
 //    print(ans?.array() ?? [])
-    print(tmp)
+//    print(tmp)
 }
 
 print("\n--- <EOF> ---")

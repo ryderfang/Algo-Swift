@@ -11,7 +11,6 @@ class Solution {}
 extension Solution {
     // Better solution: dp[i] = min(dp[i], dp[i-c] + 1), i <- [1...n]
     func coinChange(_ coins: [Int], _ amount: Int) -> Int {
-        let n = coins.count
         var dp = [Int](repeating: Int.max, count: 10001)
         for (i, c) in coins.enumerated() {
             if i == 0 {
