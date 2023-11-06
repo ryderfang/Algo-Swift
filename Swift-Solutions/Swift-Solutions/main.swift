@@ -13,13 +13,9 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    "#",
-    "#,#",
-    "9,3,4,#,#,1,#,#,2,#,6,#,#",
-    "1,#",
-    "9,#,#,1",
-    "1,#,2,#,#",
-    "1,2,#,#,#",
+    [1,2,3],
+    [3,2,3,nil,3,nil,1],
+    [3,4,5,1,3,nil,1],
 ]
 
 for (i, x) in cases.enumerated() {
@@ -27,12 +23,12 @@ for (i, x) in cases.enumerated() {
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
 //    var head = ListNode.arrayToList(x)
-//    let root = TreeNode.arrayToTree(x.0)
+    let root = TreeNode.arrayToTree(x)
 //    let node = Node.arrayToNode(x)
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.isValidSerialization(x)
+    let ans = sol.rob(root)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

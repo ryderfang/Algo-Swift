@@ -34,7 +34,7 @@ extension Solution {
         return max(ans0, ans1)
     }
 
-    func rob(_ nums: [Int]) -> Int {
+    func rob22(_ nums: [Int]) -> Int {
         func _dp(_ start: Int, _ end: Int) -> Int {
             var pre = 0, cur = 0, ans = 0
             for i in start..<end {

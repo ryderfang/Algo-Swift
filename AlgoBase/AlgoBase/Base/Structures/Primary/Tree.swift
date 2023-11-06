@@ -134,7 +134,7 @@ public extension TreeNode {
 
 // MARK: - Iteratively Traversal
 public extension TreeNode {
-    // 左根右
+    // 中序（左根右）
     static func inOrderIterative(_ root: TreeNode?) -> [Int] {
         guard let root = root else { return [] }
         var ans = [Int]()
@@ -152,7 +152,7 @@ public extension TreeNode {
         return ans
     }
 
-    // 根左右
+    // 前序（根左右）
     static func preOrderIterative(_ root: TreeNode?) -> [Int] {
         guard let root = root else { return [] }
         var ans = [Int]()
@@ -166,7 +166,7 @@ public extension TreeNode {
         return ans
     }
 
-    // 左右根
+    // 后序（左右根）
     static func postOrderIterative(_ root: TreeNode?) -> [Int] {
         guard let root = root else { return [] }
         var ans = [Int]()
@@ -232,5 +232,31 @@ public extension TreeNode {
             node = top.left
         }
         return ans
+    }
+}
+
+// * Can't import module in LeetCode.
+import ObjectiveC.runtime
+
+fileprivate extension TreeNode {
+    enum StoreKey {
+        static var key1 = "key1"
+        static var key2 = "key2"
+    }
+    var robSelf: Int {
+        get {
+            (objc_getAssociatedObject(self, &StoreKey.key1) as? NSNumber)?.intValue ?? -1
+        }
+        set {
+            objc_setAssociatedObject(self, &StoreKey.key1, NSNumber(value: newValue), .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+    var notBobSelf: Int {
+        get {
+            (objc_getAssociatedObject(self, &StoreKey.key2) as? NSNumber)?.intValue ?? -1
+        }
+        set {
+            objc_setAssociatedObject(self, &StoreKey.key2, NSNumber(value: newValue), .OBJC_ASSOCIATION_RETAIN)
+        }
     }
 }

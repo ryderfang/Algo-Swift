@@ -34,7 +34,8 @@ extension Solution {
             q = q?.next
         }
     }
-    // better solution
+    
+    // Better solution
     func deleteNode1(_ node: ListNode?) {
         node?.val = node?.next?.val ?? 0
         node?.next = node?.next?.next
