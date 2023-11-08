@@ -10,11 +10,7 @@ My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with *
 
 ### ⏳ Progress
 
-| Difficulty | Progress |
-| :----- | :----- |
-| Easy   | 102/610 |
-| Medium | 80/1327 |
-| Hard   | 3/552  |
+![LeetCode Stats](https://leetcard.jacoblin.cool/ryderfang?theme=light&font=Fjord%20One&ext=activity)
 
 > Motivation comes from incentive.
 
