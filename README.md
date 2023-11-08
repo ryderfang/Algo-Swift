@@ -10,7 +10,7 @@ My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with *
 
 ### ⏳ Progress
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/ryderfang?theme=light&font=Fjord%20One&ext=activity)
+![LeetCode Stats](https://leetcard.jacoblin.cool/ryderfang?theme=light&font=Fjord%20One&ext=activity&width=555)
 
 > Motivation comes from incentive.
 
