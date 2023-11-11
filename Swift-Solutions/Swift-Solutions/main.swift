@@ -13,10 +13,14 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    0,
-    1,
-    2,
-    3,
+//    1,
+//    2,
+//    3,
+//    4,
+    10,
+    12,
+    17,
+//    10,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -29,7 +33,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.countNumbersWithUniqueDigits(x)
+    let ans = sol.stringCount2(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
