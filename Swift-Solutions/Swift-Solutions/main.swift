@@ -13,14 +13,10 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-//    1,
-//    2,
-//    3,
-//    4,
-    10,
-    12,
-    17,
-//    10,
+//    ([1,2,7], [4,5,3]),
+//    ([2,3,4,5,9], [8,8,4,4,4]),
+//    ([1,5,4], [2,5,3]),
+    ([17,13,19,9,6,14], [17,14,15,1,19,19])
 ]
 
 for (i, x) in cases.enumerated() {
@@ -33,7 +29,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.stringCount2(x)
+    let ans = sol.minOperations(x.0, x.1)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

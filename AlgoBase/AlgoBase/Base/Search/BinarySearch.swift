@@ -14,7 +14,7 @@ class BinarySearch {
      * @return the index where it would be if it were inserted in order
      * https://leetcode.com/problems/search-insert-position/description/
     **/
-    static func search(_ nums: [Int], _ target: Int) -> Int {
+    static func searchIndex(_ nums: [Int], _ target: Int) -> Int {
         var l = 0, r = nums.count
         while l < r {
             let m = l + (r - l) / 2
