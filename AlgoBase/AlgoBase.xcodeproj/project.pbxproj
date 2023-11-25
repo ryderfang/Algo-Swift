@@ -13,6 +13,7 @@
 		0D4E52E129604FC9000796BB /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52E029604FC9000796BB /* Polygon.swift */; };
 		0D74F4A82920AE60000E9237 /* Prime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74F4A72920AE60000E9237 /* Prime.swift */; };
 		0D76387A290E2978004CD387 /* ObjExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D763879290E2978004CD387 /* ObjExt.swift */; };
+		0D84DE5D2B064E2200A11A42 /* Combinations+Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D84DE5C2B064E2200A11A42 /* Combinations+Count.swift */; };
 		0D9E9B8C292BCEE7005486CE /* HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8B292BCEE7005486CE /* HelperTests.swift */; };
 		0D9E9BA22930C950005486CE /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9BA12930C950005486CE /* BigInt.swift */; };
 		0DADAC272914007F00C30C0F /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC262914007F00C30C0F /* QuickSort.swift */; };
@@ -73,6 +74,7 @@
 		0D4E52E029604FC9000796BB /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 		0D74F4A72920AE60000E9237 /* Prime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prime.swift; sourceTree = "<group>"; };
 		0D763879290E2978004CD387 /* ObjExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjExt.swift; sourceTree = "<group>"; };
+		0D84DE5C2B064E2200A11A42 /* Combinations+Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combinations+Count.swift"; sourceTree = "<group>"; };
 		0D9E9B8B292BCEE7005486CE /* HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperTests.swift; sourceTree = "<group>"; };
 		0D9E9BA12930C950005486CE /* BigInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigInt.swift; sourceTree = "<group>"; };
 		0DADAC262914007F00C30C0F /* QuickSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				DAFCA43D28FAD91B00CF1DE6 /* Permutations.swift */,
 				DAFCA43E28FAD91B00CF1DE6 /* Combinations.swift */,
 				DAFCA43F28FAD91B00CF1DE6 /* LehmerCode.swift */,
+				0D84DE5C2B064E2200A11A42 /* Combinations+Count.swift */,
 			);
 			path = Combinatorics;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				0DF7953929990B7100893B80 /* DirectedGraph.swift in Sources */,
 				0D76387A290E2978004CD387 /* ObjExt.swift in Sources */,
 				0D4E52552945ECC3000796BB /* DoubleExt.swift in Sources */,
+				0D84DE5D2B064E2200A11A42 /* Combinations+Count.swift in Sources */,
 				0DF7953B29990BA800893B80 /* UndirectedGraph.swift in Sources */,
 				0DB6C8562944946000CBBC67 /* HeapSort.swift in Sources */,
 				0DF7954529A224E100893B80 /* Trie.swift in Sources */,
