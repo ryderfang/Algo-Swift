@@ -33,7 +33,8 @@ public func READNUMS(fname: String = "testcase") -> [[Int]] {
 
 // Globally
 class Solution {
-
+    // lc382
+    var arr: [Int] = []
 }
 
 // lc278
