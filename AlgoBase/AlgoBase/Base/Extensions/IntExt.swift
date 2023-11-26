@@ -130,3 +130,32 @@ extension Int {
         return n > 0 && (n & (n - 1) == 0) && (n - 1) % 3 == 0
     }
 }
+
+// 32 位随机数
+// -> Int.random(in: 0..<n)
+// -> arc4random() % upper_bound
+// -> arc4random_uniform(upper_bound)
+
+// 64 位随机数
+func arc4random<T: ExpressibleByIntegerLiteral> (type: T.Type) -> T {
+    var r: T = 0
+    arc4random_buf(&r, MemoryLayout<T>.size)
+    return r
+}
+
+extension UInt64 {
+    static func random(lower: UInt64 = min, upper: UInt64 = max) -> UInt64 {
+        var m: UInt64
+        let u = upper - lower
+        var r = arc4random(type: UInt64.self)
+        if u > UInt64(Int64.max) {
+            m = 1 + ~u
+        } else {
+            m = ((max - (u * 2)) + 1) % u
+        }
+        while r < m {
+            r = arc4random(type: UInt64.self)
+        }
+        return (r % u) + lower
+    }
+}

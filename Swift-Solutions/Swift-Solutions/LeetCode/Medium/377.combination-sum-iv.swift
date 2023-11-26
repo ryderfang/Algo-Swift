@@ -10,7 +10,7 @@ class Solution {}
 #endif
 extension Solution {
     // Better solution: O(n * target)
-    func combinationSum4(_ nums: [Int], _ target: Int) -> Int {
+    func __combinationSum4(_ nums: [Int], _ target: Int) -> Int {
         var dp = [Int](repeating: 0, count: target + 1)
         let mod = 2147483647
         dp[0] = 1
@@ -23,6 +23,27 @@ extension Solution {
         }
         return dp[target]
     }
+
+    // O(n * target)
+    func combinationSum4(_ nums: [Int], _ target: Int) -> Int {
+        var cache = [Int: Int]()
+        cache[0] = 1
+        func _solve(_ nums: [Int], _ target: Int, _ cache: inout [Int: Int]) -> Int {
+            guard target >= 0 else { return 0 }
+            if let saved = cache[target] {
+                return saved
+            }
+
+            var ret = 0
+            for num in nums {
+                ret += _solve(nums, target - num, &cache)
+            }
+            cache[target] = ret
+            return ret
+        }
+        return _solve(nums, target, &cache)
+    }
+
 
     // 硬算 + 强行优化
     func _combinationSum4(_ nums: [Int], _ target: Int) -> Int {
