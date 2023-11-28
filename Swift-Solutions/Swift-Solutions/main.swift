@@ -13,8 +13,9 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    ([[1,5,9],[10,11,13],[12,13,15]], 8),
-    ([[-5]], 1)
+//    "324",
+//    "[123,[456,[789]]]",
+    "[123,456,[788,799,833],[[]],10,[]]",
 ]
 
 for (i, x) in cases.enumerated() {
@@ -27,8 +28,8 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.kthSmallest(x.0, x.1)
-    print(ans)
+    let ans = sol.deserialize(x)
+    print(ans.getList())
 //    print(ans?.array() ?? [])
 //    print(tmp)
 }

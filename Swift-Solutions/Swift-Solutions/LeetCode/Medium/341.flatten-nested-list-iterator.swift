@@ -8,13 +8,13 @@
 #if !LC_SOLUTION_EXT
 class Solution {}
 #else
-class NestedInteger {
-    public func isInteger() -> Bool { false }
-    public func getInteger() -> Int { 1 }
-    public func setInteger(value: Int) { }
-    public func add(elem: NestedInteger) { }
-    public func getList() -> [NestedInteger] { [] }
-}
+//class NestedInteger {
+//    public func isInteger() -> Bool { false }
+//    public func getInteger() -> Int { 1 }
+//    public func setInteger(value: Int) { }
+//    public func add(elem: NestedInteger) { }
+//    public func getList() -> [NestedInteger] { [] }
+//}
 #endif
 /**
  * // This is the interface that allows for creating nested lists.
