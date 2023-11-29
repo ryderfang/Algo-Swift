@@ -13,9 +13,9 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-//    "324",
-//    "[123,[456,[789]]]",
-    "[123,456,[788,799,833],[[]],10,[]]",
+    13,
+    2,
+    98,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -28,8 +28,8 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.deserialize(x)
-    print(ans.getList())
+    let ans = sol.lexicalOrder(x)
+    print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
 }
