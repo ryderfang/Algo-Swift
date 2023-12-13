@@ -19,8 +19,8 @@ My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with *
 - 🔶 Lv.20 [🥉] "400 easy"
 - 🔷 Lv.30 "AK easy"
 - 🟢 ~~Lv.40 "100 medium"~~ 🎯🎉
-- 🟠 Lv.50 [🥈] "200 medium" 🚶🚶🚶
-- 🔵 Lv.60 "400 medium
+- 🟠 ~~Lv.50 [🥈] "200 medium"~~ 🎯🎉
+- 🔵 Lv.60 "400 medium 🚶🚶🚶
 - 🟣 Lv.70 "600 medium"
 - 🟩 Lv.80 "100 hard"
 - 🟧 Lv.90 [🥇] "200 hard"

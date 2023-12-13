@@ -13,10 +13,11 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    "a",
-    "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext",
-    "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext",
-    "file1.txt\nfile2.txt\nlongfile.txt"
+    3,
+    11,
+    99,
+    100,
+    2147483647,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -29,7 +30,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.lengthLongestPath(x)
+    let ans = sol.findNthDigit(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

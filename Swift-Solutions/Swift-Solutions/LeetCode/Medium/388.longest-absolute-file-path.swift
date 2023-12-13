@@ -36,7 +36,7 @@ extension Solution {
             if !isFile {
                 stack.append((String(tmp), tab))
             } else {
-                var path = (stack.map { $0.0 } + [String(tmp)]).joined(separator: "/")
+                let path = (stack.map { $0.0 } + [String(tmp)]).joined(separator: "/")
                 print(path)
                 ans = max(ans, path.count)
             }

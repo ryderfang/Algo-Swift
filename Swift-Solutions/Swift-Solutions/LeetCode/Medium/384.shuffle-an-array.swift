@@ -13,10 +13,10 @@ class Solution {
 
 // n ~ [1, 50]
 extension Solution {
-    convenience init(_ nums: [Int]) {
-        self.init()
-        self.arr = nums
-    }
+//    convenience init(_ nums: [Int]) {
+//        self.init()
+//        self.arr = nums
+//    }
     
     func reset() -> [Int] {
         return self.arr

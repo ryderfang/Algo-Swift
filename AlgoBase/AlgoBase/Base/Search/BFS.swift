@@ -25,7 +25,7 @@ extension Search {
     }
 
     // 非递归 (队列）
-    public static func bfs(start: Int, n: Int, _ path: [Int: [Int]]) {
+    public static func bfs(start: Int, _ path: [Int: [Int]]) {
         var visited = Set<Int>()
         visited.insert(start)
         var queue: [Int] = [start]
@@ -40,5 +40,21 @@ extension Search {
             }
         }
         print(output)
+    }
+
+    // bfs - Query (start -> end)
+    public static func bfsQuery(start: Int, end: Int, _ path: [Int: [Int]]) -> Bool {
+        guard start != end else { return true }
+        var visited = Set([start])
+        var queue: [Int] = [start]
+        while !queue.isEmpty {
+            let top = queue.removeFirst()
+            for neighbor in path[top, default: []] where !visited.contains(neighbor) {
+                guard neighbor != end else { return true }
+                queue.append(neighbor)
+                visited.insert(neighbor)
+            }
+        }
+        return false
     }
 }

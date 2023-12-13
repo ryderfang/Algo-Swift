@@ -7,7 +7,28 @@
 
 import Foundation
 
-fileprivate class UnionFind {
+fileprivate class UnionFind<T: Hashable> {
+    private var parent: [T: T]
+
+    init() {
+        parent = [T: T]()
+    }
+
+    func find(_ x: T) -> T {
+        if parent[x] != x {
+            parent[x] = find(parent[x] ?? x)
+        }
+        return parent[x, default: x]
+    }
+
+    func merge(_ x: T, _ y: T) {
+        if parent[x] == nil { parent[x] = x }
+        if parent[y] == nil { parent[y] = y }
+        parent[find(x)] = find(y)
+    }
+}
+
+fileprivate class UnionFind1 {
     private var parent: [Int: Int]
 
     init() {

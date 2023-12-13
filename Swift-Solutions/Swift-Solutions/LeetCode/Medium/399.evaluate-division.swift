@@ -9,7 +9,34 @@
 class Solution {}
 #endif
 extension Solution {
+    // Better solution: BFS
     func calcEquation(_ equations: [[String]], _ values: [Double], _ queries: [[String]]) -> [Double] {
+        let graph = zip(equations,values).reduce(into: [String: [String: Double]]()) { graph, tuple in
+            let (v0, v1, weight) = (tuple.0[0], tuple.0[1], tuple.1)
+            graph[v0, default:[:]][v1] = weight
+            graph[v1, default:[:]][v0] = 1.0 / weight
+        }
+
+        func bfs(_ query:[String]) -> Double {
+            let (start, end) = (query[0], query[1])
+            guard graph[start] != nil, graph[end] != nil else { return -1.0 }
+            guard start != end else { return 1.0 }
+            var q = [(start, 1.0)], visited = Set([start])
+            while !q.isEmpty {
+                let (node, weight) = q.removeFirst()
+                for (adjacentNode, adjacentWeight) in graph[node]! where !visited.contains(adjacentNode) {
+                    guard adjacentNode != end else { return weight * adjacentWeight }
+                    q.append((adjacentNode, weight * adjacentWeight))
+                    visited.insert(adjacentNode)
+                }
+            }
+            return -1.0
+        }
+
+        return queries.map(bfs)
+    }
+
+    func calcEquation1(_ equations: [[String]], _ values: [Double], _ queries: [[String]]) -> [Double] {
         func _solve(_ u: Int, _ v: Int, _ visited: inout Set<Int>, _ path: [[(Bool, Double, Double)]]) -> (Bool, Double, Double) {
             visited.insert(u)
             var ans = path[u][v]

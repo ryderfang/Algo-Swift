@@ -35,6 +35,8 @@ public func READNUMS(fname: String = "testcase") -> [[Int]] {
 class Solution {
     // lc382
     var arr: [Int] = []
+    // lc398
+    var mp: [Int: [Int]] = [:]
 }
 
 // lc278
