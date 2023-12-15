@@ -138,13 +138,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D4E52D12955DB55000796BB /* Geometry */ = {
+		0D0222032B2C4DA700AF5C1C /* 5.Number-Theory */ = {
+			isa = PBXGroup;
+			children = (
+				DAFCA43428FAD91B00CF1DE6 /* NumberTheory.swift */,
+			);
+			path = "5.Number-Theory";
+			sourceTree = "<group>";
+		};
+		0D0222042B2C4F0200AF5C1C /* 8.Classic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 8.Classic;
+			sourceTree = "<group>";
+		};
+		0D0222052B2C4F3000AF5C1C /* 4.Baisc-Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				DAFCA43528FAD91B00CF1DE6 /* Search */,
+				0D763870290C1AE7004CD387 /* Sort */,
+			);
+			path = "4.Baisc-Algorithm";
+			sourceTree = "<group>";
+		};
+		0D4E52D12955DB55000796BB /* 1.Geometry */ = {
 			isa = PBXGroup;
 			children = (
 				0D4E52D22955DB89000796BB /* Geometry.swift */,
 				0D4E52E029604FC9000796BB /* Polygon.swift */,
 			);
-			path = Geometry;
+			path = 1.Geometry;
 			sourceTree = "<group>";
 		};
 		0D763870290C1AE7004CD387 /* Sort */ = {
@@ -186,13 +210,13 @@
 			path = Advanced;
 			sourceTree = "<group>";
 		};
-		0DF7953729990B2800893B80 /* Graph */ = {
+		0DF7953729990B2800893B80 /* 7.Graph-Theory */ = {
 			isa = PBXGroup;
 			children = (
 				0DF7953829990B7100893B80 /* DirectedGraph.swift */,
 				0DF7953A29990BA800893B80 /* UndirectedGraph.swift */,
 			);
-			path = Graph;
+			path = "7.Graph-Theory";
 			sourceTree = "<group>";
 		};
 		DAFCA40828FAD8D700CF1DE6 = {
@@ -220,6 +244,7 @@
 				DAFCA41528FAD8D700CF1DE6 /* AlgoBase.h */,
 				DAFCA42E28FAD91B00CF1DE6 /* Base */,
 				DAFCA42C28FAD91B00CF1DE6 /* Books */,
+				DAFCA42F28FAD91B00CF1DE6 /* Extensions */,
 			);
 			path = AlgoBase;
 			sourceTree = "<group>";
@@ -247,14 +272,14 @@
 			isa = PBXGroup;
 			children = (
 				DAFCA43728FAD91B00CF1DE6 /* _Macro.swift */,
-				DAFCA43C28FAD91B00CF1DE6 /* Combinatorics */,
-				DAFCA42F28FAD91B00CF1DE6 /* Extensions */,
-				0D4E52D12955DB55000796BB /* Geometry */,
-				0DF7953729990B2800893B80 /* Graph */,
-				DAFCA43328FAD91B00CF1DE6 /* Math */,
-				DAFCA43528FAD91B00CF1DE6 /* Search */,
-				0D763870290C1AE7004CD387 /* Sort */,
-				DAFCA43828FAD91B00CF1DE6 /* Structures */,
+				0D4E52D12955DB55000796BB /* 1.Geometry */,
+				DAFCA43C28FAD91B00CF1DE6 /* 2.Combinatorics */,
+				DAFCA43828FAD91B00CF1DE6 /* 3.Data-Structures */,
+				0D0222052B2C4F3000AF5C1C /* 4.Baisc-Algorithm */,
+				0D0222032B2C4DA700AF5C1C /* 5.Number-Theory */,
+				DAFCA43328FAD91B00CF1DE6 /* 6.Math */,
+				0DF7953729990B2800893B80 /* 7.Graph-Theory */,
+				0D0222042B2C4F0200AF5C1C /* 8.Classic */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -272,15 +297,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		DAFCA43328FAD91B00CF1DE6 /* Math */ = {
+		DAFCA43328FAD91B00CF1DE6 /* 6.Math */ = {
 			isa = PBXGroup;
 			children = (
 				0D9E9BA12930C950005486CE /* BigInt.swift */,
-				DAFCA43428FAD91B00CF1DE6 /* NumberTheory.swift */,
 				0D74F4A72920AE60000E9237 /* Prime.swift */,
 				0DDF443C2AE8025F0053E862 /* String+BigInt.swift */,
 			);
-			path = Math;
+			path = 6.Math;
 			sourceTree = "<group>";
 		};
 		DAFCA43528FAD91B00CF1DE6 /* Search */ = {
@@ -293,16 +317,16 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		DAFCA43828FAD91B00CF1DE6 /* Structures */ = {
+		DAFCA43828FAD91B00CF1DE6 /* 3.Data-Structures */ = {
 			isa = PBXGroup;
 			children = (
 				0DDF44452AE8DBEB0053E862 /* Advanced */,
 				0DDF44442AE8DBB30053E862 /* Primary */,
 			);
-			path = Structures;
+			path = "3.Data-Structures";
 			sourceTree = "<group>";
 		};
-		DAFCA43C28FAD91B00CF1DE6 /* Combinatorics */ = {
+		DAFCA43C28FAD91B00CF1DE6 /* 2.Combinatorics */ = {
 			isa = PBXGroup;
 			children = (
 				DAFCA43D28FAD91B00CF1DE6 /* Permutations.swift */,
@@ -310,7 +334,7 @@
 				DAFCA43F28FAD91B00CF1DE6 /* LehmerCode.swift */,
 				0D84DE5C2B064E2200A11A42 /* Combinations+Count.swift */,
 			);
-			path = Combinatorics;
+			path = 2.Combinatorics;
 			sourceTree = "<group>";
 		};
 		DAFCA44028FAD91C00CF1DE6 /* Support Files */ = {

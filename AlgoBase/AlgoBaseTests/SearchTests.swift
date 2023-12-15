@@ -33,7 +33,7 @@ final class SearchTests: XCTestCase {
     }
 
     func testBFS2() {
-        Search.bfs(start: 1, n: n, path)
+        Search.bfs(start: 1, path)
     }
 
     func testDFS() {
@@ -53,9 +53,9 @@ final class SearchTests: XCTestCase {
     }
 
     func testBinarySearch() {
-        XCTAssertEqual(BinarySearch.search([5], 5), 0)
-        XCTAssertEqual(BinarySearch.search([5], 4), 0)
-        XCTAssertEqual(BinarySearch.search([-1,0,3,5,9,12], 2), 2)
+        XCTAssertEqual(BinarySearch.searchIndex([5], 5), 0)
+        XCTAssertEqual(BinarySearch.searchIndex([5], 4), 0)
+        XCTAssertEqual(BinarySearch.searchIndex([-1,0,3,5,9,12], 2), 2)
         XCTAssertEqual(BinarySearch.find([-1,0,3,5,9,12], 2), -1)
         XCTAssertEqual(BinarySearch.find([5], 4), -1)
         XCTAssertEqual(BinarySearch.find2([5], 5), 0)
