@@ -13,6 +13,7 @@ extension Search {
         print("#\(depth)# \(nodes)")
         var next = [Int]()
         for x in nodes {
+            guard visited[x] == 0 else { continue }
             visited[x] = 1
             for neighbor in path[x, default: []] {
                 guard visited[neighbor] == 0 else { continue }
