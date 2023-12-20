@@ -13,14 +13,15 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    3,
-    11,
-    99,
-    100,
-    2147483647,
+    (0.01,-73839.1,-3289891.3),
+    (0.01,-73839.1,-3289891.3),
+    (0.01,-73839.1,-3289891.3),
+    (0.01,-73839.1,-3289891.3),
+    // -73839.10480,-3289891.29666
 ]
 
-for (i, x) in cases.enumerated() {
+//for (i, x) in cases.enumerated() {
+for i in 0..<100 {
     print("--- <\(i+1)> ---")
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
@@ -30,7 +31,8 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.findNthDigit(x)
+    let sol2 = Solution(0.01,-73839.1,-3289891.3)
+    let ans = sol2.randPoint()
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

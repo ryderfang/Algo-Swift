@@ -37,6 +37,8 @@ class Solution {
     var arr: [Int] = []
     // lc398
     var mp: [Int: [Int]] = [:]
+    // lc478
+    var (r, x0, y0) = (0.0, 0.0, 0.0)
 }
 
 // lc278

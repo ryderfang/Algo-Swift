@@ -9,6 +9,7 @@
 class Solution {}
 #endif
 extension Solution {
+    // Better solution: 多点共线，斜率相同
     func checkStraightLine(_ coordinates: [[Int]]) -> Bool {
         let n = coordinates.count
         guard n > 2 else { return true }
