@@ -46,7 +46,8 @@ class Geometry {
 }
 
 extension Geometry {
-    struct Point {
+    // make it internal hashable
+    struct Point: Hashable {
         public var x: Double
         public var y: Double
 
