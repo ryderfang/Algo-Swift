@@ -13,15 +13,13 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    (0.01,-73839.1,-3289891.3),
-    (0.01,-73839.1,-3289891.3),
-    (0.01,-73839.1,-3289891.3),
-    (0.01,-73839.1,-3289891.3),
-    // -73839.10480,-3289891.29666
+    [[1,2],[2,1],[1,0],[0,1]],
+    [[0,1],[2,1],[1,1],[1,0],[2,0]],
+    [[0,3],[1,2],[3,1],[1,3],[2,1]],
+    [[3,1],[1,1],[0,1],[2,1],[3,3],[3,2],[0,2],[2,3]]
 ]
 
-//for (i, x) in cases.enumerated() {
-for i in 0..<100 {
+for (i, x) in cases.enumerated() {
     print("--- <\(i+1)> ---")
 //    ClassHandler.test(ops: x.0, datas: x.1)
 
@@ -31,8 +29,7 @@ for i in 0..<100 {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let sol2 = Solution(0.01,-73839.1,-3289891.3)
-    let ans = sol2.randPoint()
+    let ans = sol.minAreaFreeRect(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

@@ -11,6 +11,7 @@ import Foundation
 class Geometry {
     static var eps: Double = 1e-8
     /* 向量叉乘/外积(cross product) -> 是一个向量（右手法则），计算的是它的模 (三维向量的 z 轴长)
+     * 平等四边形（垂直 = 矩形）面积
      2D: a x b = |a| * |b| * sin(α) = x1 * y2 - x2 * y1 = (0, 0, x1 * y2 - x2 * y1)
      3D: a x b = (y1 * z2 - z1 * y2, z1 * x2 - x1 * z2, x1 * y2 - y1 * x2)
      * < 0 b 在 a 的顺时针方向
@@ -48,17 +49,22 @@ class Geometry {
 extension Geometry {
     // make it internal hashable
     struct Point: Hashable {
-        public var x: Double
-        public var y: Double
+        var x: Int
+        var y: Int
 
         init(_ i: Int, _ j: Int ) {
-            self.x = Double(i)
-            self.y = Double(j)
+            (x, y) = (i, j)
+        }
+
+        init(_ p: [Int]) {
+            x = p[0]
+            y = p[1]
         }
     }
+
     struct Line {
-        public var a: Point
-        public var b: Point
+        var a: Point
+        var b: Point
     }
 }
 
@@ -88,6 +94,16 @@ extension Geometry {
         !(zero(x - x2) && zero(y - y2))
     }
 
+    // 直线平行
+    static func parallel(_ u1: [Int], _ u2: [Int], _ v1: [Int], _ v2: [Int]) -> Bool {
+        (u1[0] - u2[0]) * (v1[1] - v2[1]) == (v1[0] - v2[0]) * (u1[1] - u2[1])
+    }
+
+    // 直线垂直
+    static func perpendicular(_ u1: [Int], _ u2: [Int], _ v1: [Int], _ v2: [Int]) -> Bool {
+        (u1[0] - u2[0]) * (v1[0] - v2[0]) + (u1[1] - u2[1]) * (v1[1] - v2[1]) == 0
+    }
+
     /* 两点直线函数：y = k * x + b
      * @return (k, b)
      * 可以使用 "\(k)-\(b)" 作为 hash key 标识一条直线
@@ -108,14 +124,25 @@ extension Geometry {
     static func triArea(_ x0: Double, _ y0: Double, _ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double) -> Double {
         fabs(xmult(x0, y0, x1, y1, x2, y2)) / 2.0
     }
+
     // 三角形面积：输入三条边（海伦公式）
     static func triArea(_ a: Double, _ b: Double, _ c: Double) -> Double {
         let p = (a + b + c) / 2
         return sqrt(p * (p - a) * (p - b) * (p - c))
     }
+
+    // 矩形面积：输入相邻三个点, p0->p1 垂直 p0->p2
+    static func rectArea(_ p0: [Int], _ p1: [Int], _ p2: [Int]) -> Int {
+        abs(xmult(p0, p1, p2))
+    }
+
+    // Forth point of a rect, p0->p1 垂直 p0->p2
+    static func forthPointOfRect(_ p0: [Int], _ p1: [Int], _ p2: [Int]) -> [Int] {
+        [p1[0] + p2[0] - p0[0], p1[1] + p2[1] - p0[1]]
+    }
 }
 
-// MARK: 三维
+// MARK: 三
 extension Geometry {
 
 }
