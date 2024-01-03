@@ -11,7 +11,7 @@ class Solution {}
 extension Solution {
     func largestDivisibleSubset(_ nums: [Int]) -> [Int] {
         let n = nums.count
-        var sorted = nums.sorted(by: <)
+        let sorted = nums.sorted(by: <)
         var dp = [[Int]](repeating: [Int](), count: n)
         dp[0] = [sorted[0]]
         var cnt = 1
