@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D02220F2B32B8A400AF5C1C /* GeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D02220E2B32B8A400AF5C1C /* GeometryTests.swift */; };
+		0D0222292B3EC57D00AF5C1C /* Geometry-Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0222282B3EC57C00AF5C1C /* Geometry-Int.swift */; };
 		0D4E52552945ECC3000796BB /* DoubleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52542945ECC3000796BB /* DoubleExt.swift */; };
 		0D4E526E2948AC54000796BB /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E526D2948AC54000796BB /* Node.swift */; };
 		0D4E52D32955DB89000796BB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52D22955DB89000796BB /* Geometry.swift */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		0D02220E2B32B8A400AF5C1C /* GeometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryTests.swift; sourceTree = "<group>"; };
+		0D0222282B3EC57C00AF5C1C /* Geometry-Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Geometry-Int.swift"; sourceTree = "<group>"; };
 		0D4E52542945ECC3000796BB /* DoubleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExt.swift; sourceTree = "<group>"; };
 		0D4E526D2948AC54000796BB /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		0D4E52D22955DB89000796BB /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		0D4E52D12955DB55000796BB /* 1.Geometry */ = {
 			isa = PBXGroup;
 			children = (
+				0D0222282B3EC57C00AF5C1C /* Geometry-Int.swift */,
 				0D4E52D22955DB89000796BB /* Geometry.swift */,
 				0D4E52E029604FC9000796BB /* Polygon.swift */,
 			);
@@ -470,6 +473,7 @@
 				DAFCA44828FAD91C00CF1DE6 /* _Macro.swift in Sources */,
 				0DB6C7E529331CE500CBBC67 /* ArrayExt.swift in Sources */,
 				DAFCA44728FAD91C00CF1DE6 /* BinarySearch.swift in Sources */,
+				0D0222292B3EC57D00AF5C1C /* Geometry-Int.swift in Sources */,
 				0D74F4A82920AE60000E9237 /* Prime.swift in Sources */,
 				DAFCA44928FAD91C00CF1DE6 /* Stack.swift in Sources */,
 				DAFCA44228FAD91C00CF1DE6 /* Primer.swift in Sources */,
