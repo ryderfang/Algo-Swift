@@ -57,6 +57,7 @@ extension Solution {
             }
             t *= delta
         }
+        print(p0)
         return ans
     }
 
@@ -94,6 +95,7 @@ extension Solution {
             }
             ans = tmp
         }
+        print(p0)
         return ans
     }
 }

@@ -7,38 +7,26 @@
 
 import Foundation
 
+typealias PointI = Geometry._Point<Int>
+typealias Point = Geometry._Point<Double>
+typealias LineI = Geometry._Line<Int>
+typealias Line = Geometry._Line<Double>
 // 计算几何 (Double)
 class Geometry {
-    static var eps: Double = 1e-8
+    let eps: Double = 1e-8
 
-    // (p0 -> p1) X (p0 -> p2)
-    static func xmult(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double, _ x0: Double, _ y0: Double) -> Double {
-        (x1 - x0) * (y2 - y0) - (x2 - x0) * (y1 - y0)
-    }
-
-    // (p0 -> p1) ⦁ (p0 -> p2)
-    static func dmult(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double, _ x0: Double, _ y0: Double) -> Double {
-        (x1 - x0) * (x2 - x0) + (y1 - y0) * (y2 - y0)
-    }
-
-    static func zero(_ x: Double) -> Bool {
-        fabs(x) < eps
-    }
-}
-
-fileprivate extension Geometry {
     // make it internal hashable
-    struct Point: Hashable {
-        var x: Double
-        var y: Double
-        init(_ i: Int = 0, _ j: Int = 0) { (x, y) = (Double(i), Double(j)) }
-        init(_ p: [Double]) { (x, y) = (p[0], p[1]) }
+    struct _Point<T: Hashable>: Hashable {
+        var x: T
+        var y: T
+        init(_ p: [T]) { (x, y) = (p[0], p[1]) }
+        init(_ a: T, _ b: T) { (x, y) = (a, b) }
     }
 
-    struct Line {
-        var a: Point
-        var b: Point
-        init(_ p0: Point, _ p1: Point) { (a, b) = (p0, p1) }
+    struct _Line<T: Hashable> {
+        var a: _Point<T>
+        var b: _Point<T>
+        init(_ p0: _Point<T>, _ p1: _Point<T>) { (a, b) = (p0, p1) }
     }
 
     struct Circle {
@@ -46,88 +34,111 @@ fileprivate extension Geometry {
         var r: Double
         init(_ p0: Point, _ r0: Double) { (p, r) = (p0, r0) }
     }
+
+    // (p0 -> p1) X (p0 -> p2)
+    func xmult(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double, _ x0: Double, _ y0: Double) -> Double {
+        (x1 - x0) * (y2 - y0) - (x2 - x0) * (y1 - y0)
+    }
+
+    // (p0 -> p1) ⦁ (p0 -> p2)
+    func dmult(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double, _ x0: Double, _ y0: Double) -> Double {
+        (x1 - x0) * (x2 - x0) + (y1 - y0) * (y2 - y0)
+    }
+
+    func zero(_ x: Double) -> Bool {
+        fabs(x) < eps
+    }
+}
+
+// MARK: Default init
+extension Geometry._Point where T == Double {
+    init(_ p: [Int]) { (x, y) = (Double(p[0]), Double(p[1])) }
+    init() { (x, y) = (0.0, 0.0) }
+}
+extension Geometry._Line where T == Double {
+    init() { (a, b) = (Point(), Point()) }
 }
 
 // MARK: 直线/线段
-fileprivate extension Geometry {
+extension Geometry {
     // (p0 -> p1) X (p0 -> p2)
-    static func xmult(_ p1: Point, _ p2: Point, _ p0: Point) -> Double {
+    func xmult(_ p1: Point, _ p2: Point, _ p0: Point) -> Double {
         (p1.x - p0.x) * (p2.y - p0.y) - (p2.x - p0.x) * (p1.y - p0.y)
     }
 
     // (p0 -> p1) ⦁ (p0 -> p2)
-    static func dmult(_ p1: Point, _ p2: Point, _ p0: Point) -> Double {
+    func dmult(_ p1: Point, _ p2: Point, _ p0: Point) -> Double {
         (p1.x - p0.x) * (p2.x - p0.x) + (p1.y - p0.y) * (p2.y - p0.y)
     }
 
     // 两点距离
-    static func distance(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double) -> Double {
+    func distance(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double) -> Double {
         sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
     }
-    static func distance(_ p1: Point, _ p2: Point) -> Double {
+    func distance(_ p1: Point, _ p2: Point) -> Double {
         sqrt((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y))
     }
 
     // 三点共线
-    static func dotsInLine(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double, _ x3: Double, _ y3: Double) -> Bool {
+    func dotsInLine(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double, _ x3: Double, _ y3: Double) -> Bool {
         zero(xmult(x1, y1, x2, y2, x3, y3))
     }
-    static func dotsInLine(_ p1: Point, _ p2: Point, _ p3: Point) -> Bool {
+    func dotsInLine(_ p1: Point, _ p2: Point, _ p3: Point) -> Bool {
         zero(xmult(p1, p2, p3))
     }
 
     // 点在线段上（含端点)
     // (x1 - x) * (x2 - x) <= eps 判断在线段内
-    static func dotOnLine(_ x: Double, _ y: Double, _ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double) -> Bool {
+    func dotOnLine(_ x: Double, _ y: Double, _ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double) -> Bool {
         zero(xmult(x, y, x1, y1, x2, y2)) &&
         ((x1 - x) * (x2 - x) < eps) &&
         ((y1 - y) * (y2 - y) < eps)
     }
-    static func dotOnLine(_ p: Point, _ l: Line) -> Bool {
+    func dotOnLine(_ p: Point, _ l: Line) -> Bool {
         zero(xmult(p, l.a, l.b)) &&
         ((l.a.x - p.x) * (l.b.x - p.x) < eps) &&
         ((l.a.y - p.y) * (l.b.y - p.y) < eps)
     }
     // 点在线段上（不含端点）
-    static func dotOnLineEx(_ x: Double, _ y: Double, _ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double) -> Bool {
+    func dotOnLineEx(_ x: Double, _ y: Double, _ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double) -> Bool {
         dotOnLine(x, y, x1, y1, x2, y2) &&
         (!zero(x - x1) || !zero(y - y1)) &&
         (!zero(x - x2) || !zero(y - y2))
     }
-    static func dotOnLineEx(_ p: Point, _ l: Line) -> Bool {
+    func dotOnLineEx(_ p: Point, _ l: Line) -> Bool {
         dotOnLine(p, l) &&
         (!zero(p.x - l.a.x) || !zero(p.y - l.a.y)) &&
         (!zero(p.x - l.b.x) || !zero(p.y - l.b.y))
     }
 
     // 两点在线段同侧
-    static func pointSameSideOfLine(_ p1: Point, _ p2: Point, _ line: Line) -> Bool {
+    func pointSameSideOfLine(_ p1: Point, _ p2: Point, _ line: Line) -> Bool {
         xmult(line.a, p1, line.b) * xmult(line.a, p2, line.b) > 0
     }
     // 两点在线段异侧
-    static func pointOppositeSideOfLine(_ p1: Point, _ p2: Point, _ line: Line) -> Bool {
+    func pointOppositeSideOfLine(_ p1: Point, _ p2: Point, _ line: Line) -> Bool {
         xmult(line.a, p1, line.b) * xmult(line.a, p2, line.b) < 0
     }
 
     // 直线平行
     // -> 直线不平行就是相交
-    static func parallel(_ u: Line, _ v: Line) -> Bool {
+    func parallel(_ u: Line, _ v: Line) -> Bool {
         zero((u.a.x - u.b.x) * (v.a.y - v.b.y) - (v.a.x - v.b.x) * (u.a.y - u.b.y))
     }
     // 直线垂直
-    static func perpendicular(_ u: Line, _ v: Line) -> Bool {
+    func perpendicular(_ u: Line, _ v: Line) -> Bool {
         zero((u.a.x - u.b.x) * (v.a.x - v.b.x) + (u.a.y - u.b.y) * (v.a.y - v.b.y))
     }
 
     // 线段相交 (含端点和部分重合)
-    static func lineIntersect(_ u: Line, _ v: Line) -> Bool {
+    func lineIntersect(_ u: Line, _ v: Line) -> Bool {
         if !dotsInLine(u.a, u.b, v.a) || !dotsInLine(u.a, u.b, v.b) {
             return !pointSameSideOfLine(u.a, u.b, v) && !pointSameSideOfLine(v.a, v.b, u)
         }
         return dotOnLine(u.a, v) || dotOnLine(u.b, v) || dotOnLine(v.a, u) || dotOnLine(v.b, u)
     }
     // 线段相关 (不含端点和部分重合)
-    static func lineIntersectEx(_ u: Line, _ v: Line) -> Bool {
+    func lineIntersectEx(_ u: Line, _ v: Line) -> Bool {
         pointOppositeSideOfLine(u.a, u.b, v) && pointOppositeSideOfLine(v.a, v.b, u)
     }
 
@@ -137,7 +148,7 @@ fileprivate extension Geometry {
     // 线段：相交
     assert(lineIntersect(u, v))
     */
-    static func intersection(_ u: Line, _ v: Line) -> Point {
+    func intersection(_ u: Line, _ v: Line) -> Point {
         var ret = u.a
         let t = ((u.a.x - v.a.x) * (v.a.y - v.b.y) - (u.a.y - v.a.y) * (v.a.x - v.b.x)) /
                 ((u.a.x - u.b.x) * (v.a.y - v.b.y) - (u.a.y - u.b.y) * (v.a.x - v.b.x))
@@ -147,19 +158,19 @@ fileprivate extension Geometry {
     }
 
     // 点到直线最近点（垂点）
-    static func pointToLine(_ p: Point, _ l: Line) -> Point {
+    func pointToLine(_ p: Point, _ l: Line) -> Point {
         var t = p
         t.x += l.a.y - l.b.y
         t.y += l.b.x - l.a.x
         return intersection(Line(p, t), l)
     }
     // 点到直线距离
-    static func distancePointToLine(_ p: Point, _ l: Line) -> Double {
+    func distancePointToLine(_ p: Point, _ l: Line) -> Double {
         fabs(xmult(p, l.a, l.b)) / distance(l.a, l.b)
     }
 
     // 点到线段最近点（垂点/端点）
-    static func pointToSegment(_ p: Point, _ l: Line) -> Point {
+    func pointToSegment(_ p: Point, _ l: Line) -> Point {
         var t = p
         t.x += l.a.y - l.b.y
         t.y += l.b.x - l.a.x
@@ -169,7 +180,7 @@ fileprivate extension Geometry {
         return intersection(Line(p, t), l)
     }
     // 点到线段距离
-    static func distancePointToSegment(_ p: Point, _ l: Line) -> Double {
+    func distancePointToSegment(_ p: Point, _ l: Line) -> Double {
         var t = p
         t.x += l.a.y - l.b.y
         t.y += l.b.x - l.a.x
@@ -185,7 +196,7 @@ fileprivate extension Geometry {
      * 可以使用 "\(k)-\(b)" 作为 hash key 标识一条直线
      * 或者 hashable struct Point, 或者 [Int] 作为 key
      **/
-    static func lineOfDots(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double) -> (Double, Double) {
+    func lineOfDots(_ x1: Double, _ y1: Double, _ x2: Double, _ y2: Double) -> (Double, Double) {
         var k, b: Double
         if fabs(x1 - x2) < eps {
             k = Double(Int.max)
@@ -199,14 +210,14 @@ fileprivate extension Geometry {
 }
 
 // MARK: 圆
-fileprivate extension Geometry {
+extension Geometry {
     // 判断直线与圆相交（包括相切）
-    static func intersectLineWithCircle(_ c: Circle, _ l: Line) -> Bool {
+    func intersectLineWithCircle(_ c: Circle, _ l: Line) -> Bool {
         distancePointToLine(c.p, l) < c.r + eps
     }
 
     // 判断线段与圆相交（包括端点与相切）
-    static func intersectSegWithCircle(_ c: Circle, _ l: Line) -> Bool {
+    func intersectSegWithCircle(_ c: Circle, _ l: Line) -> Bool {
         let t1 = distance(c.p, l.a) - c.r
         let t2 = distance(c.p, l.b) - c.r
         if t1 < eps || t2 < eps {
@@ -220,13 +231,13 @@ fileprivate extension Geometry {
     }
 
     // 圆与圆相交
-    static func intersectTwoCircle(_ c1: Circle, _ c2: Circle) -> Bool {
+    func intersectTwoCircle(_ c1: Circle, _ c2: Circle) -> Bool {
         distance(c1.p, c2.p) < c1.r + c2.r + eps &&
         distance(c1.p, c2.p) > fabs(c1.r - c2.r) - eps
     }
 
     // 圆上到点 p 的最近点（p 是圆心则直接返回）
-    static func pointToCircle(_ p: Point, _ c: Circle) -> Point {
+    func pointToCircle(_ p: Point, _ c: Circle) -> Point {
         let dist = distance(p, c.p)
         guard dist >= eps else { return p }
         var (u, v) = (Point(), Point())
@@ -240,7 +251,7 @@ fileprivate extension Geometry {
 
     // 直线与圆的交点
     // 计算线段与圆的交点，可以先调用该方法，再判断结果是否在线段上
-    static func intersectLineWithCircle(_ c: Circle, _ l: Line) -> (Point, Point) {
+    func intersectLineWithCircle(_ c: Circle, _ l: Line) -> (Point, Point) {
         var p = c.p
         p.x += l.a.y - l.b.y
         p.y += l.b.x - l.a.x
@@ -256,7 +267,7 @@ fileprivate extension Geometry {
 
     // 圆与圆的交点
     // 相交： assert(intersectTwoCircle(c1, c2) 且圆心不重合：distance(c1.p, c2.p) > eps
-    static func intersectTwoCircle(_ c1: Circle, _ c2: Circle) -> (Point, Point) {
+    func intersectTwoCircle(_ c1: Circle, _ c2: Circle) -> (Point, Point) {
         var (u, v) = (Point(), Point())
         let dist = distance(c1.p, c2.p)
         assert(dist > eps)

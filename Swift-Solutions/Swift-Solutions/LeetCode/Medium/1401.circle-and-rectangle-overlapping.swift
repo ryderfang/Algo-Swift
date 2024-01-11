@@ -15,7 +15,7 @@ extension Solution {
         let rectH = Double(y2 - y1)
         let rectX = Double(x1 + x2) / 2
         let rectY = Double(y1 + y2) / 2
-        
+
         // distance between circle center and rectangle center
         let dx = fabs(Double(xCenter) - rectX)
         let dy = fabs(Double(yCenter) - rectY)

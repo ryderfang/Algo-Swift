@@ -63,8 +63,8 @@ extension Solution {
                 }
             }
             ans = max(ans, tmp)
-        return ans
         }
+        return ans
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D02220F2B32B8A400AF5C1C /* GeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D02220E2B32B8A400AF5C1C /* GeometryTests.swift */; };
 		0D0222292B3EC57D00AF5C1C /* Geometry-Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0222282B3EC57C00AF5C1C /* Geometry-Int.swift */; };
+		0D0222332B456A6E00AF5C1C /* ConvexHull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0222322B456A6E00AF5C1C /* ConvexHull.swift */; };
 		0D4E52552945ECC3000796BB /* DoubleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52542945ECC3000796BB /* DoubleExt.swift */; };
 		0D4E526E2948AC54000796BB /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E526D2948AC54000796BB /* Node.swift */; };
 		0D4E52D32955DB89000796BB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E52D22955DB89000796BB /* Geometry.swift */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		0D02220E2B32B8A400AF5C1C /* GeometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryTests.swift; sourceTree = "<group>"; };
 		0D0222282B3EC57C00AF5C1C /* Geometry-Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Geometry-Int.swift"; sourceTree = "<group>"; };
+		0D0222322B456A6E00AF5C1C /* ConvexHull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvexHull.swift; sourceTree = "<group>"; };
 		0D4E52542945ECC3000796BB /* DoubleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExt.swift; sourceTree = "<group>"; };
 		0D4E526D2948AC54000796BB /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		0D4E52D22955DB89000796BB /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
@@ -150,13 +152,6 @@
 			path = "5.Number-Theory";
 			sourceTree = "<group>";
 		};
-		0D0222042B2C4F0200AF5C1C /* 8.Classic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = 8.Classic;
-			sourceTree = "<group>";
-		};
 		0D0222052B2C4F3000AF5C1C /* 4.Baisc-Algorithm */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,9 +161,17 @@
 			path = "4.Baisc-Algorithm";
 			sourceTree = "<group>";
 		};
+		0D46A7B92B47A3BE00D9A402 /* 8.Classic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 8.Classic;
+			sourceTree = "<group>";
+		};
 		0D4E52D12955DB55000796BB /* 1.Geometry */ = {
 			isa = PBXGroup;
 			children = (
+				0D0222322B456A6E00AF5C1C /* ConvexHull.swift */,
 				0D0222282B3EC57C00AF5C1C /* Geometry-Int.swift */,
 				0D4E52D22955DB89000796BB /* Geometry.swift */,
 				0D4E52E029604FC9000796BB /* Polygon.swift */,
@@ -285,7 +288,7 @@
 				0D0222032B2C4DA700AF5C1C /* 5.Number-Theory */,
 				DAFCA43328FAD91B00CF1DE6 /* 6.Math */,
 				0DF7953729990B2800893B80 /* 7.Graph-Theory */,
-				0D0222042B2C4F0200AF5C1C /* 8.Classic */,
+				0D46A7B92B47A3BE00D9A402 /* 8.Classic */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				DAFCA44628FAD91C00CF1DE6 /* NumberTheory.swift in Sources */,
 				0DB6C84E2944922300CBBC67 /* ShellSort.swift in Sources */,
 				DAFCA44828FAD91C00CF1DE6 /* _Macro.swift in Sources */,
+				0D0222332B456A6E00AF5C1C /* ConvexHull.swift in Sources */,
 				0DB6C7E529331CE500CBBC67 /* ArrayExt.swift in Sources */,
 				DAFCA44728FAD91C00CF1DE6 /* BinarySearch.swift in Sources */,
 				0D0222292B3EC57D00AF5C1C /* Geometry-Int.swift in Sources */,
