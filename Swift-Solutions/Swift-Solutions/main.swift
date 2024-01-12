@@ -13,7 +13,13 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    [[3, 3], [9, 1], [5, 7]],
+    [2,1,1,2], // t
+    [1,2,3,4], // f
+    [1,1,1,2,1], // t
+    [3,3,4,2,2], // f
+    [1,1,2,1,1], // t
+    [1,1,2,2,1,1], // t
+    [3,3,3,2,1,1], // f
 ]
 
 for (i, x) in cases.enumerated() {
@@ -26,8 +32,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.getMinDistSum(x, 1e-11)
-    print(sol.getMinDistSum2(x, 1e-10))
+    let ans = sol.isSelfCrossing(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

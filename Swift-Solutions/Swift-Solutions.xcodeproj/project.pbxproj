@@ -48,6 +48,7 @@
 		0D46A7BF2B4F97EE00D9A402 /* 1515.best-position-for-a-service-centre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46A7BB2B4F97EE00D9A402 /* 1515.best-position-for-a-service-centre.swift */; };
 		0D46A7C02B4F97EE00D9A402 /* 1453.maximum-number-of-darts-inside-of-a-circular-dartboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46A7BC2B4F97EE00D9A402 /* 1453.maximum-number-of-darts-inside-of-a-circular-dartboard.swift */; };
 		0D46A7C12B4F97EE00D9A402 /* 1610.maximum-number-of-visible-points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46A7BD2B4F97EE00D9A402 /* 1610.maximum-number-of-visible-points.swift */; };
+		0D46A7C32B4FB09800D9A402 /* 335.self-crossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46A7C22B4FB09800D9A402 /* 335.self-crossing.swift */; };
 		0D4C2AC12923B40500E73722 /* 7.reverse-integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C2AC02923B40500E73722 /* 7.reverse-integer.swift */; };
 		0D4C2AC32923BCF700E73722 /* 8.string-to-integer-atoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C2AC22923BCF700E73722 /* 8.string-to-integer-atoi.swift */; };
 		0D4C2AC52923C76D00E73722 /* 11.container-with-most-water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C2AC42923C76D00E73722 /* 11.container-with-most-water.swift */; };
@@ -508,6 +509,7 @@
 		0D46A7BB2B4F97EE00D9A402 /* 1515.best-position-for-a-service-centre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1515.best-position-for-a-service-centre.swift"; sourceTree = "<group>"; };
 		0D46A7BC2B4F97EE00D9A402 /* 1453.maximum-number-of-darts-inside-of-a-circular-dartboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1453.maximum-number-of-darts-inside-of-a-circular-dartboard.swift"; sourceTree = "<group>"; };
 		0D46A7BD2B4F97EE00D9A402 /* 1610.maximum-number-of-visible-points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1610.maximum-number-of-visible-points.swift"; sourceTree = "<group>"; };
+		0D46A7C22B4FB09800D9A402 /* 335.self-crossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "335.self-crossing.swift"; sourceTree = "<group>"; };
 		0D4C2AC02923B40500E73722 /* 7.reverse-integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "7.reverse-integer.swift"; sourceTree = "<group>"; };
 		0D4C2AC22923BCF700E73722 /* 8.string-to-integer-atoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "8.string-to-integer-atoi.swift"; sourceTree = "<group>"; };
 		0D4C2AC42923C76D00E73722 /* 11.container-with-most-water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "11.container-with-most-water.swift"; sourceTree = "<group>"; };
@@ -1377,6 +1379,7 @@
 				DAFCA3A828F6B71200CF1DE6 /* 23.merge-k-sorted-lists.swift */,
 				DAFCA3A928F6B71200CF1DE6 /* 60.permutation-sequence.swift */,
 				0D0222102B32C66200AF5C1C /* 149.max-points-on-a-line.swift */,
+				0D46A7C22B4FB09800D9A402 /* 335.self-crossing.swift */,
 				0D46A7BA2B4F97EE00D9A402 /* 587.erect-the-fence.swift */,
 				0D46A7BC2B4F97EE00D9A402 /* 1453.maximum-number-of-darts-inside-of-a-circular-dartboard.swift */,
 				0D46A7BB2B4F97EE00D9A402 /* 1515.best-position-for-a-service-centre.swift */,
@@ -1767,6 +1770,7 @@
 				0D64839A296EE19300458B69 /* 961.n-repeated-element-in-size-2-n-array.swift in Sources */,
 				0DB6C7FD293A3E7F00CBBC67 /* 102.binary-tree-level-order-traversal.swift in Sources */,
 				0D02220C2B3290CA00AF5C1C /* 1037.valid-boomerang.swift in Sources */,
+				0D46A7C32B4FB09800D9A402 /* 335.self-crossing.swift in Sources */,
 				0D4E528E294CA565000796BB /* 643.maximum-average-subarray-i.swift in Sources */,
 				DAFCA3A028F6B70400CF1DE6 /* 77.combinations.swift in Sources */,
 				DAFCA3B728F9362600CF1DE6 /* 26.remove-duplicates-from-sorted-array.swift in Sources */,
