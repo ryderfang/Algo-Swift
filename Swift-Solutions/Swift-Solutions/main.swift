@@ -13,13 +13,16 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    [2,1,1,2], // t
-    [1,2,3,4], // f
-    [1,1,1,2,1], // t
-    [3,3,4,2,2], // f
-    [1,1,2,1,1], // t
-    [1,1,2,2,1,1], // t
-    [3,3,3,2,1,1], // f
+    [1,3],
+    [5,1,6],
+    [3,4,5,6,7,8],
+//    [2,1,1,2], // t
+//    [1,2,3,4], // f
+//    [1,1,1,2,1], // t
+//    [3,3,4,2,2], // f
+//    [1,1,2,1,1], // t
+//    [1,1,2,2,1,1], // t
+//    [3,3,3,2,1,1], // f
 ]
 
 for (i, x) in cases.enumerated() {
@@ -32,7 +35,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.isSelfCrossing(x)
+    let ans = sol.subsetXORSum(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

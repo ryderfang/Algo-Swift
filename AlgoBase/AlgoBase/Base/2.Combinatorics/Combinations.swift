@@ -9,6 +9,7 @@ import Foundation
 
 public extension Combinatorics {
     // MARK: C(n, k)
+    // C(n, k) = n! / (k! * (n-k)!)
     func combine(_ n: Int, _ k: Int) -> [[Int]] {
         var ans = [[Int]]()
         func _p(_ index: Int, _ res: [Int]) {
@@ -31,6 +32,7 @@ public extension Combinatorics {
     }
     
     // MARK: C(n, 0) + C(n, 1) + ... C(n, n)
+    // = 2^n (n 个数，选与不选)
     func subsets(_ nums: [Int]) -> [[Int]] {
         var ans = [[Int]]()
         ans.append([])
