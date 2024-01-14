@@ -13,16 +13,13 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    [1,3],
-    [5,1,6],
-    [3,4,5,6,7,8],
-//    [2,1,1,2], // t
-//    [1,2,3,4], // f
-//    [1,1,1,2,1], // t
-//    [3,3,4,2,2], // f
-//    [1,1,2,1,1], // t
-//    [1,1,2,2,1,1], // t
-//    [3,3,3,2,1,1], // f
+    (4, 2), // 5
+    (3, 1), // 3
+    (5, 2), // 15
+    (10, 6), // 455
+    (30, 7), // 796297179
+    (51, 29), // 658311732
+    (921, 753), // 235857028
 ]
 
 for (i, x) in cases.enumerated() {
@@ -35,7 +32,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.subsetXORSum(x)
+    let ans = sol.numberOfSets(x.0, x.1)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
