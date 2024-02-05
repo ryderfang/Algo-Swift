@@ -28,7 +28,7 @@ https://leetcode.com/tag/queue/
 https://leetcode.com/tag/monotonic-stack/
 https://leetcode.com/tag/linked-list/
 https://leetcode.com/tag/heap-priority-queue/ 🌟🌟
-https://leetcode.com/tag/trie/
+https://leetcode.com/tag/trie/
 https://leetcode.com/tag/segment-tree/ 🌟🌟
 https://leetcode.com/tag/tree/
 https://leetcode.com/tag/prefix-sum/
@@ -52,7 +52,7 @@ https://leetcode.com/tag/number-theory/
 
 6. Math 数学 / 数值计算
 https://leetcode.com/tag/math/
-https://leetcode.com/tag/bit-manipulation/
+https://leetcode.com/tag/bit-manipulation/
 
 7. Graph-Theory 图论
 https://leetcode.com/tag/graph/
