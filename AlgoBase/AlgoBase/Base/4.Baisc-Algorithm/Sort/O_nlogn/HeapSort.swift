@@ -1,5 +1,5 @@
 //
-//  SelectionSort.swift
+//  HeapSort.swift
 //  AlgoBase
 //
 //  Created by ryfang on 2022/12/10.
@@ -7,11 +7,12 @@
 
 import Foundation
 
-// 选择排序（不稳定）
-// 时间：O(n^2)
+// 堆排序（不稳定）
+// In-place
+// 时间：O(nlogn)
 // 空间：O(1)
 extension Sort {
-    static func selectionSort(_ nums: inout [Int]) {
+    static func heapSort(_ nums: inout [Int]) {
         
     }
 }

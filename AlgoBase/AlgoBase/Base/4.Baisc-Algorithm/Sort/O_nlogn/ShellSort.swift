@@ -8,6 +8,7 @@
 import Foundation
 
 // 希尔排序（不稳定）
+// In-place
 // 时间：O(nlogn)
 // 空间：O(1)
 extension Sort {

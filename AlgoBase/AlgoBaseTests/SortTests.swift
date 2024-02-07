@@ -1,14 +1,14 @@
 //
-//  AlgoBaseTests.swift
+//  SortTests.swift
 //  AlgoBaseTests
 //
-//  Created by ryfang on 2022/10/15.
+//  Created by ryfang on 2024/2/7.
 //
 
 import XCTest
 @testable import AlgoBase
 
-final class AlgoBaseTests: XCTestCase {
+final class SortTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -33,10 +33,34 @@ final class AlgoBaseTests: XCTestCase {
         }
     }
 
-    func testPrimes() {
-        XCTAssertEqual(Prime.getPrimes(100), Prime.getPrimes2(100))
-        for x in Prime.getPrimes(100) {
-            XCTAssertTrue(Prime.isPrime(x))
-        }
+    // MARK: O(n^2)
+    func testBubbleSort() {
+        var nums = [1, 8, 4, 2, 11, 2, 7, 3]
+        Sort.bubbleSort(&nums)
+        XCTAssertEqual(nums, [1, 2, 2, 3, 4, 7, 8, 11])
     }
+    
+
+    // MARK: O(n*logn)
+
+    // MARK: O(n)
+
+    func testQuickSort() {
+        var nums = [1, 8, 4, 2, 11, 2, 7, 3]
+        Sort.quickSort(&nums)
+        XCTAssertEqual(nums, [1, 2, 2, 3, 4, 7, 8, 11])
+    }
+
+    func testInsectionSort() {
+        var nums = [1, 8, 4, 2, 11, 2, 7, 3]
+        Sort.insertionSort(&nums)
+        XCTAssertEqual(nums, [1, 2, 2, 3, 4, 7, 8, 11])
+    }
+
+    func testShellSort() {
+        var nums = [1, 8, 4, 2, 11, 2, 7, 3]
+        Sort.shellSort(&nums)
+        XCTAssertEqual(nums, [1, 2, 2, 3, 4, 7, 8, 11])
+    }
+
 }

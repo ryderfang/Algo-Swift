@@ -7,10 +7,10 @@
 
 import Foundation
 
-class Sort {
-}
+class Sort {}
 
 // 快速排序（不稳定）
+// In-place
 // 时间：O(nlogn)
 // 空间：O(logn)
 extension Sort {
