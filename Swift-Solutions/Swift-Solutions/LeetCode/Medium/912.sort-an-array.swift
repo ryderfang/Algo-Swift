@@ -1,28 +1,25 @@
-//
-//  MergeSort.swift
-//  AlgoBase
-//
-//  Created by ryfang on 2022/12/10.
-//
+/*
+ * @lc app=leetcode id=912 lang=swift
+ *
+ * [912] Sort an Array
+ */
 
-import Foundation
-
-// 归并排序（稳定）
-// Out-place
-// 时间：O(nlogn)
-// 空间：O(n)
-extension Sort {
-    static func mergeSort(_ nums: [Int]) -> [Int] {
+// @lc code=start
+#if !LC_SOLUTION_EXT
+class Solution {}
+#endif
+extension Solution {
+    func sortArray(_ nums: [Int]) -> [Int] {
         let n = nums.count
         guard n > 1 else { return nums }
         let mid = n / 2
-        let leftArray = mergeSort(Array(nums[0..<mid]))
-        let rightArray = mergeSort(Array(nums[mid..<n]))
+        let leftArray = sortArray(Array(nums[0..<mid]))
+        let rightArray = sortArray(Array(nums[mid..<n]))
         return _merge(leftArray, rightArray)
     }
 
     // merge two sorted array
-    static func _merge(_ leftPile: [Int], _ rightPile: [Int]) -> [Int] {
+    func _merge(_ leftPile: [Int], _ rightPile: [Int]) -> [Int] {
         var (leftIndex, rightIndex) = (0, 0)
         var orderedPile = [Int]()
         orderedPile.reserveCapacity(leftPile.count + rightPile.count)
@@ -46,3 +43,4 @@ extension Sort {
         return orderedPile
     }
 }
+// @lc code=end
