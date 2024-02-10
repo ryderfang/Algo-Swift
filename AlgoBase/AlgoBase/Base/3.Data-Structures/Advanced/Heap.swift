@@ -7,7 +7,7 @@
 
 import Foundation
 
-fileprivate struct Heap<T> {
+internal struct Heap<T> {
     var nodes = [T]()
 
     // compare: '>' for max-heap
