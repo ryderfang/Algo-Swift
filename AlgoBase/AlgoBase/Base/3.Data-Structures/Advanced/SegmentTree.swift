@@ -7,25 +7,43 @@
 
 import Foundation
 
-fileprivate class SegmentTree {
+class SegmentTree {
+    // [1, 2*n)
     private var tree: [Int]
-    private var n: Int
+    private var n: Int = 0
+    private var total: Int = 0
 
+    // tree[i+n] = nums[i]
     init(_ nums: [Int]) {
         n = nums.count
         tree = [Int](repeating: 0, count: n * 2)
         buildTree(nums)
+        total = nums.reduce(0, +)
     }
 
-    func update(_ index: Int, _ val: Int) {
+    // nums[i] += v
+    func add(_ i: Int, _ v: Int) {
+        update(i, v + tree[i + n])
+    }
+
+    // nums[index] = v
+    func update(_ index: Int, _ v: Int) {
         var i = index + n
-        tree[i] = val
+        total += (v - tree[i])
+        tree[i] = v
         while i > 0 {
             tree[i / 2] = tree[i] + tree[i ^ 1]
             i /= 2
         }
     }
 
+    // sum of [0...index]
+    func query(_ index: Int) -> Int {
+        guard index >= 0 && index < n else { return 0 }
+        return query(0, index)
+    }
+
+    // sum of [left...right]
     func query(_ left: Int, _ right: Int) -> Int {
         var ans = 0
         var i = left + n
@@ -43,6 +61,11 @@ fileprivate class SegmentTree {
             j /= 2
         }
         return ans
+    }
+
+    // sum of [index...n)
+    func suffix(_ index: Int) -> Int {
+        total - query(index - 1)
     }
 
     private func buildTree(_ nums: [Int]) {

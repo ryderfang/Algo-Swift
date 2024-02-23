@@ -336,6 +336,10 @@
 		0DC370A52B53D57C00A5CE48 /* 1641.count-sorted-vowel-strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370A42B53D57C00A5CE48 /* 1641.count-sorted-vowel-strings.swift */; };
 		0DC370A72B54141400A5CE48 /* 2063.vowels-of-all-substrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370A62B54141400A5CE48 /* 2063.vowels-of-all-substrings.swift */; };
 		0DC370A92B54224E00A5CE48 /* 1621.number-of-sets-of-k-non-overlapping-line-segments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370A82B54224E00A5CE48 /* 1621.number-of-sets-of-k-non-overlapping-line-segments.swift */; };
+		0DC370B22B884C8400A5CE48 /* 2426.number-of-pairs-satisfying-inequality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370AE2B884C8300A5CE48 /* 2426.number-of-pairs-satisfying-inequality.swift */; };
+		0DC370B32B884C8400A5CE48 /* 920.number-of-music-playlists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370AF2B884C8400A5CE48 /* 920.number-of-music-playlists.swift */; };
+		0DC370B42B884C8400A5CE48 /* 1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370B02B884C8400A5CE48 /* 1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift */; };
+		0DC370B52B884C8400A5CE48 /* 1359.count-all-valid-pickup-and-delivery-options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370B12B884C8400A5CE48 /* 1359.count-all-valid-pickup-and-delivery-options.swift */; };
 		0DCF946F2928DF20009D3B1A /* 22.generate-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF946E2928DF1F009D3B1A /* 22.generate-parentheses.swift */; };
 		0DCF94712928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF94702928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift */; };
 		0DCF94732928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF94722928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift */; };
@@ -802,6 +806,10 @@
 		0DC370A42B53D57C00A5CE48 /* 1641.count-sorted-vowel-strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1641.count-sorted-vowel-strings.swift"; sourceTree = "<group>"; };
 		0DC370A62B54141400A5CE48 /* 2063.vowels-of-all-substrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2063.vowels-of-all-substrings.swift"; sourceTree = "<group>"; };
 		0DC370A82B54224E00A5CE48 /* 1621.number-of-sets-of-k-non-overlapping-line-segments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1621.number-of-sets-of-k-non-overlapping-line-segments.swift"; sourceTree = "<group>"; };
+		0DC370AE2B884C8300A5CE48 /* 2426.number-of-pairs-satisfying-inequality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2426.number-of-pairs-satisfying-inequality.swift"; sourceTree = "<group>"; };
+		0DC370AF2B884C8400A5CE48 /* 920.number-of-music-playlists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "920.number-of-music-playlists.swift"; sourceTree = "<group>"; };
+		0DC370B02B884C8400A5CE48 /* 1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift"; sourceTree = "<group>"; };
+		0DC370B12B884C8400A5CE48 /* 1359.count-all-valid-pickup-and-delivery-options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1359.count-all-valid-pickup-and-delivery-options.swift"; sourceTree = "<group>"; };
 		0DCF946E2928DF1F009D3B1A /* 22.generate-parentheses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "22.generate-parentheses.swift"; sourceTree = "<group>"; };
 		0DCF94702928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "24.swap-nodes-in-pairs.swift"; sourceTree = "<group>"; };
 		0DCF94722928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "28.find-the-index-of-the-first-occurrence-in-a-string.swift"; sourceTree = "<group>"; };
@@ -1396,9 +1404,13 @@
 				0D0222102B32C66200AF5C1C /* 149.max-points-on-a-line.swift */,
 				0D46A7C22B4FB09800D9A402 /* 335.self-crossing.swift */,
 				0D46A7BA2B4F97EE00D9A402 /* 587.erect-the-fence.swift */,
+				0DC370AF2B884C8400A5CE48 /* 920.number-of-music-playlists.swift */,
+				0DC370B12B884C8400A5CE48 /* 1359.count-all-valid-pickup-and-delivery-options.swift */,
 				0D46A7BC2B4F97EE00D9A402 /* 1453.maximum-number-of-darts-inside-of-a-circular-dartboard.swift */,
+				0DC370B02B884C8400A5CE48 /* 1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift */,
 				0D46A7BB2B4F97EE00D9A402 /* 1515.best-position-for-a-service-centre.swift */,
 				0D46A7BD2B4F97EE00D9A402 /* 1610.maximum-number-of-visible-points.swift */,
+				0DC370AE2B884C8300A5CE48 /* 2426.number-of-pairs-satisfying-inequality.swift */,
 			);
 			path = Hard;
 			sourceTree = "<group>";
@@ -1555,6 +1567,7 @@
 				0D76388E290EA6C4004CD387 /* 217.contains-duplicate.swift in Sources */,
 				0DDF445B2AED484A0053E862 /* 324.wiggle-sort-ii.swift in Sources */,
 				0DB6C7E72933840000CBBC67 /* 82.remove-duplicates-from-sorted-list-ii.swift in Sources */,
+				0DC370B42B884C8400A5CE48 /* 1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift in Sources */,
 				0DB6C7DF29326C2100CBBC67 /* 79.word-search.swift in Sources */,
 				0DF7953D29A1ECAD00893B80 /* 208.implement-trie-prefix-tree.swift in Sources */,
 				0DADAC352914107F00C30C0F /* 387.first-unique-character-in-a-string.swift in Sources */,
@@ -1604,6 +1617,7 @@
 				0D64836B2962DC5C00458B69 /* 867.transpose-matrix.swift in Sources */,
 				0D4E52A2295086DB000796BB /* 696.count-binary-substrings.swift in Sources */,
 				0DB6C80B293B3AC600CBBC67 /* WeeklyContest322.swift in Sources */,
+				0DC370B52B884C8400A5CE48 /* 1359.count-all-valid-pickup-and-delivery-options.swift in Sources */,
 				0D763861290ACF61004CD387 /* 108.convert-sorted-array-to-binary-search-tree.swift in Sources */,
 				0D865BBF2AE2248800CB3C1B /* 275.h-index-ii.swift in Sources */,
 				0DB6C7F92938F37100CBBC67 /* 98.validate-binary-search-tree.swift in Sources */,
@@ -1712,6 +1726,7 @@
 				0D7638A2290ECD52004CD387 /* 258.add-digits.swift in Sources */,
 				0D02220D2B3290CA00AF5C1C /* 1232.check-if-it-is-a-straight-line.swift in Sources */,
 				0D763863290BF80E004CD387 /* 110.balanced-binary-tree.swift in Sources */,
+				0DC370B32B884C8400A5CE48 /* 920.number-of-music-playlists.swift in Sources */,
 				DAFCA3A328F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift in Sources */,
 				0D763867290C029E004CD387 /* 112.path-sum.swift in Sources */,
 				0D4E52D52956F355000796BB /* 819.most-common-word.swift in Sources */,
@@ -1743,6 +1758,7 @@
 				0D02222D2B454C7E00AF5C1C /* 593.valid-square.swift in Sources */,
 				0D74F48D291BE707000E9237 /* 482.license-key-formatting.swift in Sources */,
 				0D9E9B92292E75F0005486CE /* 36.valid-sudoku.swift in Sources */,
+				0DC370B22B884C8400A5CE48 /* 2426.number-of-pairs-satisfying-inequality.swift in Sources */,
 				0D4E52A0294F153F000796BB /* 693.binary-number-with-alternating-bits.swift in Sources */,
 				0D6483942968157700458B69 /* 942.di-string-match.swift in Sources */,
 				0D763882290E53B2004CD387 /* 171.excel-sheet-column-number.swift in Sources */,
