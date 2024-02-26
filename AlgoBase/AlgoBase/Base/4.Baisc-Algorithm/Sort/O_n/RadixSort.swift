@@ -13,7 +13,9 @@ import Foundation
 // 空间：O(n+k)
 extension Sort {
     // 从低位向高位 (LSD, Least significant digital)
-    static func radixSort(_ nums: inout [Int]) {
+    static func radixSort(_ nums: [Int]) -> [Int] {
+        let offSet = Int(5 * 1e4)
+        var nums = nums.map { $0 + offSet }
         let radix = 10
         var done = false
         var digit = 1
@@ -42,5 +44,6 @@ extension Sort {
 
             digit *= radix
         }
+        return nums.map { $0 - offSet }
     }
 }

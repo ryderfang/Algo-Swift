@@ -17,7 +17,7 @@ extension Sort {
         for i in 0..<n {
             for j in 1..<n-i {
                 if nums[j] < nums[j-1] {
-                    nums.swapAt(i, j)
+                    nums.swapAt(j, j-1)
                 }
             }
         }

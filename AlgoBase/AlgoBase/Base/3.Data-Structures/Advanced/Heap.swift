@@ -37,7 +37,6 @@ internal struct Heap<T> {
         return nodes.count
     }
 
-
     public func peek() -> T? {
         return nodes.first
     }
@@ -65,7 +64,6 @@ internal struct Heap<T> {
             return value
         }
     }
-
 
     /**
      * Takes a child node and looks at its parents; if a parent is not larger
@@ -206,7 +204,6 @@ fileprivate struct PriorityQueue<T> {
     public mutating func dequeue() -> T? {
         return heap.remove()
     }
-
 }
 
 extension PriorityQueue {

@@ -26,6 +26,21 @@ extension Sort {
         }
         return ans
     }
+
+    func _bucketSort(_ nums: [Int]) -> [Int] {
+        let maxSize = Int(1e5 + 1)
+        var bucket = [Int](repeating: 0, count: maxSize)
+        let offSet = Int(5 * 1e4)
+        let nums = nums.map { $0 + offSet }
+        for x in nums {
+            bucket[x] += 1
+        }
+        var ans = [Int]()
+        for (x, c) in bucket.enumerated() {
+            ans.append(contentsOf: [Int](repeating: x, count: c))
+        }
+        return ans.map { $0 - offSet }
+    }
 }
 
 fileprivate extension Array where Element == Int {

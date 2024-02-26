@@ -346,6 +346,7 @@
 		0DC370BF2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370BD2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift */; };
 		0DC370C12B8C651A00A5CE48 /* 315.count-of-smaller-numbers-after-self.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370C02B8C651900A5CE48 /* 315.count-of-smaller-numbers-after-self.swift */; };
 		0DC9A3A32B8C6F57001CCF13 /* 1649.create-sorted-array-through-instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9A3A22B8C6F57001CCF13 /* 1649.create-sorted-array-through-instructions.swift */; };
+		0DC9A3A52B8C7422001CCF13 /* 2179.count-good-triplets-in-an-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9A3A42B8C7422001CCF13 /* 2179.count-good-triplets-in-an-array.swift */; };
 		0DCF946F2928DF20009D3B1A /* 22.generate-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF946E2928DF1F009D3B1A /* 22.generate-parentheses.swift */; };
 		0DCF94712928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF94702928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift */; };
 		0DCF94732928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF94722928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift */; };
@@ -822,6 +823,7 @@
 		0DC370BD2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift"; sourceTree = "<group>"; };
 		0DC370C02B8C651900A5CE48 /* 315.count-of-smaller-numbers-after-self.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "315.count-of-smaller-numbers-after-self.swift"; sourceTree = "<group>"; };
 		0DC9A3A22B8C6F57001CCF13 /* 1649.create-sorted-array-through-instructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1649.create-sorted-array-through-instructions.swift"; sourceTree = "<group>"; };
+		0DC9A3A42B8C7422001CCF13 /* 2179.count-good-triplets-in-an-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2179.count-good-triplets-in-an-array.swift"; sourceTree = "<group>"; };
 		0DCF946E2928DF1F009D3B1A /* 22.generate-parentheses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "22.generate-parentheses.swift"; sourceTree = "<group>"; };
 		0DCF94702928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "24.swap-nodes-in-pairs.swift"; sourceTree = "<group>"; };
 		0DCF94722928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "28.find-the-index-of-the-first-occurrence-in-a-string.swift"; sourceTree = "<group>"; };
@@ -1428,6 +1430,7 @@
 				0D46A7BB2B4F97EE00D9A402 /* 1515.best-position-for-a-service-centre.swift */,
 				0D46A7BD2B4F97EE00D9A402 /* 1610.maximum-number-of-visible-points.swift */,
 				0DC9A3A22B8C6F57001CCF13 /* 1649.create-sorted-array-through-instructions.swift */,
+				0DC9A3A42B8C7422001CCF13 /* 2179.count-good-triplets-in-an-array.swift */,
 				0DC370AE2B884C8300A5CE48 /* 2426.number-of-pairs-satisfying-inequality.swift */,
 			);
 			path = Hard;
@@ -1886,6 +1889,7 @@
 				0DCF94712928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift in Sources */,
 				0D4E52B82951F078000796BB /* 728.self-dividing-numbers.swift in Sources */,
 				0D01F331281AE26D00794410 /* main.swift in Sources */,
+				0DC9A3A52B8C7422001CCF13 /* 2179.count-good-triplets-in-an-array.swift in Sources */,
 				0D4E52742948B076000796BB /* 566.reshape-the-matrix.swift in Sources */,
 				0DB6C838293F85F300CBBC67 /* 133.clone-graph.swift in Sources */,
 				0DB6C827293B745200CBBC67 /* 128.longest-consecutive-sequence.swift in Sources */,

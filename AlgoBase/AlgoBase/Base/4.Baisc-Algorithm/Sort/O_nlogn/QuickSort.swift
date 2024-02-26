@@ -7,6 +7,7 @@
 
 import Foundation
 
+// 排序测试: lc912
 class Sort {}
 
 // 快速排序（不稳定）
@@ -15,30 +16,30 @@ class Sort {}
 // 空间：O(logn)
 extension Sort {
     static func quickSort(_ nums: inout [Int]) {
-        quickSort(0, nums.count - 1, &nums)
-    }
-
-    static func quickSort(_ beg: Int, _ end: Int, _ nums: inout [Int]) {
-        var i = beg, j = end, x = nums[(beg + end) / 2]
-        while true {
-            while nums[i] < x { i += 1 }
-            while nums[j] > x { j -= 1 }
-            if i <= j {
-                nums.swapAt(i, j)
-                i += 1
-                j -= 1
+        func _qSort(_ beg: Int, _ end: Int, _ nums: inout [Int]) {
+            var i = beg, j = end, x = nums[(beg + end) / 2]
+            while true {
+                while nums[i] < x { i += 1 }
+                while nums[j] > x { j -= 1 }
+                if i <= j {
+                    nums.swapAt(i, j)
+                    i += 1
+                    j -= 1
+                }
+                guard i < j else { break }
             }
-            guard i < j else { break }
+            if i < end {
+                _qSort(i, end, &nums)
+            }
+            if j > beg {
+                _qSort(beg, j, &nums)
+            }
         }
-        if i < end {
-            quickSort(i, end, &nums)
-        }
-        if j > beg {
-            quickSort(beg, j, &nums)
-        }
+        _qSort(0, nums.count - 1, &nums)
     }
 }
 
+// 将数组分成三段，小于 | 等于 | 大于，段内不一定有序
 // Dutch National Flag (DNF problem)
 // -> 🇳🇱
 extension Sort {
