@@ -7,6 +7,9 @@
 
 import Foundation
 
+/*
+ 求和线段树
+ */
 class SegmentTree {
     // [1, 2*n)
     private var tree: [Int]
@@ -74,6 +77,72 @@ class SegmentTree {
         }
         for i in (1..<n).reversed() {
             tree[i] = tree[i * 2] + tree[i * 2 + 1]
+        }
+    }
+}
+
+// MARK: 泛型
+fileprivate class SegmentTreeEx<T> {
+    private var value: T
+    private var function: (T, T) -> T
+    private var leftBound: Int
+    private var rightBound: Int
+    private var leftChild: SegmentTreeEx<T>?
+    private var rightChild: SegmentTreeEx<T>?
+
+    /* function can be:
+     sum / multi / min / max / gcd, etc..
+    - sum: SegmentTreeEx(nums, +)
+    **/
+    convenience init(array: [T], function: @escaping (T, T) -> T) {
+        self.init(array: array, leftBound: 0, rightBound: array.count-1, function: function)
+    }
+
+    init(array: [T], leftBound: Int, rightBound: Int, function: @escaping (T, T) -> T) {
+        self.leftBound = leftBound
+        self.rightBound = rightBound
+        self.function = function
+
+        if leftBound == rightBound {
+            value = array[leftBound]
+        } else {
+            let middle = (leftBound + rightBound) / 2
+            leftChild = SegmentTreeEx<T>(array: array, leftBound: leftBound, rightBound: middle, function: function)
+            rightChild = SegmentTreeEx<T>(array: array, leftBound: middle+1, rightBound: rightBound, function: function)
+            value = function(leftChild!.value, rightChild!.value)
+        }
+    }
+
+
+    func query(leftBound: Int, rightBound: Int) -> T {
+        if self.leftBound == leftBound && self.rightBound == rightBound {
+            return self.value
+        }
+
+        guard let leftChild = leftChild else { fatalError("leftChild should not be nil") }
+        guard let rightChild = rightChild else { fatalError("rightChild should not be nil") }
+
+        if leftChild.rightBound < leftBound {
+            return rightChild.query(leftBound: leftBound, rightBound: rightBound)
+        } else if rightChild.leftBound > rightBound {
+            return leftChild.query(leftBound: leftBound, rightBound: rightBound)
+        } else {
+            let leftResult = leftChild.query(leftBound: leftBound, rightBound: leftChild.rightBound)
+            let rightResult = rightChild.query(leftBound:rightChild.leftBound, rightBound: rightBound)
+            return function(leftResult, rightResult)
+        }
+    }
+
+    func replaceItem(at index: Int, withItem item: T) {
+        if leftBound == rightBound {
+            value = item
+        } else if let leftChild = leftChild, let rightChild = rightChild {
+            if leftChild.rightBound >= index {
+                leftChild.replaceItem(at: index, withItem: item)
+            } else {
+                rightChild.replaceItem(at: index, withItem: item)
+            }
+            value = function(leftChild.value, rightChild.value)
         }
     }
 }

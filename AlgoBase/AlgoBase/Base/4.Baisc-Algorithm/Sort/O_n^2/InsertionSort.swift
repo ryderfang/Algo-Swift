@@ -42,3 +42,39 @@ extension Sort {
         }
     }
 }
+
+// 插入有序数组
+extension Array where Element: Comparable {
+    // count strictly less than target
+    func bisectLeft(_ target: Element) -> Int {
+        var (lo, hi) = (0, count)
+        while lo < hi {
+            let mid = lo + (hi - lo) / 2
+            if self[mid] < target {
+                lo = mid + 1
+            } else {
+                hi = mid
+            }
+        }
+        return lo
+    }
+
+    // count less or equal than target
+    func bisectRight(_ target: Element) -> Int {
+        var (lo, hi) = (0, count)
+        while lo < hi {
+            let mid = lo + (hi - lo) / 2
+            if self[mid] <= target {
+                lo = mid + 1
+            } else {
+                hi = mid
+            }
+        }
+        return lo
+    }
+
+    mutating func insort(_ element: Element) {
+        let i = bisectRight(element)
+        insert(element, at: i)
+    }
+}

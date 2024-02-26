@@ -13,13 +13,9 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    (4, 2), // 5
-    (3, 1), // 3
-    (5, 2), // 15
-    (10, 6), // 455
-    (30, 7), // 796297179
-    (51, 29), // 658311732
-    (921, 753), // 235857028
+    [1,5,6,2],
+    [1,2,3,6,5,4],
+    [1,3,3,3,2,4,2,1,2],
 ]
 
 for (i, x) in cases.enumerated() {
@@ -32,7 +28,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.numberOfSets(x.0, x.1)
+    let ans = sol.createSortedArray(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

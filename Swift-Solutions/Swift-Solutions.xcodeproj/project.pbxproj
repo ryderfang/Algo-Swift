@@ -340,6 +340,12 @@
 		0DC370B32B884C8400A5CE48 /* 920.number-of-music-playlists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370AF2B884C8400A5CE48 /* 920.number-of-music-playlists.swift */; };
 		0DC370B42B884C8400A5CE48 /* 1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370B02B884C8400A5CE48 /* 1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift */; };
 		0DC370B52B884C8400A5CE48 /* 1359.count-all-valid-pickup-and-delivery-options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370B12B884C8400A5CE48 /* 1359.count-all-valid-pickup-and-delivery-options.swift */; };
+		0DC370BA2B88980300A5CE48 /* 1122.relative-sort-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370B82B88980200A5CE48 /* 1122.relative-sort-array.swift */; };
+		0DC370BB2B88980300A5CE48 /* 1051.height-checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370B92B88980300A5CE48 /* 1051.height-checker.swift */; };
+		0DC370BE2B88981500A5CE48 /* 912.sort-an-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370BC2B88981500A5CE48 /* 912.sort-an-array.swift */; };
+		0DC370BF2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370BD2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift */; };
+		0DC370C12B8C651A00A5CE48 /* 315.count-of-smaller-numbers-after-self.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC370C02B8C651900A5CE48 /* 315.count-of-smaller-numbers-after-self.swift */; };
+		0DC9A3A32B8C6F57001CCF13 /* 1649.create-sorted-array-through-instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9A3A22B8C6F57001CCF13 /* 1649.create-sorted-array-through-instructions.swift */; };
 		0DCF946F2928DF20009D3B1A /* 22.generate-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF946E2928DF1F009D3B1A /* 22.generate-parentheses.swift */; };
 		0DCF94712928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF94702928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift */; };
 		0DCF94732928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF94722928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift */; };
@@ -810,6 +816,12 @@
 		0DC370AF2B884C8400A5CE48 /* 920.number-of-music-playlists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "920.number-of-music-playlists.swift"; sourceTree = "<group>"; };
 		0DC370B02B884C8400A5CE48 /* 1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift"; sourceTree = "<group>"; };
 		0DC370B12B884C8400A5CE48 /* 1359.count-all-valid-pickup-and-delivery-options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1359.count-all-valid-pickup-and-delivery-options.swift"; sourceTree = "<group>"; };
+		0DC370B82B88980200A5CE48 /* 1122.relative-sort-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1122.relative-sort-array.swift"; sourceTree = "<group>"; };
+		0DC370B92B88980300A5CE48 /* 1051.height-checker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1051.height-checker.swift"; sourceTree = "<group>"; };
+		0DC370BC2B88981500A5CE48 /* 912.sort-an-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "912.sort-an-array.swift"; sourceTree = "<group>"; };
+		0DC370BD2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift"; sourceTree = "<group>"; };
+		0DC370C02B8C651900A5CE48 /* 315.count-of-smaller-numbers-after-self.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "315.count-of-smaller-numbers-after-self.swift"; sourceTree = "<group>"; };
+		0DC9A3A22B8C6F57001CCF13 /* 1649.create-sorted-array-through-instructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1649.create-sorted-array-through-instructions.swift"; sourceTree = "<group>"; };
 		0DCF946E2928DF1F009D3B1A /* 22.generate-parentheses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "22.generate-parentheses.swift"; sourceTree = "<group>"; };
 		0DCF94702928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "24.swap-nodes-in-pairs.swift"; sourceTree = "<group>"; };
 		0DCF94722928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "28.find-the-index-of-the-first-occurrence-in-a-string.swift"; sourceTree = "<group>"; };
@@ -1181,6 +1193,8 @@
 				0D6483A929702F7E00458B69 /* 1002.find-common-characters.swift */,
 				0D0222082B2F2B4100AF5C1C /* 1030.matrix-cells-in-distance-order.swift */,
 				0D02220A2B3290C900AF5C1C /* 1037.valid-boomerang.swift */,
+				0DC370B92B88980300A5CE48 /* 1051.height-checker.swift */,
+				0DC370B82B88980200A5CE48 /* 1122.relative-sort-array.swift */,
 				0D02220B2B3290C900AF5C1C /* 1232.check-if-it-is-a-straight-line.swift */,
 				0D0222062B2F285500AF5C1C /* 1266.minimum-time-visiting-all-points.swift */,
 				0DC370A02B513DCD00A5CE48 /* 1863.sum-of-all-subset-xor-totals.swift */,
@@ -1379,6 +1393,7 @@
 				0D0222122B32D08900AF5C1C /* 478.generate-random-point-in-a-circle.swift */,
 				0D02222C2B454C7E00AF5C1C /* 593.valid-square.swift */,
 				0D02221C2B3C258A00AF5C1C /* 858.mirror-reflection.swift */,
+				0DC370BC2B88981500A5CE48 /* 912.sort-an-array.swift */,
 				0D0222172B3C074500AF5C1C /* 939.minimum-area-rectangle.swift */,
 				0D0222182B3C074500AF5C1C /* 963.minimum-area-rectangle-ii.swift */,
 				0D0222162B3C074500AF5C1C /* 973.k-closest-points-to-origin.swift */,
@@ -1392,6 +1407,7 @@
 				0DC370A22B51441B00A5CE48 /* 2221.find-triangular-sum-of-an-array.swift */,
 				0D0222202B3EC17F00AF5C1C /* 2249.count-lattice-points-inside-a-circle.swift */,
 				0D02222E2B45552F00AF5C1C /* 2280.minimum-lines-to-represent-a-line-chart.swift */,
+				0DC370BD2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -1402,6 +1418,7 @@
 				DAFCA3A828F6B71200CF1DE6 /* 23.merge-k-sorted-lists.swift */,
 				DAFCA3A928F6B71200CF1DE6 /* 60.permutation-sequence.swift */,
 				0D0222102B32C66200AF5C1C /* 149.max-points-on-a-line.swift */,
+				0DC370C02B8C651900A5CE48 /* 315.count-of-smaller-numbers-after-self.swift */,
 				0D46A7C22B4FB09800D9A402 /* 335.self-crossing.swift */,
 				0D46A7BA2B4F97EE00D9A402 /* 587.erect-the-fence.swift */,
 				0DC370AF2B884C8400A5CE48 /* 920.number-of-music-playlists.swift */,
@@ -1410,6 +1427,7 @@
 				0DC370B02B884C8400A5CE48 /* 1467.probability-of-a-two-boxes-having-the-same-number-of-distinct-balls.swift */,
 				0D46A7BB2B4F97EE00D9A402 /* 1515.best-position-for-a-service-centre.swift */,
 				0D46A7BD2B4F97EE00D9A402 /* 1610.maximum-number-of-visible-points.swift */,
+				0DC9A3A22B8C6F57001CCF13 /* 1649.create-sorted-array-through-instructions.swift */,
 				0DC370AE2B884C8300A5CE48 /* 2426.number-of-pairs-satisfying-inequality.swift */,
 			);
 			path = Hard;
@@ -1576,6 +1594,7 @@
 				0D4E5286294C8DB2000796BB /* 606.construct-string-from-binary-tree.swift in Sources */,
 				0DADAC3D2915235100C30C0F /* 404.sum-of-left-leaves.swift in Sources */,
 				0D4E52BE29533127000796BB /* 746.min-cost-climbing-stairs.swift in Sources */,
+				0DC370BB2B88980300A5CE48 /* 1051.height-checker.swift in Sources */,
 				0D4E52A829508EAB000796BB /* 703.kth-largest-element-in-a-stream.swift in Sources */,
 				0D74F497291F591F000E9237 /* 500.keyboard-row.swift in Sources */,
 				DAFCA46328FAF6EC00CF1DE6 /* 66.plus-one.swift in Sources */,
@@ -1635,6 +1654,7 @@
 				0DB6C8582944B34E00CBBC67 /* 150.evaluate-reverse-polish-notation.swift in Sources */,
 				0D4E526229475696000796BB /* 530.minimum-absolute-difference-in-bst.swift in Sources */,
 				0DFCF0FB2AF92A23004CE61B /* 355.design-twitter.swift in Sources */,
+				0DC370BA2B88980300A5CE48 /* 1122.relative-sort-array.swift in Sources */,
 				0D74F48129154D9E000E9237 /* 448.find-all-numbers-disappeared-in-an-array.swift in Sources */,
 				0D865BC32AE2294700CB3C1B /* 284.peeking-iterator.swift in Sources */,
 				0DF088052A092AD800486C49 /* 260.single-number-iii.swift in Sources */,
@@ -1728,6 +1748,7 @@
 				0D763863290BF80E004CD387 /* 110.balanced-binary-tree.swift in Sources */,
 				0DC370B32B884C8400A5CE48 /* 920.number-of-music-playlists.swift in Sources */,
 				DAFCA3A328F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift in Sources */,
+				0DC370BF2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift in Sources */,
 				0D763867290C029E004CD387 /* 112.path-sum.swift in Sources */,
 				0D4E52D52956F355000796BB /* 819.most-common-word.swift in Sources */,
 				0D763895290EB51A004CD387 /* 226.invert-binary-tree.swift in Sources */,
@@ -1773,6 +1794,7 @@
 				0DADAC2B291402BD00C30C0F /* 350.intersection-of-two-arrays-ii.swift in Sources */,
 				0D4E52B42951EF54000796BB /* 724.find-pivot-index.swift in Sources */,
 				0DDF44332AE66DA50053E862 /* 289.game-of-life.swift in Sources */,
+				0DC9A3A32B8C6F57001CCF13 /* 1649.create-sorted-array-through-instructions.swift in Sources */,
 				0D74F487291BE09B000E9237 /* 461.hamming-distance.swift in Sources */,
 				0D0222262B3EC18000AF5C1C /* 372.super-pow.swift in Sources */,
 				0DDF44492AE8EA170053E862 /* 309.best-time-to-buy-and-sell-stock-with-cooldown.swift in Sources */,
@@ -1800,6 +1822,7 @@
 				0D4E52532945EB28000796BB /* 166.fraction-to-recurring-decimal.swift in Sources */,
 				DAFCA46D28FBD64700CF1DE6 /* 88.merge-sorted-array.swift in Sources */,
 				0D64839A296EE19300458B69 /* 961.n-repeated-element-in-size-2-n-array.swift in Sources */,
+				0DC370C12B8C651A00A5CE48 /* 315.count-of-smaller-numbers-after-self.swift in Sources */,
 				0DB6C7FD293A3E7F00CBBC67 /* 102.binary-tree-level-order-traversal.swift in Sources */,
 				0D02220C2B3290CA00AF5C1C /* 1037.valid-boomerang.swift in Sources */,
 				0D46A7C32B4FB09800D9A402 /* 335.self-crossing.swift in Sources */,
@@ -1889,6 +1912,7 @@
 				0DE6B80529911F2A00FA49A3 /* 189.rotate-array.swift in Sources */,
 				0D4E52DB2960452F000796BB /* 830.positions-of-large-groups.swift in Sources */,
 				0D9E9BA0292FC1D5005486CE /* 48.rotate-image.swift in Sources */,
+				0DC370BE2B88981500A5CE48 /* 912.sort-an-array.swift in Sources */,
 				0DF087FB2A07597A00486C49 /* 235.lowest-common-ancestor-of-a-binary-search-tree.swift in Sources */,
 				0D9E9B94292E7CE6005486CE /* 38.count-and-say.swift in Sources */,
 				0D763869290C0BF8004CD387 /* 118.pascals-triangle.swift in Sources */,
