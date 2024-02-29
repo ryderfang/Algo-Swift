@@ -46,6 +46,7 @@ extension Sort {
 // 插入有序数组
 extension Array where Element: Comparable {
     // count strictly less than target
+    // lower_bound
     func bisectLeft(_ target: Element) -> Int {
         var (lo, hi) = (0, count)
         while lo < hi {
@@ -60,6 +61,7 @@ extension Array where Element: Comparable {
     }
 
     // count less or equal than target
+    // upper_bound
     func bisectRight(_ target: Element) -> Int {
         var (lo, hi) = (0, count)
         while lo < hi {
