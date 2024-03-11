@@ -5,7 +5,10 @@
  */
 
 // @lc code=start
-class Solution {
+#if !LC_SOLUTION_EXT
+class Solution {}
+#endif
+extension Solution {
     func smallestTrimmedNumbers(_ nums: [String], _ queries: [[Int]]) -> [Int] {
         let maxDigits = nums.map { $0.count }.max() ?? 0
         // reversed: LSD, Least significant digital

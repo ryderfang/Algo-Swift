@@ -13,10 +13,8 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    [3, -1],
-    [1,5,6,2],
-    [1,2,3,6,5,4],
-    [1,3,3,3,2,4,2,1,2],
+    "tree",
+    "cccaaa",
 ]
 
 for (i, x) in cases.enumerated() {
@@ -29,7 +27,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.sortArray(x)
+    let ans = sol.frequencySort(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

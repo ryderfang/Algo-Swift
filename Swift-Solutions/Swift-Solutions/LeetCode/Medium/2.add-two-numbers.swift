@@ -15,6 +15,9 @@
  *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
  * }
  */
+#if !LC_SOLUTION_EXT
+class Solution {}
+#endif
 extension Solution {
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         var p = l1

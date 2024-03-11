@@ -43,7 +43,7 @@ extension Solution {
     }
 }
 
-class SegmentTree {
+fileprivate class SegmentTree {
     // [1, 2*n)
     private var tree: [Int]
     private var n: Int = 0

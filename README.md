@@ -53,7 +53,7 @@ To fix `redeclaration of 'Solution' issue`, I modified the extension.
 
 2. change template
 
-* `/node_modules/vsc-leetcode-cli/templates/codeonly.tpl`
+* `node_modules/vsc-leetcode-cli/templates/codeonly.tpl`
 
 ```swift
 // codeonly.tpl
@@ -67,6 +67,7 @@ ${comment.singleLine} @lc code=start
 #if !LC_SOLUTION_EXT
 class Solution {}
 #endif
+
 ${code}
 ${comment.singleLine} @lc code=end
 ```

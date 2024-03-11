@@ -14,10 +14,10 @@ public func TOCK(function: String = #function) {
 // MARK: 分类
 /**
 1. Geometry 几何
-https://leetcode.com/tag/geometry/
+[✓] https://leetcode.com/tag/geometry/
 
 2. Combinatorics 组合
-https://leetcode.com/tag/combinatorics/
+[✓] https://leetcode.com/tag/combinatorics/
 
 3. Data-Structures 数据结构
 https://leetcode.com/tag/array/
@@ -28,24 +28,24 @@ https://leetcode.com/tag/queue/
 https://leetcode.com/tag/monotonic-stack/
 https://leetcode.com/tag/linked-list/
 https://leetcode.com/tag/heap-priority-queue/ 🌟🌟
-https://leetcode.com/tag/trie/
+https://leetcode.com/tag/trie/ 🌟
 https://leetcode.com/tag/segment-tree/ 🌟🌟
+https://leetcode.com/tag/binary-indexed-tree/ (BIT)
 https://leetcode.com/tag/tree/
 https://leetcode.com/tag/prefix-sum/
 https://leetcode.com/tag/binary-tree/
 https://leetcode.com/tag/binary-search-tree/
-https://leetcode.com/tag/binary-indexed-tree/
 https://leetcode.com/tag/union-find/ 🌟🌟
 
 4. Baisc-Algorithm 基础算法 🌟🌟🌟🌟
-https://leetcode.com/tag/sorting/
-https://leetcode.com/tag/greedy/
-https://leetcode.com/tag/divide-and-conquer/
-https://leetcode.com/tag/binary-search/
-https://leetcode.com/tag/depth-first-search/
-https://leetcode.com/tag/breadth-first-search/
+[=] https://leetcode.com/tag/sorting/
+https://leetcode.com/tag/greedy/ 🌟
+https://leetcode.com/tag/divide-and-conquer/ 🌟
+https://leetcode.com/tag/binary-search/ 🌟🌟
+https://leetcode.com/tag/depth-first-search/ 🌟🌟🌟
+https://leetcode.com/tag/breadth-first-search/ 🌟🌟🌟
 https://leetcode.com/tag/dynamic-programming/ 🌟🌟🌟🌟🌟
-https://leetcode.com/tag/backtracking/
+https://leetcode.com/tag/backtracking/ 🌟🌟
 
 5. Number-Theory 数论
 https://leetcode.com/tag/number-theory/
