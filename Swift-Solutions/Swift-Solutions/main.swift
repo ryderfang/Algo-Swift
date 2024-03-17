@@ -13,8 +13,9 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    "tree",
-    "cccaaa",
+    (["a"], [0]),
+    (["e","a","b"], [0, 0, 1]),
+    (["a","b","c","d"], [1, 0, 1, 1])
 ]
 
 for (i, x) in cases.enumerated() {
@@ -27,7 +28,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.frequencySort(x)
+    let ans = sol.getLongestSubsequence(x.0, x.1)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

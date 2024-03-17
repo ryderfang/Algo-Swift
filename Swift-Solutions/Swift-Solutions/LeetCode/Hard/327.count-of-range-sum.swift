@@ -115,7 +115,7 @@ extension Solution {
     }
 }
 
-extension Array where Element: Comparable {
+fileprivate extension Array where Element: Comparable {
     // count strictly less than target
     func bisectLeft(_ target: Element) -> Int {
         var (lo, hi) = (0, count)

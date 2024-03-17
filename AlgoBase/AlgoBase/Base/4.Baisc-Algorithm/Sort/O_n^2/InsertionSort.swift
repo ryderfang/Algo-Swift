@@ -44,7 +44,7 @@ extension Sort {
 }
 
 // 插入有序数组
-extension Array where Element: Comparable {
+fileprivate extension Array where Element: Comparable {
     // count strictly less than target
     // lower_bound
     func bisectLeft(_ target: Element) -> Int {
