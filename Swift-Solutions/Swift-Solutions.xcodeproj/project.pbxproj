@@ -357,6 +357,7 @@
 		0DC9A3B72BA6913A001CCF13 /* 1137.n-th-tribonacci-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9A3B62BA6913A001CCF13 /* 1137.n-th-tribonacci-number.swift */; };
 		0DC9A3B92BA6952F001CCF13 /* 2900.longest-unequal-adjacent-groups-subsequence-i.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9A3B82BA6952E001CCF13 /* 2900.longest-unequal-adjacent-groups-subsequence-i.swift */; };
 		0DC9A3BB2BA6B6AB001CCF13 /* 894.all-possible-full-binary-trees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9A3BA2BA6B6AB001CCF13 /* 894.all-possible-full-binary-trees.swift */; };
+		0DC9A3BD2BA6DB6A001CCF13 /* 1043.partition-array-for-maximum-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9A3BC2BA6DB6A001CCF13 /* 1043.partition-array-for-maximum-sum.swift */; };
 		0DCF946F2928DF20009D3B1A /* 22.generate-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF946E2928DF1F009D3B1A /* 22.generate-parentheses.swift */; };
 		0DCF94712928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF94702928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift */; };
 		0DCF94732928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCF94722928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift */; };
@@ -844,6 +845,7 @@
 		0DC9A3B62BA6913A001CCF13 /* 1137.n-th-tribonacci-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1137.n-th-tribonacci-number.swift"; sourceTree = "<group>"; };
 		0DC9A3B82BA6952E001CCF13 /* 2900.longest-unequal-adjacent-groups-subsequence-i.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2900.longest-unequal-adjacent-groups-subsequence-i.swift"; sourceTree = "<group>"; };
 		0DC9A3BA2BA6B6AB001CCF13 /* 894.all-possible-full-binary-trees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "894.all-possible-full-binary-trees.swift"; sourceTree = "<group>"; };
+		0DC9A3BC2BA6DB6A001CCF13 /* 1043.partition-array-for-maximum-sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1043.partition-array-for-maximum-sum.swift"; sourceTree = "<group>"; };
 		0DCF946E2928DF1F009D3B1A /* 22.generate-parentheses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "22.generate-parentheses.swift"; sourceTree = "<group>"; };
 		0DCF94702928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "24.swap-nodes-in-pairs.swift"; sourceTree = "<group>"; };
 		0DCF94722928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "28.find-the-index-of-the-first-occurrence-in-a-string.swift"; sourceTree = "<group>"; };
@@ -1425,6 +1427,7 @@
 				0D0222172B3C074500AF5C1C /* 939.minimum-area-rectangle.swift */,
 				0D0222182B3C074500AF5C1C /* 963.minimum-area-rectangle-ii.swift */,
 				0D0222162B3C074500AF5C1C /* 973.k-closest-points-to-origin.swift */,
+				0DC9A3BC2BA6DB6A001CCF13 /* 1043.partition-array-for-maximum-sum.swift */,
 				0DDF444E2AEB9FA90053E862 /* 1081.smallest-subsequence-of-distinct-characters.swift */,
 				0D02222A2B453BA400AF5C1C /* 1401.circle-and-rectangle-overlapping.swift */,
 				0DC370A82B54224E00A5CE48 /* 1621.number-of-sets-of-k-non-overlapping-line-segments.swift */,
@@ -1927,6 +1930,7 @@
 				0D01F331281AE26D00794410 /* main.swift in Sources */,
 				0DC9A3A52B8C7422001CCF13 /* 2179.count-good-triplets-in-an-array.swift in Sources */,
 				0D4E52742948B076000796BB /* 566.reshape-the-matrix.swift in Sources */,
+				0DC9A3BD2BA6DB6A001CCF13 /* 1043.partition-array-for-maximum-sum.swift in Sources */,
 				0DB6C838293F85F300CBBC67 /* 133.clone-graph.swift in Sources */,
 				0DB6C827293B745200CBBC67 /* 128.longest-consecutive-sequence.swift in Sources */,
 				0DB6C7E2293274E200CBBC67 /* 81.search-in-rotated-sorted-array-ii.swift in Sources */,
