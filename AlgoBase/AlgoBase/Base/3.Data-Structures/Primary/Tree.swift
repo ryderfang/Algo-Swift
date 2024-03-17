@@ -56,6 +56,32 @@ public extension TreeNode {
         return ans
     }
 
+    func leafs() -> [TreeNode] {
+        var ans = [TreeNode]()
+        if left == nil && right == nil {
+            ans.append(self)
+        } else {
+            ans.append(contentsOf: left?.leafs() ?? [])
+            ans.append(contentsOf: right?.leafs() ?? [])
+        }
+        return ans
+    }
+
+    func copy() -> TreeNode {
+        let node = TreeNode(val)
+        node.left = left?.copy()
+        node.right = right?.copy()
+        return node
+    }
+
+    func hash() -> String {
+        let arr = _array()
+        return arr.map {
+            if let x = $0 { return String(x) }
+            else { return "null" }
+        }.joined(separator: ",")
+    }
+
     // TODO: to be optimized
     static func arrayToTree(_ nums: [Int?]) -> TreeNode? {
         guard nums.count > 0 else { return nil }
