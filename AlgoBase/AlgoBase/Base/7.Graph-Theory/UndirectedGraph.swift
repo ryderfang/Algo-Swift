@@ -48,4 +48,29 @@ class UndirectedGraph {
         }
         return true
     }
+
+    // Floyd-Warshall 算法，求无向图中任意两点之间的最短距离
+    public static func minDistance(_ n: Int, _ edges: [[Int]]) {
+        var dist: [[Int]] = (0..<n).map { row in
+            (0..<n).map { col in
+                row == col ? 0 : Int.max
+            }
+        }
+
+        for edge in edges {
+            let (u, v, distance) = (edge[0], edge[1], edge[2])
+            dist[u][v] = distance
+            dist[v][u] = distance
+        }
+
+        // k should outer-most
+        for k in 0..<n {
+            for i in 0..<n {
+                for j in 0..<n {
+                    guard dp[i][k] < Int.max && dp[k][j] < Int.max else { continue }
+                    dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
+                }
+            }
+        }
+    }
 }
