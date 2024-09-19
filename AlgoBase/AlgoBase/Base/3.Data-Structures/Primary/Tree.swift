@@ -264,6 +264,7 @@ public extension TreeNode {
 // * Can't import module in LeetCode.
 import ObjectiveC.runtime
 
+// m337
 fileprivate extension TreeNode {
     enum StoreKey {
         static var key1 = "key1"
@@ -277,7 +278,7 @@ fileprivate extension TreeNode {
             objc_setAssociatedObject(self, &StoreKey.key1, NSNumber(value: newValue), .OBJC_ASSOCIATION_RETAIN)
         }
     }
-    var notBobSelf: Int {
+    var notRobSelf: Int {
         get {
             (objc_getAssociatedObject(self, &StoreKey.key2) as? NSNumber)?.intValue ?? -1
         }
