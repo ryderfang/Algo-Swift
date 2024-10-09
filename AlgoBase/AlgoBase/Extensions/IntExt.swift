@@ -50,6 +50,16 @@ extension Int {
 }
 
 // MARK: Binary
+private extension Array<Int> {
+    func bitsToInt() -> Int {
+        var iVal = 0
+        for b in self {
+            iVal = iVal * 2 + b
+        }
+        return iVal
+    }
+}
+
 extension Int {
     public func toBinary(bitWidth: Int = 32) -> String {
         guard self != 0 else { return "0" }
