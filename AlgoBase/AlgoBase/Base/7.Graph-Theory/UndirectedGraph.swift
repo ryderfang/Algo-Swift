@@ -67,7 +67,7 @@ class UndirectedGraph {
         for k in 0..<n {
             for i in 0..<n {
                 for j in 0..<n {
-                    guard dp[i][k] < Int.max && dp[k][j] < Int.max else { continue }
+                    guard dist[i][k] < Int.max && dist[k][j] < Int.max else { continue }
                     dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
                 }
             }

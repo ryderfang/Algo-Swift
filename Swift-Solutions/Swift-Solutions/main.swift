@@ -13,10 +13,10 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    ([1,15,7,9,2,5,10], 3),
-    ([1,4,1,5,7,3,6,1,9,9,3], 4),
-    ([1], 1),
-    ([1,10,11,2], 3)
+    [1],
+    [1,1],
+    [1,2,0],
+    [3,4,-1,1],
 ]
 
 for (i, x) in cases.enumerated() {
@@ -29,7 +29,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.maxSumAfterPartitioning(x.0, x.1)
+    let ans = sol.firstMissingPositive(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

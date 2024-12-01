@@ -10,7 +10,7 @@ class Solution {}
 #endif
 
 extension Solution {
-    func minDistance(_ word1: String, _ word2: String) -> Int {
+    func minDistance_1(_ word1: String, _ word2: String) -> Int {
         var dp: [String: Int] = [:]
         let sep: String = "$"
         dp[sep] = 0
