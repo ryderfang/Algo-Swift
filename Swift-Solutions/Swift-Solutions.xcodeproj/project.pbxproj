@@ -230,6 +230,9 @@
 		0D865BC32AE2294700CB3C1B /* 284.peeking-iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D865BC22AE2294700CB3C1B /* 284.peeking-iterator.swift */; };
 		0D865BC52AE23B8C00CB3C1B /* 287.find-the-duplicate-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D865BC42AE23B8C00CB3C1B /* 287.find-the-duplicate-number.swift */; };
 		0D94C1202CFC418200CFB6A9 /* 41.first-missing-positive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C11F2CFC418200CFB6A9 /* 41.first-missing-positive.swift */; };
+		0D94C1222CFC4F6100CFB6A9 /* 1911.maximum-alternating-subsequence-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1212CFC4F6100CFB6A9 /* 1911.maximum-alternating-subsequence-sum.swift */; };
+		0D94C1242CFC55F800CFB6A9 /* 799.champagne-tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1232CFC55F800CFB6A9 /* 799.champagne-tower.swift */; };
+		0D94C1262CFF047600CFB6A9 /* 1690.stone-game-vii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1252CFF047600CFB6A9 /* 1690.stone-game-vii.swift */; };
 		0D9E9B8A292A7CF0005486CE /* 29.divide-two-integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B89292A7CF0005486CE /* 29.divide-two-integers.swift */; };
 		0D9E9B8E292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8D292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift */; };
 		0D9E9B90292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8F292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift */; };
@@ -765,6 +768,9 @@
 		0D865BC22AE2294700CB3C1B /* 284.peeking-iterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "284.peeking-iterator.swift"; sourceTree = "<group>"; };
 		0D865BC42AE23B8C00CB3C1B /* 287.find-the-duplicate-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "287.find-the-duplicate-number.swift"; sourceTree = "<group>"; };
 		0D94C11F2CFC418200CFB6A9 /* 41.first-missing-positive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "41.first-missing-positive.swift"; sourceTree = "<group>"; };
+		0D94C1212CFC4F6100CFB6A9 /* 1911.maximum-alternating-subsequence-sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1911.maximum-alternating-subsequence-sum.swift"; sourceTree = "<group>"; };
+		0D94C1232CFC55F800CFB6A9 /* 799.champagne-tower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "799.champagne-tower.swift"; sourceTree = "<group>"; };
+		0D94C1252CFF047600CFB6A9 /* 1690.stone-game-vii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1690.stone-game-vii.swift"; sourceTree = "<group>"; };
 		0D9E9B89292A7CF0005486CE /* 29.divide-two-integers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "29.divide-two-integers.swift"; sourceTree = "<group>"; };
 		0D9E9B8D292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "33.search-in-rotated-sorted-array.swift"; sourceTree = "<group>"; };
 		0D9E9B8F292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "34.find-first-and-last-position-of-element-in-sorted-array.swift"; sourceTree = "<group>"; };
@@ -1527,6 +1533,7 @@
 				0DC9A3AE2B9EE8BC001CCF13 /* 692.top-k-frequent-words.swift */,
 				0DC442DE2CFC2BBC00995BE8 /* 712.minimum-ascii-delete-sum-for-two-strings.swift */,
 				0DC442E72CFC2BBE00995BE8 /* 714.best-time-to-buy-and-sell-stock-with-transaction-fee.swift */,
+				0D94C1232CFC55F800CFB6A9 /* 799.champagne-tower.swift */,
 				0D02221C2B3C258A00AF5C1C /* 858.mirror-reflection.swift */,
 				0DC442F82CFC2BC000995BE8 /* 877.stone-game.swift */,
 				0DC9A3BA2BA6B6AB001CCF13 /* 894.all-possible-full-binary-trees.swift */,
@@ -1563,9 +1570,11 @@
 				0DC442FB2CFC2BC000995BE8 /* 1638.count-substrings-that-differ-by-one-character.swift */,
 				0DC370A42B53D57C00A5CE48 /* 1641.count-sorted-vowel-strings.swift */,
 				0DC442E82CFC2BBE00995BE8 /* 1653.minimum-deletions-to-make-string-balanced.swift */,
+				0D94C1252CFF047600CFB6A9 /* 1690.stone-game-vii.swift */,
 				0DC442EA2CFC2BBE00995BE8 /* 1749.maximum-absolute-sum-of-any-subarray.swift */,
 				0D0222142B32E00B00AF5C1C /* 1828.queries-on-number-of-points-inside-a-circle.swift */,
 				0DC442DF2CFC2BBD00995BE8 /* 1884.egg-drop-with-2-eggs-and-n-floors.swift */,
+				0D94C1212CFC4F6100CFB6A9 /* 1911.maximum-alternating-subsequence-sum.swift */,
 				0DC442FD2CFC2BC000995BE8 /* 1947.maximum-compatibility-score-sum.swift */,
 				0DC442EB2CFC2BBE00995BE8 /* 2002.maximum-product-of-the-length-of-two-palindromic-subsequences.swift */,
 				0DC370A62B54141400A5CE48 /* 2063.vowels-of-all-substrings.swift */,
@@ -1782,6 +1791,7 @@
 				0DC4432F2CFC2BC200995BE8 /* 516.longest-palindromic-subsequence.swift in Sources */,
 				0D4D1F122AFFB1DA000ACD0F /* 72.edit-distance.swift in Sources */,
 				0DC4432B2CFC2BC200995BE8 /* 2305.fair-distribution-of-cookies.swift in Sources */,
+				0D94C1222CFC4F6100CFB6A9 /* 1911.maximum-alternating-subsequence-sum.swift in Sources */,
 				0DBE143F2912C46500F5ECE1 /* 342.power-of-four.swift in Sources */,
 				0DBE143329114DC200F5ECE1 /* 283.move-zeroes.swift in Sources */,
 				0DB6C7EF2934F4D300CBBC67 /* 92.reverse-linked-list-ii.swift in Sources */,
@@ -2102,6 +2112,7 @@
 				0DB6C7ED2934E68D00CBBC67 /* 91.decode-ways.swift in Sources */,
 				0D0222072B2F285500AF5C1C /* 1266.minimum-time-visiting-all-points.swift in Sources */,
 				0DCF94712928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift in Sources */,
+				0D94C1242CFC55F800CFB6A9 /* 799.champagne-tower.swift in Sources */,
 				0D4E52B82951F078000796BB /* 728.self-dividing-numbers.swift in Sources */,
 				0D01F331281AE26D00794410 /* main.swift in Sources */,
 				0DC9A3A52B8C7422001CCF13 /* 2179.count-good-triplets-in-an-array.swift in Sources */,
@@ -2213,6 +2224,7 @@
 				0D74F49D291FF4C1000E9237 /* 506.relative-ranks.swift in Sources */,
 				0D0221E62B16408500AF5C1C /* 386.lexicographical-numbers.swift in Sources */,
 				0DDF44392AE6CB140053E862 /* 304.range-sum-query-2-d-immutable.swift in Sources */,
+				0D94C1262CFF047600CFB6A9 /* 1690.stone-game-vii.swift in Sources */,
 				0DADAC3F291524E200C30C0F /* 405.convert-a-number-to-hexadecimal.swift in Sources */,
 				0D74F489291BE273000E9237 /* 463.island-perimeter.swift in Sources */,
 				0D0222152B32E00B00AF5C1C /* 1828.queries-on-number-of-points-inside-a-circle.swift in Sources */,
