@@ -13,9 +13,10 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    [1,4,2],
-    [5,3,1,4,2],
-    [7,90,5,1,100,10,10,2],
+    ("abcde", "ace"),
+    ("abc", "abc"),
+    ("abc", "def"),
+    ("bl", "yby")
 ]
 
 for (i, x) in cases.enumerated() {
@@ -28,7 +29,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.stoneGameVII(x)
+    let ans = sol.longestCommonSubsequence(x.0, x.1)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)

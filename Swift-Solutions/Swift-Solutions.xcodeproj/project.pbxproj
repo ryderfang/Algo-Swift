@@ -233,6 +233,8 @@
 		0D94C1222CFC4F6100CFB6A9 /* 1911.maximum-alternating-subsequence-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1212CFC4F6100CFB6A9 /* 1911.maximum-alternating-subsequence-sum.swift */; };
 		0D94C1242CFC55F800CFB6A9 /* 799.champagne-tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1232CFC55F800CFB6A9 /* 799.champagne-tower.swift */; };
 		0D94C1262CFF047600CFB6A9 /* 1690.stone-game-vii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1252CFF047600CFB6A9 /* 1690.stone-game-vii.swift */; };
+		0D94C1282CFF24C500CFB6A9 /* 2673.make-costs-of-paths-equal-in-a-binary-tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1272CFF24C400CFB6A9 /* 2673.make-costs-of-paths-equal-in-a-binary-tree.swift */; };
+		0D94C12A2CFF2AB000CFB6A9 /* 1143.longest-common-subsequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1292CFF2AB000CFB6A9 /* 1143.longest-common-subsequence.swift */; };
 		0D9E9B8A292A7CF0005486CE /* 29.divide-two-integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B89292A7CF0005486CE /* 29.divide-two-integers.swift */; };
 		0D9E9B8E292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8D292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift */; };
 		0D9E9B90292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8F292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift */; };
@@ -771,6 +773,8 @@
 		0D94C1212CFC4F6100CFB6A9 /* 1911.maximum-alternating-subsequence-sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1911.maximum-alternating-subsequence-sum.swift"; sourceTree = "<group>"; };
 		0D94C1232CFC55F800CFB6A9 /* 799.champagne-tower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "799.champagne-tower.swift"; sourceTree = "<group>"; };
 		0D94C1252CFF047600CFB6A9 /* 1690.stone-game-vii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1690.stone-game-vii.swift"; sourceTree = "<group>"; };
+		0D94C1272CFF24C400CFB6A9 /* 2673.make-costs-of-paths-equal-in-a-binary-tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2673.make-costs-of-paths-equal-in-a-binary-tree.swift"; sourceTree = "<group>"; };
+		0D94C1292CFF2AB000CFB6A9 /* 1143.longest-common-subsequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1143.longest-common-subsequence.swift"; sourceTree = "<group>"; };
 		0D9E9B89292A7CF0005486CE /* 29.divide-two-integers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "29.divide-two-integers.swift"; sourceTree = "<group>"; };
 		0D9E9B8D292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "33.search-in-rotated-sorted-array.swift"; sourceTree = "<group>"; };
 		0D9E9B8F292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "34.find-first-and-last-position-of-element-in-sorted-array.swift"; sourceTree = "<group>"; };
@@ -1555,6 +1559,7 @@
 				0DC442E52CFC2BBD00995BE8 /* 1105.filling-bookcase-shelves.swift */,
 				0DC442E12CFC2BBD00995BE8 /* 1130.minimum-cost-tree-from-leaf-values.swift */,
 				0DC442DC2CFC2BBC00995BE8 /* 1140.stone-game-ii.swift */,
+				0D94C1292CFF2AB000CFB6A9 /* 1143.longest-common-subsequence.swift */,
 				0DC442F72CFC2BC000995BE8 /* 1155.number-of-dice-rolls-with-target-sum.swift */,
 				0DC442FF2CFC2BC100995BE8 /* 1227.airplane-seat-assignment-probability.swift */,
 				0DC442DB2CFC2BBC00995BE8 /* 1277.count-square-submatrices-with-all-ones.swift */,
@@ -1587,6 +1592,7 @@
 				0DC442FE2CFC2BC100995BE8 /* 2305.fair-distribution-of-cookies.swift */,
 				0DC9A3A62B9EE34C001CCF13 /* 2343.query-kth-smallest-trimmed-number.swift */,
 				0DC370BD2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift */,
+				0D94C1272CFF24C400CFB6A9 /* 2673.make-costs-of-paths-equal-in-a-binary-tree.swift */,
 				0DC442DA2CFC2BBC00995BE8 /* 2684.maximum-number-of-moves-in-a-grid.swift */,
 				0DC443002CFC2BC100995BE8 /* 3192.minimum-operations-to-make-binary-array-elements-equal-to-one-ii.swift */,
 			);
@@ -1823,6 +1829,7 @@
 				0D4E52CC2955D4B3000796BB /* 804.unique-morse-code-words.swift in Sources */,
 				0D763876290CF92D004CD387 /* 202.happy-number.swift in Sources */,
 				0DC9A3A92B9EE34C001CCF13 /* 451.sort-characters-by-frequency.swift in Sources */,
+				0D94C12A2CFF2AB000CFB6A9 /* 1143.longest-common-subsequence.swift in Sources */,
 				0DC9A3AF2B9EE8BC001CCF13 /* 692.top-k-frequent-words.swift in Sources */,
 				0D76387E290E44A2004CD387 /* 168.excel-sheet-column-title.swift in Sources */,
 				0DDF44352AE678E50053E862 /* 299.bulls-and-cows.swift in Sources */,
@@ -2127,6 +2134,7 @@
 				0D4E52D729570658000796BB /* 821.shortest-distance-to-a-character.swift in Sources */,
 				0DC9A3AD2B9EE35F001CCF13 /* 493.reverse-pairs.swift in Sources */,
 				0DADAC382914120B00C30C0F /* 392.is-subsequence.swift in Sources */,
+				0D94C1282CFF24C500CFB6A9 /* 2673.make-costs-of-paths-equal-in-a-binary-tree.swift in Sources */,
 				DAFCA40728FAD75800CF1DE6 /* Defines.swift in Sources */,
 				0D64838829659FDA00458B69 /* 922.sort-array-by-parity-ii.swift in Sources */,
 				0DB6C815293B3B2D00CBBC67 /* WeeklyContest323.swift in Sources */,
