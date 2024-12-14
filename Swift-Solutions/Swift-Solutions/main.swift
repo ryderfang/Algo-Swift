@@ -13,10 +13,9 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    ("abcde", "ace"),
-    ("abc", "abc"),
-    ("abc", "def"),
-    ("bl", "yby")
+    "RR.L",
+    ".L.R...LR..L..",
+    "RL",
 ]
 
 for (i, x) in cases.enumerated() {
@@ -29,7 +28,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.longestCommonSubsequence(x.0, x.1)
+    let ans = sol.pushDominoes(x)
     print(ans)
 //    print(ans?.array() ?? [])
 //    print(tmp)
