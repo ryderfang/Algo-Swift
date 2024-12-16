@@ -239,6 +239,7 @@
 		0D94C1302D0595AE00CFB6A9 /* 3218.minimum-cost-for-cutting-cake-i.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C12F2D0595AE00CFB6A9 /* 3218.minimum-cost-for-cutting-cake-i.swift */; };
 		0D94C1322D059E5900CFB6A9 /* 838.push-dominoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1312D059E5900CFB6A9 /* 838.push-dominoes.swift */; };
 		0D94C1342D05A4B700CFB6A9 /* 1504.count-submatrices-with-all-ones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1332D05A4B700CFB6A9 /* 1504.count-submatrices-with-all-ones.swift */; };
+		0D94C1362D0EA41500CFB6A9 /* 2054.two-best-non-overlapping-events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D94C1352D0EA41500CFB6A9 /* 2054.two-best-non-overlapping-events.swift */; };
 		0D9E9B8A292A7CF0005486CE /* 29.divide-two-integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B89292A7CF0005486CE /* 29.divide-two-integers.swift */; };
 		0D9E9B8E292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8D292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift */; };
 		0D9E9B90292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E9B8F292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift */; };
@@ -783,6 +784,7 @@
 		0D94C12F2D0595AE00CFB6A9 /* 3218.minimum-cost-for-cutting-cake-i.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "3218.minimum-cost-for-cutting-cake-i.swift"; sourceTree = "<group>"; };
 		0D94C1312D059E5900CFB6A9 /* 838.push-dominoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "838.push-dominoes.swift"; sourceTree = "<group>"; };
 		0D94C1332D05A4B700CFB6A9 /* 1504.count-submatrices-with-all-ones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "1504.count-submatrices-with-all-ones.swift"; sourceTree = "<group>"; };
+		0D94C1352D0EA41500CFB6A9 /* 2054.two-best-non-overlapping-events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2054.two-best-non-overlapping-events.swift"; sourceTree = "<group>"; };
 		0D9E9B89292A7CF0005486CE /* 29.divide-two-integers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "29.divide-two-integers.swift"; sourceTree = "<group>"; };
 		0D9E9B8D292E53A6005486CE /* 33.search-in-rotated-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "33.search-in-rotated-sorted-array.swift"; sourceTree = "<group>"; };
 		0D9E9B8F292E6052005486CE /* 34.find-first-and-last-position-of-element-in-sorted-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "34.find-first-and-last-position-of-element-in-sorted-array.swift"; sourceTree = "<group>"; };
@@ -1592,6 +1594,7 @@
 				0D94C1212CFC4F6100CFB6A9 /* 1911.maximum-alternating-subsequence-sum.swift */,
 				0DC442FD2CFC2BC000995BE8 /* 1947.maximum-compatibility-score-sum.swift */,
 				0DC442EB2CFC2BBE00995BE8 /* 2002.maximum-product-of-the-length-of-two-palindromic-subsequences.swift */,
+				0D94C1352D0EA41500CFB6A9 /* 2054.two-best-non-overlapping-events.swift */,
 				0DC370A62B54141400A5CE48 /* 2063.vowels-of-all-substrings.swift */,
 				0D02221F2B3EC17F00AF5C1C /* 2101.detonate-the-maximum-bombs.swift */,
 				0DC442EE2CFC2BBF00995BE8 /* 2110.number-of-smooth-descent-periods-of-a-stock.swift */,
@@ -2254,6 +2257,7 @@
 				0D0222152B32E00B00AF5C1C /* 1828.queries-on-number-of-points-inside-a-circle.swift in Sources */,
 				0DBE143529128D7F00F5ECE1 /* 290.word-pattern.swift in Sources */,
 				0D763892290EB25C004CD387 /* 225.implement-stack-using-queues.swift in Sources */,
+				0D94C1362D0EA41500CFB6A9 /* 2054.two-best-non-overlapping-events.swift in Sources */,
 				DAFCA46928FBD09000CF1DE6 /* 70.climbing-stairs.swift in Sources */,
 				0DCF94732928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift in Sources */,
 				0D0222252B3EC18000AF5C1C /* 2249.count-lattice-points-inside-a-circle.swift in Sources */,
