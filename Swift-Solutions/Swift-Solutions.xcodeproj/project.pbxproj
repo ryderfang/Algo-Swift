@@ -265,6 +265,7 @@
 		0DADAC3B2915119F00C30C0F /* 401.binary-watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3A2915119F00C30C0F /* 401.binary-watch.swift */; };
 		0DADAC3D2915235100C30C0F /* 404.sum-of-left-leaves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3C2915235100C30C0F /* 404.sum-of-left-leaves.swift */; };
 		0DADAC3F291524E200C30C0F /* 405.convert-a-number-to-hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3E291524E100C30C0F /* 405.convert-a-number-to-hexadecimal.swift */; };
+		0DB59C032D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB59C022D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift */; };
 		0DB6C7BC29310E7F00CBBC67 /* 53.maximum-subarray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7BB29310E7F00CBBC67 /* 53.maximum-subarray.swift */; };
 		0DB6C7BE2931197C00CBBC67 /* 54.spiral-matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7BD2931197C00CBBC67 /* 54.spiral-matrix.swift */; };
 		0DB6C7C029312B3600CBBC67 /* 55.jump-game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7BF29312B3600CBBC67 /* 55.jump-game.swift */; };
@@ -810,6 +811,7 @@
 		0DADAC3A2915119F00C30C0F /* 401.binary-watch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "401.binary-watch.swift"; sourceTree = "<group>"; };
 		0DADAC3C2915235100C30C0F /* 404.sum-of-left-leaves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "404.sum-of-left-leaves.swift"; sourceTree = "<group>"; };
 		0DADAC3E291524E100C30C0F /* 405.convert-a-number-to-hexadecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "405.convert-a-number-to-hexadecimal.swift"; sourceTree = "<group>"; };
+		0DB59C022D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2606.find-the-substring-with-maximum-cost.swift"; sourceTree = "<group>"; };
 		0DB6C7BB29310E7F00CBBC67 /* 53.maximum-subarray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "53.maximum-subarray.swift"; sourceTree = "<group>"; };
 		0DB6C7BD2931197C00CBBC67 /* 54.spiral-matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "54.spiral-matrix.swift"; sourceTree = "<group>"; };
 		0DB6C7BF29312B3600CBBC67 /* 55.jump-game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "55.jump-game.swift"; sourceTree = "<group>"; };
@@ -1605,6 +1607,7 @@
 				0DC442FE2CFC2BC100995BE8 /* 2305.fair-distribution-of-cookies.swift */,
 				0DC9A3A62B9EE34C001CCF13 /* 2343.query-kth-smallest-trimmed-number.swift */,
 				0DC370BD2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift */,
+				0DB59C022D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift */,
 				0D94C1272CFF24C400CFB6A9 /* 2673.make-costs-of-paths-equal-in-a-binary-tree.swift */,
 				0DC442DA2CFC2BBC00995BE8 /* 2684.maximum-number-of-moves-in-a-grid.swift */,
 				0D94C12D2D05803F00CFB6A9 /* 2707.extra-characters-in-a-string.swift */,
@@ -1739,7 +1742,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					0D01F32C281AE26D00794410 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -2147,6 +2150,7 @@
 				0DB6C827293B745200CBBC67 /* 128.longest-consecutive-sequence.swift in Sources */,
 				0DB6C7E2293274E200CBBC67 /* 81.search-in-rotated-sorted-array-ii.swift in Sources */,
 				DAFCA3B528F9140900CF1DE6 /* 20.valid-parentheses.swift in Sources */,
+				0DB59C032D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift in Sources */,
 				0DC370A92B54224E00A5CE48 /* 1621.number-of-sets-of-k-non-overlapping-line-segments.swift in Sources */,
 				0D4E52572945FC48000796BB /* 167.two-sum-ii-input-array-is-sorted.swift in Sources */,
 				0D4E52D729570658000796BB /* 821.shortest-distance-to-a-character.swift in Sources */,
@@ -2346,6 +2350,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2407,6 +2412,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
