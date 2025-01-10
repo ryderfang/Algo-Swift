@@ -11,13 +11,37 @@ class Solution {}
 
 extension Solution {
     // Better solution
+    // DP
+    func findTargetSumWays(_ nums: [Int], _ target: Int) -> Int {
+        let sum = nums.reduce(0, +)
+        guard target >= -sum && target <= sum else { return 0 }
+
+        let n = nums.count
+        var memo = Array(repeating: Array(repeating: 0, count: sum * 2 + 1), count: n)
+        memo[0][sum + nums[0]] = 1
+        memo[0][sum - nums[0]] += 1 // nums[0] could be 0
+
+        for i in 1..<n {
+            let num = nums[i]
+            for j in 0...2*sum {
+                if memo[i - 1][j] > 0 { // if there's valid sum of j up to index i - 1
+                    memo[i][j + num] += memo[i - 1][j]
+                    memo[i][j - num] += memo[i - 1][j]
+                }
+            }
+        }
+
+        return memo[n - 1][sum + target]
+    }
+    
+    // Better solution
     /*
      * (A - B) = target
      * (A + B) = sum
      * B = (sum - target) / 2
      * -> 0-1 knapsack
      */
-    func findTargetSumWays(_ nums: [Int], _ target: Int) -> Int {
+    func findTargetSumWays1(_ nums: [Int], _ target: Int) -> Int {
         let sum = nums.reduce(0, +)
         guard target >= -sum && target <= sum else { return 0 }
         guard (sum - target) % 2 == 0 else { return 0 }
@@ -34,7 +58,7 @@ extension Solution {
     
     // n <- [1, 20]
     // nums[i] <- [0, 1000]
-    func findTargetSumWays1(_ nums: [Int], _ target: Int) -> Int {
+    func findTargetSumWays2(_ nums: [Int], _ target: Int) -> Int {
         var dp = [Int: Int]()
         let n = nums.count
         for i in 0..<n {
