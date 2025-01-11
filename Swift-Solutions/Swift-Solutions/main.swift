@@ -13,13 +13,17 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    ("adaa", "d", [-1000]),
-    ("abc", "abc", [-1,-1,-1])
+//    [0, 4, 5],
+//    [2,7,4,1,8,1],
+//    [31,26,33,21,40],
+    [1,1,2,3,5,8,13,21,34,55,89,14,23,37,61,98],
 ]
 
 let result = [
-    2,
-    0,
+//    1,
+//    1,
+//    5,
+    1,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -32,7 +36,8 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.maximumCostSubstring(x.0, x.1, x.2)
+    let ans = sol.lastStoneWeightII(x)
+    
     print("\(ans) ~> \(ans == result[i] ? "✅" : "❌")")
 //    print(ans?.array() ?? [])
 //    print(tmp)
