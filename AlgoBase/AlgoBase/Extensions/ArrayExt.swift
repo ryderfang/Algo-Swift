@@ -20,3 +20,25 @@ private extension Array<Int> {
         return [[[[Int]]]](repeating: [[[Int]]](repeating: [[Int]](repeating: [Int](repeating: 0, count: s), count: k), count: n), count: m)
     }
 }
+
+private struct HashableTriple<T1: Hashable, T2: Hashable, T3: Hashable>: Hashable {
+    let first: T1
+    let second: T2
+    let third: T3
+    
+    init(_ values: (T1, T2, T3)) {
+        self.first = values.0
+        self.second = values.1
+        self.third = values.2
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(first)
+        hasher.combine(second)
+        hasher.combine(third)
+    }
+
+    static func == (lhs: HashableTriple, rhs: HashableTriple) -> Bool {
+        return lhs.first == rhs.first && lhs.second == rhs.second && lhs.third == rhs.third
+    }
+}

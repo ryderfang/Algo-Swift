@@ -13,17 +13,13 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    39,
-    54,
-    241,
-    8433,
+    (3, 2, 0, 0),
+    (1, 0, 0, 0),
 ]
 
 let result = [
-    3,
-    3,
-    3,
-    4,
+    0.0625,
+    1.0000,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -36,7 +32,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.minOperations(x)
+    let ans = sol.knightProbability(x.0, x.1, x.2, x.3)
     
     print("\(ans) ~> \(ans == result[safe: i] ? "✅" : "❌")")
 //    print(ans?.array() ?? [])
