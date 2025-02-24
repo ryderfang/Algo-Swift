@@ -13,17 +13,17 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-//    [0, 4, 5],
-//    [2,7,4,1,8,1],
-//    [31,26,33,21,40],
-    [1,1,2,3,5,8,13,21,34,55,89,14,23,37,61,98],
+    39,
+    54,
+    241,
+    8433,
 ]
 
 let result = [
-//    1,
-//    1,
-//    5,
-    1,
+    3,
+    3,
+    3,
+    4,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -36,9 +36,9 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.lastStoneWeightII(x)
+    let ans = sol.minOperations(x)
     
-    print("\(ans) ~> \(ans == result[i] ? "✅" : "❌")")
+    print("\(ans) ~> \(ans == result[safe: i] ? "✅" : "❌")")
 //    print(ans?.array() ?? [])
 //    print(tmp)
 }
@@ -69,5 +69,16 @@ struct ClassHandler {
 fileprivate extension Array where Element == String {
     func charArray() -> [Character] {
         return self.map { Character($0) }
+    }
+}
+
+extension Array {
+    subscript(safe index: Index) -> Element? {
+        get { return self.indices ~= index ? self[index] : nil }
+        set {
+            if self.indices ~= index {
+                self[index] = newValue!
+            }
+        }
     }
 }

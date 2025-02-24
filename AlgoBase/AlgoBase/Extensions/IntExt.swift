@@ -119,13 +119,14 @@ extension Int {
 //        return self.nonzeroBitCount
     }
 
-    func isPowerOfTwo(_ n: Int) -> Bool {
+    func isPowerOfTwo() -> Bool {
         let n = self
         guard n > 0 else { return false }
         return (n & (n - 1)) == 0
     }
 
-    func isPowerOfThree(_ n: Int) -> Bool {
+    func isPowerOfThree() -> Bool {
+        let n = self
         guard n > 0 else { return false }
         // calculated by python:
         // list(map(lambda x: 3 ** x, list(range(0,20))))
@@ -136,7 +137,8 @@ extension Int {
 
     // 4^n = 2^(2*n)
     // 4^n = 3 * (4^n-1 + 4^n-2 + ... + 4 + 1)
-    func isPowerOfFour(_ n: Int) -> Bool {
+    func isPowerOfFour() -> Bool {
+        let n = self
         return n > 0 && (n & (n - 1) == 0) && (n - 1) % 3 == 0
     }
 }
