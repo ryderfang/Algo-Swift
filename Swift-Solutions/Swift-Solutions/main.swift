@@ -13,13 +13,21 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    (3, 2, 0, 0),
-    (1, 0, 0, 0),
+    ("abced", 2),
+    ("aaazzz", 4),
+    ("vgjtj", 14),
+    
+//    ([1,2,-1,3,3,4], 2, 2),
+//    ([-10,3,-1,-2], 4, 1)
 ]
 
 let result = [
-    0.0625,
-    1.0000,
+    3,
+    6,
+    4,
+    
+//    13,
+//    -10,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -32,7 +40,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.knightProbability(x.0, x.1, x.2, x.3)
+    let ans = sol.longestPalindromicSubsequence(x.0, x.1)
     
     print("\(ans) ~> \(ans == result[safe: i] ? "✅" : "❌")")
 //    print(ans?.array() ?? [])

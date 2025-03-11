@@ -47,6 +47,15 @@ extension Character {
         guard let ascii = self.asciiValue, 97...122 ~= ascii else { return -1 }
         return Int(ascii - 97)
     }
+    
+    // cycle distance between characters, e.g. dist('a', 'z') = 1
+    public static func dist(_ ch1: Character, _ ch2: Character) -> Int {
+        let index1 = (ch1.asciiValue! - 97)
+        let index2 = (ch2.asciiValue! - 97)
+        let minIndex = min(index1, index2)
+        let maxIndex = max(index1, index2)
+        return Int(min(maxIndex - minIndex, minIndex + 26 - maxIndex))
+    }
 
     func toLower() -> Character {
         guard let ascii = self.asciiValue, ascii >= 65 && ascii <= 90 else { return self }

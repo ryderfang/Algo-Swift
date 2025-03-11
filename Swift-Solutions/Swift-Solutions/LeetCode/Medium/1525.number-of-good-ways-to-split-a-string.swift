@@ -11,7 +11,6 @@ class Solution {}
 
 extension Solution {
     func numSplits(_ s: String) -> Int {
-        let n = s.count
         let s = Array(s)
         var mp1 = [Character: Int]()
         for c in s {

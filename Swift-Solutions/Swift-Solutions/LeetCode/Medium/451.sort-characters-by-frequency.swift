@@ -15,7 +15,7 @@ extension Solution {
         for c in s {
             mp[c, default: 0] += 1
         }
-        var sorted = mp.sorted(by: {$0.value > $1.value } )
+        let sorted = mp.sorted(by: {$0.value > $1.value } )
         var ans = [Character]()
         for (ch, n) in sorted {
             ans.append(contentsOf: [Character](repeating: ch, count: n))

@@ -266,6 +266,8 @@
 		0DADAC3B2915119F00C30C0F /* 401.binary-watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3A2915119F00C30C0F /* 401.binary-watch.swift */; };
 		0DADAC3D2915235100C30C0F /* 404.sum-of-left-leaves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3C2915235100C30C0F /* 404.sum-of-left-leaves.swift */; };
 		0DADAC3F291524E200C30C0F /* 405.convert-a-number-to-hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3E291524E100C30C0F /* 405.convert-a-number-to-hexadecimal.swift */; };
+		0DAF63F72D6DFF7E0033B270 /* 2140.solving-questions-with-brainpower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAF63F62D6DFF7E0033B270 /* 2140.solving-questions-with-brainpower.swift */; };
+		0DAF63F92D73F89F0033B270 /* WeeklyContest439.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAF63F82D73F74E0033B270 /* WeeklyContest439.swift */; };
 		0DB59C032D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB59C022D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift */; };
 		0DB59C052D1812E800D6A05B /* 740.delete-and-earn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB59C042D1812E800D6A05B /* 740.delete-and-earn.swift */; };
 		0DB59C072D181C4800D6A05B /* 1049.last-stone-weight-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB59C062D181C4800D6A05B /* 1049.last-stone-weight-ii.swift */; };
@@ -819,6 +821,8 @@
 		0DADAC3A2915119F00C30C0F /* 401.binary-watch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "401.binary-watch.swift"; sourceTree = "<group>"; };
 		0DADAC3C2915235100C30C0F /* 404.sum-of-left-leaves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "404.sum-of-left-leaves.swift"; sourceTree = "<group>"; };
 		0DADAC3E291524E100C30C0F /* 405.convert-a-number-to-hexadecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "405.convert-a-number-to-hexadecimal.swift"; sourceTree = "<group>"; };
+		0DAF63F62D6DFF7E0033B270 /* 2140.solving-questions-with-brainpower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2140.solving-questions-with-brainpower.swift"; sourceTree = "<group>"; };
+		0DAF63F82D73F74E0033B270 /* WeeklyContest439.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyContest439.swift; sourceTree = "<group>"; };
 		0DB59C022D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2606.find-the-substring-with-maximum-cost.swift"; sourceTree = "<group>"; };
 		0DB59C042D1812E800D6A05B /* 740.delete-and-earn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "740.delete-and-earn.swift"; sourceTree = "<group>"; };
 		0DB59C062D181C4800D6A05B /* 1049.last-stone-weight-ii.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1049.last-stone-weight-ii.swift"; sourceTree = "<group>"; };
@@ -1619,6 +1623,7 @@
 				0DC370A62B54141400A5CE48 /* 2063.vowels-of-all-substrings.swift */,
 				0D02221F2B3EC17F00AF5C1C /* 2101.detonate-the-maximum-bombs.swift */,
 				0DC442EE2CFC2BBF00995BE8 /* 2110.number-of-smooth-descent-periods-of-a-stock.swift */,
+				0DAF63F62D6DFF7E0033B270 /* 2140.solving-questions-with-brainpower.swift */,
 				0DC370A22B51441B00A5CE48 /* 2221.find-triangular-sum-of-an-array.swift */,
 				0D0222202B3EC17F00AF5C1C /* 2249.count-lattice-points-inside-a-circle.swift */,
 				0D02222E2B45552F00AF5C1C /* 2280.minimum-lines-to-represent-a-line-chart.swift */,
@@ -1695,6 +1700,7 @@
 				0DDF445C2AEDFAC60053E862 /* WeeklyContest369.swift */,
 				0DDF44662AF735B10053E862 /* WeeklyContest370.swift */,
 				0D84DE502B00705B00A11A42 /* WeeklyContest371.swift */,
+				0DAF63F82D73F74E0033B270 /* WeeklyContest439.swift */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -2008,6 +2014,7 @@
 				0D7638A2290ECD52004CD387 /* 258.add-digits.swift in Sources */,
 				0D02220D2B3290CA00AF5C1C /* 1232.check-if-it-is-a-straight-line.swift in Sources */,
 				0D763863290BF80E004CD387 /* 110.balanced-binary-tree.swift in Sources */,
+				0DAF63F92D73F89F0033B270 /* WeeklyContest439.swift in Sources */,
 				0DC370B32B884C8400A5CE48 /* 920.number-of-music-playlists.swift in Sources */,
 				DAFCA3A328F6B70400CF1DE6 /* 19.remove-nth-node-from-end-of-list.swift in Sources */,
 				0DC370BF2B88981500A5CE48 /* 2400.number-of-ways-to-reach-a-position-after-exactly-k-steps.swift in Sources */,
@@ -2167,6 +2174,7 @@
 				0D0222072B2F285500AF5C1C /* 1266.minimum-time-visiting-all-points.swift in Sources */,
 				0DCF94712928EB0C009D3B1A /* 24.swap-nodes-in-pairs.swift in Sources */,
 				0D94C1242CFC55F800CFB6A9 /* 799.champagne-tower.swift in Sources */,
+				0DAF63F72D6DFF7E0033B270 /* 2140.solving-questions-with-brainpower.swift in Sources */,
 				0D4E52B82951F078000796BB /* 728.self-dividing-numbers.swift in Sources */,
 				0D01F331281AE26D00794410 /* main.swift in Sources */,
 				0DC9A3A52B8C7422001CCF13 /* 2179.count-good-triplets-in-an-array.swift in Sources */,
