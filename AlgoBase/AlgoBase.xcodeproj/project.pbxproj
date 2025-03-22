@@ -24,6 +24,7 @@
 		0DADAC272914007F00C30C0F /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC262914007F00C30C0F /* QuickSort.swift */; };
 		0DADAC3329140DE700C30C0F /* DictionaryExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADAC3229140DE700C30C0F /* DictionaryExt.swift */; };
 		0DAF640F2D8437830033B270 /* pack_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAF640E2D8437600033B270 /* pack_01.swift */; };
+		0DAF64132D85C8970033B270 /* pack_05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAF64122D85C8970033B270 /* pack_05.swift */; };
 		0DB6C7E529331CE500CBBC67 /* ArrayExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C7E429331CE500CBBC67 /* ArrayExt.swift */; };
 		0DB6C805293B1DCF00CBBC67 /* TreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C804293B1DCF00CBBC67 /* TreeTests.swift */; };
 		0DB6C82E293C39C500CBBC67 /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6C82D293C39C500CBBC67 /* UnionFind.swift */; };
@@ -97,6 +98,7 @@
 		0DADAC3229140DE700C30C0F /* DictionaryExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExt.swift; sourceTree = "<group>"; };
 		0DAF640D2D84328A0033B270 /* Tianyi.Cui_Pack_V2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Tianyi.Cui_Pack_V2.pdf; sourceTree = "<group>"; };
 		0DAF640E2D8437600033B270 /* pack_01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pack_01.swift; sourceTree = "<group>"; };
+		0DAF64122D85C8970033B270 /* pack_05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pack_05.swift; sourceTree = "<group>"; };
 		0DB6C7E429331CE500CBBC67 /* ArrayExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExt.swift; sourceTree = "<group>"; };
 		0DB6C804293B1DCF00CBBC67 /* TreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeTests.swift; sourceTree = "<group>"; };
 		0DB6C82D293C39C500CBBC67 /* UnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				0DAF640E2D8437600033B270 /* pack_01.swift */,
+				0DAF64122D85C8970033B270 /* pack_05.swift */,
 				0DAF640D2D84328A0033B270 /* Tianyi.Cui_Pack_V2.pdf */,
 			);
 			path = Knapsack;
@@ -557,6 +560,7 @@
 				0D84DE5D2B064E2200A11A42 /* Combinations+Count.swift in Sources */,
 				0DF7953B29990BA800893B80 /* UndirectedGraph.swift in Sources */,
 				0DB6C8562944946000CBBC67 /* HeapSort.swift in Sources */,
+				0DAF64132D85C8970033B270 /* pack_05.swift in Sources */,
 				0DF7954529A224E100893B80 /* Trie.swift in Sources */,
 				0DAF640F2D8437830033B270 /* pack_01.swift in Sources */,
 				DAFCA44F28FAD91C00CF1DE6 /* AlgoBase.docc in Sources */,

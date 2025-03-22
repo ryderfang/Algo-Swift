@@ -269,6 +269,8 @@
 		0DAF63F72D6DFF7E0033B270 /* 2140.solving-questions-with-brainpower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAF63F62D6DFF7E0033B270 /* 2140.solving-questions-with-brainpower.swift */; };
 		0DAF63F92D73F89F0033B270 /* WeeklyContest439.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAF63F82D73F74E0033B270 /* WeeklyContest439.swift */; };
 		0DAF64112D856F400033B270 /* 416.partition-equal-subset-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAF64102D856F400033B270 /* 416.partition-equal-subset-sum.swift */; };
+		0DAF64152D85C95F0033B270 /* 474.ones-and-zeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAF64142D85C95F0033B270 /* 474.ones-and-zeroes.swift */; };
+		0DAF64172D85D48C0033B270 /* 879.profitable-schemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAF64162D85D48C0033B270 /* 879.profitable-schemes.swift */; };
 		0DB59C032D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB59C022D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift */; };
 		0DB59C052D1812E800D6A05B /* 740.delete-and-earn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB59C042D1812E800D6A05B /* 740.delete-and-earn.swift */; };
 		0DB59C072D181C4800D6A05B /* 1049.last-stone-weight-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB59C062D181C4800D6A05B /* 1049.last-stone-weight-ii.swift */; };
@@ -825,6 +827,8 @@
 		0DAF63F62D6DFF7E0033B270 /* 2140.solving-questions-with-brainpower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2140.solving-questions-with-brainpower.swift"; sourceTree = "<group>"; };
 		0DAF63F82D73F74E0033B270 /* WeeklyContest439.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyContest439.swift; sourceTree = "<group>"; };
 		0DAF64102D856F400033B270 /* 416.partition-equal-subset-sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "416.partition-equal-subset-sum.swift"; sourceTree = "<group>"; };
+		0DAF64142D85C95F0033B270 /* 474.ones-and-zeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "474.ones-and-zeroes.swift"; sourceTree = "<group>"; };
+		0DAF64162D85D48C0033B270 /* 879.profitable-schemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "879.profitable-schemes.swift"; sourceTree = "<group>"; };
 		0DB59C022D167DC600D6A05B /* 2606.find-the-substring-with-maximum-cost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2606.find-the-substring-with-maximum-cost.swift"; sourceTree = "<group>"; };
 		0DB59C042D1812E800D6A05B /* 740.delete-and-earn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "740.delete-and-earn.swift"; sourceTree = "<group>"; };
 		0DB59C062D181C4800D6A05B /* 1049.last-stone-weight-ii.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1049.last-stone-weight-ii.swift"; sourceTree = "<group>"; };
@@ -1557,6 +1561,7 @@
 				0DC443042CFC2BC100995BE8 /* 413.arithmetic-slices.swift */,
 				0DAF64102D856F400033B270 /* 416.partition-equal-subset-sum.swift */,
 				0DC9A3A72B9EE34C001CCF13 /* 451.sort-characters-by-frequency.swift */,
+				0DAF64142D85C95F0033B270 /* 474.ones-and-zeroes.swift */,
 				0D0222122B32D08900AF5C1C /* 478.generate-random-point-in-a-circle.swift */,
 				0DB59C082D3274E700D6A05B /* 494.target-sum.swift */,
 				0DC443022CFC2BC100995BE8 /* 516.longest-palindromic-subsequence.swift */,
@@ -1659,6 +1664,7 @@
 				0D46A7C22B4FB09800D9A402 /* 335.self-crossing.swift */,
 				0DC9A3AB2B9EE35F001CCF13 /* 493.reverse-pairs.swift */,
 				0D46A7BA2B4F97EE00D9A402 /* 587.erect-the-fence.swift */,
+				0DAF64162D85D48C0033B270 /* 879.profitable-schemes.swift */,
 				0DC370AF2B884C8400A5CE48 /* 920.number-of-music-playlists.swift */,
 				0DC370B12B884C8400A5CE48 /* 1359.count-all-valid-pickup-and-delivery-options.swift */,
 				0D46A7BC2B4F97EE00D9A402 /* 1453.maximum-number-of-darts-inside-of-a-circular-dartboard.swift */,
@@ -2088,6 +2094,7 @@
 				0D4E52702948AE6B000796BB /* 561.array-partition.swift in Sources */,
 				0DBE143D29129C7700F5ECE1 /* 338.counting-bits.swift in Sources */,
 				0DF7954329A2123D00893B80 /* 211.design-add-and-search-words-data-structure.swift in Sources */,
+				0DAF64152D85C95F0033B270 /* 474.ones-and-zeroes.swift in Sources */,
 				0D4E52C82955CE77000796BB /* 771.jewels-and-stones.swift in Sources */,
 				0DB6C82B293B7E9100CBBC67 /* 130.surrounded-regions.swift in Sources */,
 				0DC443252CFC2BC200995BE8 /* 877.stone-game.swift in Sources */,
@@ -2206,6 +2213,7 @@
 				0DF795322993BE0C00893B80 /* 201.bitwise-and-of-numbers-range.swift in Sources */,
 				0D94C1302D0595AE00CFB6A9 /* 3218.minimum-cost-for-cutting-cake-i.swift in Sources */,
 				0DB6C85F2944BFF600CBBC67 /* 153.find-minimum-in-rotated-sorted-array.swift in Sources */,
+				0DAF64172D85D48C0033B270 /* 879.profitable-schemes.swift in Sources */,
 				0DB6C8612944C61400CBBC67 /* 155.min-stack.swift in Sources */,
 				0D6483732962EFE800458B69 /* 883.projection-area-of-3-d-shapes.swift in Sources */,
 				0D64838229631D7400458B69 /* 908.smallest-range-i.swift in Sources */,

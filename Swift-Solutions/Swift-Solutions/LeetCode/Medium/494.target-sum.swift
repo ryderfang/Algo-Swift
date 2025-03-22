@@ -12,7 +12,7 @@ class Solution {}
 extension Solution {
     // Better solution
     // DP
-    func findTargetSumWays(_ nums: [Int], _ target: Int) -> Int {
+    func findTargetSumWays1(_ nums: [Int], _ target: Int) -> Int {
         let sum = nums.reduce(0, +)
         guard target >= -sum && target <= sum else { return 0 }
 
@@ -36,16 +36,37 @@ extension Solution {
     
     // Better solution
     /*
+     * A: elements use "add"
+     * B: elements use "sub"
      * (A - B) = target
      * (A + B) = sum
      * B = (sum - target) / 2
      * -> 0-1 knapsack
      */
-    func findTargetSumWays1(_ nums: [Int], _ target: Int) -> Int {
+    func findTargetSumWays2(_ nums: [Int], _ target: Int) -> Int {
         let sum = nums.reduce(0, +)
         guard target >= -sum && target <= sum else { return 0 }
         guard (sum - target) % 2 == 0 else { return 0 }
         let T = (sum - target) / 2
+        // dp[cur] -> 到 nums[i] 时和为 cur 的个数
+        // dp[i][cur] = dp[i-1][cur] + dp[i-1][cur-nums_i]
+        // 一维化后即，dp[cur] += dp[cur-nums_i]
+        var dp = [Int](repeating: 0, count: T + 1)
+        dp[0] = 1
+        for num in nums {
+            for cur in stride(from: T, through: num, by: -1) {
+                dp[cur] += dp[cur - num]
+            }
+        }
+        return dp[T]
+    }
+    
+    // 也可以将 A 的个数作为 T
+    func findTargetSumWays(_ nums: [Int], _ target: Int) -> Int {
+        let sum = nums.reduce(0, +)
+        guard target >= -sum && target <= sum else { return 0 }
+        guard (sum + target) % 2 == 0 else { return 0 }
+        let T = (sum + target) / 2
         var dp = [Int](repeating: 0, count: T + 1)
         dp[0] = 1
         for num in nums {
@@ -58,7 +79,7 @@ extension Solution {
     
     // n <- [1, 20]
     // nums[i] <- [0, 1000]
-    func findTargetSumWays2(_ nums: [Int], _ target: Int) -> Int {
+    func findTargetSumWays3(_ nums: [Int], _ target: Int) -> Int {
         var dp = [Int: Int]()
         let n = nums.count
         for i in 0..<n {

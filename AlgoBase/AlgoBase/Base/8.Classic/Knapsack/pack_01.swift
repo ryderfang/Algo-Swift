@@ -12,18 +12,16 @@
 
 /* LeetCode 参考题目
  * 416.partition-equal-subset-sum
- * 474.
- * 494.
- * 879.
- * 1049.
+ * 494.target-sum
+ * 1049.last-stone-weight-ii
  */
 
 /* 1.2 基本思路
- > dp[i][v] = max(dp[i-1][v], dp[i-1][v-C[i]] + W[i])
+ > dp[i][v] = max(dp[i-1][v], dp[i-1][v-C_i] + W_i)
  * dp[i][v] -> 前 i 件物品装入 v 的背包的子问题
  * 对物品 i，有两种情况
  * 如果不放入，转化为 dp[i-1][v]
- * 如果放入，转化为 dp[i-1][v-C[i]]，同时总价值 +W[i]
+ * 如果放入，转化为 dp[i-1][v-C_i]，同时总价值 +W_i
  * T: O(nV), M: O(nV)
  */
 func pack_01_1(_ V: Int, _ C: [Int], _ W: [Int]) -> Int {

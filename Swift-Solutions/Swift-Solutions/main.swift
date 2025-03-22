@@ -13,28 +13,19 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    [1,5,11,5],
-    [1,2,3,5],
-    [1,2,5],
-    [100,4,6],
-    [2,2,3,5],
-    [2,2,1,1],
-    
-    
-//    ([1,2,-1,3,3,4], 2, 2),
-//    ([-10,3,-1,-2], 4, 1)
+    (5, 3, [2, 2], [2, 3]),
+    (10, 5, [2,3,5], [6,7,8]),
+    (64, 0, [80, 40], [88, 88]),
+    (1, 1, [1,1,1,1,2,2,1,2,1,1], [0,1,0,0,1,1,1,0,2,2]),
+    (10, 10, [9], [6]),
 ]
 
 let result = [
-    true,
-    false,
-    false,
-    false,
-    false,
-    true,
-    
-//    13,
-//    -10,
+    2,
+    7,
+    2,
+    4,
+    0,
 ]
 
 for (i, x) in cases.enumerated() {
@@ -47,7 +38,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.canPartition(x)
+    let ans = sol.profitableSchemes(x.0, x.1, x.2, x.3)
     
     print("\(ans) ~> \(ans == result[safe: i] ? "✅" : "❌")")
 //    print(ans?.array() ?? [])
