@@ -10,6 +10,24 @@ class Solution {}
 #endif
 extension Solution {
     func wordBreak(_ s: String, _ wordDict: [String]) -> Bool {
+        let (n, V) = (wordDict.count, s.count)
+        var dp = [Bool](repeating: false, count: V + 1)
+        let wordSet = Set(wordDict)
+        let maxWordLength = wordSet.map { $0.count }.max() ?? 0
+        dp[0] = true
+        for i in 1...V {
+            let start = max(0, i - maxWordLength)
+            for j in start..<i {
+                if dp[j] && wordSet.contains(s[j...i-1]) {
+                    dp[i] = true
+                    break
+                }
+            }
+        }
+        return dp[V]
+    }
+    
+    func wordBreak1(_ s: String, _ wordDict: [String]) -> Bool {
         var dic = [String: Int]()
         var wordMaxLength = 0
         for word in wordDict {

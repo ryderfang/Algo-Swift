@@ -459,6 +459,7 @@
 		0DE6B801298E0AA500FA49A3 /* 179.largest-number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6B800298E0AA500FA49A3 /* 179.largest-number.swift */; };
 		0DE6B803298E156900FA49A3 /* 187.repeated-dna-sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6B802298E156900FA49A3 /* 187.repeated-dna-sequences.swift */; };
 		0DE6B80529911F2A00FA49A3 /* 189.rotate-array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6B80429911F2900FA49A3 /* 189.rotate-array.swift */; };
+		0DEBBA832E87AF9F00FEC5CB /* 1449.form-largest-integer-with-digits-that-add-up-to-target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBBA822E87AF9F00FEC5CB /* 1449.form-largest-integer-with-digits-that-add-up-to-target.swift */; };
 		0DF087F02A03FB5800486C49 /* 223.rectangle-area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF087EF2A03FB5800486C49 /* 223.rectangle-area.swift */; };
 		0DF087F22A04022E00486C49 /* 227.basic-calculator-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF087F12A04022E00486C49 /* 227.basic-calculator-ii.swift */; };
 		0DF087F42A05028200486C49 /* 229.majority-element-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF087F32A05028200486C49 /* 229.majority-element-ii.swift */; };
@@ -1017,6 +1018,7 @@
 		0DE6B800298E0AA500FA49A3 /* 179.largest-number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "179.largest-number.swift"; sourceTree = "<group>"; };
 		0DE6B802298E156900FA49A3 /* 187.repeated-dna-sequences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "187.repeated-dna-sequences.swift"; sourceTree = "<group>"; };
 		0DE6B80429911F2900FA49A3 /* 189.rotate-array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "189.rotate-array.swift"; sourceTree = "<group>"; };
+		0DEBBA822E87AF9F00FEC5CB /* 1449.form-largest-integer-with-digits-that-add-up-to-target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1449.form-largest-integer-with-digits-that-add-up-to-target.swift"; sourceTree = "<group>"; };
 		0DF087EF2A03FB5800486C49 /* 223.rectangle-area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "223.rectangle-area.swift"; sourceTree = "<group>"; };
 		0DF087F12A04022E00486C49 /* 227.basic-calculator-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "227.basic-calculator-ii.swift"; sourceTree = "<group>"; };
 		0DF087F32A05028200486C49 /* 229.majority-element-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "229.majority-element-ii.swift"; sourceTree = "<group>"; };
@@ -1612,6 +1614,7 @@
 				0DC443052CFC2BC200995BE8 /* 1387.sort-integers-by-the-power-value.swift */,
 				0DC443062CFC2BC200995BE8 /* 1395.count-number-of-teams.swift */,
 				0D02222A2B453BA400AF5C1C /* 1401.circle-and-rectangle-overlapping.swift */,
+				0DEBBA822E87AF9F00FEC5CB /* 1449.form-largest-integer-with-digits-that-add-up-to-target.swift */,
 				0DC442F52CFC2BBF00995BE8 /* 1493.longest-subarray-of-1-s-after-deleting-one-element.swift */,
 				0D94C1332D05A4B700CFB6A9 /* 1504.count-submatrices-with-all-ones.swift */,
 				0DC442FA2CFC2BC000995BE8 /* 1525.number-of-good-ways-to-split-a-string.swift */,
@@ -2309,6 +2312,7 @@
 				0DBE143529128D7F00F5ECE1 /* 290.word-pattern.swift in Sources */,
 				0D763892290EB25C004CD387 /* 225.implement-stack-using-queues.swift in Sources */,
 				0D94C1362D0EA41500CFB6A9 /* 2054.two-best-non-overlapping-events.swift in Sources */,
+				0DEBBA832E87AF9F00FEC5CB /* 1449.form-largest-integer-with-digits-that-add-up-to-target.swift in Sources */,
 				DAFCA46928FBD09000CF1DE6 /* 70.climbing-stairs.swift in Sources */,
 				0DCF94732928EC4C009D3B1A /* 28.find-the-index-of-the-first-occurrence-in-a-string.swift in Sources */,
 				0D0222252B3EC18000AF5C1C /* 2249.count-lattice-points-inside-a-circle.swift in Sources */,

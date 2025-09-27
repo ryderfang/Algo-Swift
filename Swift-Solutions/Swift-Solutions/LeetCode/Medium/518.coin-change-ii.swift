@@ -10,7 +10,24 @@ class Solution {}
 #endif
 
 extension Solution {
+    // 完全背包问题
     func change(_ amount: Int, _ coins: [Int]) -> Int {
+        guard amount > 0 else { return 1 }
+        guard coins.count > 0 else { return 0 }
+        var dp = [Int](repeating: 0, count: amount + 1)
+        dp[0] = 1
+        let sortedCoins = coins.sorted()
+        for coin in sortedCoins {
+            guard coin <= amount else { break }
+            for i in coin...amount {
+                if dp[i-coin] >= Int32.max { break }
+                dp[i] += dp[i-coin]
+            }
+        }
+        return dp[amount]
+    }
+    
+    func change1(_ amount: Int, _ coins: [Int]) -> Int {
         let n = coins.count
         let coins = coins.sorted()
         var dp = [[Int]](repeating: [Int](repeating: Int.min, count: n), count: 5001)
