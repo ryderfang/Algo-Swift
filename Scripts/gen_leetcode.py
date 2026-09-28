@@ -244,7 +244,7 @@ def add_to_xcode_project(filename, difficulty):
         group_marker = f"{group_id} /* {difficulty} */"
         group_pos = content.find(group_marker)
         if group_pos == -1:
-            print(f"  [pbxproj] Warning: (difficulty) group not found.")
+            print(f"  [pbxproj] Warning: {difficulty} group not found.")
         else:
             children_open = content.find("children = (", group_pos)
             children_close = content.find("\n\t\t\t);", children_open)
