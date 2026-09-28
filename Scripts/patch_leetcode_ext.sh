@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 #
 # patch_leetcode_ext.sh
 #
@@ -6,12 +6,12 @@
 # "redeclaration of 'Solution'" issue for Swift.
 #
 # What it does:
-# 1. Patches codeonly.tpl to wrap `class Solution {}` in #if guard
-# 2. Patches core.js to replace `class Solution` with `extension Solution`
+#   1. Patches codeonly.tpl to wrap `class Solution {}` in #if guard
+#   2. Patches core.js to replace `class Solution` with `extension Solution`
 #
 # Usage:
-# ./patch_leetcode_ext.sh           # auto-detect extension version
-# ./patch_leetcode_ext.sh 0.18.4    # specify version explicitly
+#   ./patch_leetcode_ext.sh           # auto-detect extension version
+#   ./patch_leetcode_ext.sh 0.18.4    # specify version explicitly
 #
 
 set -euo pipefail
@@ -32,8 +32,8 @@ if [[ -z "$EXT_DIR" || ! -d "$EXT_DIR" ]]; then
 fi
 
 VERSION=$(basename "$EXT_DIR" | sed 's/leetcode.vscode-leetcode-//')
-echo "Found LeetCode extension v${VERSION}" 
-echo " Path: $EXT_DIR"
+echo "Found LeetCode extension v${VERSION}"
+echo "  Path: $EXT_DIR"
 
 TPL_FILE="$EXT_DIR/node_modules/vsc-leetcode-cli/templates/codeonly.tpl"
 CORE_FILE="$EXT_DIR/node_modules/vsc-leetcode-cli/lib/core.js"
@@ -72,7 +72,7 @@ fi
 # --- Patch 2: core.js ---
 PATCH_MARKER_JS="fix 'swift' redeclaration issue"
 if grep -q "$PATCH_MARKER_JS" "$CORE_FILE"; then
-    echo "[js] Already patched, skipping."
+    echo "[js]  Already patched, skipping."
 else
     # Insert the fix after `data.testcase = ...;`
     sed -i '' '/data\.testcase = util\.inspect/a\
@@ -80,7 +80,7 @@ else
   // fix '\''swift'\'' redeclaration issue\
   data.code = data.code.replace(/class Solution/g, '\''extension Solution'\'');
 ' "$CORE_FILE"
-    echo "[js] Patched: added class->extension Solution replacement"
+    echo "[js]  Patched: added class->extension Solution replacement"
 fi
 
 echo ""
