@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AlgoBase/AlgoBase.xcodeproj">
+      location = "group:AlgoKit/AlgoKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Swift-Solutions/Swift-Solutions.xcodeproj">
+      location = "container:Tangram/Tangram.xcodeproj">
    </FileRef>
 </Workspace>
