@@ -10,8 +10,8 @@
 #   2. Patches core.js to replace `class Solution` with `extension Solution`
 #
 # Usage:
-#   ./patch_leetcode_ext.sh           # auto-detect extension version
-#   ./patch_leetcode_ext.sh 0.18.4    # specify version explicitly
+#   ./patch_leetcode_ext.sh          # auto-detect extension version
+#   ./patch_leetcode_ext.sh 0.18.4   # specify version explicitly
 #
 
 set -euo pipefail
