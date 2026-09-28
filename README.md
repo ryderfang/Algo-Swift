@@ -44,6 +44,13 @@ While solving problems I summarize those code snippets as templates. Thanks to r
 
 To fix `redeclaration of 'Solution' issue`, I modified the extension.
 
+just run the script: `./Scripts/patch_leetcode_ext.sh`
+
+<details>
+<summary><b>Manually fix</b></summary>
+
+Any folded content here. It requires an empty line just above it.
+
 * path: `~/.vscode/extensions/leetcode.vscode-leetcode-0.18.1`
 
 
@@ -92,6 +99,8 @@ core.exportProblem = function(problem, opts) {
   return file.render(opts.tpl, data);
 };
 ```
+
+</details>
 
 ### 📚 Books
 
