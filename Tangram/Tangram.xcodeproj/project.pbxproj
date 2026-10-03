@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DBBE6AA306A9AE5005111DF /* AlgoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBBE6A9306A9AE5005111DF /* AlgoKit.framework */; };
+		0D9C215C3071483C00EDE4B9 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9C215B3071483C00EDE4B9 /* Runner.swift */; };
 		0DBBE8C5306A9C4F005111DF /* 138.copy-list-with-random-pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE800306A9C4F005111DF /* 138.copy-list-with-random-pointer.swift */; };
 		0DBBE8C6306A9C4F005111DF /* 868.binary-gap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE76C306A9C4F005111DF /* 868.binary-gap.swift */; };
 		0DBBE8C7306A9C4F005111DF /* 207.course-schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE81B306A9C4F005111DF /* 207.course-schedule.swift */; };
@@ -566,8 +566,8 @@
 		0D01F32D281AE26D00794410 /* Tangram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tangram; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0C133228200E020021D8BA /* TangramTests.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TangramTests.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D9C21563071463000EDE4B9 /* AlgoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlgoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D9C21593071475500EDE4B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
-		0DBBE6A9306A9AE5005111DF /* AlgoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlgoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D9C215A3071483C00EDE4B9 /* TangramTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TangramTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		0D9C215B3071483C00EDE4B9 /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
 		0DBBE6B6306A9C4F005111DF /* BiweeklyContest92.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest92.swift; sourceTree = "<group>"; };
 		0DBBE6B7306A9C4F005111DF /* BiweeklyContest116.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest116.swift; sourceTree = "<group>"; };
 		0DBBE6B8306A9C4F005111DF /* BiweeklyContest117.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest117.swift; sourceTree = "<group>"; };
@@ -1095,7 +1095,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DBBE6AA306A9AE5005111DF /* AlgoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,7 +1114,6 @@
 				0DBBE8C4306A9C4F005111DF /* Tangram */,
 				0D9C21553071461400EDE4B9 /* TangramTests */,
 				0D01F32E281AE26D00794410 /* Products */,
-				DAFCA45728FAE3E800CF1DE6 /* Support Files */,
 				0D9C21573071463000EDE4B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -1132,7 +1130,8 @@
 		0D9C21553071461400EDE4B9 /* TangramTests */ = {
 			isa = PBXGroup;
 			children = (
-				DAFCA3FC28FAD3C200CF1DE6 /* Frameworks */,
+				0D9C215B3071483C00EDE4B9 /* Runner.swift */,
+				0D9C215A3071483C00EDE4B9 /* TangramTests-Bridging-Header.h */,
 			);
 			path = TangramTests;
 			sourceTree = "<group>";
@@ -1728,22 +1727,6 @@
 			path = Tangram;
 			sourceTree = "<group>";
 		};
-		DAFCA3FC28FAD3C200CF1DE6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0DBBE6A9306A9AE5005111DF /* AlgoKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DAFCA45728FAE3E800CF1DE6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0D9C21593071475500EDE4B9 /* README.md */,
-			);
-			path = "Support Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1798,6 +1781,7 @@
 					};
 					0D0C133128200E020021D8BA = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 2650;
 					};
 				};
 			};
@@ -2362,6 +2346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9C215C3071483C00EDE4B9 /* Runner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2522,6 +2507,7 @@
 		0D0C133428200E020021D8BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2535,6 +2521,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TangramTests/TangramTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -2542,6 +2531,7 @@
 		0D0C133528200E020021D8BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2555,6 +2545,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TangramTests/TangramTests-Bridging-Header.h";
+				SWIFT_VERSION = 6.0;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
