@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D0C133628200E100021D8BA /* testcase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D0C132C282007EC0021D8BA /* testcase.txt */; };
 		0DBBE6AA306A9AE5005111DF /* AlgoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBBE6A9306A9AE5005111DF /* AlgoKit.framework */; };
 		0DBBE8C5306A9C4F005111DF /* 138.copy-list-with-random-pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE800306A9C4F005111DF /* 138.copy-list-with-random-pointer.swift */; };
 		0DBBE8C6306A9C4F005111DF /* 868.binary-gap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE76C306A9C4F005111DF /* 868.binary-gap.swift */; };
@@ -565,8 +564,8 @@
 
 /* Begin PBXFileReference section */
 		0D01F32D281AE26D00794410 /* Tangram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tangram; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D0C132C282007EC0021D8BA /* testcase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testcase.txt; sourceTree = "<group>"; };
 		0D0C133228200E020021D8BA /* TangramTests.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TangramTests.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D9C21563071463000EDE4B9 /* AlgoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlgoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBBE6A9306A9AE5005111DF /* AlgoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlgoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBBE6B6306A9C4F005111DF /* BiweeklyContest92.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest92.swift; sourceTree = "<group>"; };
 		0DBBE6B7306A9C4F005111DF /* BiweeklyContest116.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest116.swift; sourceTree = "<group>"; };
@@ -1114,9 +1113,10 @@
 			isa = PBXGroup;
 			children = (
 				0DBBE8C4306A9C4F005111DF /* Tangram */,
-				DAFCA3FC28FAD3C200CF1DE6 /* Frameworks */,
+				0D9C21553071461400EDE4B9 /* TangramTests */,
 				0D01F32E281AE26D00794410 /* Products */,
 				DAFCA45728FAE3E800CF1DE6 /* Support Files */,
+				0D9C21573071463000EDE4B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1129,12 +1129,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0D0C132B282007C40021D8BA /* Testcases */ = {
+		0D9C21553071461400EDE4B9 /* TangramTests */ = {
 			isa = PBXGroup;
 			children = (
-				0D0C132C282007EC0021D8BA /* testcase.txt */,
+				DAFCA3FC28FAD3C200CF1DE6 /* Frameworks */,
 			);
-			path = Testcases;
+			path = TangramTests;
+			sourceTree = "<group>";
+		};
+		0D9C21573071463000EDE4B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D9C21563071463000EDE4B9 /* AlgoKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		0DBBE6B9306A9C4F005111DF /* Biweekly */ = {
@@ -1732,7 +1740,6 @@
 			isa = PBXGroup;
 			children = (
 				DAFCA45828FAE46700CF1DE6 /* README.md */,
-				0D0C132B282007C40021D8BA /* Testcases */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -1818,7 +1825,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D0C133628200E100021D8BA /* testcase.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

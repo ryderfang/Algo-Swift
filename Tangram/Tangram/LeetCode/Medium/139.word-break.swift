@@ -10,7 +10,7 @@ class Solution {}
 #endif
 extension Solution {
     func wordBreak(_ s: String, _ wordDict: [String]) -> Bool {
-        let (n, V) = (wordDict.count, s.count)
+        let (_, V) = (wordDict.count, s.count)
         var dp = [Bool](repeating: false, count: V + 1)
         let wordSet = Set(wordDict)
         let maxWordLength = wordSet.map { $0.count }.max() ?? 0
