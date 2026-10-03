@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D9C215C3071483C00EDE4B9 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9C215B3071483C00EDE4B9 /* Runner.swift */; };
 		0DBBE8C5306A9C4F005111DF /* 138.copy-list-with-random-pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE800306A9C4F005111DF /* 138.copy-list-with-random-pointer.swift */; };
 		0DBBE8C6306A9C4F005111DF /* 868.binary-gap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE76C306A9C4F005111DF /* 868.binary-gap.swift */; };
 		0DBBE8C7306A9C4F005111DF /* 207.course-schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE81B306A9C4F005111DF /* 207.course-schedule.swift */; };
@@ -530,16 +529,6 @@
 		E39059DDD4D34596A58EBEF1 /* 1614.maximum-nesting-depth-of-the-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0D0C133A28201BEB0021D8BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0D01F325281AE26D00794410 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0D0C133128200E020021D8BA;
-			remoteInfo = TestCases;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		0D01F32B281AE26D00794410 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -564,10 +553,10 @@
 
 /* Begin PBXFileReference section */
 		0D01F32D281AE26D00794410 /* Tangram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tangram; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D0C133228200E020021D8BA /* TangramTests.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TangramTests.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D9C21563071463000EDE4B9 /* AlgoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlgoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D9C215A3071483C00EDE4B9 /* TangramTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TangramTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		0D9C215B3071483C00EDE4B9 /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
+		0D9C216130714FD300EDE4B9 /* TangramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TangramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBBE6B6306A9C4F005111DF /* BiweeklyContest92.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest92.swift; sourceTree = "<group>"; };
 		0DBBE6B7306A9C4F005111DF /* BiweeklyContest116.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest116.swift; sourceTree = "<group>"; };
 		0DBBE6B8306A9C4F005111DF /* BiweeklyContest117.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest117.swift; sourceTree = "<group>"; };
@@ -1098,7 +1087,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0D0C132F28200E020021D8BA /* Frameworks */ = {
+		0D9C215E30714FD300EDE4B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1122,7 +1111,7 @@
 			isa = PBXGroup;
 			children = (
 				0D01F32D281AE26D00794410 /* Tangram */,
-				0D0C133228200E020021D8BA /* TangramTests.bundle */,
+				0D9C216130714FD300EDE4B9 /* TangramTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1742,29 +1731,30 @@
 			buildRules = (
 			);
 			dependencies = (
-				0D0C133B28201BEB0021D8BA /* PBXTargetDependency */,
 			);
 			name = Tangram;
 			productName = Solutions;
 			productReference = 0D01F32D281AE26D00794410 /* Tangram */;
 			productType = "com.apple.product-type.tool";
 		};
-		0D0C133128200E020021D8BA /* TangramTests */ = {
+		0D9C216030714FD300EDE4B9 /* TangramTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D0C133328200E020021D8BA /* Build configuration list for PBXNativeTarget "TangramTests" */;
+			buildConfigurationList = 0D9C216530714FD300EDE4B9 /* Build configuration list for PBXNativeTarget "TangramTests" */;
 			buildPhases = (
-				0D0C132E28200E020021D8BA /* Sources */,
-				0D0C132F28200E020021D8BA /* Frameworks */,
-				0D0C133028200E020021D8BA /* Resources */,
+				0D9C215D30714FD300EDE4B9 /* Sources */,
+				0D9C215E30714FD300EDE4B9 /* Frameworks */,
+				0D9C215F30714FD300EDE4B9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TangramTests;
-			productName = TestCases;
-			productReference = 0D0C133228200E020021D8BA /* TangramTests.bundle */;
-			productType = "com.apple.product-type.bundle";
+			packageProductDependencies = (
+			);
+			productName = TangramTests;
+			productReference = 0D9C216130714FD300EDE4B9 /* TangramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1773,15 +1763,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					0D01F32C281AE26D00794410 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
-					0D0C133128200E020021D8BA = {
-						CreatedOnToolsVersion = 13.3.1;
-						LastSwiftMigration = 2650;
+					0D9C216030714FD300EDE4B9 = {
+						CreatedOnToolsVersion = 26.5;
 					};
 				};
 			};
@@ -1799,13 +1788,13 @@
 			projectRoot = "";
 			targets = (
 				0D01F32C281AE26D00794410 /* Tangram */,
-				0D0C133128200E020021D8BA /* TangramTests */,
+				0D9C216030714FD300EDE4B9 /* TangramTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0D0C133028200E020021D8BA /* Resources */ = {
+		0D9C215F30714FD300EDE4B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2342,23 +2331,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0D0C132E28200E020021D8BA /* Sources */ = {
+		0D9C215D30714FD300EDE4B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D9C215C3071483C00EDE4B9 /* Runner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0D0C133B28201BEB0021D8BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0D0C133128200E020021D8BA /* TangramTests */;
-			targetProxy = 0D0C133A28201BEB0021D8BA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0D01F332281AE26D00794410 /* Debug */ = {
@@ -2504,50 +2484,48 @@
 			};
 			name = Release;
 		};
-		0D0C133428200E020021D8BA /* Debug */ = {
+		0D9C216630714FD300EDE4B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Ryder.TestCases;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryder.TangramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "TangramTests/TangramTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 6.0;
-				WRAPPER_EXTENSION = bundle;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		0D0C133528200E020021D8BA /* Release */ = {
+		0D9C216730714FD300EDE4B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Ryder.TestCases;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryder.TangramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "TangramTests/TangramTests-Bridging-Header.h";
-				SWIFT_VERSION = 6.0;
-				WRAPPER_EXTENSION = bundle;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -2572,11 +2550,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D0C133328200E020021D8BA /* Build configuration list for PBXNativeTarget "TangramTests" */ = {
+		0D9C216530714FD300EDE4B9 /* Build configuration list for PBXNativeTarget "TangramTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D0C133428200E020021D8BA /* Debug */,
-				0D0C133528200E020021D8BA /* Release */,
+				0D9C216630714FD300EDE4B9 /* Debug */,
+				0D9C216730714FD300EDE4B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
