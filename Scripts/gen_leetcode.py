@@ -241,7 +241,7 @@ def add_to_xcode_project(filename, difficulty):
     if not group_id:
         print(f"  [pbxproj] Warning: unknown difficulty '{difficulty}'.")
     else:
-        group_marker = f"{group_id} /* {difficulty} */"
+        group_marker = f"{group_id} /* {difficulty} */ = "
         group_pos = content.find(group_marker)
         if group_pos == -1:
             print(f"  [pbxproj] Warning: {difficulty} group not found.")
@@ -264,7 +264,7 @@ def add_to_xcode_project(filename, difficulty):
             )
 
     # 4. PBXSourcesBuildPhase
-    src_pos = content.find(f"{SOURCES_PHASE_ID} /* Sources */")
+    src_pos = content.find(f"{SOURCES_PHASE_ID} /* Sources */ = ")
     if src_pos == -1:
         print("  [pbxproj] Warning: Sources build phase not found.")
     else:
@@ -287,23 +287,30 @@ def add_to_xcode_project(filename, difficulty):
 # ---------------------------------------------------------------------------
 
 
-def main():
-    if len(sys.argv) != 2 or not sys.argv[1].isdigit():
-        print("Usage: python3 Scripts/gen_leetcode.py <question_number>")
-        sys.exit(1)
+def _parse_ids(argv):
+    """Parse questions IDs from args: './lc 1 2 3' or './lc 1,2,3' or mixed."""
+    ids = []
+    for arg in argv:
+        for part in arg.split(","):
+            part = part.strip()
+            if part.isdigit():
+                ids.append(part)
+    return ids
 
-    qid = sys.argv[1]
-    print(f"Fetching question #{qid} from LeetCode...")
+
+def generate_one(qid):
+    """Fetch, generate, and register one problem. Return True on success."""
+    print(f"\nFetching question #{qid} from LeetCode...")
 
     problem = find_slug_by_id(qid)
     if not problem:
-        print(f"Error: Question #{qid} not found.")
-        sys.exit(1)
+        print(f"  Error: Question #{qid} not found.")
+        return False
 
     code = get_swift_snippet(problem["titleSlug"])
     if code is None:
-        print(f"Error: No Swift code snippet for [{qid}] {problem['title']}.")
-        sys.exit(1)
+        print(f"  Error: No Swift code snippet for [{qid}] {problem['title']}.")
+        return False
 
     difficulty = problem["difficulty"]  # Easy / Medium / Hard
     target_dir = os.path.join(LEETCODE_DIR, difficulty)
@@ -311,10 +318,9 @@ def main():
     filepath = os.path.join(target_dir, filename)
 
     if os.path.exists(filepath):
-        ans = input(f"  {filename} already exists. Overwrite? [y/N] ").strip().lower()
-        if ans != "y":
-            print("Aborted.")
-            sys.exit(0)
+        print(f"  {filename} already exists, skipping.")
+        add_to_xcode_project(filename, difficulty)
+        return True
 
     os.makedirs(target_dir, exist_ok=True)
     content = generate_swift_content(problem, code)
@@ -326,6 +332,24 @@ def main():
     print(f"  -> {os.path.relpath(filepath, PROJECT_ROOT)}")
 
     add_to_xcode_project(filename, difficulty)
+    return True
+
+
+def main():
+    ids = sorted(_parse_ids(sys.argv[1:]), key=int)
+    if not ids:
+        print("Usage: ./lc <id> [id ...]\n  e.g. ./lc 1 2 3  or  ./lc 1,2,3")
+        sys.exit(1)
+
+    ok, fail = 0, 0
+    for qid in ids:
+        if generate_one(qid):
+            ok += 1
+        else:
+            fail += 1
+
+    if len(ids) > 1:
+        print(f"\nDone: {ok} added, {fail} failed.")
 
 
 if __name__ == "__main__":

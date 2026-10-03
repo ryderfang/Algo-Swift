@@ -13,13 +13,15 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    (2, 3),
-    (5, 1)
+    "(1+(2*3)+((8)/4))+1",
+    "(1)+((2))+(((3)))",
+    "()(())((()()))"
 ]
 
 let result = [
-    10,
-    0
+    3,
+    3,
+    3
 ]
 
 for (i, x) in cases.enumerated() {
@@ -32,7 +34,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x.map { $0.charArray() }
 
 //    var tmp = x
-    let ans = sol.sumOfGoodIntegers(x.0, x.1)
+    let ans = sol.maxDepth(x)
     
     print("\(ans) ~> \(ans == result[safe: i] ? "✅" : "❌")")
 //    print(ans?.array() ?? [])
