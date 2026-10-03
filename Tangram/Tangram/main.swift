@@ -13,14 +13,28 @@ let sol = Solution()
 // let cases = READNUMS()
 
 let cases = [
-    "(1+(2*3)+((8)/4))+1",
+    "(1+(2*3)+((8)/4))+1",//(()(()))
     "(1)+((2))+(((3)))",
-    "()(())((()()))"
+    "()(())((()()))",
+    "))",
+    "((",
+    "())",
+    "((())())",
+    "(,(()),",
+    "(,(()),((())),)",
+    "8*((1*(5+6))*(8/6))"
 ]
 
 let result = [
     3,
     3,
+    3,
+    0,
+    0,
+    1,
+    3,
+    2,
+    4,
     3
 ]
 
@@ -36,7 +50,7 @@ for (i, x) in cases.enumerated() {
 //    var tmp = x
     let ans = sol.maxDepth(x)
     
-    print("\(ans) ~> \(ans == result[safe: i] ? "✅" : "❌")")
+    print("ans:\(ans), expected:\(result[safe: i], default: "") ~> \(ans == result[safe: i] ? "✅" : "❌")")
 //    print(ans?.array() ?? [])
 //    print(tmp)
 }

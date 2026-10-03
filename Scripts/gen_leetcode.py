@@ -288,7 +288,7 @@ def add_to_xcode_project(filename, difficulty):
 
 
 def _parse_ids(argv):
-    """Parse questions IDs from args: './lc 1 2 3' or './lc 1,2,3' or mixed."""
+    """Parse question IDs from args: './lc 1 2 3' or './lc 1,2,3' or mixed."""
     ids = []
     for arg in argv:
         for part in arg.split(","):

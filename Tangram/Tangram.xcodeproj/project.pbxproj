@@ -528,6 +528,7 @@
 		0DBBEAC9306A9C4F005111DF /* 724.find-pivot-index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE753306A9C4F005111DF /* 724.find-pivot-index.swift */; };
 		0DBBEACA306A9C4F005111DF /* 997.find-the-town-judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE788306A9C4F005111DF /* 997.find-the-town-judge.swift */; };
 		0DBBEACB306A9C4F005111DF /* 747.largest-number-at-least-twice-of-others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE758306A9C4F005111DF /* 747.largest-number-at-least-twice-of-others.swift */; };
+		E39059DDD4D34596A58EBEF1 /* 1614.maximum-nesting-depth-of-the-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1087,6 +1088,7 @@
 		0DBBE8C2306A9C4F005111DF /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		0DBBE8C3306A9C4F005111DF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DAFCA45828FAE46700CF1DE6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1614.maximum-nesting-depth-of-the-parentheses.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1379,6 +1381,7 @@
 				0DBBE790306A9C4F005111DF /* 1137.n-th-tribonacci-number.swift */,
 				0DBBE791306A9C4F005111DF /* 1232.check-if-it-is-a-straight-line.swift */,
 				0DBBE792306A9C4F005111DF /* 1266.minimum-time-visiting-all-points.swift */,
+				EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */,
 				0DBBE793306A9C4F005111DF /* 1668.maximum-repeating-substring.swift */,
 				0DBBE794306A9C4F005111DF /* 1863.sum-of-all-subset-xor-totals.swift */,
 				0DBBE795306A9C4F005111DF /* 1991.find-the-middle-index-in-array.swift */,
@@ -2345,6 +2348,7 @@
 				0DBBEAC9306A9C4F005111DF /* 724.find-pivot-index.swift in Sources */,
 				0DBBEACA306A9C4F005111DF /* 997.find-the-town-judge.swift in Sources */,
 				0DBBEACB306A9C4F005111DF /* 747.largest-number-at-least-twice-of-others.swift in Sources */,
+				E39059DDD4D34596A58EBEF1 /* 1614.maximum-nesting-depth-of-the-parentheses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
