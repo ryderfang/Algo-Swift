@@ -1,9 +1,11 @@
-"""Shared LeetCode API utilities for gen_*.py scripts."""
+"""Shared LeetCode API and Xcode project utilities for gen_*.py scripts."""
 
 import json
 import os
+import re
 import ssl
 import sys
+import uuid
 import urllib.request
 import urllib.error
 
@@ -105,3 +107,64 @@ def swift_snippet(problem):
         if s["langSlug"] == "swift":
             return s["code"]
     return None
+
+
+# ---------------------------------------------------------------------------
+# Xcode project (pbxproj) helpers
+# ---------------------------------------------------------------------------
+
+PBXPROJ_PATH = os.path.join(
+    PROJECT_ROOT, "Tangram", "Tangram.xcodeproj", "project.pbxproj"
+)
+
+def generate_pbx_id(content):
+    """Generate a unique 24-char hex ID not already in the pbxproj content."""
+    existing = set(re.findall(r'\b([0-9A-F]{24})\b', content))
+    while True:
+        new_id = uuid.uuid4().hex[:24].upper()
+        if new_id not in existing:
+            return new_id
+
+
+def add_file_to_group(filename, group_id, file_type="text.json"):
+    """Add a file reference to a PBXGroup in the Xcode project.
+
+    Only adds PBXFileReference + group child (no PBXBuildFile — for data files).
+    Skips if the file is already in the project.
+    """
+    with open(PBXPROJ_PATH, "r") as f:
+        content = f.read()
+
+    if f"/* {filename} */" in content:
+        return  # already there
+
+    file_ref_id = generate_pbx_id(content)
+
+    # PBXFileReference
+    content = content.replace(
+        "/* End PBXFileReference section */",
+        f'\t\t{file_ref_id} /* {filename} */ = '
+        f'{{isa = PBXFileReference; lastKnownFileType = {file_type}; '
+        f'path = "{filename}"; sourceTree = "<group>"; }};\n'
+        f"/* End PBXFileReference section */",
+    )
+
+    # PBXGroup — sorted insertion
+    marker = f"{group_id} /* "
+    pos = content.find(marker)
+    if pos != -1:
+        co = content.find("children = (", pos)
+        cc = content.find("\n\t\t\t);", co)
+        block = content[co + len("children = ("):cc]
+        entries = [ln.strip() for ln in block.split("\n") if ln.strip()]
+        entries.append(f"{file_ref_id} /* {filename} */,")
+        # Sort by leading number in filename (e.g. "1614.json")
+        def sort_key(e):
+            m = re.search(r'/\*\s*(\d+)', e)
+            return int(m.group(1)) if m else 0
+        entries.sort(key=sort_key)
+        rebuilt = "\n".join(f"\t\t\t\t{e}" for e in entries)
+        content = content[:co + len("children = (")] + f"\n{rebuilt}\n" + content[cc + 1:]
+
+    with open(PBXPROJ_PATH, "w") as f:
+        f.write(content)

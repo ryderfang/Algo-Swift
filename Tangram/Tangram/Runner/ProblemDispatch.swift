@@ -14,17 +14,11 @@ enum ProblemRunner {
             return
         }
 
-        print("--- Problem #\(id) ---")
+        print("--- [\(id)] Non-overlapping Intervals ---")
         var passed = 0, failed = 0
 
-        switch id {
-        case 1614: // [1614] Maximum Nesting Depth of the Parentheses
-            for (i, tc) in cases.enumerated() {
-                check(sol.maxDepth(tc.string(0)), tc.expectedInt, "Case \(i + 1)", &passed, &failed)
-            }
-        default:
-            print("Problem #\(id) not registered. Run: python3 Scripts/gen_tests.py \(id)")
-            return
+        for (i, tc) in cases.enumerated() {
+            check(sol.eraseOverlapIntervals(tc.intArray2D(0)), tc.expectedInt, "Case \(i + 1)", &passed, &failed)
         }
 
         print("\(passed + failed) tests: \(passed) passed, \(failed) failed")

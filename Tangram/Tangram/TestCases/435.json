@@ -1,0 +1,34 @@
+{
+  "id": 435,
+  "title": "Non-overlapping Intervals",
+  "slug": "non-overlapping-intervals",
+  "difficulty": "Medium",
+  "funcName": "eraseOverlapIntervals",
+  "params": [
+    {
+      "name": "intervals",
+      "type": "integer[][]"
+    }
+  ],
+  "returnType": "integer",
+  "cases": [
+    {
+      "inputs": [
+        "[[1,2],[2,3],[3,4],[1,3]]"
+      ],
+      "expected": "1"
+    },
+    {
+      "inputs": [
+        "[[1,2],[1,2],[1,2]]"
+      ],
+      "expected": "2"
+    },
+    {
+      "inputs": [
+        "[[1,2],[2,3]]"
+      ],
+      "expected": "0"
+    }
+  ]
+}

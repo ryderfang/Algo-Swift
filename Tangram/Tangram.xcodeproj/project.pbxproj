@@ -529,6 +529,7 @@
 		0DBBEACA306A9C4F005111DF /* 997.find-the-town-judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE788306A9C4F005111DF /* 997.find-the-town-judge.swift */; };
 		0DBBEACB306A9C4F005111DF /* 747.largest-number-at-least-twice-of-others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE758306A9C4F005111DF /* 747.largest-number-at-least-twice-of-others.swift */; };
 		E39059DDD4D34596A58EBEF1 /* 1614.maximum-nesting-depth-of-the-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */; };
+		4DA88E86AB9443B79175B50E /* 435.non-overlapping-intervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F3C4626F645AB8338E187 /* 435.non-overlapping-intervals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -560,6 +561,7 @@
 		0D9C217330725DB700EDE4B9 /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
 		0D9C217530725DC400EDE4B9 /* 1614.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 1614.json; sourceTree = "<group>"; };
 		0D9C217630725EE600EDE4B9 /* ProblemDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDispatch.swift; sourceTree = "<group>"; };
+		0D9C21783072637800EDE4B9 /* 167.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 167.json; sourceTree = "<group>"; };
 		0DBBE6B6306A9C4F005111DF /* BiweeklyContest92.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest92.swift; sourceTree = "<group>"; };
 		0DBBE6B7306A9C4F005111DF /* BiweeklyContest116.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest116.swift; sourceTree = "<group>"; };
 		0DBBE6B8306A9C4F005111DF /* BiweeklyContest117.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiweeklyContest117.swift; sourceTree = "<group>"; };
@@ -1079,6 +1081,8 @@
 		0DBBE8BF306A9C4F005111DF /* 3218.minimum-cost-for-cutting-cake-i.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3218.minimum-cost-for-cutting-cake-i.swift"; sourceTree = "<group>"; };
 		0DBBE8C2306A9C4F005111DF /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1614.maximum-nesting-depth-of-the-parentheses.swift"; sourceTree = "<group>"; };
+		AD4F3C4626F645AB8338E187 /* 435.non-overlapping-intervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "435.non-overlapping-intervals.swift"; sourceTree = "<group>"; };
+		472D3F4390754857AC36AB22 /* 435.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "435.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1120,6 +1124,8 @@
 		0D9C216D3072485A00EDE4B9 /* TestCases */ = {
 			isa = PBXGroup;
 			children = (
+				0D9C21783072637800EDE4B9 /* 167.json */,
+				472D3F4390754857AC36AB22 /* 435.json */,
 				0D9C217530725DC400EDE4B9 /* 1614.json */,
 			);
 			path = TestCases;
@@ -1605,6 +1611,7 @@
 				0DBBE865306A9C4F005111DF /* 400.nth-digit.swift */,
 				0DBBE866306A9C4F005111DF /* 413.arithmetic-slices.swift */,
 				0DBBE867306A9C4F005111DF /* 416.partition-equal-subset-sum.swift */,
+				AD4F3C4626F645AB8338E187 /* 435.non-overlapping-intervals.swift */,
 				0DBBE868306A9C4F005111DF /* 451.sort-characters-by-frequency.swift */,
 				0DBBE869306A9C4F005111DF /* 474.ones-and-zeroes.swift */,
 				0DBBE86A306A9C4F005111DF /* 478.generate-random-point-in-a-circle.swift */,
@@ -2300,6 +2307,7 @@
 				0DBBEACA306A9C4F005111DF /* 997.find-the-town-judge.swift in Sources */,
 				0DBBEACB306A9C4F005111DF /* 747.largest-number-at-least-twice-of-others.swift in Sources */,
 				E39059DDD4D34596A58EBEF1 /* 1614.maximum-nesting-depth-of-the-parentheses.swift in Sources */,
+				4DA88E86AB9443B79175B50E /* 435.non-overlapping-intervals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2474,3 +2482,4 @@
 	};
 	rootObject = 0D01F325281AE26D00794410 /* Project object */;
 }
+AD4F3C4626F645AB8338E187

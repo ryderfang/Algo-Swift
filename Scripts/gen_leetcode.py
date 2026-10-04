@@ -12,14 +12,11 @@ Usage:  python3 Scripts/gen_leetcode.py <question_number> [...]
 import os
 import re
 import sys
-import uuid
 
-from lc_common import PROJECT_ROOT, fetch_problem, swift_snippet
+from lc_common import (PROJECT_ROOT, PBXPROJ_PATH, fetch_problem,
+                       swift_snippet, generate_pbx_id)
 
 LEETCODE_DIR = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "LeetCode")
-PBXPROJ_PATH = os.path.join(
-    PROJECT_ROOT, "Tangram", "Tangram.xcodeproj", "project.pbxproj"
-)
 
 # Xcode project IDs (from Tangram.xcodeproj/project.pbxproj)
 GROUP_IDS = {
@@ -50,13 +47,6 @@ def generate_swift_content(problem, code):
 # Xcode project manipulation
 # ---------------------------------------------------------------------------
 
-def _generate_pbx_id(existing_ids):
-    while True:
-        new_id = uuid.uuid4().hex[:24].upper()
-        if new_id not in existing_ids:
-            return new_id
-
-
 def _problem_number(entry):
     m = re.search(r'/\*\s*(\d+)\.', entry)
     return int(m.group(1)) if m else 0
@@ -71,10 +61,10 @@ def add_to_xcode_project(filename, difficulty):
         print(f"  [pbxproj] {filename} already in project, skipping.")
         return
 
-    ids = set(re.findall(r'\b([0-9A-F]{24})\b', content))
-    file_ref_id = _generate_pbx_id(ids)
-    ids.add(file_ref_id)
-    build_file_id = _generate_pbx_id(ids)
+    file_ref_id = generate_pbx_id(content)
+    # Add to content so next ID is unique
+    content += file_ref_id
+    build_file_id = generate_pbx_id(content)
 
     # PBXBuildFile
     content = content.replace(
