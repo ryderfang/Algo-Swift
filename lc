@@ -1,2 +1,16 @@
 #!/bin/bash
-python3 "$(dirname "$0")/Scripts/gen_leetcode.py" "$@"
+# LeetCode CLI
+#   ./lc <id>          - generate solution + test cases, set Runner
+#   ./lc <id> <id> ... - batch generate solutions only
+#   ./lc test <id>     - only generate/update test cases + set Runner
+DIR="$(dirname "$0")/Scripts"
+
+if [ "$1" = "test" ]; then
+    shift
+    python3 "$DIR/gen_tests.py" "$@"
+elif [ $# -eq 1 ] && [[ "$1" =~ ^[0-9]+$ ]]; then
+    python3 "$DIR/gen_leetcode.py" "$1"
+    python3 "$DIR/gen_tests.py" "$1"
+else
+    python3 "$DIR/gen_leetcode.py" "$@"
+fi

@@ -69,3 +69,5 @@ fastlane/test_output
 iOSInjectionProject/
 
 .buildStartTime.txt
+
+__pycache__/

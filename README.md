@@ -2,68 +2,94 @@
 
 ![Swift](https://img.shields.io/badge/Swift-%23FF4088.svg?&style=for-the-badge&logo=swift&logoColor=white)
 
-This repo is about algorithm codes writing by Swift. Two parts included.
-
-## 🗝 Solutions
-
-My solutions of [LeetCode](https://leetcode.com/problemset/all/) problems with **Swift**.
-
-### ⏳ Progress
+LeetCode solutions and algorithm templates in Swift.
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/ryderfang?theme=light&font=Fjord%20One&ext=activity&width=555)
 
-> Motivation comes from incentive.
 
-- 🔸 ~~Lv.1 "100 easy"~~ 🎯🎉
-- 🔹 ~~Lv.10 "200 easy"~~ 🎯🎉
-- 🔶 Lv.20 [🥉] "400 easy"
-- 🔷 Lv.30 "AK easy"
-- 🟢 ~~Lv.40 "100 medium"~~ 🎯🎉
-- 🟠 ~~Lv.50 [🥈] "200 medium"~~ 🎯🎉
-- 🔵 Lv.60 "400 medium 🚶🚶🚶
-- 🟣 Lv.70 "600 medium"
-- 🟩 Lv.80 "100 hard"
-- 🟧 Lv.90 [🥇] "200 hard"
-- 🟦 Lv.100 "300 hard"
-- 🟪 Lv.110 "AK medium"
-- 🔱 Lv.120 [🏆] "AK hard"
+## Project Structure
 
-## 📦 Base
+```
+Algo-Swift.xcworkspace
+├── AlgoKit/                    # Reusable algorithm & data-structure library
+│   └── Base/                   #   Geometry, Combinatorics, Data Structures,
+│                               #   Sorting, Number Theory, Math, Graph, Classics
+├── Tangram/                    # LeetCode workspace
+│   └── Tangram/
+│       ├── LeetCode/           #   Solutions (Easy / Medium / Hard / Contest)
+│       ├── Runner/             #   Test runner infrastructure
+│       │   ├── Defines.swift   #     Solution class, AlgoKit re-exports
+│       │   ├── ProblemDispatch.swift  # (auto-generated)
+│       │   └── TestCaseLoader.swift   # JSON test-case parser
+│       ├── Runner.swift        #   @main entry point
+│       └── TestCases/          #   Test data (*.json, auto-generated)
+├── Scripts/
+│   ├── lc_common.py            # Shared LeetCode API client
+│   ├── gen_leetcode.py         # Solution file generator
+│   ├── gen_tests.py            # Test case generator
+│   └── patch_leetcode_ext.sh   # VSCode extension patch
+└── lc                          # CLI entry point (see below)
+```
 
-### 📔 Templetes
+## Quick Start
 
-While solving problems I summarize those code snippets as templates. Thanks to references:
+```bash
+# Generate a solution template + test cases for problem 42
+./lc 42
 
-* [raywenderlich/swift-algorithm-club](https://github.com/raywenderlich/swift-algorithm-club)
+# Open Algo-Swift.xcworkspace, write your solution, then Cmd+R to run tests
+```
 
-* [SunZhiC/DataStructuresInSwift](https://github.com/SunZhiC/DataStructuresInSwift)
+## CLI Reference
 
-* LeetCode Solution Pages, such as https://leetcode.com/problems/merge-k-sorted-lists/solution/
+The `lc` command is the single entry point for all code generation.
 
-#### ‼️ VSCode-LeetCode extension
+```
+./lc <id>              Generate solution file + test cases, set Runner to <id>
+./lc <id> [id ...]     Batch generate solution files only (no test setup)
+./lc test <id>         Regenerate test cases + set Runner (solution already exists)
+```
 
-To fix `redeclaration of 'Solution' issue`, I modified the extension.
+### Examples
 
-just run the script: `./Scripts/patch_leetcode_ext.sh`
+```bash
+./lc 1                 # Start "Two Sum" — creates solution + 3 test cases
+./lc 42                # Start "Trapping Rain Water"
+./lc test 42           # Re-fetch test cases for problem 42
+./lc 100,101,102       # Batch scaffold three tree problems
+```
+
+## AlgoKit
+
+Reusable algorithm and data-structure library, extracted from problem-solving patterns:
+
+- **Data Structures** — TreeNode, ListNode, Trie, Union-Find, BIT, Segment Tree
+- **Algorithms** — Sorting (O(n^2), O(n log n), O(n)), Binary Search, BFS/DFS
+- **Math** — Geometry, Combinatorics, Number Theory
+- **Classics** — Knapsack, LIS, Matrix Exponentiation
+
+References:
+- [raywenderlich/swift-algorithm-club](https://github.com/raywenderlich/swift-algorithm-club)
+- [SunZhiC/DataStructuresInSwift](https://github.com/SunZhiC/DataStructuresInSwift)
+
+## VSCode-LeetCode Extension Patch
+
+To fix the `redeclaration of 'Solution'` issue when using the VSCode LeetCode extension:
+
+```bash
+./Scripts/patch_leetcode_ext.sh
+```
 
 <details>
-<summary><b>Manually fix</b></summary>
+<summary><b>Manual fix</b></summary>
 
-Any folded content here. It requires an empty line just above it.
+Path: `~/.vscode/extensions/leetcode.vscode-leetcode-0.18.1`
 
-* path: `~/.vscode/extensions/leetcode.vscode-leetcode-0.18.1`
+1. Add `LC_SOLUTION_EXT` to **Custom Flags** in Xcode Build Settings
 
+2. Change template — `node_modules/vsc-leetcode-cli/templates/codeonly.tpl`
 
-1. add `Custom Flags` to `Build Settings` of Xcode project
-
-![](https://ryder-1252249141.cos.ap-shanghai.myqcloud.com/uPic/2022-11-13-EycSUM.png)
-
-2. change template
-
-* `node_modules/vsc-leetcode-cli/templates/codeonly.tpl`
-
-```swift
-// codeonly.tpl
+```
 ${comment.start}
 ${comment.line} @lc app=${app} id=${fid} lang=${lang}
 ${comment.line}
@@ -79,25 +105,10 @@ ${code}
 ${comment.singleLine} @lc code=end
 ```
 
-3. change js logic
+3. Patch `node_modules/vsc-leetcode-cli/lib/core.js` — add before `return file.render(...)`:
 
-* `node_modules/vsc-leetcode-cli/lib/core.js`
-
-```
-core.exportProblem = function(problem, opts) {
-  const data = _.extend({}, problem);
-  // ... 
-  data.code = (opts.code || data.code || '').replace(/\r\n/g, '\n');
-  data.comment = h.langToCommentStyle(data.lang);
-  data.percent = data.percent.toFixed(2);
-  data.testcase = util.inspect(data.testcase || '');
-
-  // fix 'swift' redeclaration issue
-  data.code = data.code.replace(/class Solution/g, 'extension Solution');
-
-  // ...
-  return file.render(opts.tpl, data);
-};
+```js
+data.code = data.code.replace(/class Solution/g, 'extension Solution');
 ```
 
 </details>

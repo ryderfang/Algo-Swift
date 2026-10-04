@@ -63,3 +63,14 @@ extension GuessGame {
         -1
     }
 }
+
+extension Array {
+    subscript(safe index: Index) -> Element? {
+        get { return self.indices ~= index ? self[index] : nil }
+        set {
+            if self.indices ~= index {
+                self[index] = newValue!
+            }
+        }
+    }
+}

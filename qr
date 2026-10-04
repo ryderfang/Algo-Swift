@@ -1,0 +1,100 @@
+#!/bin/bash
+# QR code generator — splits large files into multiple QR codes
+#
+#   qr <file>              Generate QR code(s) from file, open result
+#   qr -t <file>           Terminal preview (single QR only)
+#   qr -o out.png <file>   Custom output path
+set -euo pipefail
+
+# QR binary-mode capacity per error correction level (version 40)
+qr_capacity() {
+    case "$1" in
+        L) echo 2953 ;; M) echo 2331 ;; Q) echo 1663 ;; H) echo 1273 ;;
+        *) echo 2331 ;;
+    esac
+}
+
+usage() {
+    cat <<'EOF'
+Usage: qr [options] <file>
+
+Generate QR code(s) from file contents (preserves spaces and line breaks).
+Large files are automatically split into multiple QR codes.
+
+Options:
+  -t          Terminal preview (single QR only)
+  -o <path>   Custom output path (default: <file>.qr.png)
+  -s <px>     Module size in pixels (default: 6)
+  -l <level>  Error correction: L, M, Q, H (default: M)
+  -h          Show this help
+EOF
+    exit 1
+}
+
+require() {
+    command -v "$1" &>/dev/null || { echo "Error: $1 not found. $2"; exit 1; }
+}
+
+# --- Main ---
+require qrencode "Install with: brew install qrencode"
+
+TERMINAL=false
+OUTPUT=""
+SIZE=6
+LEVEL=M
+
+while getopts "to:s:l:h" opt; do
+    case $opt in
+        t) TERMINAL=true ;;
+        o) OUTPUT="$OPTARG" ;;
+        s) SIZE="$OPTARG" ;;
+        l) LEVEL="$OPTARG" ;;
+        h) usage ;;
+        *) usage ;;
+    esac
+done
+shift $((OPTIND - 1))
+
+[ $# -lt 1 ] && usage
+
+FILE="$1"
+[ -f "$FILE" ] || { echo "Error: File not found: $FILE"; exit 1; }
+
+FILESIZE=$(wc -c < "$FILE" | tr -d ' ')
+MAX=$(qr_capacity "$LEVEL")
+[ -z "$OUTPUT" ] && OUTPUT="${FILE}.qr.png"
+
+if [ "$TERMINAL" = true ]; then
+    if [ "$FILESIZE" -le "$MAX" ]; then
+        qrencode -8 -t UTF8 -l "$LEVEL" -r "$FILE"
+    else
+        echo "Error: File too large for terminal preview ($FILESIZE > $MAX bytes at -l $LEVEL)."
+        exit 1
+    fi
+elif [ "$FILESIZE" -le "$MAX" ]; then
+    # Single QR
+    qrencode -8 -o "$OUTPUT" -s "$SIZE" -l "$LEVEL" -r "$FILE"
+    echo "$OUTPUT"
+    open "$OUTPUT"
+else
+    # Split into chunks, one QR per chunk
+    local_tmp=$(mktemp -d)
+    split -b "$MAX" "$FILE" "$local_tmp/chunk_"
+    base="${OUTPUT%.png}"
+    seq=1
+    total=$(ls "$local_tmp"/chunk_* | wc -l | tr -d ' ')
+    created=()
+
+    for chunk in "$local_tmp"/chunk_*; do
+        out_path="${base}-${seq}of${total}.png"
+        qrencode -8 -o "$out_path" -s "$SIZE" -l "$LEVEL" -r "$chunk"
+        created+=("$out_path")
+        seq=$((seq + 1))
+    done
+
+    rm -rf "$local_tmp"
+    echo "${#created[@]} QR codes  [$FILESIZE bytes, -l $LEVEL]"
+    for f in "${created[@]}"; do echo "  $f"; done
+    open "${created[@]}"
+fi
+
