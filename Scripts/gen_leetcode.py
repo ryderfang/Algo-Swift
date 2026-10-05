@@ -62,9 +62,7 @@ def add_to_xcode_project(filename, difficulty):
         return
 
     file_ref_id = generate_pbx_id(content)
-    # Add to content so next ID is unique
-    content += file_ref_id
-    build_file_id = generate_pbx_id(content)
+    build_file_id = generate_pbx_id(content + file_ref_id)
 
     # PBXBuildFile
     content = content.replace(
