@@ -2,7 +2,7 @@
 """
 gen_tests.py - Generate test cases for a LeetCode problem.
 
-Fetches example test cases from LeetCode, saves them as JSON, and generates
+Fetches example test cases from LeetCode, saves them as plain-text, and generates
 ProblemDispatch.swift with only the current problem's dispatch entry.
 
 Usage:  python3 Scripts/gen_tests.py <question_number>
@@ -161,29 +161,54 @@ enum ProblemRunner {{
 """
 
 
-def write_json_testcases(qid, problem):
-    """Write test case data to TestCases/<id>.json. Returns file path."""
+def write_txt_testcases(qid, problem):
+    """Write test case data to TestCases/<id>.txt in plain-text format.
+    
+    Format:
+        id: 167
+        title: Two Sum II
+        ...
+        ---
+        [2,7,11,15]
+        9
+        = [1, 2]
+
+        [2,3,4]
+        6
+        = [1, 3]
+    """
     meta = problem["metaData"]
     inputs_list = problem["exampleTestcaseList"]
     outputs = parse_outputs_from_html(problem["content"])
 
-    cases = [
-        {"inputs": raw.split("\n"), "expected": outputs[i] if i < len(outputs) else ""}
-        for i, raw in enumerate(inputs_list)
+    params_str = ", ".join(
+        f"{p['name']}:{p['type']}" for p in meta.get("params", [])
+    )
+    return_type = meta.get("return", {}).get("type", "void")
+
+    lines = [
+        f"id: {qid}",
+        f"title: {problem['title']}",
+        f"slug: {problem['titleSlug']}",
+        f"difficulty: {problem['difficulty']}",
+        f"funcName: {meta.get('name', 'solve')}",
+        f"params: {params_str}",
+        f"returnType: {return_type}",
+        "---"
     ]
-    data = {
-        "id": int(qid), "title": problem["title"],
-        "slug": problem["titleSlug"], "difficulty": problem["difficulty"],
-        "funcName": meta.get("name", "solve"),
-        "params": [{"name": p["name"], "type": p["type"]} for p in meta.get("params", [])],
-        "returnType": meta.get("return", {}).get("type", "void"),
-        "cases": cases,
-    }
+
+    for i, raw in enumerate(inputs_list):
+        if i > 0:
+            lines.append("")  # blank line between cases
+        for input_line in raw.split("\n"):
+            lines.append(input_line)
+        expected = outputs[i] if i < len(outputs) else ""
+        lines.append(f"= {expected}")
 
     os.makedirs(TESTCASES_DIR, exist_ok=True)
-    path = os.path.join(TESTCASES_DIR, f"{qid}.json")
+    path = os.path.join(TESTCASES_DIR, f"{qid}.txt")
     with open(path, "w") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n".join(lines) + "\n ")
     return path
 
 
@@ -227,11 +252,11 @@ def main():
         print("  This might be a design/class problem that needs manual test setup.")
         sys.exit(1)
 
-    # 1. Write JSON test cases
-    json_path = write_json_testcases(qid, problem)
+    # 1. Write plain-text test cases
+    txt_path = write_txt_testcases(qid, problem)
 
-    # 2. Add JSON to Xcode project (TestCases group)
-    add_file_to_group(f"{qid}.json", TESTCASES_GROUP_ID)
+    # 2. Add txt to Xcode project (TestCases group)
+    add_file_to_group(f"{qid}.txt", TESTCASES_GROUP_ID, file_type="text")
 
     # 3. Generate ProblemDispatch.swift for this problem only
     func_name = meta.get("name", "solve")
@@ -244,7 +269,7 @@ def main():
 
     n = len(problem["exampleTestcaseList"])
     print(f"  [{qid}] {problem['title']} ({problem['difficulty']})")
-    print(f"  -> {os.path.relpath(json_path, PROJECT_ROOT)}  ({n} test cases)")
+    print(f"  -> {os.path.relpath(txt_path, PROJECT_ROOT)}  ({n} test cases)")
     print(f"  -> ProblemDispatch.swift updated")
     print(f"  -> Runner.swift problemID = {qid}")
     print(f"\n  Run: Cmd+R in Xcode")

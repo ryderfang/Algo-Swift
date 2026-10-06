@@ -151,22 +151,57 @@ private enum JSONParse {
 
 // MARK: - Loader
 
+/// Loads test cases from a plain-text file at `TextCases/<id>.txt`.
+///
+/// Format (metadata header + cases separated by blank lines):
+/// ```
+/// id: 167
+/// funcName: twoSum
+/// params: numbers:integer[], target:integer
+/// returnType: integer[]
+/// ---
+/// [2,7,11,15]
+/// 9
+/// = [1,2]
+///
+/// [2,3,4]
+/// 6
+/// = [1,3]
+/// ```
+///
+/// Everything above `---` is metadata (used by `gen_tests.py`, ignore here).
+/// Each case below `---`: one line per input param, then `= expected`.
+/// Blank lines separate cases.
 func loadTestCases(_ id: Int) -> [TestCase] {
     let dir = URL(fileURLWithPath: #filePath)
         .deletingLastPathComponent() // Runner/
         .deletingLastPathComponent() // Tangram/
         .appendingPathComponent("TestCases")
-    let url = dir.appendingPathComponent("\(id).json")
+    let url = dir.appendingPathComponent("\(id).txt")
 
-    guard let data = try? Data(contentsOf: url),
-          let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-          let casesArray = json["cases"] as? [[String: Any]] else {
+    guard let content = try? String(contentsOf: url, encoding: .utf8) else {
         return []
     }
 
-    return casesArray.compactMap { c in
-        guard let inputs = c["inputs"] as? [String],
-              let expected = c["expected"] as? String else { return nil }
+    // Split on `---` separator; take everything after it
+    let parts = content.components(separatedBy: "\n---\n")
+    let body = parts.count > 1 ? parts[1] : parts[0]
+    
+    // Split into blocks by blank lines
+    let blocks = body.components(separatedBy: "\n\n")
+    
+    return blocks.compactMap { block in
+        let lines = block
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .components(separatedBy: "\n")
+            .filter { !$0.isEmpty }
+        guard lines.count >= 2 else { return nil }
+        
+        // Last line starting with "= " is the expected value
+        guard let lastLine = lines.last, lastLine.hasPrefix("= ") else { return nil }
+        let expected = String(lastLine.dropFirst(2))
+        let inputs = Array(lines.dropLast())
+        
         return TestCase(inputs: inputs, expected: expected)
     }
 }
