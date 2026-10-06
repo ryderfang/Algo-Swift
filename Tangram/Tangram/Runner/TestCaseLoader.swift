@@ -169,7 +169,7 @@ private enum JSONParse {
 /// = [1,3]
 /// ```
 ///
-/// Everything above `---` is metadata (used by gen_tests.py, ignore here).
+/// Everything above `---` is metadata (used by gen_tests.py, ignored here).
 /// Each case below `---`: one line per input param, then `= expected`.
 /// Blank lines separate cases.
 func loadTestCases(_ id: Int) -> [TestCase] {
@@ -201,7 +201,7 @@ func loadTestCases(_ id: Int) -> [TestCase] {
         guard let lastLine = lines.last, lastLine.hasPrefix("= ") else { return nil }
         let expected = String(lastLine.dropFirst(2))
         let inputs = Array(lines.dropLast())
-        
+
         return TestCase(inputs: inputs, expected: expected)
     }
 }
