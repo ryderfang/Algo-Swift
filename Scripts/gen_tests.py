@@ -2,8 +2,8 @@
 """
 gen_tests.py - Generate test cases for a LeetCode problem.
 
-Fetches example test cases from LeetCode, saves them as plain-text, and generates
-ProblemDispatch.swift with only the current problem's dispatch entry.
+Fetches example test cases from LeetCode, saves them as plain-text, and
+generates ProblemDispatch.swift with only the current problem's dispatch entry.
 
 Usage:  python3 Scripts/gen_tests.py <question_number>
 """
@@ -163,7 +163,7 @@ enum ProblemRunner {{
 
 def write_txt_testcases(qid, problem):
     """Write test case data to TestCases/<id>.txt in plain-text format.
-    
+
     Format:
         id: 167
         title: Two Sum II
@@ -171,11 +171,11 @@ def write_txt_testcases(qid, problem):
         ---
         [2,7,11,15]
         9
-        = [1, 2]
+        = [1,2]
 
         [2,3,4]
         6
-        = [1, 3]
+        = [1,3]
     """
     meta = problem["metaData"]
     inputs_list = problem["exampleTestcaseList"]
@@ -194,7 +194,7 @@ def write_txt_testcases(qid, problem):
         f"funcName: {meta.get('name', 'solve')}",
         f"params: {params_str}",
         f"returnType: {return_type}",
-        "---"
+        "---",
     ]
 
     for i, raw in enumerate(inputs_list):
@@ -208,7 +208,7 @@ def write_txt_testcases(qid, problem):
     os.makedirs(TESTCASES_DIR, exist_ok=True)
     path = os.path.join(TESTCASES_DIR, f"{qid}.txt")
     with open(path, "w") as f:
-        f.write("\n".join(lines) + "\n ")
+        f.write("\n".join(lines) + "\n")
     return path
 
 

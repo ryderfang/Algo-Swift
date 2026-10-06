@@ -151,7 +151,7 @@ private enum JSONParse {
 
 // MARK: - Loader
 
-/// Loads test cases from a plain-text file at `TextCases/<id>.txt`.
+/// Loads test cases from a plain-text file at `TestCases/<id>.txt`.
 ///
 /// Format (metadata header + cases separated by blank lines):
 /// ```
@@ -169,7 +169,7 @@ private enum JSONParse {
 /// = [1,3]
 /// ```
 ///
-/// Everything above `---` is metadata (used by `gen_tests.py`, ignore here).
+/// Everything above `---` is metadata (used by gen_tests.py, ignore here).
 /// Each case below `---`: one line per input param, then `= expected`.
 /// Blank lines separate cases.
 func loadTestCases(_ id: Int) -> [TestCase] {
@@ -186,17 +186,17 @@ func loadTestCases(_ id: Int) -> [TestCase] {
     // Split on `---` separator; take everything after it
     let parts = content.components(separatedBy: "\n---\n")
     let body = parts.count > 1 ? parts[1] : parts[0]
-    
+
     // Split into blocks by blank lines
     let blocks = body.components(separatedBy: "\n\n")
-    
+
     return blocks.compactMap { block in
         let lines = block
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .components(separatedBy: "\n")
             .filter { !$0.isEmpty }
         guard lines.count >= 2 else { return nil }
-        
+
         // Last line starting with "= " is the expected value
         guard let lastLine = lines.last, lastLine.hasPrefix("= ") else { return nil }
         let expected = String(lastLine.dropFirst(2))
