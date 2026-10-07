@@ -1,0 +1,27 @@
+id: 3751
+title: Total Waviness of Numbers in Range I
+slug: total-waviness-of-numbers-in-range-i
+difficulty: Medium
+funcName: totalWaviness
+params: num1:integer, num2:integer
+returnType: integer
+---
+120
+130
+= 3
+
+198
+202
+= 3
+
+4848
+4848
+= 2
+
+314
+400
+= 52
+
+1
+100000
+= 166005

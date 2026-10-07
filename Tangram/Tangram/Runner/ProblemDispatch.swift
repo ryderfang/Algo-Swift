@@ -14,11 +14,11 @@ enum ProblemRunner {
             return
         }
 
-        print("--- [\(id)] Non-overlapping Intervals ---")
+        print("--- [\(id)] Total Waviness of Numbers in Range I ---")
         var passed = 0, failed = 0
 
         for (i, tc) in cases.enumerated() {
-            check(sol.eraseOverlapIntervals(tc.intArray2D(0)), tc.expectedInt, "Case \(i + 1)", &passed, &failed)
+            check(sol.totalWaviness(tc.int(0), tc.int(1)), tc.expectedInt, "Case \(i + 1)", &passed, &failed)
         }
 
         print("\(passed + failed) tests: \(passed) passed, \(failed) failed")

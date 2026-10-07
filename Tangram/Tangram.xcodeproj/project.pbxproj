@@ -530,6 +530,7 @@
 		0DBBEACB306A9C4F005111DF /* 747.largest-number-at-least-twice-of-others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBE758306A9C4F005111DF /* 747.largest-number-at-least-twice-of-others.swift */; };
 		4F9F9CD662704927A14A53C6 /* 435.non-overlapping-intervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C6D7859CC443669199988F /* 435.non-overlapping-intervals.swift */; };
 		E39059DDD4D34596A58EBEF1 /* 1614.maximum-nesting-depth-of-the-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */; };
+		2282DD1BCAA8428BAA51546C /* 3751.total-waviness-of-numbers-in-range-i.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8A10711A049F59E727685 /* 3751.total-waviness-of-numbers-in-range-i.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1083,6 +1084,8 @@
 		E9C6D7859CC443669199988F /* 435.non-overlapping-intervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "435.non-overlapping-intervals.swift"; sourceTree = "<group>"; };
 		EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1614.maximum-nesting-depth-of-the-parentheses.swift"; sourceTree = "<group>"; };
 		F5B52D903A1D4260BB488BB6 /* 167.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 167.txt; sourceTree = "<group>"; };
+		F7D8A10711A049F59E727685 /* 3751.total-waviness-of-numbers-in-range-i.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3751.total-waviness-of-numbers-in-range-i.swift"; sourceTree = "<group>"; };
+		860B7023414845D1B02C8A43 /* 3751.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "3751.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1127,6 +1130,7 @@
 				F5B52D903A1D4260BB488BB6 /* 167.txt */,
 				8DEE7931F7144DE3B24698A9 /* 435.txt */,
 				43D99F5A17A54167B3CAD2C2 /* 1614.txt */,
+				860B7023414845D1B02C8A43 /* 3751.txt */,
 			);
 			path = TestCases;
 			sourceTree = "<group>";
@@ -1700,6 +1704,7 @@
 				0DBBE8BD306A9C4F005111DF /* 2707.extra-characters-in-a-string.swift */,
 				0DBBE8BE306A9C4F005111DF /* 3192.minimum-operations-to-make-binary-array-elements-equal-to-one-ii.swift */,
 				0DBBE8BF306A9C4F005111DF /* 3218.minimum-cost-for-cutting-cake-i.swift */,
+				F7D8A10711A049F59E727685 /* 3751.total-waviness-of-numbers-in-range-i.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -2308,6 +2313,7 @@
 				0DBBEACB306A9C4F005111DF /* 747.largest-number-at-least-twice-of-others.swift in Sources */,
 				E39059DDD4D34596A58EBEF1 /* 1614.maximum-nesting-depth-of-the-parentheses.swift in Sources */,
 				4F9F9CD662704927A14A53C6 /* 435.non-overlapping-intervals.swift in Sources */,
+				2282DD1BCAA8428BAA51546C /* 3751.total-waviness-of-numbers-in-range-i.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
