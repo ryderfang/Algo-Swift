@@ -117,6 +117,21 @@ PBXPROJ_PATH = os.path.join(
     PROJECT_ROOT, "Tangram", "Tangram.xcodeproj", "project.pbxproj"
 )
 
+# Xcode PBXGroup IDs for difficulty subgroups
+DIFFICULTY_GROUP_IDS = {
+    "LeetCode": {
+        "Easy": "0DBBE798306A9C4F005111DF",
+        "Medium": "0DBBE8C0306A9C4F005111DF",
+        "Hard": "0DBBE7AD306A9C4F005111DF",
+    },
+    "TestCases": {
+        "Easy": "0D7360E53082215F00DFD004",
+        "Medium": "0D7360E63082216800DFD004",
+        "Hard": "0D7360E73082216D00DFD004",
+    }
+}
+
+
 def generate_pbx_id(content):
     """Generate a unique 24-char hex ID not already in the pbxproj content."""
     existing = set(re.findall(r'\b([0-9A-F]{24})\b', content))

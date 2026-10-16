@@ -13,12 +13,12 @@ import os
 import re
 import sys
 
-from lc_common import PROJECT_ROOT, fetch_problem, add_file_to_group
+from lc_common import PROJECT_ROOT, fetch_problem, add_file_to_group, DIFFICULTY_GROUP_IDS
 
 RUNNER_DIR = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "Runner")
 TESTCASES_DIR = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "TestCases")
 DISPATCH_PATH = os.path.join(RUNNER_DIR, "ProblemDispatch.swift")
-RUNNER_PATH = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "Runner.swift")
+RUNNER_PATH = os.path.join(RUNNER_DIR, "Runner.swift")
 
 # Xcode TestCases group ID (from project.pbxproj)
 TESTCASES_GROUP_ID = "0D9C216D3072485A00EDE4B9"
@@ -162,7 +162,7 @@ enum ProblemRunner {{
 
 
 def write_txt_testcases(qid, problem):
-    """Write test case data to TestCases/<id>.txt in plain-text format.
+    """Write test case data to TestCases/<difficulty>/<id>.txt in plain-text format.
 
     Format:
         id: 167
@@ -205,8 +205,10 @@ def write_txt_testcases(qid, problem):
         expected = outputs[i] if i < len(outputs) else ""
         lines.append(f"= {expected}")
 
-    os.makedirs(TESTCASES_DIR, exist_ok=True)
-    path = os.path.join(TESTCASES_DIR, f"{qid}.txt")
+    difficulty = problem["difficulty"]
+    diff_dir = os.path.join(TESTCASES_DIR, difficulty)
+    os.makedirs(diff_dir, exist_ok=True)
+    path = os.path.join(diff_dir, f"{qid}.txt")
     with open(path, "w") as f:
         f.write("\n".join(lines) + "\n")
     return path
@@ -255,8 +257,10 @@ def main():
     # 1. Write plain-text test cases
     txt_path = write_txt_testcases(qid, problem)
 
-    # 2. Add txt to Xcode project (TestCases group)
-    add_file_to_group(f"{qid}.txt", TESTCASES_GROUP_ID, file_type="text")
+    # 2. Add txt to Xcode project (TestCases/<difficulty> group)
+    difficulty = problem["difficulty"]
+    group_id = DIFFICULTY_GROUP_IDS["TestCases"].get(difficulty, TESTCASES_GROUP_ID)
+    add_file_to_group(f"{qid}.txt", group_id, file_type="text")
 
     # 3. Generate ProblemDispatch.swift for this problem only
     func_name = meta.get("name", "solve")

@@ -14,16 +14,11 @@ import re
 import sys
 
 from lc_common import (PROJECT_ROOT, PBXPROJ_PATH, fetch_problem,
-                       swift_snippet, generate_pbx_id)
+                       swift_snippet, generate_pbx_id, DIFFICULTY_GROUP_IDS)
 
 LEETCODE_DIR = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "LeetCode")
 
-# Xcode project IDs (from Tangram.xcodeproj/project.pbxproj)
-GROUP_IDS = {
-    "Easy": "0DBBE798306A9C4F005111DF",
-    "Medium": "0DBBE8C0306A9C4F005111DF",
-    "Hard": "0DBBE7AD306A9C4F005111DF",
-}
+GROUP_IDS = DIFFICULTY_GROUP_IDS["LeetCode"]
 SOURCES_PHASE_ID = "0D01F329281AE26D00794410"
 
 

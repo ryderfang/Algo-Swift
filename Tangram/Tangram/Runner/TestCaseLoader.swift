@@ -151,7 +151,7 @@ private enum JSONParse {
 
 // MARK: - Loader
 
-/// Loads test cases from a plain-text file at `TestCases/<id>.txt`.
+/// Loads test cases from a plain-text file at `TestCases/<difficulty>/<id>.txt`.
 ///
 /// Format (metadata header + cases separated by blank lines):
 /// ```
@@ -177,7 +177,12 @@ func loadTestCases(_ id: Int) -> [TestCase] {
         .deletingLastPathComponent() // Runner/
         .deletingLastPathComponent() // Tangram/
         .appendingPathComponent("TestCases")
-    let url = dir.appendingPathComponent("\(id).txt")
+    let filename = "\(id).txt"
+    // Search in Easy/Medium/Hard subdirectories
+    let url: URL = ["Easy", "Medium", "Hard"]
+        .map { dir.appendingPathComponent($0).appendingPathComponent(filename)}
+        .first { FileManager.default.fileExists(atPath: $0.path) }
+        ?? dir.appendingPathComponent(filename) // fallback to flat path
 
     guard let content = try? String(contentsOf: url, encoding: .utf8) else {
         return []
