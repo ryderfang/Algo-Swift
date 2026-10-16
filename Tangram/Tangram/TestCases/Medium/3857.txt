@@ -1,0 +1,16 @@
+id: 3857
+title: Minimum Cost to Split into Ones
+slug: minimum-cost-to-split-into-ones
+difficulty: Medium
+funcName: minCost
+params: n:integer
+returnType: integer
+---
+3
+= 3
+
+4
+= 6
+
+500
+= 124750

@@ -14,11 +14,11 @@ enum ProblemRunner {
             return
         }
 
-        print("--- [\(id)] Total Waviness of Numbers in Range I ---")
+        print("--- [\(id)] Find X Value of Array I ---")
         var passed = 0, failed = 0
 
         for (i, tc) in cases.enumerated() {
-            check(sol.totalWaviness(tc.int(0), tc.int(1)), tc.expectedInt, "Case \(i + 1)", &passed, &failed)
+            check(sol.resultArray(tc.intArray(0), tc.int(1)), tc.expectedIntArray, "Case \(i + 1)", &passed, &failed)
         }
 
         print("\(passed + failed) tests: \(passed) passed, \(failed) failed")
