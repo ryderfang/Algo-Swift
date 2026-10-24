@@ -128,7 +128,7 @@ DIFFICULTY_GROUP_IDS = {
         "Easy": "0D7360E53082215F00DFD004",
         "Medium": "0D7360E63082216800DFD004",
         "Hard": "0D7360E73082216D00DFD004",
-    }
+    },
 }
 
 

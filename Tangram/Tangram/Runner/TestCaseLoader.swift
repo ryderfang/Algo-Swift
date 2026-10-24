@@ -180,7 +180,7 @@ func loadTestCases(_ id: Int) -> [TestCase] {
     let filename = "\(id).txt"
     // Search in Easy/Medium/Hard subdirectories
     let url: URL = ["Easy", "Medium", "Hard"]
-        .map { dir.appendingPathComponent($0).appendingPathComponent(filename)}
+        .map { dir.appendingPathComponent($0).appendingPathComponent(filename) }
         .first { FileManager.default.fileExists(atPath: $0.path) }
         ?? dir.appendingPathComponent(filename) // fallback to flat path
 
