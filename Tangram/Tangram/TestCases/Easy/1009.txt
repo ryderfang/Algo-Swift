@@ -1,0 +1,19 @@
+id: 1009
+title: Complement of Base 10 Integer
+slug: complement-of-base-10-integer
+difficulty: Easy
+funcName: bitwiseComplement
+params: n:integer
+returnType: integer
+---
+5
+= 2
+
+7
+= 0
+
+10
+= 5
+
+0
+= 1

@@ -9,7 +9,10 @@ import uuid
 import urllib.request
 import urllib.error
 
-GRAPHQL_URL = "https://leetcode.com/graphql"
+BASE_URL = "https://leetcode.com"
+GRAPHQL_URL = f"{BASE_URL}/graphql"
+USER_AGENT = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+              "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36")
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 _ssl_ctx = None
@@ -25,15 +28,15 @@ def _get_ssl_ctx():
     return _ssl_ctx
 
 
-def graphql_request(query, variables=None):
+def graphql_request(query, variables=None, headers=None):
     """Send a GraphQL request to LeetCode."""
     payload = json.dumps({"query": query, "variables": variables or {}}).encode()
-    req = urllib.request.Request(
-        GRAPHQL_URL, data=payload,
-        headers={"Content-Type": "application/json",
-                 "Referer": "https://leetcode.com",
-                 "User-Agent": "Mozilla/5.0"},
-    )
+    req_headers = {"Content-Type": "application/json",
+                   "Referer": "https://leetcode.com",
+                   "User-Agent": "Mozilla/5.0"}
+    if headers:
+        req_headers.update(headers)
+    req = urllib.request.Request(GRAPHQL_URL, data=payload, headers=req_headers)
     try:
         with urllib.request.urlopen(req, timeout=15, context=_get_ssl_ctx()) as resp:
             return json.loads(resp.read().decode())
@@ -44,6 +47,38 @@ def graphql_request(query, variables=None):
     except urllib.error.URLError as e:
         print(f"Error: Cannot reach LeetCode API: {e.reason}")
         sys.exit(1)
+
+
+def ssl_context():
+    """Shared SSL context (falls back to unverified if certs are unavailable)."""
+    return _get_ssl_ctx()
+
+
+def die(message):
+    print(f"Error: {message}", file=sys.stderr)
+    sys.exit(1)
+
+
+def request_json(url, data=None, headers=None, timeout=20):
+    """JSON-over-HTTP request with LeetCode-flavored error handling."""
+    req = urllib.request.Request(url, data=data, headers=headers or {})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout,
+                                    context=_get_ssl_ctx()) as resp:
+            body = resp.read().decode()
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403):
+            die("LeetCode refused the request (session expired or invalid).\n"
+                "  Log in again with the LeetCode VS Code extension, or set "
+                "LEETCODE_COOKIE.")
+        body = e.read().decode(errors="replace")[:300] if e.fp else ""
+        die(f"LeetCode API returned HTTP {e.code}: {body}")
+    except urllib.error.URLError as e:
+        die(f"Cannot reach LeetCode: {e.reason}")
+    try:
+        return json.loads(body)
+    except ValueError:
+        die(f"Unexpected response from LeetCode: {body[:200]}")
 
 
 def find_problem(qid):

@@ -14,11 +14,11 @@ enum ProblemRunner {
             return
         }
 
-        print("--- [\(id)] Find X Value of Array I ---")
+        print("--- [\(id)] Complement of Base 10 Integer ---")
         var passed = 0, failed = 0
 
         for (i, tc) in cases.enumerated() {
-            check(sol.resultArray(tc.intArray(0), tc.int(1)), tc.expectedIntArray, "Case \(i + 1)", &passed, &failed)
+            check(sol.bitwiseComplement(tc.int(0)), tc.expectedInt, "Case \(i + 1)", &passed, &failed)
         }
 
         print("\(passed + failed) tests: \(passed) passed, \(failed) failed")

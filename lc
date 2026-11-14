@@ -3,9 +3,17 @@
 #   ./lc <id>          - generate solution + test cases, set Runner
 #   ./lc <id> <id> ... - batch generate solutions only
 #   ./lc test <id>     - only generate/update test cases + set Runner
+#   ./lc submit <id>   - submit the solution for <id> to LeetCode
+#   ./lc cookie [ck]   - show session status, or save a browser cookie
 DIR="$(dirname "$0")/Scripts"
 
-if [ "$1" = "test" ]; then
+if [ "$1" = "cookie" ]; then
+    shift
+    python3 "$DIR/lc_cookie.py" "$@"
+elif [ "$1" = "submit" ]; then
+    shift
+    python3 "$DIR/submit_leetcode.py" "$@"
+elif [ "$1" = "test" ]; then
     shift
     python3 "$DIR/gen_tests.py" "$@"
 elif [ $# -eq 1 ] && [[ "$1" =~ ^[0-9]+$ ]]; then

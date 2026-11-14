@@ -27,6 +27,7 @@ Algo-Swift.xcworkspace
 │   ├── lc_common.py            # Shared LeetCode API client
 │   ├── gen_leetcode.py         # Solution file generator
 │   ├── gen_tests.py            # Test case generator
+│   ├── submit_leetcode.py      # Solution submitter
 │   └── patch_leetcode_ext.sh   # VSCode extension patch
 └── lc                          # CLI entry point (see below)
 ```
@@ -48,6 +49,18 @@ The `lc` command is the single entry point for all code generation.
 ./lc <id>              Generate solution file + test cases, set Runner to <id>
 ./lc <id> [id ...]     Batch generate solution files only (no test setup)
 ./lc test <id>         Regenerate test cases + set Runner (solution already exists)
+./lc submit <id>       Submit the solution for <id> to LeetCode
+./lc cookie            Show LeetCode session status
+./lc cookie '<cookie>' Save a browser cookie for submissions
+```
+
+Submission reuses the session from the LeetCode VS Code extension or
+`~/.lc/leetcode/user.json`. To refresh it manually, copy the `Cookie` header
+from browser DevTools on leetcode.com and run (only `LEETCODE_SESSION` is
+required — `csrftoken` is fetched automatically):
+
+```bash
+./lc cookie 'LEETCODE_SESSION=...; csrftoken=...'
 ```
 
 ### Examples
@@ -56,6 +69,7 @@ The `lc` command is the single entry point for all code generation.
 ./lc 1                 # Start "Two Sum" — creates solution + 3 test cases
 ./lc 42                # Start "Trapping Rain Water"
 ./lc test 42           # Re-fetch test cases for problem 42
+./lc submit 42         # Submit "Trapping Rain Water" to LeetCode
 ./lc 100,101,102       # Batch scaffold three tree problems
 ```
 

@@ -1,0 +1,19 @@
+id: 1005
+title: Maximize Sum Of Array After K Negations
+slug: maximize-sum-of-array-after-k-negations
+difficulty: Easy
+funcName: largestSumAfterKNegations
+params: nums:integer[], k:integer
+returnType: integer
+---
+[4,2,3]
+1
+= 5
+
+[3,-1,0,2]
+3
+= 6
+
+[2,-3,-1,5,-4]
+2
+= 13
