@@ -14,11 +14,11 @@ enum ProblemRunner {
             return
         }
 
-        print("--- [\(id)] Last Stone Weight ---")
+        print("--- [\(id)] Remove All Adjacent Duplicates In String ---")
         var passed = 0, failed = 0
 
         for (i, tc) in cases.enumerated() {
-            check(sol.lastStoneWeight(tc.intArray(0)), tc.expectedInt, "Case \(i + 1)", &passed, &failed)
+            check(sol.removeDuplicates(tc.string(0)), tc.expectedString, "Case \(i + 1)", &passed, &failed)
         }
 
         print("\(passed + failed) tests: \(passed) passed, \(failed) failed")

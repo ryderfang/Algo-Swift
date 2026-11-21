@@ -164,6 +164,9 @@ enum ProblemRunner {{
 def write_txt_testcases(qid, problem):
     """Write test case data to TestCases/<difficulty>/<id>.txt in plain-text format.
 
+    An existing file is kept as is (it may hold hand-added cases).
+    Returns (path, written).
+
     Format:
         id: 167
         title: Two Sum II
@@ -177,6 +180,10 @@ def write_txt_testcases(qid, problem):
         6
         = [1,3]
     """
+    path = os.path.join(TESTCASES_DIR, problem["difficulty"], f"{qid}.txt")
+    if os.path.exists(path):
+        return path, False
+
     meta = problem["metaData"]
     inputs_list = problem["exampleTestcaseList"]
     outputs = parse_outputs_from_html(problem["content"])
@@ -205,13 +212,10 @@ def write_txt_testcases(qid, problem):
         expected = outputs[i] if i < len(outputs) else ""
         lines.append(f"= {expected}")
 
-    difficulty = problem["difficulty"]
-    diff_dir = os.path.join(TESTCASES_DIR, difficulty)
-    os.makedirs(diff_dir, exist_ok=True)
-    path = os.path.join(diff_dir, f"{qid}.txt")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         f.write("\n".join(lines) + "\n")
-    return path
+    return path, True
 
 
 def write_dispatch(qid, title, func_name, params, return_type):
@@ -255,7 +259,7 @@ def main():
         sys.exit(1)
 
     # 1. Write plain-text test cases
-    txt_path = write_txt_testcases(qid, problem)
+    txt_path, written = write_txt_testcases(qid, problem)
 
     # 2. Add txt to Xcode project (TestCases/<difficulty> group)
     difficulty = problem["difficulty"]
@@ -272,8 +276,9 @@ def main():
     update_runner_id(qid)
 
     n = len(problem["exampleTestcaseList"])
+    status = f"{n} test cases" if written else "already exists, kept"
     print(f"  [{qid}] {problem['title']} ({problem['difficulty']})")
-    print(f"  -> {os.path.relpath(txt_path, PROJECT_ROOT)}  ({n} test cases)")
+    print(f"  -> {os.path.relpath(txt_path, PROJECT_ROOT)}  ({status})")
     print(f"  -> ProblemDispatch.swift updated")
     print(f"  -> Runner.swift problemID = {qid}")
     print(f"\n  Run: Cmd+R in Xcode")

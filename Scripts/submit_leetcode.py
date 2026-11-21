@@ -7,9 +7,9 @@ posts it to the judge, and polls for the result.
 
 Submission requires a logged-in session (LeetCode's public GraphQL exposes
 no submit mutation; the REST judge endpoints used by the website and the
-VS Code extension are the only option). Credentials are read from
-$LEETCODE_COOKIE / $LEETCODE_SESSION, ~/.lc/leetcode/user.json, or the
-editor's LeetCode extension state (see lc_common.load_cookies).
+VS Code extension are the only option). The session is discovered
+automatically (env, ~/.lc cache, editor extension, Chrome); see
+lc_cookie.load_cookies.
 
 Usage:  ./lc submit <question_number>     e.g. ./lc submit 1005
 """
@@ -21,9 +21,9 @@ import re
 import sys
 import time
 
-from lc_common import (BASE_URL, PROJECT_ROOT, die, find_problem,
-                       graphql_request, request_json)
-from lc_cookie import auth_headers, fetch_csrf_token, load_cookies
+from lc_common import (BASE_URL, PROJECT_ROOT, die, graphql_request,
+                       request_json)
+from lc_cookie import NO_SESSION_HINT, auth_headers, load_cookies
 
 LEETCODE_DIR = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "LeetCode")
 POLL_INTERVAL = 1.5
@@ -69,16 +69,18 @@ def extract_code(path):
 # Judge API
 # ---------------------------------------------------------------------------
 
-def fetch_question_id(slug, headers):
-    """Internal question id (e.g. frontend 1005 -> 1047) required by submit."""
+def fetch_question(slug, headers):
+    """Title, difficulty and the internal question id (e.g. frontend
+    1005 -> 1047) required by submit."""
     data = graphql_request(
-        "query($slug: String!) { question(titleSlug: $slug) { questionId } }",
+        "query($slug: String!) { question(titleSlug: $slug) "
+        "{ questionId title difficulty } }",
         {"slug": slug}, headers=headers,
     ).get("data") or {}
-    question_id = (data.get("question") or {}).get("questionId")
-    if not question_id:
+    question = data.get("question") or {}
+    if not question.get("questionId"):
         die(f"Could not fetch the LeetCode question id for '{slug}'.")
-    return int(question_id)
+    return question
 
 
 def submit(slug, question_id, code, headers):
@@ -159,26 +161,20 @@ def main():
         sys.exit(1)
 
     qid = sys.argv[1]
-    problem = find_problem(qid)
-    if not problem:
-        die(f"Question #{qid} not found on LeetCode.")
-    slug = problem["titleSlug"]
-
     path = find_solution_file(qid)
+    slug = os.path.basename(path).split(".")[1]
     code = extract_code(path)
 
-    cookies = load_cookies()
-    if not cookies.get("LEETCODE_SESSION"):
-        die("No LeetCode session found.\n"
-            "  Log in with the LeetCode VS Code extension, or set:\n"
-            "    export LEETCODE_COOKIE='LEETCODE_SESSION=...; csrftoken=...'")
-    if not cookies.get("csrftoken"):
-        cookies["csrftoken"] = fetch_csrf_token()
+    cookies, username, source = load_cookies()
+    if not cookies:
+        die("No valid LeetCode session found.\n" + NO_SESSION_HINT)
     headers = auth_headers(cookies)
 
-    question_id = fetch_question_id(slug, headers)
+    problem = fetch_question(slug, headers)
+    question_id = int(problem["questionId"])
 
     print(f"[{qid}] {problem['title']} ({problem['difficulty']})")
+    print(f"  user: {username} (from {source})")
     print(f"  file: {os.path.relpath(path, PROJECT_ROOT)}")
     print(f"  code: {len(code.splitlines())} lines")
 

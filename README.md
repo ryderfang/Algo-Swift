@@ -54,10 +54,13 @@ The `lc` command is the single entry point for all code generation.
 ./lc cookie '<cookie>' Save a browser cookie for submissions
 ```
 
-Submission reuses the session from the LeetCode VS Code extension or
-`~/.lc/leetcode/user.json`. To refresh it manually, copy the `Cookie` header
-from browser DevTools on leetcode.com and run (only `LEETCODE_SESSION` is
-required — `csrftoken` is fetched automatically):
+Submission finds a logged-in session automatically, skipping any that have expired:
+`$LEETCODE_COOKIE` → `~/.lc/leetcode/user.json` → LeetCode extension in
+VS Code / Cursor / Windsurf → **Chrome** (all profiles). Just stay logged in to
+leetcode.com in Chrome. The first run asks for Keychain access to
+"Chrome Safe Storage"; choose *Always Allow*. The session it finds is cached in
+`user.json`. To set a cookie manually instead, copy the `Cookie` header from
+browser DevTools (only `LEETCODE_SESSION` is required):
 
 ```bash
 ./lc cookie 'LEETCODE_SESSION=...; csrftoken=...'

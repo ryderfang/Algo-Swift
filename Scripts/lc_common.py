@@ -5,6 +5,7 @@ import os
 import re
 import ssl
 import sys
+import time
 import uuid
 import urllib.request
 import urllib.error
@@ -20,12 +21,43 @@ _ssl_ctx = None
 def _get_ssl_ctx():
     global _ssl_ctx
     if _ssl_ctx is None:
-        try:
-            _ssl_ctx = ssl.create_default_context()
-            urllib.request.urlopen("https://leetcode.com", timeout=3, context=_ssl_ctx)
-        except Exception:
+        _ssl_ctx = ssl.create_default_context()
+        # Corporate proxy CAs often lack the key-usage extension that strict
+        # mode (default since Python 3.13) requires; keep verification on.
+        _ssl_ctx.verify_flags &= ~ssl.VERIFY_X509_STRICT
+        if not _ssl_ctx.cert_store_stats().get("x509_ca"):
             _ssl_ctx = ssl._create_unverified_context()
     return _ssl_ctx
+
+
+RETRIES = 3
+
+
+def _read(req, timeout, retries=RETRIES):
+    """urlopen + read, retrying requests that time out.
+
+    The corporate proxy (Zscaler) sometimes accepts the connection and then
+    never answers; a fresh request usually goes through.
+    """
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout,
+                                        context=_get_ssl_ctx()) as resp:
+                return resp.read().decode()
+        except urllib.error.HTTPError:
+            raise
+        except urllib.error.URLError as e:
+            if not isinstance(e.reason, TimeoutError):
+                raise
+        except TimeoutError:
+            pass
+        if attempt < retries:
+            print(f"  LeetCode timed out, retrying ({attempt + 1}/{retries})...",
+                  file=sys.stderr)
+            time.sleep(attempt)
+    tries = f" after {retries} tries" if retries > 1 else ""
+    die(f"LeetCode did not respond within {timeout}s{tries}. "
+        "Check your network/proxy and try again.")
 
 
 def graphql_request(query, variables=None, headers=None):
@@ -38,8 +70,7 @@ def graphql_request(query, variables=None, headers=None):
         req_headers.update(headers)
     req = urllib.request.Request(GRAPHQL_URL, data=payload, headers=req_headers)
     try:
-        with urllib.request.urlopen(req, timeout=15, context=_get_ssl_ctx()) as resp:
-            return json.loads(resp.read().decode())
+        return json.loads(_read(req, timeout=15))
     except urllib.error.HTTPError as e:
         body = e.read().decode() if e.fp else ""
         print(f"Error: LeetCode API returned {e.code}: {body[:200]}")
@@ -63,14 +94,12 @@ def request_json(url, data=None, headers=None, timeout=20):
     """JSON-over-HTTP request with LeetCode-flavored error handling."""
     req = urllib.request.Request(url, data=data, headers=headers or {})
     try:
-        with urllib.request.urlopen(req, timeout=timeout,
-                                    context=_get_ssl_ctx()) as resp:
-            body = resp.read().decode()
+        # Only retry GETs: retrying a POST (e.g. submit) could submit twice.
+        body = _read(req, timeout, retries=RETRIES if data is None else 1)
     except urllib.error.HTTPError as e:
         if e.code in (401, 403):
             die("LeetCode refused the request (session expired or invalid).\n"
-                "  Log in again with the LeetCode VS Code extension, or set "
-                "LEETCODE_COOKIE.")
+                "  Log in to leetcode.com in Chrome, or run: ./lc cookie '<cookie>'")
         body = e.read().decode(errors="replace")[:300] if e.fp else ""
         die(f"LeetCode API returned HTTP {e.code}: {body}")
     except urllib.error.URLError as e:

@@ -119,7 +119,7 @@ def _parse_ids(argv):
 
 def generate_one(qid):
     """Fetch, generate, and register one problem. Return True on success."""
-    print(f"\nFetching question #{qid} from LeetCode...")
+    print(f"Fetching question #{qid} from LeetCode...")
 
     problem = fetch_problem(qid)
     if not problem:
@@ -157,7 +157,11 @@ def main():
         print("Usage: ./lc <id> [id ...]\n  e.g. ./lc 1 2 3  or  ./lc 1,2,3")
         sys.exit(1)
 
-    ok = sum(1 for qid in ids if generate_one(qid))
+    ok = 0
+    for i, qid in enumerate(ids):
+        if i:
+            print()
+        ok += generate_one(qid)
     if len(ids) > 1:
         print(f"\nDone: {ok} added, {len(ids) - ok} failed.")
 
