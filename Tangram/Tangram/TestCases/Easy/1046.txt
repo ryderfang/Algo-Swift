@@ -1,0 +1,13 @@
+id: 1046
+title: Last Stone Weight
+slug: last-stone-weight
+difficulty: Easy
+funcName: lastStoneWeight
+params: stones:integer[]
+returnType: integer
+---
+[2,7,4,1,8,1]
+= 1
+
+[1]
+= 1

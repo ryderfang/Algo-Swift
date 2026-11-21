@@ -1,0 +1,16 @@
+id: 1021
+title: Remove Outermost Parentheses
+slug: remove-outermost-parentheses
+difficulty: Easy
+funcName: removeOuterParentheses
+params: s:string
+returnType: string
+---
+"(()())(())"
+= "()()()"
+
+"(()())(())(()(()))"
+= "()()()()(())"
+
+"()()"
+= ""

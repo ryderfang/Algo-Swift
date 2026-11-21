@@ -1,0 +1,16 @@
+id: 1018
+title: Binary Prefix Divisible By 5
+slug: binary-prefix-divisible-by-5
+difficulty: Easy
+funcName: prefixesDivBy5
+params: nums:integer[]
+returnType: list<boolean>
+---
+[0,1,1]
+= [true,false,false]
+
+[1,1,1]
+= [false,false,false]
+
+[1,0,1,1,1,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,1,0,0,1,1,1,1,1,1,0,1,1,0,1,0,0,0,0,0,0,1,0,1,1,1,0,0,1,0]
+= [false, false, true, false, false, false, false, false, false, false, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, true, false, false, true, false, false, true, true, true, true, true, true, true, false, false, true, false, false, false, false, true, true]

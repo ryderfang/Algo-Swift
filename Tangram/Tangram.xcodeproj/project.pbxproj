@@ -535,6 +535,11 @@
 		E39059DDD4D34596A58EBEF1 /* 1614.maximum-nesting-depth-of-the-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */; };
 		112C8A8BA900467E857E14B4 /* 1005.maximize-sum-of-array-after-k-negations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4112BEDA2A4BCC9D1D8429 /* 1005.maximize-sum-of-array-after-k-negations.swift */; };
 		E9493F3FF716402C90F2887C /* 1009.complement-of-base-10-integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D82D7C712A46628E26C062 /* 1009.complement-of-base-10-integer.swift */; };
+		63CD02D5FBB24BBA8A30B2D7 /* 1013.partition-array-into-three-parts-with-equal-sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5B2F5B6D5473284EE7D99 /* 1013.partition-array-into-three-parts-with-equal-sum.swift */; };
+		5A970B745EEF45ABA7DB42DE /* 1018.binary-prefix-divisible-by-5.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47A699AC6A041E890A6ADDD /* 1018.binary-prefix-divisible-by-5.swift */; };
+		0A35A687F99C4A87B656A8FC /* 1021.remove-outermost-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886131E6D144A0D91200184 /* 1021.remove-outermost-parentheses.swift */; };
+		CB0F55E3E6D84A0588A19E90 /* 1022.sum-of-root-to-leaf-binary-numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D19C255E3584C41A3E114C4 /* 1022.sum-of-root-to-leaf-binary-numbers.swift */; };
+		2AE120BBB71E4A70BCC42A6D /* 1046.last-stone-weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19BF802CD9249219EEB6612 /* 1046.last-stone-weight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1098,6 +1103,16 @@
 		8F05A45AFEEB4E6DA291F870 /* 1005.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1005.txt"; sourceTree = "<group>"; };
 		B7D82D7C712A46628E26C062 /* 1009.complement-of-base-10-integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1009.complement-of-base-10-integer.swift"; sourceTree = "<group>"; };
 		84946C6284624C7FB635C1FC /* 1009.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1009.txt"; sourceTree = "<group>"; };
+		20C5B2F5B6D5473284EE7D99 /* 1013.partition-array-into-three-parts-with-equal-sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1013.partition-array-into-three-parts-with-equal-sum.swift"; sourceTree = "<group>"; };
+		879FC0C0B8D848F1A781E465 /* 1013.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1013.txt"; sourceTree = "<group>"; };
+		C47A699AC6A041E890A6ADDD /* 1018.binary-prefix-divisible-by-5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1018.binary-prefix-divisible-by-5.swift"; sourceTree = "<group>"; };
+		A45B409CF37240E899C8741F /* 1018.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1018.txt"; sourceTree = "<group>"; };
+		7886131E6D144A0D91200184 /* 1021.remove-outermost-parentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1021.remove-outermost-parentheses.swift"; sourceTree = "<group>"; };
+		9ECF0CE57DDB4CF1A5D16283 /* 1021.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1021.txt"; sourceTree = "<group>"; };
+		0D19C255E3584C41A3E114C4 /* 1022.sum-of-root-to-leaf-binary-numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1022.sum-of-root-to-leaf-binary-numbers.swift"; sourceTree = "<group>"; };
+		FD8C14C1275E4281B39DC25E /* 1022.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1022.txt"; sourceTree = "<group>"; };
+		A19BF802CD9249219EEB6612 /* 1046.last-stone-weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1046.last-stone-weight.swift"; sourceTree = "<group>"; };
+		06C33FC2B3CD4CE0B552AA21 /* 1046.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1046.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1133,6 +1148,11 @@
 			children = (
 				8F05A45AFEEB4E6DA291F870 /* 1005.txt */,
 				84946C6284624C7FB635C1FC /* 1009.txt */,
+				879FC0C0B8D848F1A781E465 /* 1013.txt */,
+				A45B409CF37240E899C8741F /* 1018.txt */,
+				9ECF0CE57DDB4CF1A5D16283 /* 1021.txt */,
+				FD8C14C1275E4281B39DC25E /* 1022.txt */,
+				06C33FC2B3CD4CE0B552AA21 /* 1046.txt */,
 				43D99F5A17A54167B3CAD2C2 /* 1614.txt */,
 			);
 			path = Easy;
@@ -1424,9 +1444,14 @@
 				0DBBE78A306A9C4F005111DF /* 1002.find-common-characters.swift */,
 				5F4112BEDA2A4BCC9D1D8429 /* 1005.maximize-sum-of-array-after-k-negations.swift */,
 				B7D82D7C712A46628E26C062 /* 1009.complement-of-base-10-integer.swift */,
+				20C5B2F5B6D5473284EE7D99 /* 1013.partition-array-into-three-parts-with-equal-sum.swift */,
+				C47A699AC6A041E890A6ADDD /* 1018.binary-prefix-divisible-by-5.swift */,
+				7886131E6D144A0D91200184 /* 1021.remove-outermost-parentheses.swift */,
+				0D19C255E3584C41A3E114C4 /* 1022.sum-of-root-to-leaf-binary-numbers.swift */,
 				0DBBE78B306A9C4F005111DF /* 1025.divisor-game.swift */,
 				0DBBE78C306A9C4F005111DF /* 1030.matrix-cells-in-distance-order.swift */,
 				0DBBE78D306A9C4F005111DF /* 1037.valid-boomerang.swift */,
+				A19BF802CD9249219EEB6612 /* 1046.last-stone-weight.swift */,
 				0DBBE78E306A9C4F005111DF /* 1051.height-checker.swift */,
 				0DBBE78F306A9C4F005111DF /* 1122.relative-sort-array.swift */,
 				0DBBE790306A9C4F005111DF /* 1137.n-th-tribonacci-number.swift */,
@@ -2362,6 +2387,11 @@
 				2BB56CB220FC47849547717B /* 3524.find-x-value-of-array-i.swift in Sources */,
 				112C8A8BA900467E857E14B4 /* 1005.maximize-sum-of-array-after-k-negations.swift in Sources */,
 				E9493F3FF716402C90F2887C /* 1009.complement-of-base-10-integer.swift in Sources */,
+				63CD02D5FBB24BBA8A30B2D7 /* 1013.partition-array-into-three-parts-with-equal-sum.swift in Sources */,
+				5A970B745EEF45ABA7DB42DE /* 1018.binary-prefix-divisible-by-5.swift in Sources */,
+				0A35A687F99C4A87B656A8FC /* 1021.remove-outermost-parentheses.swift in Sources */,
+				CB0F55E3E6D84A0588A19E90 /* 1022.sum-of-root-to-leaf-binary-numbers.swift in Sources */,
+				2AE120BBB71E4A70BCC42A6D /* 1046.last-stone-weight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
