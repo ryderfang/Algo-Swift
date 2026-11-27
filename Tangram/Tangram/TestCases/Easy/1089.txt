@@ -1,0 +1,13 @@
+id: 1089
+title: Duplicate Zeros
+slug: duplicate-zeros
+difficulty: Easy
+funcName: duplicateZeros
+params: arr:integer[]
+returnType: void
+---
+[1,0,2,3,0,4,5,0]
+= [1,0,0,2,3,0,0,4]
+
+[1,2,3]
+= [1,2,3]

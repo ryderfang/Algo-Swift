@@ -542,6 +542,12 @@
 		E39059DDD4D34596A58EBEF1 /* 1614.maximum-nesting-depth-of-the-parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */; };
 		E9493F3FF716402C90F2887C /* 1009.complement-of-base-10-integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D82D7C712A46628E26C062 /* 1009.complement-of-base-10-integer.swift */; };
 		7512042D3B624E84B334CACC /* 1047.remove-all-adjacent-duplicates-in-string.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29759D4A45340C596E480EB /* 1047.remove-all-adjacent-duplicates-in-string.swift */; };
+		C1507F2E17004545A02E0714 /* 1071.greatest-common-divisor-of-strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC613440AA840BEAFEFD093 /* 1071.greatest-common-divisor-of-strings.swift */; };
+		96229C81A4EB4B6DA8A3A5CF /* 1078.occurrences-after-bigram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFEEE8FE0649CBAE38A877 /* 1078.occurrences-after-bigram.swift */; };
+		2FE8B03F56A848A68F1ABBA6 /* 1089.duplicate-zeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212525BFFB5D461AAB92E420 /* 1089.duplicate-zeros.swift */; };
+		1BC0AD49FC0E4CD0A77A5883 /* 1103.distribute-candies-to-people.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0411437260743B2BD60980E /* 1103.distribute-candies-to-people.swift */; };
+		AAB074256C5645299C5F0CEE /* 1108.defanging-an-ip-address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3FF1130BA3483C89B3DFCB /* 1108.defanging-an-ip-address.swift */; };
+		B49C04DD640A4AF88B7622A1 /* 1128.number-of-equivalent-domino-pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8C280E28940AD8EAA31E3 /* 1128.number-of-equivalent-domino-pairs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1117,6 +1123,17 @@
 		FD8C14C1275E4281B39DC25E /* 1022.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1022.txt; sourceTree = "<group>"; };
 		F29759D4A45340C596E480EB /* 1047.remove-all-adjacent-duplicates-in-string.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1047.remove-all-adjacent-duplicates-in-string.swift"; sourceTree = "<group>"; };
 		DC8DF2C381C4440DBE781ACE /* 1047.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1047.txt"; sourceTree = "<group>"; };
+		ACC613440AA840BEAFEFD093 /* 1071.greatest-common-divisor-of-strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1071.greatest-common-divisor-of-strings.swift"; sourceTree = "<group>"; };
+		020E39B6CF4C441D8DCBBB13 /* 1071.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1071.txt"; sourceTree = "<group>"; };
+		4FFFEEE8FE0649CBAE38A877 /* 1078.occurrences-after-bigram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1078.occurrences-after-bigram.swift"; sourceTree = "<group>"; };
+		7A4E7B99EBE3446FAAF5C715 /* 1078.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1078.txt"; sourceTree = "<group>"; };
+		212525BFFB5D461AAB92E420 /* 1089.duplicate-zeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1089.duplicate-zeros.swift"; sourceTree = "<group>"; };
+		86B762EE27E04CA8B74E0B2C /* 1089.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1089.txt"; sourceTree = "<group>"; };
+		A0411437260743B2BD60980E /* 1103.distribute-candies-to-people.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1103.distribute-candies-to-people.swift"; sourceTree = "<group>"; };
+		A4B6D5FBB52045DA880407F7 /* 1103.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1103.txt"; sourceTree = "<group>"; };
+		1D3FF1130BA3483C89B3DFCB /* 1108.defanging-an-ip-address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1108.defanging-an-ip-address.swift"; sourceTree = "<group>"; };
+		A4C8C280E28940AD8EAA31E3 /* 1128.number-of-equivalent-domino-pairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1128.number-of-equivalent-domino-pairs.swift"; sourceTree = "<group>"; };
+		7821AD8B09DE44F5B38EF739 /* 1108.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1108.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1159,6 +1176,11 @@
 				FD8C14C1275E4281B39DC25E /* 1022.txt */,
 				06C33FC2B3CD4CE0B552AA21 /* 1046.txt */,
 				DC8DF2C381C4440DBE781ACE /* 1047.txt */,
+				020E39B6CF4C441D8DCBBB13 /* 1071.txt */,
+				7A4E7B99EBE3446FAAF5C715 /* 1078.txt */,
+				86B762EE27E04CA8B74E0B2C /* 1089.txt */,
+				A4B6D5FBB52045DA880407F7 /* 1103.txt */,
+				7821AD8B09DE44F5B38EF739 /* 1108.txt */,
 				43D99F5A17A54167B3CAD2C2 /* 1614.txt */,
 			);
 			path = Easy;
@@ -1460,7 +1482,13 @@
 				A19BF802CD9249219EEB6612 /* 1046.last-stone-weight.swift */,
 				F29759D4A45340C596E480EB /* 1047.remove-all-adjacent-duplicates-in-string.swift */,
 				0DBBE78E306A9C4F005111DF /* 1051.height-checker.swift */,
+				ACC613440AA840BEAFEFD093 /* 1071.greatest-common-divisor-of-strings.swift */,
+				4FFFEEE8FE0649CBAE38A877 /* 1078.occurrences-after-bigram.swift */,
+				212525BFFB5D461AAB92E420 /* 1089.duplicate-zeros.swift */,
+				A0411437260743B2BD60980E /* 1103.distribute-candies-to-people.swift */,
+				1D3FF1130BA3483C89B3DFCB /* 1108.defanging-an-ip-address.swift */,
 				0DBBE78F306A9C4F005111DF /* 1122.relative-sort-array.swift */,
+				A4C8C280E28940AD8EAA31E3 /* 1128.number-of-equivalent-domino-pairs.swift */,
 				0DBBE790306A9C4F005111DF /* 1137.n-th-tribonacci-number.swift */,
 				0DBBE791306A9C4F005111DF /* 1232.check-if-it-is-a-straight-line.swift */,
 				0DBBE792306A9C4F005111DF /* 1266.minimum-time-visiting-all-points.swift */,
@@ -2400,6 +2428,12 @@
 				CB0F55E3E6D84A0588A19E90 /* 1022.sum-of-root-to-leaf-binary-numbers.swift in Sources */,
 				2AE120BBB71E4A70BCC42A6D /* 1046.last-stone-weight.swift in Sources */,
 				7512042D3B624E84B334CACC /* 1047.remove-all-adjacent-duplicates-in-string.swift in Sources */,
+				C1507F2E17004545A02E0714 /* 1071.greatest-common-divisor-of-strings.swift in Sources */,
+				96229C81A4EB4B6DA8A3A5CF /* 1078.occurrences-after-bigram.swift in Sources */,
+				2FE8B03F56A848A68F1ABBA6 /* 1089.duplicate-zeros.swift in Sources */,
+				1BC0AD49FC0E4CD0A77A5883 /* 1103.distribute-candies-to-people.swift in Sources */,
+				AAB074256C5645299C5F0CEE /* 1108.defanging-an-ip-address.swift in Sources */,
+				B49C04DD640A4AF88B7622A1 /* 1128.number-of-equivalent-domino-pairs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

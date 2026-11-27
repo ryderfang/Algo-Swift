@@ -1,0 +1,17 @@
+id: 1078
+title: Occurrences After Bigram
+slug: occurrences-after-bigram
+difficulty: Easy
+funcName: findOcurrences
+params: text:string, first:string, second:string
+returnType: string[]
+---
+"alice is a good girl she is a good student"
+"a"
+"good"
+= ["girl","student"]
+
+"we will we will rock you"
+"we"
+"will"
+= ["we","rock"]

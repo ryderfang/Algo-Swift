@@ -14,11 +14,11 @@ enum ProblemRunner {
             return
         }
 
-        print("--- [\(id)] Remove All Adjacent Duplicates In String ---")
+        print("--- [\(id)] Defanging an IP Address ---")
         var passed = 0, failed = 0
 
         for (i, tc) in cases.enumerated() {
-            check(sol.removeDuplicates(tc.string(0)), tc.expectedString, "Case \(i + 1)", &passed, &failed)
+            check(sol.defangIPaddr(tc.string(0)), tc.expectedString, "Case \(i + 1)", &passed, &failed)
         }
 
         print("\(passed + failed) tests: \(passed) passed, \(failed) failed")

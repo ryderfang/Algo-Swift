@@ -1,0 +1,13 @@
+id: 1108
+title: Defanging an IP Address
+slug: defanging-an-ip-address
+difficulty: Easy
+funcName: defangIPaddr
+params: address:string
+returnType: string
+---
+"1.1.1.1"
+= "1[.]1[.]1[.]1"
+
+"255.100.50.0"
+= "255[.]100[.]50[.]0"

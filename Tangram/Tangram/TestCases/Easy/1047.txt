@@ -1,0 +1,16 @@
+id: 1047
+title: Remove All Adjacent Duplicates In String
+slug: remove-all-adjacent-duplicates-in-string
+difficulty: Easy
+funcName: removeDuplicates
+params: s:string
+returnType: string
+---
+"abbaca"
+= "ca"
+
+"azxxzy"
+= "ay"
+
+"aaaaaaaaa"
+= "a"

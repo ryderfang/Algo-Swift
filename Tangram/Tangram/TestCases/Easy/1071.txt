@@ -1,0 +1,27 @@
+id: 1071
+title: Greatest Common Divisor of Strings
+slug: greatest-common-divisor-of-strings
+difficulty: Easy
+funcName: gcdOfStrings
+params: str1:string, str2:string
+returnType: string
+---
+"ABCABC"
+"ABC"
+= "ABC"
+
+"ABABAB"
+"ABAB"
+= "AB"
+
+"LEET"
+"CODE"
+= ""
+
+"AAAAAB"
+"AAA"
+= ""
+
+"AAAAAAAAA"
+"AAACCC"
+= ""

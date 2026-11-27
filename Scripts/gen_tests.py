@@ -38,9 +38,6 @@ INPUT_PARSERS = {
     "boolean[]": "tc.boolArray({i})", "double[]": "tc.doubleArray({i})",
     "character[]": "tc.charArray({i})", "character[][]": "tc.charArray2D({i})",
     "TreeNode": "tc.treeNode({i})", "ListNode": "tc.listNode({i})",
-    "list<integer>": "tc.intArray({i})", "list<string>": "tc.stringArray({i})",
-    "list<list<integer>>": "tc.intArray2D({i})",
-    "list<list<string>>": "tc.stringArray2D({i})",
 }
 
 # return type -> (expected expr, assertion style)
@@ -58,10 +55,6 @@ EXPECTED_MAP = {
     "character[]": ("tc.expectedCharArray", "equal"),
     "TreeNode": ("tc.expectedOptionalIntArray", "tree"),
     "ListNode": ("tc.expectedIntArray", "list"),
-    "list<integer>": ("tc.expectedIntArray", "equal"),
-    "list<string>": ("tc.expectedStringArray", "equal"),
-    "list<list<integer>>": ("tc.expectedIntArray2D", "equal"),
-    "list<list<string>>": ("tc.expectedStringArray2D", "equal"),
     "void": (None, "void"),
 }
 
@@ -84,14 +77,29 @@ def parse_outputs_from_html(content):
     return outputs
 
 
+def normalize_type(t):
+    """LeetCode writes some arrays as list<...>: list<list<integer>> -> integer[][]."""
+    m = re.fullmatch(r"list<(.+)>", t)
+    return normalize_type(m.group(1)) + "[]" if m else t
+
+
+def lookup(table, t, default):
+    key = normalize_type(t)
+    if key not in table:
+        print(f"  Warning: unsupported type '{t}', falling back to string.",
+              file=sys.stderr)
+    return table.get(key, default)
+
+
 def generate_dispatch_body(func_name, params, return_type):
     """Generate the assertion body inside a for-loop over test cases."""
     args = ", ".join(
-        INPUT_PARSERS.get(p["type"], "tc.string({i})").format(i=i)
+        lookup(INPUT_PARSERS, p["type"], "tc.string({i})").format(i=i)
         for i, p in enumerate(params)
     )
     call = f"sol.{func_name}({args})"
-    expected_expr, style = EXPECTED_MAP.get(return_type, ("tc.expectedString", "equal"))
+    expected_expr, style = lookup(EXPECTED_MAP, return_type,
+                                  ("tc.expectedString", "equal"))
 
     if style == "void":
         return f"            // void return - verify side effects manually\n            {call}"
