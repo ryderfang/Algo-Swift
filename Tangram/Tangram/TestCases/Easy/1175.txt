@@ -1,0 +1,16 @@
+id: 1175
+title: Prime Arrangements
+slug: prime-arrangements
+difficulty: Easy
+funcName: numPrimeArrangements
+params: n:integer
+returnType: integer
+---
+5
+= 12
+
+100
+= 682289015
+
+1
+= 1

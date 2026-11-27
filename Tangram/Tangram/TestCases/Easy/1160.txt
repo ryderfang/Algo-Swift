@@ -1,0 +1,15 @@
+id: 1160
+title: Find Words That Can Be Formed by Characters
+slug: find-words-that-can-be-formed-by-characters
+difficulty: Easy
+funcName: countCharacters
+params: words:string[], chars:string
+returnType: integer
+---
+["cat","bt","hat","tree"]
+"atach"
+= 6
+
+["hello","world","leetcode"]
+"welldonehoneyr"
+= 10

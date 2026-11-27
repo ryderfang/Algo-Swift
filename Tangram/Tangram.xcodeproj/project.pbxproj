@@ -548,6 +548,9 @@
 		1BC0AD49FC0E4CD0A77A5883 /* 1103.distribute-candies-to-people.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0411437260743B2BD60980E /* 1103.distribute-candies-to-people.swift */; };
 		AAB074256C5645299C5F0CEE /* 1108.defanging-an-ip-address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3FF1130BA3483C89B3DFCB /* 1108.defanging-an-ip-address.swift */; };
 		B49C04DD640A4AF88B7622A1 /* 1128.number-of-equivalent-domino-pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8C280E28940AD8EAA31E3 /* 1128.number-of-equivalent-domino-pairs.swift */; };
+		C1EDFC41BE614027851F709F /* 1154.day-of-the-year.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DFB26910E42A5BD19EB1E /* 1154.day-of-the-year.swift */; };
+		53367738A5BB40408EEACB92 /* 1160.find-words-that-can-be-formed-by-characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8838318BD643D890F072AF /* 1160.find-words-that-can-be-formed-by-characters.swift */; };
+		54E3F5A6351B45F29770740E /* 1175.prime-arrangements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0092C09A93460A90F7A541 /* 1175.prime-arrangements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1135,6 +1138,12 @@
 		A4C8C280E28940AD8EAA31E3 /* 1128.number-of-equivalent-domino-pairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1128.number-of-equivalent-domino-pairs.swift"; sourceTree = "<group>"; };
 		7821AD8B09DE44F5B38EF739 /* 1108.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1108.txt"; sourceTree = "<group>"; };
 		53CF05B4F49F42B994FD511B /* 1128.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1128.txt"; sourceTree = "<group>"; };
+		DA5DFB26910E42A5BD19EB1E /* 1154.day-of-the-year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1154.day-of-the-year.swift"; sourceTree = "<group>"; };
+		AE4D0DD83CA244208F131503 /* 1154.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1154.txt"; sourceTree = "<group>"; };
+		4E8838318BD643D890F072AF /* 1160.find-words-that-can-be-formed-by-characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1160.find-words-that-can-be-formed-by-characters.swift"; sourceTree = "<group>"; };
+		B387E339F9AB4025AB3D6772 /* 1160.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1160.txt"; sourceTree = "<group>"; };
+		1C0092C09A93460A90F7A541 /* 1175.prime-arrangements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1175.prime-arrangements.swift"; sourceTree = "<group>"; };
+		E09806F4E29D4F069C445A08 /* 1175.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1175.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1183,6 +1192,9 @@
 				A4B6D5FBB52045DA880407F7 /* 1103.txt */,
 				7821AD8B09DE44F5B38EF739 /* 1108.txt */,
 				53CF05B4F49F42B994FD511B /* 1128.txt */,
+				AE4D0DD83CA244208F131503 /* 1154.txt */,
+				B387E339F9AB4025AB3D6772 /* 1160.txt */,
+				E09806F4E29D4F069C445A08 /* 1175.txt */,
 				43D99F5A17A54167B3CAD2C2 /* 1614.txt */,
 			);
 			path = Easy;
@@ -1492,6 +1504,9 @@
 				0DBBE78F306A9C4F005111DF /* 1122.relative-sort-array.swift */,
 				A4C8C280E28940AD8EAA31E3 /* 1128.number-of-equivalent-domino-pairs.swift */,
 				0DBBE790306A9C4F005111DF /* 1137.n-th-tribonacci-number.swift */,
+				DA5DFB26910E42A5BD19EB1E /* 1154.day-of-the-year.swift */,
+				4E8838318BD643D890F072AF /* 1160.find-words-that-can-be-formed-by-characters.swift */,
+				1C0092C09A93460A90F7A541 /* 1175.prime-arrangements.swift */,
 				0DBBE791306A9C4F005111DF /* 1232.check-if-it-is-a-straight-line.swift */,
 				0DBBE792306A9C4F005111DF /* 1266.minimum-time-visiting-all-points.swift */,
 				EA0AB3E513C6460FAD8885F8 /* 1614.maximum-nesting-depth-of-the-parentheses.swift */,
@@ -2436,6 +2451,9 @@
 				1BC0AD49FC0E4CD0A77A5883 /* 1103.distribute-candies-to-people.swift in Sources */,
 				AAB074256C5645299C5F0CEE /* 1108.defanging-an-ip-address.swift in Sources */,
 				B49C04DD640A4AF88B7622A1 /* 1128.number-of-equivalent-domino-pairs.swift in Sources */,
+				C1EDFC41BE614027851F709F /* 1154.day-of-the-year.swift in Sources */,
+				53367738A5BB40408EEACB92 /* 1160.find-words-that-can-be-formed-by-characters.swift in Sources */,
+				54E3F5A6351B45F29770740E /* 1175.prime-arrangements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

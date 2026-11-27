@@ -14,11 +14,11 @@ enum ProblemRunner {
             return
         }
 
-        print("--- [\(id)] Number of Equivalent Domino Pairs ---")
+        print("--- [\(id)] Prime Arrangements ---")
         var passed = 0, failed = 0
 
         for (i, tc) in cases.enumerated() {
-            check(sol.numEquivDominoPairs(tc.intArray2D(0)), tc.expectedInt, "Case \(i + 1)", &passed, &failed)
+            check(sol.numPrimeArrangements(tc.int(0)), tc.expectedInt, "Case \(i + 1)", &passed, &failed)
         }
 
         print("\(passed + failed) tests: \(passed) passed, \(failed) failed")
