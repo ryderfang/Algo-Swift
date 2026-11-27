@@ -110,6 +110,12 @@ def request_json(url, data=None, headers=None, timeout=20):
         die(f"Unexpected response from LeetCode: {body[:200]}")
 
 
+def parse_ids(argv):
+    """Parse question IDs from args like ["1", "2,3"] -> ["1", "2", "3"]."""
+    return [part.strip() for arg in argv for part in arg.split(",")
+            if part.strip().isdigit()]
+
+
 def find_problem(qid):
     """Find a problem by frontend question ID. Returns dict or None."""
     query = """

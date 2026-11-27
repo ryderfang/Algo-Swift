@@ -1,0 +1,4 @@
+#!/bin/bash
+# Shortcut for ./lc submit <id>
+#   ./submit <id>      - submit the solution for <id> to LeetCode
+exec "$(dirname "$0")/lc" submit "$@"

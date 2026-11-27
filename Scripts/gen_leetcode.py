@@ -13,7 +13,7 @@ import os
 import re
 import sys
 
-from lc_common import (PROJECT_ROOT, PBXPROJ_PATH, fetch_problem,
+from lc_common import (PROJECT_ROOT, PBXPROJ_PATH, fetch_problem, parse_ids,
                        swift_snippet, generate_pbx_id, DIFFICULTY_GROUP_IDS)
 
 LEETCODE_DIR = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "LeetCode")
@@ -107,16 +107,6 @@ def add_to_xcode_project(filename, difficulty):
 # Main
 # ---------------------------------------------------------------------------
 
-def _parse_ids(argv):
-    ids = []
-    for arg in argv:
-        for part in arg.split(","):
-            part = part.strip()
-            if part.isdigit():
-                ids.append(part)
-    return ids
-
-
 def generate_one(qid):
     """Fetch, generate, and register one problem. Return True on success."""
     print(f"Fetching question #{qid} from LeetCode...")
@@ -152,7 +142,7 @@ def generate_one(qid):
 
 
 def main():
-    ids = sorted(_parse_ids(sys.argv[1:]), key=int)
+    ids = sorted(parse_ids(sys.argv[1:]), key=int)
     if not ids:
         print("Usage: ./lc <id> [id ...]\n  e.g. ./lc 1 2 3  or  ./lc 1,2,3")
         sys.exit(1)

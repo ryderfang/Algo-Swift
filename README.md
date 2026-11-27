@@ -47,9 +47,10 @@ The `lc` command is the single entry point for all code generation.
 
 ```
 ./lc <id>              Generate solution file + test cases, set Runner to <id>
-./lc <id> [id ...]     Batch generate solution files only (no test setup)
+./lc <id> [id ...]     Batch generate solutions + test cases, set Runner to first <id>
 ./lc test <id>         Regenerate test cases + set Runner (solution already exists)
 ./lc submit <id>       Submit the solution for <id> to LeetCode
+./submit <id>          Shortcut for ./lc submit <id>
 ./lc cookie            Show LeetCode session status
 ./lc cookie '<cookie>' Save a browser cookie for submissions
 ```
@@ -73,7 +74,7 @@ browser DevTools (only `LEETCODE_SESSION` is required):
 ./lc 42                # Start "Trapping Rain Water"
 ./lc test 42           # Re-fetch test cases for problem 42
 ./lc submit 42         # Submit "Trapping Rain Water" to LeetCode
-./lc 100,101,102       # Batch scaffold three tree problems
+./lc 100,101,102       # Batch scaffold three tree problems (Runner -> 100)
 ```
 
 ## AlgoKit

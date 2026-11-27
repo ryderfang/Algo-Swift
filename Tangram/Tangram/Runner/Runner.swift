@@ -9,7 +9,7 @@
 enum Runner {
     static func main() {
         // @gen_tests:problem_id
-        let problemID = 1108
+        let problemID = 1128
 
         if problemID > 0 {
             ProblemRunner.run(problemID)

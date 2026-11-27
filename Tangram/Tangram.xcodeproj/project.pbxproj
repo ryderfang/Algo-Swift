@@ -1134,6 +1134,7 @@
 		1D3FF1130BA3483C89B3DFCB /* 1108.defanging-an-ip-address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1108.defanging-an-ip-address.swift"; sourceTree = "<group>"; };
 		A4C8C280E28940AD8EAA31E3 /* 1128.number-of-equivalent-domino-pairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1128.number-of-equivalent-domino-pairs.swift"; sourceTree = "<group>"; };
 		7821AD8B09DE44F5B38EF739 /* 1108.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1108.txt"; sourceTree = "<group>"; };
+		53CF05B4F49F42B994FD511B /* 1128.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1128.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1181,6 +1182,7 @@
 				86B762EE27E04CA8B74E0B2C /* 1089.txt */,
 				A4B6D5FBB52045DA880407F7 /* 1103.txt */,
 				7821AD8B09DE44F5B38EF739 /* 1108.txt */,
+				53CF05B4F49F42B994FD511B /* 1128.txt */,
 				43D99F5A17A54167B3CAD2C2 /* 1614.txt */,
 			);
 			path = Easy;

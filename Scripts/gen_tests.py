@@ -5,7 +5,7 @@ gen_tests.py - Generate test cases for a LeetCode problem.
 Fetches example test cases from LeetCode, saves them as plain-text, and
 generates ProblemDispatch.swift with only the current problem's dispatch entry.
 
-Usage:  python3 Scripts/gen_tests.py <question_number>
+Usage:  python3 Scripts/gen_tests.py <question_number> [question_number ...]
 """
 
 import json
@@ -13,7 +13,14 @@ import os
 import re
 import sys
 
-from lc_common import PROJECT_ROOT, fetch_problem, add_file_to_group, DIFFICULTY_GROUP_IDS
+from lc_common import (
+    PROJECT_ROOT,
+    fetch_problem,
+    parse_ids,
+    swift_snippet,
+    add_file_to_group,
+    DIFFICULTY_GROUP_IDS,
+)
 
 RUNNER_DIR = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "Runner")
 TESTCASES_DIR = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "TestCases")
@@ -91,27 +98,80 @@ def lookup(table, t, default):
     return table.get(key, default)
 
 
-def generate_dispatch_body(func_name, params, return_type):
+def detect_inout_indices(func_name, swift_code, meta):
+    """Return the set of 0-based parameter indices marked `inout` in Swift."""
+    indices = set()
+    if swift_code:
+        m = re.search(rf"func\s+{re.escape(func_name)}\s*\(([^)]*)\)", swift_code)
+        if m:
+            raw_params = m.group(1).strip()
+            if raw_params:
+                for i, part in enumerate(raw_params.split(",")):
+                    if re.search(r":\s*inout\b", part):
+                        indices.add(i)
+    out_idx = meta.get("output", {}).get("paramindex")
+    if isinstance(out_idx, int):
+        indices.add(out_idx)
+    return indices
+
+
+def generate_dispatch_body(func_name, params, return_type, inout_indices=None, output_param_index=None):
     """Generate the assertion body inside a for-loop over test cases."""
-    args = ", ".join(
-        lookup(INPUT_PARSERS, p["type"], "tc.string({i})").format(i=i)
-        for i, p in enumerate(params)
-    )
+    inout_indices = inout_indices or set()
+    prep_lines = []
+    call_args = []
+    for i, p in enumerate(params):
+        expr = lookup(INPUT_PARSERS, p["type"], "tc.string({i})").format(i=i)
+        if i in inout_indices:
+            var_name = p.get("name") or f"arg{i}"
+            prep_lines.append(f"            var {var_name} = {expr}")
+            call_args.append(f"&{var_name}")
+        else:
+            call_args.append(expr)
+
+    args = ", ".join(call_args)
     call = f"sol.{func_name}({args})"
     expected_expr, style = lookup(EXPECTED_MAP, return_type,
                                   ("tc.expectedString", "equal"))
 
+    prefix = ("\n".join(prep_lines) + "\n") if prep_lines else ""
+
     if style == "void":
-        return f"            // void return - verify side effects manually\n            {call}"
+        target_idx = output_param_index
+        if target_idx is None and len(inout_indices) == 1:
+            target_idx = next(iter(inout_indices))
+        if target_idx is not None and 0 <= target_idx < len(params) and target_idx in inout_indices:
+            target_var = params[target_idx].get("name") or f"arg{target_idx}"
+            out_expected, out_style = lookup(
+                EXPECTED_MAP, params[target_idx]["type"], (None, "void")
+            )
+            if out_expected and out_style in ("tree", "list"):
+                return (f"{prefix}"
+                        f"            {call}\n"
+                        f"            if !tc.expected.isEmpty {{\n"
+                        f"                check({target_var}?.array() ?? [], {out_expected}, "
+                        f"\"Case \\(i + 1)\", &passed, &failed)\n"
+                        f"            }}")
+            if out_expected and out_style == "equal":
+                return (f"{prefix}"
+                        f"            {call}\n"
+                        f"            if !tc.expected.isEmpty {{\n"
+                        f"                check({target_var}, {out_expected}, "
+                        f"\"Case \\(i + 1)\", &passed, &failed)\n"
+                        f"            }}")
+        return f"{prefix}            // void return - verify side effects manually\n            {call}"
     elif style in ("tree", "list"):
-        return (f"            let result = {call}\n"
+        return (f"{prefix}"
+                f"            let result = {call}\n"
                 f"            check(result?.array() ?? [], {expected_expr}, "
                 f"\"Case \\(i + 1)\", &passed, &failed)")
     elif style == "accuracy":
-        return (f"            checkAccuracy({call}, {expected_expr}, "
+        return (f"{prefix}"
+                f"            checkAccuracy({call}, {expected_expr}, "
                 f"accuracy: 1e-5, \"Case \\(i + 1)\", &passed, &failed)")
     else:
-        return (f"            check({call}, {expected_expr}, "
+        return (f"{prefix}"
+                f"            check({call}, {expected_expr}, "
                 f"\"Case \\(i + 1)\", &passed, &failed)")
 
 
@@ -226,9 +286,15 @@ def write_txt_testcases(qid, problem):
     return path, True
 
 
-def write_dispatch(qid, title, func_name, params, return_type):
+def write_dispatch(qid, title, func_name, params, return_type, inout_indices=None, output_param_index=None):
     """Write ProblemDispatch.swift for a single problem."""
-    body = generate_dispatch_body(func_name, params, return_type)
+    body = generate_dispatch_body(
+        func_name,
+        params,
+        return_type,
+        inout_indices=inout_indices,
+        output_param_index=output_param_index,
+    )
     with open(DISPATCH_PATH, "w") as f:
         f.write(DISPATCH_TEMPLATE.format(title=title, body=body))
 
@@ -247,24 +313,23 @@ def update_runner_id(qid):
 # Main
 # ---------------------------------------------------------------------------
 
-def main():
-    if len(sys.argv) != 2 or not sys.argv[1].isdigit():
-        print("Usage: python3 Scripts/gen_tests.py <question_number>")
-        sys.exit(1)
+def setup_tests(qid, set_runner=True):
+    """Write test cases for one problem; optionally point the Runner at it.
 
-    qid = sys.argv[1]
+    Returns True on success.
+    """
     print(f"Fetching question #{qid} from LeetCode...")
 
     problem = fetch_problem(qid)
     if not problem:
         print(f"Error: Question #{qid} not found.")
-        sys.exit(1)
+        return False
 
     meta = problem["metaData"]
     if not meta.get("params"):
         print(f"Error: No function metadata for [{qid}] {problem['title']}.")
         print("  This might be a design/class problem that needs manual test setup.")
-        sys.exit(1)
+        return False
 
     # 1. Write plain-text test cases
     txt_path, written = write_txt_testcases(qid, problem)
@@ -274,21 +339,59 @@ def main():
     group_id = DIFFICULTY_GROUP_IDS["TestCases"].get(difficulty, TESTCASES_GROUP_ID)
     add_file_to_group(f"{qid}.txt", group_id, file_type="text")
 
-    # 3. Generate ProblemDispatch.swift for this problem only
-    func_name = meta.get("name", "solve")
-    params = meta.get("params", [])
-    return_type = meta.get("return", {}).get("type", "void")
-    write_dispatch(qid, problem["title"], func_name, params, return_type)
-
-    # 4. Update Runner.swift
-    update_runner_id(qid)
-
     n = len(problem["exampleTestcaseList"])
     status = f"{n} test cases" if written else "already exists, kept"
     print(f"  [{qid}] {problem['title']} ({problem['difficulty']})")
     print(f"  -> {os.path.relpath(txt_path, PROJECT_ROOT)}  ({status})")
+    if not set_runner:
+        return True
+
+    # 3. Generate ProblemDispatch.swift for this problem only
+    func_name = meta.get("name", "solve")
+    params = meta.get("params", [])
+    return_type = meta.get("return", {}).get("type", "void")
+    inout_indices = detect_inout_indices(func_name, swift_snippet(problem), meta)
+    output_param_index = meta.get("output", {}).get("paramindex")
+    write_dispatch(
+        qid,
+        problem["title"],
+        func_name,
+        params,
+        return_type,
+        inout_indices=inout_indices,
+        output_param_index=output_param_index if isinstance(output_param_index, int) else None,
+    )
+
+    # 4. Update Runner.swift
+    update_runner_id(qid)
+
     print(f"  -> ProblemDispatch.swift updated")
     print(f"  -> Runner.swift problemID = {qid}")
+    return True
+
+
+def main():
+    ids = sorted(parse_ids(sys.argv[1:]), key=int)
+    if not ids:
+        print("Usage: python3 Scripts/gen_tests.py <question_number> [question_number ...]")
+        sys.exit(1)
+
+    # ProblemDispatch.swift holds a single problem, so the Runner targets the
+    # first ID that sets up successfully; the rest only get test case files.
+    runner_id = None
+    ok = 0
+    for i, qid in enumerate(ids):
+        if i:
+            print()
+        if setup_tests(qid, set_runner=runner_id is None):
+            ok += 1
+            runner_id = runner_id or qid
+    if len(ids) > 1:
+        print(f"\nDone: {ok} set up, {len(ids) - ok} failed.")
+        if runner_id:
+            print(f"  Runner targets #{runner_id}. Switch with: ./lc test <id>")
+    if not ok:
+        sys.exit(1)
     print(f"\n  Run: Cmd+R in Xcode")
 
 
