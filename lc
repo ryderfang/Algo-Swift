@@ -16,5 +16,5 @@ elif [ "$1" = "test" ]; then
     shift
     python3 "$DIR/gen_tests.py" "$@"
 else
-    python3 "$DIR/gen_leetcode.py" "$@" && python3 "$DIR/gen_tests.py" "$@"
+    python3 "$DIR/gen_leetcode.py" "$@"
 fi

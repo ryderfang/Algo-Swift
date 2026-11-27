@@ -313,21 +313,15 @@ def update_runner_id(qid):
 # Main
 # ---------------------------------------------------------------------------
 
-def setup_tests(qid, set_runner=True):
-    """Write test cases for one problem; optionally point the Runner at it.
+def setup_tests(problem, set_runner=True):
+    """Write test cases for one fetched problem; optionally point the Runner at it.
 
     Returns True on success.
     """
-    print(f"Fetching question #{qid} from LeetCode...")
-
-    problem = fetch_problem(qid)
-    if not problem:
-        print(f"Error: Question #{qid} not found.")
-        return False
-
+    qid = problem["frontendQuestionId"]
     meta = problem["metaData"]
     if not meta.get("params"):
-        print(f"Error: No function metadata for [{qid}] {problem['title']}.")
+        print(f"  Error: No function metadata for [{qid}] {problem['title']}.")
         print("  This might be a design/class problem that needs manual test setup.")
         return False
 
@@ -341,7 +335,6 @@ def setup_tests(qid, set_runner=True):
 
     n = len(problem["exampleTestcaseList"])
     status = f"{n} test cases" if written else "already exists, kept"
-    print(f"  [{qid}] {problem['title']} ({problem['difficulty']})")
     print(f"  -> {os.path.relpath(txt_path, PROJECT_ROOT)}  ({status})")
     if not set_runner:
         return True
@@ -370,10 +363,14 @@ def setup_tests(qid, set_runner=True):
     return True
 
 
-def main():
-    ids = sorted(parse_ids(sys.argv[1:]), key=int)
+def run(ids, before=None, usage="python3 Scripts/gen_tests.py <question_number> [question_number ...]"):
+    """Fetch each problem once, run `before(problem)` (if given), then set up tests.
+
+    `before` returns True on success; a failure skips the test setup.
+    """
+    ids = sorted(ids, key=int)
     if not ids:
-        print("Usage: python3 Scripts/gen_tests.py <question_number> [question_number ...]")
+        print(f"Usage: {usage}")
         sys.exit(1)
 
     # ProblemDispatch.swift holds a single problem, so the Runner targets the
@@ -383,7 +380,15 @@ def main():
     for i, qid in enumerate(ids):
         if i:
             print()
-        if setup_tests(qid, set_runner=runner_id is None):
+        print(f"Fetching question #{qid} from LeetCode...")
+        problem = fetch_problem(qid)
+        if not problem:
+            print(f"  Error: Question #{qid} not found.")
+            continue
+        print(f"  [{qid}] {problem['title']} ({problem['difficulty']})")
+        if before and not before(problem):
+            continue
+        if setup_tests(problem, set_runner=runner_id is None):
             ok += 1
             runner_id = runner_id or qid
     if len(ids) > 1:
@@ -393,6 +398,10 @@ def main():
     if not ok:
         sys.exit(1)
     print(f"\n  Run: Cmd+R in Xcode")
+
+
+def main():
+    run(parse_ids(sys.argv[1:]))
 
 
 if __name__ == "__main__":

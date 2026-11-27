@@ -4,7 +4,8 @@ gen_leetcode.py - Generate a LeetCode Swift solution template.
 
 Fetches problem metadata and Swift code snippet from LeetCode's GraphQL API,
 creates a .swift file in the correct difficulty directory (Easy/Medium/Hard),
-and adds it to the Tangram Xcode project in sorted order.
+and adds it to the Tangram Xcode project in sorted order. Test cases are set up
+from the same fetch (see gen_tests.py), so each problem is fetched only once.
 
 Usage:  python3 Scripts/gen_leetcode.py <question_number> [...]
 """
@@ -13,8 +14,9 @@ import os
 import re
 import sys
 
-from lc_common import (PROJECT_ROOT, PBXPROJ_PATH, fetch_problem, parse_ids,
+from lc_common import (PROJECT_ROOT, PBXPROJ_PATH, parse_ids,
                        swift_snippet, generate_pbx_id, DIFFICULTY_GROUP_IDS)
+from gen_tests import run
 
 LEETCODE_DIR = os.path.join(PROJECT_ROOT, "Tangram", "Tangram", "LeetCode")
 
@@ -107,18 +109,11 @@ def add_to_xcode_project(filename, difficulty):
 # Main
 # ---------------------------------------------------------------------------
 
-def generate_one(qid):
-    """Fetch, generate, and register one problem. Return True on success."""
-    print(f"Fetching question #{qid} from LeetCode...")
-
-    problem = fetch_problem(qid)
-    if not problem:
-        print(f"  Error: Question #{qid} not found.")
-        return False
-
+def generate_solution(problem):
+    """Generate and register the solution file for a fetched problem. Return True on success."""
     code = swift_snippet(problem)
     if code is None:
-        print(f"  Error: No Swift code snippet for [{qid}] {problem['title']}.")
+        print(f"  Error: No Swift code snippet for [{problem['frontendQuestionId']}] {problem['title']}.")
         return False
 
     difficulty = problem["difficulty"]
@@ -128,32 +123,18 @@ def generate_one(qid):
 
     if os.path.exists(filepath):
         print(f"  {filename} already exists, skipping.")
-        add_to_xcode_project(filename, difficulty)
-        return True
-
-    os.makedirs(target_dir, exist_ok=True)
-    with open(filepath, "w") as f:
-        f.write(generate_swift_content(problem, code))
-
-    print(f"  [{problem['frontendQuestionId']}] {problem['title']} ({difficulty})")
-    print(f"  -> {os.path.relpath(filepath, PROJECT_ROOT)}")
+    else:
+        os.makedirs(target_dir, exist_ok=True)
+        with open(filepath, "w") as f:
+            f.write(generate_swift_content(problem, code))
+        print(f"  -> {os.path.relpath(filepath, PROJECT_ROOT)}")
     add_to_xcode_project(filename, difficulty)
     return True
 
 
 def main():
-    ids = sorted(parse_ids(sys.argv[1:]), key=int)
-    if not ids:
-        print("Usage: ./lc <id> [id ...]\n  e.g. ./lc 1 2 3  or  ./lc 1,2,3")
-        sys.exit(1)
-
-    ok = 0
-    for i, qid in enumerate(ids):
-        if i:
-            print()
-        ok += generate_one(qid)
-    if len(ids) > 1:
-        print(f"\nDone: {ok} added, {len(ids) - ok} failed.")
+    run(parse_ids(sys.argv[1:]), before=generate_solution,
+        usage="./lc <id> [id ...]\n  e.g. ./lc 1 2 3  or  ./lc 1,2,3")
 
 
 if __name__ == "__main__":
